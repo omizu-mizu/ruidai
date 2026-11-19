@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=10mm,y=6mm]
+\ax{-0.6}{2.6}{-0.8}{5}
+\draw[thick,domain=0:2.2,samples=80] plot (\x,{(\x)^3-3*\x+2.3});
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\fill (1,0.3) circle (1.6pt);
+\node[above right] at (1,0.3){\scriptsize 最小 $a-2$};
+\node[below] at (current bounding box.south){\scriptsize 最小値 $a-2$ が0以上ならグラフは $x$ 軸より下に出ない};
+\end{tikzpicture}

@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=7mm,y=0.18mm]
+\ax{-0.6}{6.6}{-15}{145}
+\draw[thick,domain=0:6,samples=80] plot (\x,{\x*(12-2*\x)^2});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\draw (6,0.12)--(6,-0.12); \node[below] at (6,0){\tiny $6$};
+\fill (2,128) circle (1.6pt);
+\node[above right] at (2,128){\scriptsize 最大 128};
+\fill (0,0) circle (1.6pt);
+\fill (6,0) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $V=x(12-2x)^2$（$0<x<6$）};
+\end{tikzpicture}

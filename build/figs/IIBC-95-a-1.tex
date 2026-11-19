@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=8mm,y=6mm]
+\ax{-2.4}{2.4}{-3}{3.2}
+\draw[thick,domain=-2.15:2.15,samples=80] plot (\x,{(\x)^3-3*\x});
+\node[left] at (0,2){\tiny $2$};
+\node[left] at (0,-2){\tiny $-2$};
+\fill (-1,2) circle (1.6pt);
+\draw[blue!60!black] (-2.4,2.6)--(2.4,2.6) node[right]{\tiny 1個}; \draw[red!70!black] (-2.4,2)--(2.4,2) node[right]{\tiny 2個}; \draw[green!50!black] (-2.4,0.8)--(2.4,0.8) node[right]{\tiny 3個};
+\node[below] at (current bounding box.south){\scriptsize 直線 $y=a$ を上下に動かす};
+\end{tikzpicture}

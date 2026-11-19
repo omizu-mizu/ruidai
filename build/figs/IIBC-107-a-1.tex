@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=9mm,y=6mm]
+\fill[blue!15] plot[domain=0:2,samples=60] (\x,{-(\x)^2+4*\x}) -- plot[domain=2:0,samples=60] (\x,{(\x)^2}) -- cycle;
+\ax{-0.8}{3}{-0.6}{4.8}
+\draw[thick,domain=-0.5:2.2,samples=80] plot (\x,{(\x)^2});
+\draw[blue!60!black,domain=-0.2:3.5,samples=80] plot (\x,{-(\x)^2+4*\x});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (2,4) circle (1.6pt);
+\node[right] at (2,4){\scriptsize $(2,4)$};
+\end{tikzpicture}

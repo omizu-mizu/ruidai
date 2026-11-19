@@ -2233,6 +2233,20 @@ $f'(2)=\displaystyle\lim_{h\to0}\frac{10h+6h^2+h^3}{h}=\lim_{h\to0}(10+6h+h^2)=1
 (2)\ $f(0)=0$，$f(2)=6$ だから，平均変化率は\quad $\dfrac{6-0}{2-0}=3$\\
 \hspace*{1.5em}$f'(x)=2x+1$ だから，$f'(c)=2c+1=3$ より\quad $c=1$\\
 \hspace*{1.5em}（2点 $(0,\ 0)$，$(2,\ 6)$ を結ぶ直線と平行な接線の接点が $x=1$．$0<c<2$ をみたす．）
+\begin{center}
+\begin{tikzpicture}[x=9mm,y=4mm]
+\ax{-1}{3}{-0.8}{7}
+\draw[thick,domain=-0.9:2.3,samples=80] plot (\x,{(\x)^2+\x});
+\draw[blue!60!black,domain=-0.3:2.3,samples=80] plot (\x,{3*\x});
+\draw[red!70!black,dashed,domain=-0.1:2.6,samples=80] plot (\x,{3*\x-1});
+\fill (0,0) circle (1.6pt);
+\fill (2,6) circle (1.6pt);
+\node[left] at (2,6){\scriptsize $(2,6)$};
+\fill (1,2) circle (1.6pt);
+\node[below right] at (1,2){\scriptsize $x=1$};
+\node[below] at (current bounding box.south){\scriptsize 青：2点を結ぶ直線（傾き3），赤：$x=1$ での接線（傾き3）};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{86}{接線（Ⅰ）}
@@ -2241,6 +2255,17 @@ $f'(2)=\displaystyle\lim_{h\to0}\frac{10h+6h^2+h^3}{h}=\lim_{h\to0}(10+6h+h^2)=1
 $y'=3x^2-3$．$x=2$ のとき $y'=12-3=9$．\\[2pt]
 接線：傾き9で点 $(2,\ 2)$ を通るので\quad $y-2=9(x-2)$，\quad $y=9x-16$\\[2pt]
 法線：傾きは $-\dfrac19$（傾きの積が $-1$）．\quad $y-2=-\dfrac19(x-2)$，\quad $y=-\dfrac19x+\dfrac{20}9$
+\begin{center}
+\begin{tikzpicture}[x=7mm,y=6mm]
+\ax{-2.4}{3}{-3}{4.5}
+\draw[thick,domain=-2.2:2.45,samples=80] plot (\x,{(\x)^3-3*\x});
+\draw[blue!60!black,domain=1.6:2.25,samples=80] plot (\x,{9*\x-16});
+\draw[red!70!black,domain=-2:3,samples=80] plot (\x,{-\x/9+20/9});
+\fill (2,2) circle (1.6pt);
+\node[right] at (2,2){\scriptsize $(2,2)$};
+\node[blue!60!black] at (2.6,3.6){\tiny 接線}; \node[red!70!black] at (-1.8,2.9){\tiny 法線};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{87}{接線（Ⅱ）}
@@ -2251,6 +2276,20 @@ $y'=2x$．接点を $(t,\ t^2)$ とすると，接線は\\
 ①が点 $(1,\ -3)$ を通るので\quad $-3=2t-t^2$，\quad $t^2-2t-3=0$，\quad $(t-3)(t+1)=0$\\
 \hspace*{1.5em}$t=3$ のとき①は\quad $y=6x-9$\quad （接点 $(3,\ 9)$）\\
 \hspace*{1.5em}$t=-1$ のとき①は\quad $y=-2x-1$\quad （接点 $(-1,\ 1)$）\\
+\begin{center}
+\begin{tikzpicture}[x=7mm,y=2.5mm]
+\ax{-2.5}{4}{-4}{10}
+\draw[thick,domain=-2.3:3.2,samples=80] plot (\x,{(\x)^2});
+\draw[blue!60!black,domain=0.4:3.3,samples=80] plot (\x,{6*\x-9});
+\draw[blue!60!black,domain=-2.3:1.8,samples=80] plot (\x,{-2*\x-1});
+\fill (1,-3) circle (1.6pt);
+\node[right] at (1,-3){\scriptsize $(1,-3)$};
+\fill (3,9) circle (1.6pt);
+\node[left] at (3,9){\scriptsize 接点};
+\fill (-1,1) circle (1.6pt);
+\node[left] at (-1,1){\scriptsize 接点};
+\end{tikzpicture}
+\end{center}
 \point{点 $(1,\ -3)$ は曲線上にないので，$y'$ に $x=1$ を代入して傾きとしてはいけない}
 \end{kai}
 
@@ -2304,6 +2343,20 @@ $y=-x^2+4x-4$ と $y=mx+n$ から\quad $x^2+(m-4)x+n+4=0$\\
 \hspace*{1.5em}$m=0$ のとき $n=0$，\quad $m=4$ のとき $n=-4$\\[2pt]
 よって\quad $y=0$，\quad $y=4x-4$\\
 （$y=0$ は $y=x^2$ と原点で，$y=-x^2+4x-4=-(x-2)^2$ と点 $(2,\ 0)$ で接する．）
+\begin{center}
+\begin{tikzpicture}[x=7mm,y=5mm]
+\ax{-1.5}{4}{-4.5}{4}
+\draw[thick,domain=-1.4:1.95,samples=80] plot (\x,{(\x)^2});
+\draw[thick,domain=0.2:3.8,samples=80] plot (\x,{-(\x)^2+4*\x-4});
+\draw[blue!60!black,domain=0.2:2,samples=80] plot (\x,{4*\x-4});
+\fill (0,0) circle (1.6pt);
+\fill (2,0) circle (1.6pt);
+\fill (2,4) circle (1.6pt);
+\fill (0,-4) circle (1.6pt);
+\draw[blue!60!black,thick] (-1.5,0)--(4,0); \node[blue!60!black,right] at (2.1,3.6){\tiny $y=4x-4$};
+\node[below] at (current bounding box.south){\scriptsize 青：2本の共通接線（$y=0$ と $y=4x-4$）};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{91}{関数決定（Ⅱ）}
@@ -2317,6 +2370,18 @@ $f(-1)=5$ より\quad $-1+0+3+c=5$，\quad $c=3$\\[2pt]
 \hspace*{1.5em}$f'(x)$ の符号は $x<-1$ で $+$，$-1<x<1$ で $-$，$x>1$ で $+$．\\
 \hspace*{1.5em}$x=-1$ で極大，$x=1$ で極小となり条件をみたす．\\[2pt]
 $a=0$，$b=-3$，$c=3$，\quad 極小値 $f(1)=1-3+3=1$
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=4mm]
+\ax{-2.3}{2.3}{-0.5}{6}
+\draw[thick,domain=-2.15:2.15,samples=80] plot (\x,{(\x)^3-3*\x+3});
+\draw (-1,0.12)--(-1,-0.12); \node[below] at (-1,0){\tiny $-1$};
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\fill (-1,5) circle (1.6pt);
+\node[above] at (-1,5){\scriptsize 極大 5};
+\fill (1,1) circle (1.6pt);
+\node[below] at (1,1){\scriptsize 極小 1};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{92}{極値をもつための条件}
@@ -2335,6 +2400,22 @@ $f'(x)=3x^2-12x+9=3(x^2-4x+3)=3(x-1)(x-3)$\\
 $0\leqq x\leqq4$ での増減：$0\leqq x<1$ で増加，$1<x<3$ で減少，$3<x\leqq4$ で増加．\\
 \hspace*{1.5em}$f(0)=0$，\quad $f(1)=1-6+9=4$（極大），\quad $f(3)=27-54+27=0$（極小），\quad $f(4)=64-96+36=4$\\[2pt]
 \point{極値と端点の値を比べる}\\
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=5mm]
+\fill[blue!10] (0,-0.6) rectangle (4,5);
+\ax{-0.6}{4.6}{-0.6}{5}
+\draw[thick,domain=0:4,samples=80] plot (\x,{(\x)^3-6*(\x)^2+9*\x});
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\draw (3,0.12)--(3,-0.12); \node[below] at (3,0){\tiny $3$};
+\draw (4,0.12)--(4,-0.12); \node[below] at (4,0){\tiny $4$};
+\fill (1,4) circle (1.6pt);
+\node[above] at (1,4){\scriptsize 4};
+\fill (3,0) circle (1.6pt);
+\fill (4,4) circle (1.6pt);
+\node[right] at (4,4){\scriptsize 4};
+\fill (0,0) circle (1.6pt);
+\end{tikzpicture}
+\end{center}
 最大値 $4$\quad（$x=1,\ 4$），\quad 最小値 $0$\quad（$x=0,\ 3$）
 \end{kai}
 
@@ -2354,6 +2435,19 @@ $V$ & & $\nearrow$ & $128$ & $\searrow$ &
 \end{center}
 $V(2)=2\cdot(12-4)^2=2\cdot64=128$\\
 よって\quad $x=2$ のとき，最大値 $128$（cm$^3$）\\
+\begin{center}
+\begin{tikzpicture}[x=7mm,y=0.18mm]
+\ax{-0.6}{6.6}{-15}{145}
+\draw[thick,domain=0:6,samples=80] plot (\x,{\x*(12-2*\x)^2});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\draw (6,0.12)--(6,-0.12); \node[below] at (6,0){\tiny $6$};
+\fill (2,128) circle (1.6pt);
+\node[above right] at (2,128){\scriptsize 最大 128};
+\fill (0,0) circle (1.6pt);
+\fill (6,0) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $V=x(12-2x)^2$（$0<x<6$）};
+\end{tikzpicture}
+\end{center}
 \point{端の $x=0,\ 6$ は範囲に含まれない．増減表で「増加→減少」の切りかわりを確かめてから最大と答える}
 \end{kai}
 
@@ -2367,6 +2461,17 @@ $x\to\pm\infty$ で $f(x)\to\pm\infty$．\\[2pt]
 \hspace*{1.5em}$a<-2,\ 2<a$ のとき\quad 1個\\
 \hspace*{1.5em}$a=-2,\ 2$ のとき\quad 2個\quad （極値をとる点で接する）\\
 \hspace*{1.5em}$-2<a<2$ のとき\quad 3個
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=6mm]
+\ax{-2.4}{2.4}{-3}{3.2}
+\draw[thick,domain=-2.15:2.15,samples=80] plot (\x,{(\x)^3-3*\x});
+\node[left] at (0,2){\tiny $2$};
+\node[left] at (0,-2){\tiny $-2$};
+\fill (-1,2) circle (1.6pt);
+\draw[blue!60!black] (-2.4,2.6)--(2.4,2.6) node[right]{\tiny 1個}; \draw[red!70!black] (-2.4,2)--(2.4,2) node[right]{\tiny 2個}; \draw[green!50!black] (-2.4,0.8)--(2.4,0.8) node[right]{\tiny 3個};
+\node[below] at (current bounding box.south){\scriptsize 直線 $y=a$ を上下に動かす};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{96}{接線の本数}
@@ -2379,6 +2484,19 @@ $y'=3x^2-3$．接点を $(t,\ t^3-3t)$ とすると接線は\\
 $g(t)=-2t^3+6t^2-6$ とすると\quad $g'(t)=-6t^2+12t=-6t(t-2)$\\
 \hspace*{1.5em}$t=0$ で極小値 $g(0)=-6$，\quad $t=2$ で極大値 $g(2)=-16+24-6=2$\\[2pt]
 $y=g(t)$ のグラフと直線 $y=b$ が異なる3点で交わる条件は\quad $-6<b<2$
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=2.5mm]
+\fill[blue!10] (-1.3,-6) rectangle (3.3,2);
+\ax{-1.3}{3.3}{-7.5}{3.5}
+\draw[thick,domain=-1.1:3.15,samples=80] plot (\x,{-2*(\x)^3+6*(\x)^2-6});
+\fill (0,-6) circle (1.6pt);
+\node[below left] at (0,-6){\scriptsize $-6$};
+\fill (2,2) circle (1.6pt);
+\node[above] at (2,2){\scriptsize 2};
+\draw[dashed] (-1.3,-6)--(3.3,-6); \draw[dashed] (-1.3,2)--(3.3,2);
+\node[below] at (current bounding box.south){\scriptsize $-6<b<2$ のとき3点で交わる（横軸は $t$）};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{97}{微分法の不等式への応用（Ⅰ）}
@@ -2389,6 +2507,18 @@ $x\geqq0$ での増減：$0<x<2$ で $f'(x)<0$（減少），$x>2$ で $f'(x)>0$
 よって $x\geqq0$ では，$x=2$ で最小値 $f(2)=8-12+4=0$ をとる．\\[2pt]
 したがって $x\geqq0$ で $f(x)\geqq0$，すなわち\quad $x^3+4\geqq3x^2$\\
 等号は $x=2$ のとき成りたつ．\\
+\begin{center}
+\begin{tikzpicture}[x=9mm,y=5mm]
+\ax{-0.6}{3.4}{-0.6}{6}
+\draw[thick,domain=0:3.2,samples=80] plot (\x,{(\x)^3-3*(\x)^2+4});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (2,0) circle (1.6pt);
+\node[below] at (2,0){\scriptsize 最小 0};
+\fill (0,4) circle (1.6pt);
+\node[left] at (0,4){\scriptsize 4};
+\node[below] at (current bounding box.south){\scriptsize $y=x^3-3x^2+4$（$x\geqq0$）};
+\end{tikzpicture}
+\end{center}
 （$f(x)=(x+1)(x-2)^2$ と因数分解できることからも確かめられる．）
 \end{kai}
 
@@ -2399,6 +2529,16 @@ $f(x)=x^3-3x+a$ とすると\quad $f'(x)=3x^2-3=3(x+1)(x-1)$\\
 $x\geqq0$ での増減：$0<x<1$ で減少，$x>1$ で増加．\\
 よって $x\geqq0$ での最小値は\quad $f(1)=1-3+a=a-2$\\[2pt]
 \point{(最小値) $\geqq0$}\quad $a-2\geqq0$ より\quad $a\geqq2$
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=6mm]
+\ax{-0.6}{2.6}{-0.8}{5}
+\draw[thick,domain=0:2.2,samples=80] plot (\x,{(\x)^3-3*\x+2.3});
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\fill (1,0.3) circle (1.6pt);
+\node[above right] at (1,0.3){\scriptsize 最小 $a-2$};
+\node[below] at (current bounding box.south){\scriptsize 最小値 $a-2$ が0以上ならグラフは $x$ 軸より下に出ない};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{99}{不定積分（Ⅰ）}
@@ -2438,6 +2578,24 @@ $x\geqq0$ での増減：$0<x<1$ で減少，$x>1$ で増加．\\
 \hspace*{1.5em}$\displaystyle\int_0^3|x-1|\,dx=\int_0^1(1-x)\,dx+\int_1^3(x-1)\,dx=\left[x-\frac{x^2}2\right]_0^1+\left[\frac{x^2}2-x\right]_1^3=\frac12+2=\frac52$\\
 \hspace*{1.5em}（グラフで考えると，2つの直角二等辺三角形の面積 $\dfrac12+2$．）\\[2pt]
 (2)\ $x^2-x-2=(x+1)(x-2)$ は，$0\leqq x\leqq2$ で0以下，$2\leqq x\leqq3$ で0以上．\\
+\begin{center}
+\begin{tikzpicture}[x=9mm,y=9mm]
+\fill[blue!15] (0,1)--(1,0)--(3,2)--(3,0)--(0,0)--cycle;
+\ax{-0.5}{3.5}{-0.5}{2.6}
+\draw[thick,domain=-0.3:3.3,samples=80] plot (\x,{abs(\x-1)});
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\draw (3,0.12)--(3,-0.12); \node[below] at (3,0){\tiny $3$};
+\node[below] at (current bounding box.south){\scriptsize (1)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=9mm,y=6mm]
+\fill[blue!15] plot[domain=0:3,samples=60] (\x,{abs((\x)^2-\x-2)}) -- plot[domain=3:0,samples=60] (\x,{0}) -- cycle;
+\ax{-0.5}{3.5}{-0.5}{4.6}
+\draw[thick,domain=-0.3:3.3,samples=80] plot (\x,{abs((\x)^2-\x-2)});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\draw (3,0.12)--(3,-0.12); \node[below] at (3,0){\tiny $3$};
+\node[below] at (current bounding box.south){\scriptsize (2) $y=|x^2-x-2|$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\displaystyle\int_0^2(x^2-x-2)\,dx=\left[\frac{x^3}3-\frac{x^2}2-2x\right]_0^2=\frac83-2-4=-\frac{10}3$\\[2pt]
 \hspace*{1.5em}$\displaystyle\int_2^3(x^2-x-2)\,dx=\left(9-\frac92-6\right)-\left(\frac83-2-4\right)=-\frac32+\frac{10}3=\frac{11}6$\\[2pt]
 \hspace*{1.5em}$\displaystyle\int_0^3|x^2-x-2|\,dx=-\int_0^2(x^2-x-2)\,dx+\int_2^3(x^2-x-2)\,dx=\frac{10}3+\frac{11}6=\frac{31}6$
@@ -2467,6 +2625,15 @@ $f(x)=x^2-\dfrac23$\\
 \ans{105}{面積（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad $x$ 軸との交点を求めて積分区間を決める．\point{曲線が $x$ 軸より下にある部分の面積は $-\displaystyle\int f(x)\,dx$}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+\fill[blue!15] plot[domain=0:2,samples=60] (\x,{0}) -- plot[domain=2:0,samples=60] (\x,{(\x)^2-2*\x}) -- cycle;
+\ax{-0.8}{2.8}{-1.5}{1.5}
+\draw[thick,domain=-0.4:2.4,samples=80] plot (\x,{(\x)^2-2*\x});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (1,-1) circle (1.6pt);
+\end{tikzpicture}
+\end{center}
 $x^2-2x=x(x-2)=0$ より，$x$ 軸との交点は $x=0,\ 2$．\\
 $0\leqq x\leqq2$ で $x^2-2x\leqq0$（グラフは $x$ 軸より下）だから\\[2pt]
 $S=-\displaystyle\int_0^2(x^2-2x)\,dx=-\left[\frac{x^3}3-x^2\right]_0^2=-\left(\frac83-4\right)=\frac43$\\[2pt]
@@ -2476,6 +2643,18 @@ $S=-\displaystyle\int_0^2(x^2-2x)\,dx=-\left[\frac{x^3}3-x^2\right]_0^2=-\left(\
 \ans{106}{面積（Ⅱ）}
 \begin{kai}
 \textbf{方針}\quad 交点の $x$ 座標を求め，\point{(上の式)$-$(下の式) を交点から交点まで積分}する．放物線と直線で囲まれた部分は $\dfrac16$ 公式が使える．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=5mm]
+\fill[blue!15] plot[domain=-1:2,samples=60] (\x,{\x+2}) -- plot[domain=2:-1,samples=60] (\x,{(\x)^2}) -- cycle;
+\ax{-2}{3}{-0.6}{5}
+\draw[thick,domain=-1.6:2.2,samples=80] plot (\x,{(\x)^2});
+\draw[blue!60!black,domain=-2:2.8,samples=80] plot (\x,{\x+2});
+\draw (-1,0.12)--(-1,-0.12); \node[below] at (-1,0){\tiny $-1$};
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (-1,1) circle (1.6pt);
+\fill (2,4) circle (1.6pt);
+\end{tikzpicture}
+\end{center}
 交点の $x$ 座標：$x^2=x+2$，$x^2-x-2=0$，$(x+1)(x-2)=0$ より\quad $x=-1,\ 2$\\
 $-1\leqq x\leqq2$ では直線が放物線より上にあるので\\[2pt]
 $S=\displaystyle\int_{-1}^2\{(x+2)-x^2\}\,dx=-\int_{-1}^2(x+1)(x-2)\,dx$\\[2pt]
@@ -2486,6 +2665,17 @@ $S=\displaystyle\int_{-1}^2\{(x+2)-x^2\}\,dx=-\int_{-1}^2(x+1)(x-2)\,dx$\\[2pt]
 \ans{107}{面積（Ⅲ）}
 \begin{kai}
 \textbf{方針}\quad 交点を求め，(上の式)$-$(下の式) を積分する．差が2次式になるので\point{$\dfrac16$ 公式}が使える．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=9mm,y=6mm]
+\fill[blue!15] plot[domain=0:2,samples=60] (\x,{-(\x)^2+4*\x}) -- plot[domain=2:0,samples=60] (\x,{(\x)^2}) -- cycle;
+\ax{-0.8}{3}{-0.6}{4.8}
+\draw[thick,domain=-0.5:2.2,samples=80] plot (\x,{(\x)^2});
+\draw[blue!60!black,domain=-0.2:3.5,samples=80] plot (\x,{-(\x)^2+4*\x});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (2,4) circle (1.6pt);
+\node[right] at (2,4){\scriptsize $(2,4)$};
+\end{tikzpicture}
+\end{center}
 交点の $x$ 座標：$x^2=-x^2+4x$，$2x^2-4x=0$，$2x(x-2)=0$ より\quad $x=0,\ 2$\\
 $0\leqq x\leqq2$ では $y=-x^2+4x$ が上にあるので\\[2pt]
 $S=\displaystyle\int_0^2\{(-x^2+4x)-x^2\}\,dx=\int_0^2(-2x^2+4x)\,dx=-2\int_0^2x(x-2)\,dx$\\[2pt]
@@ -2524,6 +2714,19 @@ $S=\displaystyle\int_{-1}^{\frac12}(x+1)^2\,dx+\int_{\frac12}^2(x-2)^2\,dx=\left
 \ans{109}{面積（Ⅴ）}
 \begin{kai}
 \textbf{方針}\quad 接線の式を求め，曲線との交点を求める．\point{接点では重解になるので $(x-1)^2$ を因数にもつ}ことを使うと因数分解が楽．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=6mm]
+\fill[blue!15] plot[domain=-2:1,samples=60] (\x,{(\x)^3-3*\x}) -- plot[domain=1:-2,samples=60] (\x,{-2}) -- cycle;
+\ax{-2.6}{2.4}{-3}{3}
+\draw[thick,domain=-2.2:2.15,samples=80] plot (\x,{(\x)^3-3*\x});
+\draw[blue!60!black,domain=-2.6:2.4,samples=80] plot (\x,{-2});
+\draw (-2,0.12)--(-2,-0.12); \node[below] at (-2,0){\tiny $-2$};
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\fill (1,-2) circle (1.6pt);
+\node[below] at (1,-2){\scriptsize 接点};
+\fill (-2,-2) circle (1.6pt);
+\end{tikzpicture}
+\end{center}
 $y'=3x^2-3$ より，$x=1$ での傾きは0．接線は\quad $y=-2$\\[2pt]
 曲線と接線の交点：$x^3-3x=-2$，$x^3-3x+2=0$\\
 \hspace*{1.5em}$x=1$ で接するので $(x-1)^2$ を因数にもち\quad $(x-1)^2(x+2)=0$．他の交点は $x=-2$\\[2pt]
@@ -2536,6 +2739,17 @@ $S=\displaystyle\int_{-2}^1\{(x^3-3x)-(-2)\}\,dx=\int_{-2}^1(x^3-3x+2)\,dx=\left
 \ans{110}{面積（Ⅵ）}
 \begin{kai}
 \textbf{方針}\quad 全体の面積を求め，\point{直線 $y=mx$ と放物線で囲まれた部分の面積が全体の半分}になる条件を立てる．どちらも $\dfrac16$ 公式で計算できる．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=13mm,y=13mm]
+\fill[blue!8] plot[domain=0:2,samples=60] (\x,{2*\x-(\x)^2}) -- plot[domain=2:0,samples=60] (\x,{0}) -- cycle;\fill[blue!25] plot[domain=0:1.59,samples=60] (\x,{2*\x-(\x)^2}) -- plot[domain=1.59:0,samples=60] (\x,{0.41*\x}) -- cycle;
+\ax{-0.6}{2.6}{-0.4}{1.4}
+\draw[thick,domain=-0.1:2.1,samples=80] plot (\x,{2*\x-(\x)^2});
+\draw[red!70!black,domain=0:2.4,samples=80] plot (\x,{0.41*\x});
+\draw (1.59,0.12)--(1.59,-0.12); \node[below] at (1.59,0){\tiny $2-m$};
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\node[below] at (current bounding box.south){\scriptsize 濃い部分が全体の半分になる};
+\end{tikzpicture}
+\end{center}
 放物線 $y=2x-x^2=-x(x-2)$ と $x$ 軸で囲まれた部分の面積は\\
 \hspace*{1.5em}$\displaystyle\int_0^2(2x-x^2)\,dx=\frac{2^3}6=\frac43$\\[2pt]
 直線 $y=mx$ がこの部分を2つに分けるには，原点での接線の傾き2より小さく $0<m<2$．\\

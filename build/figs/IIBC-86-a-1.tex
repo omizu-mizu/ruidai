@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=7mm,y=6mm]
+\ax{-2.4}{3}{-3}{4.5}
+\draw[thick,domain=-2.2:2.45,samples=80] plot (\x,{(\x)^3-3*\x});
+\draw[blue!60!black,domain=1.6:2.25,samples=80] plot (\x,{9*\x-16});
+\draw[red!70!black,domain=-2:3,samples=80] plot (\x,{-\x/9+20/9});
+\fill (2,2) circle (1.6pt);
+\node[right] at (2,2){\scriptsize $(2,2)$};
+\node[blue!60!black] at (2.6,3.6){\tiny 接線}; \node[red!70!black] at (-1.8,2.9){\tiny 法線};
+\end{tikzpicture}
