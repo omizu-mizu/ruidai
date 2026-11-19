@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=10mm,y=10mm]
+\fill[blue!10] (0,0)--(3,1)--(1,2)--cycle;
+\ax{-0.5}{3.6}{-0.5}{2.6}
+\fill (3,1) circle (1.6pt);
+\node[right] at (3,1){\scriptsize A$(3,1)$};
+\fill (1,2) circle (1.6pt);
+\node[above] at (1,2){\scriptsize B$(1,2)$};
+\draw[->,thick] (0,0)--(3,1); \draw[->,thick] (0,0)--(1,2); \draw (3,1)--(1,2);
+\end{tikzpicture}

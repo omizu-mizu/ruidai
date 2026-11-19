@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=8mm,y=8mm]
+\ax{-0.5}{4.6}{-0.5}{4.8}
+\fill (1,0) circle (1.6pt);
+\node[below] at (1,0){\scriptsize A};
+\fill (3,4) circle (1.6pt);
+\node[above] at (3,4){\scriptsize B};
+\fill (4.2,1.4) circle (1.6pt);
+\node[right] at (4.2,1.4){\scriptsize P};
+\fill (2,2) circle (1.6pt);
+\draw[thick,blue!60!black] (2,2) circle (2.236); \draw (1,0)--(4.2,1.4)--(3,4); \draw (1,0)--(3,4);
+\node[below] at (current bounding box.south){\scriptsize $\angle\mathrm{APB}=90^\circ$};
+\end{tikzpicture}

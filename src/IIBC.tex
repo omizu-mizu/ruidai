@@ -3101,6 +3101,11 @@ $m\vec a+n\vec b=m(2,\ 1)+n(-1,\ 3)=(2m-n,\ m+3n)$\\
 これが $(7,\ 0)$ に等しいので\quad $2m-n=7$ ……①，\quad $m+3n=0$ ……②\\
 ②より $m=-3n$．①に代入して $-6n-n=7$，$n=-1$．よって $m=3$．\\[2pt]
 $\vec c=3\vec a-\vec b$\\
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\draw[->,thick] (0.000,0.000)--(2.000,1.000);\draw[->,thick] (2.000,1.000)--(4.000,2.000);\draw[->,thick] (4.000,2.000)--(6.000,3.000);\draw[->,thick,blue!60!black] (6.000,3.000)--(7.000,0.000);\draw[->,very thick,red!70!black] (0.000,0.000)--(7.000,0.000);\draw[->,gray] (0.000,0.000)--(-1.000,3.000);\node[above left] at (1.000,0.500){\scriptsize $\vec a$};\node[right] at (6.600,1.600){\scriptsize $-\vec b$};\node[below] at (3.500,0.000){\scriptsize $\vec c$};\node[left] at (-1.000,3.000){\scriptsize $\vec b$};
+\end{tikzpicture}
+\end{center}
 （確認：$3(2,\ 1)-(-1,\ 3)=(6+1,\ 3-3)=(7,\ 0)$）
 \end{kai}
 
@@ -3109,6 +3114,11 @@ $\vec c=3\vec a-\vec b$\\
 \textbf{方針}\quad \point{$m:n$ に内分する点は $\dfrac{n\vec a+m\vec b}{m+n}$，外分は $n$ を $-n$ にする}．係数は「遠い方の比」を掛けることに注意．\\[2pt]
 P は AB を $2:3$ に内分するので\quad $\vec p=\dfrac{3\vec a+2\vec b}{2+3}=\dfrac{3\vec a+2\vec b}{5}$\\[2pt]
 Q は AB を $2:3$ に外分するので，$3$ を $-3$ にして\\
+\begin{center}
+\begin{tikzpicture}[scale=0.38]
+\draw (-10.5,0)--(5.5,0);\fill (0.000,0.000) circle (1.4pt);\fill (5.000,0.000) circle (1.4pt);\fill (2.000,0.000) circle (1.4pt);\fill (-10.000,0.000) circle (1.4pt);\node[above] at (0.000,0.000){\scriptsize A};\node[above] at (5.000,0.000){\scriptsize B};\node[above] at (2.000,0.000){\scriptsize P};\node[above] at (-10.000,0.000){\scriptsize Q};\node[below] at (1.000,0.000){\scriptsize 2};\node[below] at (3.500,0.000){\scriptsize 3};\node[below] at (-5,0){\scriptsize 10};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\vec q=\dfrac{-3\vec a+2\vec b}{2-3}=\dfrac{-3\vec a+2\vec b}{-1}=3\vec a-2\vec b$\\
 （$2<3$ なので Q は A の側の延長上にある．係数の和が1になっていることで検算できる．）
 \end{kai}
@@ -3116,6 +3126,19 @@ Q は AB を $2:3$ に外分するので，$3$ を $-3$ にして\\
 \ans{141}{3点が一直線上にある条件}
 \begin{kai}
 \textbf{方針}\quad \point{3点 A，B，C が一直線上 $\iff\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ となる実数 $k$ がある}．成分で比較する．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=4mm,y=2.6mm]
+\ax{-0.5}{8}{-0.5}{12}
+\draw[gray,domain=0.2:7.7,samples=80] plot (\x,{1.5*\x+0.5});
+\fill (1,2) circle (1.6pt);
+\node[left] at (1,2){\scriptsize A};
+\fill (3,5) circle (1.6pt);
+\node[left] at (3,5){\scriptsize B};
+\fill (7,11) circle (1.6pt);
+\node[left] at (7,11){\scriptsize C};
+\draw[->,thick,blue!60!black] (1,2)--(3,5); \draw[->,thick,red!70!black] (1.15,1.8)--(7.15,10.8); \node[blue!60!black] at (2.6,3.2){\tiny $\overrightarrow{\mathrm{AB}}$}; \node[red!70!black] at (5.3,6.7){\tiny $\overrightarrow{\mathrm{AC}}=3\overrightarrow{\mathrm{AB}}$};
+\end{tikzpicture}
+\end{center}
 $\overrightarrow{\mathrm{AB}}=(3-1,\ 5-2)=(2,\ 3)$，\quad $\overrightarrow{\mathrm{AC}}=(x-1,\ 11-2)=(x-1,\ 9)$\\
 $\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ より\quad $(x-1,\ 9)=(2k,\ 3k)$\\
 $y$ 成分から $3k=9$，$k=3$．$x$ 成分から $x-1=6$．\\[2pt]
@@ -3126,6 +3149,11 @@ $y$ 成分から $3k=9$，$k=3$．$x$ 成分から $x-1=6$．\\[2pt]
 \ans{142}{三角形の重心の位置ベクトル}
 \begin{kai}
 \textbf{方針}\quad \point{$\overrightarrow{\mathrm{PQ}}=\vec q-\vec p$（終点 $-$ 始点）}で位置ベクトルに直し，$\vec g$ の式を代入する．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[gray] (1.000,3.000)--(0.000,0.000)--(4.000,0.400)--cycle;\draw[->,thick] (1.667,1.133)--(1.000,3.000);\draw[->,thick] (1.667,1.133)--(0.000,0.000);\draw[->,thick] (1.667,1.133)--(4.000,0.400);\fill (1.667,1.133) circle (1.4pt);\node[below] at (1.667,1.133){\scriptsize G};\node[above] at (1.000,3.000){\scriptsize A};\node[left] at (0.000,0.000){\scriptsize B};\node[right] at (4.000,0.400){\scriptsize C};
+\end{tikzpicture}
+\end{center}
 $\overrightarrow{\mathrm{GA}}=\vec a-\vec g$，\quad $\overrightarrow{\mathrm{GB}}=\vec b-\vec g$，\quad $\overrightarrow{\mathrm{GC}}=\vec c-\vec g$ だから\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{GA}}+\overrightarrow{\mathrm{GB}}+\overrightarrow{\mathrm{GC}}=(\vec a+\vec b+\vec c)-3\vec g$\\
 $\vec g=\dfrac{\vec a+\vec b+\vec c}3$ より $3\vec g=\vec a+\vec b+\vec c$ だから\\
@@ -3166,11 +3194,24 @@ $|\vec a+t\vec b|^2=(3+t)^2+(1+t)^2=2t^2+8t+10=2(t+2)^2+2$\\
 $t=-2$ のとき最小値2をとる．$|\vec a+t\vec b|\geqq0$ だから\\[2pt]
 最小値\quad $\sqrt2$\quad（$t=-2$）\\
 （このとき $\vec a+t\vec b=(1,\ -1)$ は $\vec b$ と垂直になっている．）
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=8mm]
+\ax{-0.8}{4}{-1.6}{2.2}
+\draw[gray,domain=0.4:4,samples=80] plot (\x,{\x-2});
+\draw[->,thick] (0,0)--(3,1); \draw[->,thick,blue!60!black] (0,0)--(1,1); \draw[->,thick,red!70!black] (0,0)--(1,-1); \node at (3,1.3){\tiny $\vec a$}; \node[blue!60!black] at (0.7,1.2){\tiny $\vec b$}; \node[red!70!black] at (1.3,-1.2){\tiny 最小のとき};
+\node[below] at (current bounding box.south){\scriptsize $\vec a+t\vec b$ の終点は灰色の直線上を動く};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{147}{角の2等分ベクトルの扱い（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad \point{角の二等分線の性質 $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}$} で D の分点の比を求め，内分点の公式を使う．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[thick] (0.000,0.000)--(2.000,0.000)--(1.026,2.819)--cycle;\draw[blue!60!black] (0.000,0.000)--(1.610,1.128);\fill (1.610,1.128) circle (1.4pt);\node[below left] at (0.000,0.000){\scriptsize O};\node[right] at (2.000,0.000){\scriptsize A};\node[above] at (1.026,2.819){\scriptsize B};\node[right] at (1.610,1.128){\scriptsize D};\node[below] at (1.000,0.000){\scriptsize 2};\node[left] at (0.513,1.410){\scriptsize 3};\node at (0.525,0.165){\tiny $\bullet$}; \node at (0.335,0.436){\tiny $\bullet$};
+\end{tikzpicture}
+\end{center}
 OD は $\angle\mathrm{AOB}$ の二等分線だから\quad $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}=|\vec a|:|\vec b|=2:3$\\
 D は AB を $2:3$ に内分するので\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{OD}}=\dfrac{3\vec a+2\vec b}{2+3}=\dfrac{3\vec a+2\vec b}{5}$\\
@@ -3180,6 +3221,11 @@ D は AB を $2:3$ に内分するので\\
 \ans{148}{角の2等分ベクトルの扱い（Ⅱ）}
 \begin{kai}
 \textbf{方針}\quad 内心は角の二等分線の交点．\point{$\angle\mathrm O$ の二等分線と AB の交点 D を求め，さらに $\triangle\mathrm{OAD}$ で $\angle\mathrm A$ の二等分線が OD を分ける比}を求める．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\draw[thick] (0.000,0.000)--(3.000,0.000)--(0.000,4.000)--cycle;\draw[blue!60!black] (0.000,0.000)--(1.714,1.714);\draw[dashed] (3.000,0.000)--(1.000,1.000);\draw[gray] (1,1) circle (1);\fill (1.714,1.714) circle (1.4pt);\fill (1.000,1.000) circle (1.4pt);\node[below left] at (0.000,0.000){\scriptsize O};\node[below right] at (3.000,0.000){\scriptsize A};\node[above] at (0.000,4.000){\scriptsize B};\node[above right] at (1.714,1.714){\scriptsize D};\node[above] at (1.000,1.000){\scriptsize I};\node[below] at (1.500,0.000){\scriptsize 3};\node[left] at (0.000,2.000){\scriptsize 4};
+\end{tikzpicture}
+\end{center}
 三平方の定理より\quad $\mathrm{AB}=\sqrt{3^2+4^2}=5$\\[2pt]
 $\angle\mathrm O$ の二等分線と AB の交点を D とすると\quad $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}=3:4$\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{OD}}=\dfrac{4\vec a+3\vec b}7$，\quad $\mathrm{AD}=5\times\dfrac37=\dfrac{15}7$\\[2pt]
@@ -3199,6 +3245,11 @@ $\overrightarrow{\mathrm{OI}}=\dfrac7{12}\overrightarrow{\mathrm{OD}}=\dfrac7{12
 \hspace*{1.5em}$\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{7}$ は，辺 BC を $4:3$ に内分する点 D の位置ベクトル．\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac79\overrightarrow{\mathrm{AD}}$ だから，P は線分 AD を $7:2$ に内分する点．\\[2pt]
 (2)\ $\triangle\mathrm{ABC}=S$ とする．\\
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[thick] (1.200,3.500)--(0.000,0.000)--(4.500,0.000)--cycle;\draw[] (1.200,3.500)--(2.571,0.000);\draw[gray] (2.267,0.778)--(0.000,0.000);\draw[gray] (2.267,0.778)--(4.500,0.000);\fill (2.571,0.000) circle (1.4pt);\fill (2.267,0.778) circle (1.4pt);\node[above] at (1.200,3.500){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (4.500,0.000){\scriptsize C};\node[below] at (2.571,0.000){\scriptsize D};\node[right] at (2.267,0.778){\scriptsize P};\node[below] at (1.286,0.000){\scriptsize 4};\node[below] at (3.536,0.000){\scriptsize 3};\node[left] at (1.733,2.139){\scriptsize 7};\node[left] at (2.419,0.389){\scriptsize 2};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\triangle\mathrm{PBC}$：底辺 BC 共通で，高さの比は $\mathrm{PD}:\mathrm{AD}=2:9$ だから\quad $\dfrac29S$\\
 \hspace*{1.5em}$\triangle\mathrm{PAB}=\dfrac{\mathrm{AP}}{\mathrm{AD}}\triangle\mathrm{ABD}=\dfrac79\cdot\dfrac{\mathrm{BD}}{\mathrm{BC}}S=\dfrac79\cdot\dfrac47S=\dfrac49S$\\
 \hspace*{1.5em}$\triangle\mathrm{PCA}=\dfrac{\mathrm{AP}}{\mathrm{AD}}\triangle\mathrm{ADC}=\dfrac79\cdot\dfrac37S=\dfrac39S$\\
@@ -3213,6 +3264,12 @@ $\overrightarrow{\mathrm{OI}}=\dfrac7{12}\overrightarrow{\mathrm{OD}}=\dfrac7{12
 (2)\ $\vec a\cdot\vec b=1\cdot\sqrt3+\sqrt3\cdot1=2\sqrt3$，\quad $|\vec a|=\sqrt{1+3}=2$，\quad $|\vec b|=\sqrt{3+1}=2$\\
 \hspace*{1.5em}$\cos\theta=\dfrac{2\sqrt3}{2\cdot2}=\dfrac{\sqrt3}2$．$0^\circ\leqq\theta\leqq180^\circ$ より\quad $\theta=30^\circ$\\
 \hspace*{1.5em}（$\vec a$ は $x$ 軸と $60^\circ$，$\vec b$ は $30^\circ$ をなすので，差の $30^\circ$ と一致．）
+\begin{center}
+\begin{tikzpicture}[x=13mm,y=13mm]
+\ax{-0.4}{2}{-0.4}{2}
+\draw[->,thick] (0,0)--(1,1.732); \draw[->,thick,blue!60!black] (0,0)--(1.732,1); \draw (0.4,0.693) arc (60:30:0.8); \node at (0.75,0.85){\tiny $30^\circ$}; \node at (1.1,1.85){\tiny $\vec a$}; \node[blue!60!black] at (1.9,1.1){\tiny $\vec b$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{151}{内積（Ⅱ）}
@@ -3225,11 +3282,28 @@ $\overrightarrow{\mathrm{OI}}=\dfrac7{12}\overrightarrow{\mathrm{OD}}=\dfrac7{12
 \hspace*{1.5em}$x=\dfrac45$ のとき $y=-\dfrac35$，\quad $x=-\dfrac45$ のとき $y=\dfrac35$\\
 \hspace*{1.5em}よって\quad $\left(\dfrac45,\ -\dfrac35\right)$，\quad $\left(-\dfrac45,\ \dfrac35\right)$\\
 \hspace*{1.5em}\point{垂直な単位ベクトルは向きが逆の2つある}
+\begin{center}
+\begin{tikzpicture}[x=16mm,y=16mm]
+\ax{-1.3}{1.6}{-1}{1.4}
+\draw[->,thick] (0,0)--(0.6,0.8) node[above]{\tiny $\vec c$ の向き}; \draw[->,thick,blue!60!black] (0,0)--(0.8,-0.6); \draw[->,thick,blue!60!black] (0,0)--(-0.8,0.6); \draw[gray,dashed] (0,0) circle (1);
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{152}{内積（Ⅲ）}
 \begin{kai}
 \textbf{方針}\quad 公式に代入するため，$|\vec a|^2$，$|\vec b|^2$，$\vec a\cdot\vec b$ を成分で計算する．（この公式は $S=\dfrac12|\vec a||\vec b|\sin\theta$ と $\sin^2\theta=1-\cos^2\theta$ から導かれる．）\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+\fill[blue!10] (0,0)--(3,1)--(1,2)--cycle;
+\ax{-0.5}{3.6}{-0.5}{2.6}
+\fill (3,1) circle (1.6pt);
+\node[right] at (3,1){\scriptsize A$(3,1)$};
+\fill (1,2) circle (1.6pt);
+\node[above] at (1,2){\scriptsize B$(1,2)$};
+\draw[->,thick] (0,0)--(3,1); \draw[->,thick] (0,0)--(1,2); \draw (3,1)--(1,2);
+\end{tikzpicture}
+\end{center}
 $\vec a=\overrightarrow{\mathrm{OA}}=(3,\ 1)$，$\vec b=\overrightarrow{\mathrm{OB}}=(1,\ 2)$ とする．\\
 \hspace*{1.5em}$|\vec a|^2=9+1=10$，\quad $|\vec b|^2=1+4=5$，\quad $\vec a\cdot\vec b=3\cdot1+1\cdot2=5$\\[2pt]
 $S=\dfrac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}=\dfrac12\sqrt{10\cdot5-5^2}=\dfrac12\sqrt{25}=\dfrac52$\\[2pt]
@@ -3252,6 +3326,12 @@ $0^\circ\leqq\theta\leqq180^\circ$ より\quad $\theta=60^\circ$
 $\vec a\cdot\vec b=4\cdot3+2\cdot1=14$，\quad $|\vec b|^2=3^2+1^2=10$\\
 正射影ベクトルは\quad $\dfrac{14}{10}(3,\ 1)=\dfrac75(3,\ 1)=\left(\dfrac{21}5,\ \dfrac75\right)$\\[2pt]
 （確認：$\vec a-\left(\dfrac{21}5,\ \dfrac75\right)=\left(-\dfrac15,\ \dfrac35\right)$ と $\vec b$ の内積は $-\dfrac35+\dfrac35=0$ で垂直．）
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+\ax{-0.5}{5}{-0.5}{2.6}
+\draw[->,thick] (0,0)--(4,2) node[above]{\tiny $\vec a$}; \draw[gray] (0,0)--(4.8,1.6); \draw[->,thick,blue!60!black] (0,0)--(3,1) node[below right]{\tiny $\vec b$}; \draw[->,very thick,red!70!black] (0,0)--(4.2,1.4); \draw[dashed] (4,2)--(4.2,1.4); \node[red!70!black] at (3.2,0.55){\tiny 正射影};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{155}{ベクトル方程式（Ⅰ）}
@@ -3263,6 +3343,23 @@ $\vec a\cdot\vec b=4\cdot3+2\cdot1=14$，\quad $|\vec b|^2=3^2+1^2=10$\\
 (2)\ 直線上の点を $\mathrm P(x,\ y)$ とすると，$\vec n\perp\overrightarrow{\mathrm{AP}}$ より $\vec n\cdot\overrightarrow{\mathrm{AP}}=0$\quad （A は点 $(2,\ -1)$）\\
 \hspace*{1.5em}$2(x-2)+3(y+1)=0$，すなわち\quad $2x+3y-1=0$\\
 \hspace*{1.5em}\point{法線ベクトル $(a,\ b)$ の成分が，そのまま直線の式の $x,\ y$ の係数になる}
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-1}{7.5}{-0.5}{3.4}
+\draw[thick,domain=-1:7.5,samples=80] plot (\x,{(7-\x)/3});
+\fill (1,2) circle (1.6pt);
+\node[above] at (1,2){\scriptsize A};
+\draw[->,thick,blue!60!black] (1,2)--(4,1) node[above]{\tiny $\vec u$};
+\node[below] at (current bounding box.south){\scriptsize (1) 方向ベクトル $\vec u$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-1}{3.5}{-2}{2.6}
+\draw[thick,domain=-1:3.5,samples=80] plot (\x,{(1-2*\x)/3});
+\fill (2,-1) circle (1.6pt);
+\draw[->,thick,red!70!black] (2,-1)--(2.8,0.2) node[right]{\tiny $\vec n$};
+\node[below] at (current bounding box.south){\scriptsize (2) 法線ベクトル $\vec n$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{156}{ベクトル方程式（Ⅱ）}
@@ -3274,6 +3371,20 @@ $\vec p-\vec a=\overrightarrow{\mathrm{AP}}$，$\vec p-\vec b=\overrightarrow{\m
 中心は AB の中点\quad $\left(\dfrac{1+3}2,\ \dfrac{0+4}2\right)=(2,\ 2)$\\
 半径は\quad $\dfrac12\mathrm{AB}=\dfrac12\sqrt{(3-1)^2+(4-0)^2}=\dfrac12\sqrt{20}=\sqrt5$\\[2pt]
 （成分で計算すると $(x-1)(x-3)+y(y-4)=0$，すなわち $(x-2)^2+(y-2)^2=5$．）
+\begin{center}
+\begin{tikzpicture}[x=8mm,y=8mm]
+\ax{-0.5}{4.6}{-0.5}{4.8}
+\fill (1,0) circle (1.6pt);
+\node[below] at (1,0){\scriptsize A};
+\fill (3,4) circle (1.6pt);
+\node[above] at (3,4){\scriptsize B};
+\fill (4.2,1.4) circle (1.6pt);
+\node[right] at (4.2,1.4){\scriptsize P};
+\fill (2,2) circle (1.6pt);
+\draw[thick,blue!60!black] (2,2) circle (2.236); \draw (1,0)--(4.2,1.4)--(3,4); \draw (1,0)--(3,4);
+\node[below] at (current bounding box.south){\scriptsize $\angle\mathrm{APB}=90^\circ$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{157}{軌跡（Ⅰ）}
@@ -3285,6 +3396,11 @@ $\vec p-\vec a=\overrightarrow{\mathrm{AP}}$，$\vec p-\vec b=\overrightarrow{\m
 \hspace*{1.5em}$\overrightarrow{\mathrm{OP}}=\dfrac s2(2\overrightarrow{\mathrm{OA}})+\dfrac t2(2\overrightarrow{\mathrm{OB}})$ と変形し，$\overrightarrow{\mathrm{OA'}}=2\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB'}}=2\overrightarrow{\mathrm{OB}}$ とすると\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{OP}}=\dfrac s2\overrightarrow{\mathrm{OA'}}+\dfrac t2\overrightarrow{\mathrm{OB'}}$，\quad $\dfrac s2+\dfrac t2=1$，\quad $\dfrac s2\geqq0$，$\dfrac t2\geqq0$\\
 \hspace*{1.5em}よって P は\quad 線分 A$'$B$'$\quad （A$'$，B$'$ は OA，OB を2倍に延長した点）
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw[gray] (0.000,0.000)--(4.000,0.600);\draw[gray] (0.000,0.000)--(1.200,3.200);\draw[thick] (2.000,0.300)--(0.600,1.600);\draw[thick,blue!60!black] (4.000,0.600)--(1.200,3.200);\fill (2.000,0.300) circle (1.4pt);\fill (0.600,1.600) circle (1.4pt);\fill (4.000,0.600) circle (1.4pt);\fill (1.200,3.200) circle (1.4pt);\node[below left] at (0.000,0.000){\scriptsize O};\node[below] at (2.000,0.300){\scriptsize A};\node[left] at (0.600,1.600){\scriptsize B};\node[below] at (4.000,0.600){\scriptsize A$'$};\node[left] at (1.200,3.200){\scriptsize B$'$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{158}{軌跡（Ⅱ）}
@@ -3297,11 +3413,21 @@ $k$ を1から2まで動かすと，線分 $\mathrm A_k\mathrm B_k$ は AB か�
 よって P の存在範囲は，台形 $\mathrm{ABB_2A_2}$ の周および内部．\\[2pt]
 $\triangle\mathrm{OA_2B_2}$ は $\triangle\mathrm{OAB}$ を2倍に拡大したもので，面積は $2^2\times3=12$．\\
 求める面積は\quad $12-3=9$
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\fill[blue!15] (2,0.3)--(4,0.6)--(1.2,3.2)--(0.6,1.6)--cycle;\draw[gray] (0.000,0.000)--(4.000,0.600)--(1.200,3.200)--cycle;\draw[] (2.000,0.300)--(0.600,1.600);\node[below left] at (0.000,0.000){\scriptsize O};\node[below] at (2.000,0.300){\scriptsize A};\node[left] at (0.600,1.600){\scriptsize B};\node[below] at (4.000,0.600){\scriptsize A$_2$};\node[left] at (1.200,3.200){\scriptsize B$_2$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{159}{ベクトルと図形}
 \begin{kai}
 \textbf{方針}\quad \point{垂直 $\iff$ 内積が0}．対角線を $\vec a,\ \vec b$ で表して内積を計算する．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[thick] (0.000,0.000)--(3.000,0.000)--(4.500,2.600)--(1.500,2.600)--cycle;\draw[blue!60!black] (0.000,0.000)--(4.500,2.600);\draw[red!70!black] (3.000,0.000)--(1.500,2.600);\node[below left] at (0.000,0.000){\scriptsize O};\node[below right] at (3.000,0.000){\scriptsize A};\node[above right] at (4.500,2.600){\scriptsize C};\node[above left] at (1.500,2.600){\scriptsize B};\node[below] at (1.500,0.000){\scriptsize $\vec a$};\node[left] at (0.750,1.300){\scriptsize $\vec b$};
+\end{tikzpicture}
+\end{center}
 平行四辺形 OACB では\quad $\overrightarrow{\mathrm{OC}}=\overrightarrow{\mathrm{OA}}+\overrightarrow{\mathrm{AC}}=\vec a+\vec b$，\quad $\overrightarrow{\mathrm{AB}}=\overrightarrow{\mathrm{OB}}-\overrightarrow{\mathrm{OA}}=\vec b-\vec a$\\[2pt]
 $\overrightarrow{\mathrm{OC}}\cdot\overrightarrow{\mathrm{AB}}=(\vec b+\vec a)\cdot(\vec b-\vec a)=|\vec b|^2-|\vec a|^2$\\
 （$\vec a\cdot\vec b$ と $\vec b\cdot\vec a$ の項は打ち消しあう．）\\[2pt]
@@ -3347,6 +3473,12 @@ $S=\dfrac12\sqrt{5\cdot5-1^2}=\dfrac12\sqrt{24}=\dfrac12\cdot2\sqrt6=\sqrt6$
 \ans{163}{直方体}
 \begin{kai}
 \textbf{方針}\quad \point{座標を設定して各点の座標を書き出す}．2直線のなす角は，方向ベクトルの内積から $\cos\theta=\dfrac{\vec u\cdot\vec v}{|\vec u||\vec v|}$．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+\draw[gray] (0.000,0.000)--(2.000,0.000);\draw[gray] (2.000,0.000)--(2.550,0.450);\draw[gray] (0.000,1.000)--(2.000,1.000);\draw[gray] (2.000,1.000)--(2.550,1.450);\draw[gray] (2.550,1.450)--(0.550,1.450);\draw[gray] (0.550,1.450)--(0.000,1.000);\draw[gray] (0.000,0.000)--(0.000,1.000);\draw[gray] (2.000,0.000)--(2.000,1.000);\draw[gray] (2.550,0.450)--(2.550,1.450);\draw[dashed,gray] (2.550,0.450)--(0.550,0.450);\draw[dashed,gray] (0.550,0.450)--(0.000,0.000);\draw[dashed,gray] (0.550,0.450)--(0.550,1.450);\draw[thick,blue!60!black] (0.000,0.000)--(2.550,1.450); \draw[thick,red!70!black] (2.000,0.000)--(0.550,1.450);\node[below left] at (0.000,0.000){\scriptsize A};\node[below right] at (2.000,0.000){\scriptsize B};\node[right] at (2.550,0.450){\scriptsize C};\node[left] at (0.550,0.450){\scriptsize D};\node[left] at (0.000,1.000){\scriptsize E};\node[below right] at (2.000,1.000){\scriptsize F};\node[above right] at (2.550,1.450){\scriptsize G};\node[above left] at (0.550,1.450){\scriptsize H};\node[below] at (1.000,0.000){\scriptsize 2};\node[right] at (2.275,0.225){\scriptsize 1};\node[left] at (0.000,0.500){\scriptsize 1};
+\end{tikzpicture}
+
+\end{center}
 A を原点とすると，$\mathrm B(2,\ 0,\ 0)$，$\mathrm D(0,\ 1,\ 0)$，$\mathrm E(0,\ 0,\ 1)$ で\\
 \hspace*{1.5em}$\mathrm G(2,\ 1,\ 1)$（A の対頂点），\quad $\mathrm H(0,\ 1,\ 1)$（E の上の面で D の真上）\\[2pt]
 $\overrightarrow{\mathrm{AG}}=(2,\ 1,\ 1)$，\quad $\overrightarrow{\mathrm{BH}}=(0-2,\ 1-0,\ 1-0)=(-2,\ 1,\ 1)$\\
@@ -3358,6 +3490,11 @@ $\cos\theta=\dfrac{-2}{\sqrt6\cdot\sqrt6}=-\dfrac13$\\
 \ans{164}{四面体（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad 各点の位置ベクトルを $\vec a,\ \vec b,\ \vec c$ で表す．\point{$\overrightarrow{\mathrm{AP}}=k\overrightarrow{\mathrm{AQ}}$ となる実数 $k$ があれば A，P，Q は一直線上}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw[thick] (0.000,3.200)--(-2.300,-0.836);\draw[thick] (0.000,3.200)--(1.900,-0.076);\draw[thick] (0.000,3.200)--(0.250,0.570);\draw[thick] (-2.300,-0.836)--(1.900,-0.076);\draw[thick] (-2.300,-0.836)--(0.250,0.570);\draw[dashed] (1.900,-0.076)--(0.250,0.570);\draw[dashed] (0.000,3.200)--(-0.050,-0.114);\draw[blue!60!black] (-2.300,-0.836)--(0.717,1.231);\fill (-0.050,-0.114) circle (1.4pt);\fill (0.717,1.231) circle (1.4pt);\fill (-0.038,0.715) circle (1.4pt);\node[above] at (0.000,3.200){\scriptsize O};\node[below] at (-2.300,-0.836){\scriptsize A};\node[right] at (1.900,-0.076){\scriptsize B};\node[left] at (0.250,0.570){\scriptsize C};\node[below] at (-0.050,-0.114){\scriptsize G};\node[right] at (0.717,1.231){\scriptsize Q};\node[left] at (-0.038,0.715){\scriptsize P};
+\end{tikzpicture}
+\end{center}
 (1)\ G は $\triangle\mathrm{ABC}$ の重心だから\quad $\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}3$\\
 \hspace*{1.5em}P は OG を $3:1$ に内分するので\quad $\overrightarrow{\mathrm{OP}}=\dfrac34\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}4$\\[2pt]
 (2)\ Q は $\triangle\mathrm{OBC}$ の重心だから\quad $\overrightarrow{\mathrm{OQ}}=\dfrac{\vec0+\vec b+\vec c}3=\dfrac{\vec b+\vec c}3$\\
@@ -3370,6 +3507,11 @@ $\cos\theta=\dfrac{-2}{\sqrt6\cdot\sqrt6}=-\dfrac13$\\
 \ans{165}{四面体（Ⅱ）}
 \begin{kai}
 \textbf{方針}\quad X は2つの条件をみたす：\point{直線 OD 上 → $\overrightarrow{\mathrm{OX}}=k\overrightarrow{\mathrm{OD}}$}，\point{平面 ABC 上 → $\overrightarrow{\mathrm{OX}}=s\vec a+t\vec b+u\vec c$ で $s+t+u=1$}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\fill[blue!8] (-2.300,-0.836)--(1.900,-0.076)--(0.250,0.570)--cycle;\draw[thick] (0.000,3.200)--(-2.300,-0.836);\draw[thick] (0.000,3.200)--(1.900,-0.076);\draw[thick] (0.000,3.200)--(0.250,0.570);\draw[thick] (-2.300,-0.836)--(1.900,-0.076);\draw[thick] (-2.300,-0.836)--(0.250,0.570);\draw[dashed] (1.900,-0.076)--(0.250,0.570);\draw[red!70!black] (0.000,3.200)--(-0.267,-2.540);\fill (-0.145,0.069) circle (1.4pt);\fill (-0.267,-2.540) circle (1.4pt);\node[above] at (0.000,3.200){\scriptsize O};\node[below] at (-2.300,-0.836){\scriptsize A};\node[right] at (1.900,-0.076){\scriptsize B};\node[left] at (0.250,0.570){\scriptsize C};\node[right] at (-0.145,0.069){\scriptsize X};\node[below] at (-0.267,-2.540){\scriptsize D};
+\end{tikzpicture}
+\end{center}
 X は直線 OD 上にあるので，実数 $k$ を用いて\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{OX}}=k\overrightarrow{\mathrm{OD}}=\dfrac k2\vec a+\dfrac k3\vec b+k\vec c$\\[2pt]
 X は平面 ABC 上にあるので，\point{係数の和が1}：\\
@@ -3381,6 +3523,11 @@ X は平面 ABC 上にあるので，\point{係数の和が1}：\\
 \ans{166}{垂線の足のベクトル}
 \begin{kai}
 \textbf{方針}\quad H は\point{平面上の点 → $\overrightarrow{\mathrm{OH}}=\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$}，\point{OH が平面に垂直 → 平面上の2つのベクトル $\overrightarrow{\mathrm{AB}}$，$\overrightarrow{\mathrm{AC}}$ の両方と垂直}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+\draw[->,gray] (0.000,0.000)--(-1.400,-1.064);\draw[->,gray] (0.000,0.000)--(2.800,0.000);\draw[->,gray] (0.000,0.000)--(0.000,2.800);\node[below left] at (-1.400,-1.064){\scriptsize $x$};\node[right] at (2.800,0.000){\scriptsize $y$};\node[above] at (0.000,2.800){\scriptsize $z$};\fill[blue!10] (-1.000,-0.760)--(2.000,0.000)--(0.000,1.000)--cycle;\draw[] (-1.000,-0.760)--(2.000,0.000);\draw[] (2.000,0.000)--(0.000,1.000);\draw[] (0.000,1.000)--(-1.000,-0.760);\draw[thick,red!70!black] (0.000,0.000)--(0.167,0.540);\fill (0.167,0.540) circle (1.4pt);\node[left] at (-1.000,-0.760){\scriptsize A};\node[below] at (2.000,0.000){\scriptsize B};\node[left] at (0.000,1.000){\scriptsize C};\node[right] at (0.167,0.540){\scriptsize H};\node[below] at (0.000,0.000){\scriptsize O};
+\end{tikzpicture}
+\end{center}
 $\overrightarrow{\mathrm{AB}}=(-2,\ 2,\ 0)$，\quad $\overrightarrow{\mathrm{AC}}=(-2,\ 0,\ 1)$\\
 H は平面 $\alpha$ 上にあるので\\
 \hspace*{1.5em}$\overrightarrow{\mathrm{OH}}=(2,\ 0,\ 0)+s(-2,\ 2,\ 0)+t(-2,\ 0,\ 1)=(2-2s-2t,\ 2s,\ t)$\\[2pt]
@@ -3394,6 +3541,12 @@ $\mathrm{OH}=\sqrt{\dfrac19+\dfrac19+\dfrac49}=\sqrt{\dfrac69}=\dfrac{\sqrt6}3$
 \ans{167}{空間ベクトルにおける幾何の活用}
 \begin{kai}
 \textbf{方針}\quad \point{$\overrightarrow{\mathrm{BC}}=\vec c-\vec b$ と表し，$\overrightarrow{\mathrm{OA}}\cdot\overrightarrow{\mathrm{BC}}=0$ を示す}．正四面体では，どの2辺のなす角も $60^\circ$ なので内積がすべて等しい．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw[thick,blue!60!black] (0.250,2.486)--(-1.400,-0.608);\draw[thick] (0.250,2.486)--(1.800,0.000);\draw[thick] (0.250,2.486)--(0.100,0.532);\draw[thick] (-1.400,-0.608)--(1.800,0.000);\draw[thick] (-1.400,-0.608)--(0.100,0.532);\draw[thick,red!70!black,dashed] (1.800,0.000)--(0.100,0.532);\node[above] at (0.250,2.486){\scriptsize O};\node[below] at (-1.400,-0.608){\scriptsize A};\node[right] at (1.800,0.000){\scriptsize B};\node[left] at (0.100,0.532){\scriptsize C};
+\end{tikzpicture}\\
+\hspace*{1.5em}（青の辺 OA と，赤の辺 BC がねじれの位置で垂直になる）
+\end{center}
 正四面体の1辺の長さを1とすると\quad $|\vec a|=|\vec b|=|\vec c|=1$\\
 各面は正三角形なので，$\vec a$ と $\vec b$，$\vec a$ と $\vec c$ のなす角はともに $60^\circ$．\\
 \hspace*{1.5em}$\vec a\cdot\vec b=\vec a\cdot\vec c=1\cdot1\cdot\cos60^\circ=\dfrac12$\\[2pt]

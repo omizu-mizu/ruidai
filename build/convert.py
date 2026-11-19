@@ -67,7 +67,9 @@ class Conv:
     def fig(self, code):
         self.nfig += 1
         fid = f'{self.fig_prefix}-{self.nfig}'
-        (FIGDIR / f'{fid}.tex').write_text(code)
+        fp = FIGDIR / f'{fid}.tex'
+        if not fp.exists() or fp.read_text() != code:   # 変わったときだけ書く（figs.sh の再生成を減らす）
+            fp.write_text(code)
         self.figs.append(fid)
         return f'<span class="fig" data-fig="{fid}"></span>'
 

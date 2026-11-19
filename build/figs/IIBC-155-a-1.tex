@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-1}{7.5}{-0.5}{3.4}
+\draw[thick,domain=-1:7.5,samples=80] plot (\x,{(7-\x)/3});
+\fill (1,2) circle (1.6pt);
+\node[above] at (1,2){\scriptsize A};
+\draw[->,thick,blue!60!black] (1,2)--(4,1) node[above]{\tiny $\vec u$};
+\node[below] at (current bounding box.south){\scriptsize (1) 方向ベクトル $\vec u$};
+\end{tikzpicture}

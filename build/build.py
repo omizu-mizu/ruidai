@@ -38,6 +38,7 @@ for b in books:
 figs = {}
 for f in sorted((B / 'figs').glob('*.svg')):
     svg = f.read_text()
+    svg = re.sub(r'(\d+\.\d\d)\d+', r'\1', svg)   # 座標の小数を2桁に丸めて軽くする
     w = float(re.search(r'width="([\d.]+)', svg).group(1))
     figs[f.stem] = {'w': w, 'src': 'data:image/svg+xml;base64,' + base64.b64encode(svg.encode()).decode()}
 
