@@ -2106,159 +2106,289 @@ $S=-\displaystyle\int_0^2(x^2-2x)\,dx=-\left[\frac{x^3}3-x^2\right]_0^2=-\left(\
 
 \ans{106}{面積（Ⅱ）}
 \begin{kai}
-交点の $x$ 座標は $x^2=x+2$ より $-1,\ 2$．\\
-\point{$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac{(\beta-\alpha)^3}6$}\quad $S=\displaystyle\int_{-1}^2(x+2-x^2)\,dx=\frac{3^3}6=\frac92$
+\textbf{方針}\quad 交点の $x$ 座標を求め，\point{(上の式)$-$(下の式) を交点から交点まで積分}する．放物線と直線で囲まれた部分は $\dfrac16$ 公式が使える．\\[2pt]
+交点の $x$ 座標：$x^2=x+2$，$x^2-x-2=0$，$(x+1)(x-2)=0$ より\quad $x=-1,\ 2$\\
+$-1\leqq x\leqq2$ では直線が放物線より上にあるので\\[2pt]
+$S=\displaystyle\int_{-1}^2\{(x+2)-x^2\}\,dx=-\int_{-1}^2(x+1)(x-2)\,dx$\\[2pt]
+\point{$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac{(\beta-\alpha)^3}6$} を使うと\quad $S=\dfrac{\{2-(-1)\}^3}6=\dfrac{27}6=\dfrac92$\\
+（直接計算：$\left[\dfrac{x^2}2+2x-\dfrac{x^3}3\right]_{-1}^2=\left(2+4-\dfrac83\right)-\left(\dfrac12-2+\dfrac13\right)=\dfrac{10}3+\dfrac76=\dfrac92$）
 \end{kai}
 
 \ans{107}{面積（Ⅲ）}
 \begin{kai}
-交点は $x^2=-x^2+4x$ より $x=0,\ 2$．\quad $S=\displaystyle\int_0^2(-2x^2+4x)\,dx=2\cdot\frac{2^3}6=\frac83$
+\textbf{方針}\quad 交点を求め，(上の式)$-$(下の式) を積分する．差が2次式になるので\point{$\dfrac16$ 公式}が使える．\\[2pt]
+交点の $x$ 座標：$x^2=-x^2+4x$，$2x^2-4x=0$，$2x(x-2)=0$ より\quad $x=0,\ 2$\\
+$0\leqq x\leqq2$ では $y=-x^2+4x$ が上にあるので\\[2pt]
+$S=\displaystyle\int_0^2\{(-x^2+4x)-x^2\}\,dx=\int_0^2(-2x^2+4x)\,dx=-2\int_0^2x(x-2)\,dx$\\[2pt]
+\hspace*{1.5em}$=-2\cdot\left(-\dfrac{2^3}6\right)=\dfrac83$\\
+（直接計算：$\left[-\dfrac23x^3+2x^2\right]_0^2=-\dfrac{16}3+8=\dfrac83$）
 \end{kai}
 
 \ans{108}{面積（Ⅳ）}
 \begin{kai}
-$\ell_1:\ y=-2x-1$，\ $\ell_2:\ y=4x-4$．交点の $x$ 座標は $\dfrac12$．\\
-$S=\displaystyle\int_{-1}^{\frac12}(x+1)^2\,dx+\int_{\frac12}^2(x-2)^2\,dx=\frac{(3/2)^3}{3}+\frac{(3/2)^3}{3}=\frac94$
+\textbf{方針}\quad 2本の接線の式と交点を求める．\point{接線の交点で積分区間を分ける}．放物線と接線の差は $(x-\text{接点})^2$ の形になる．\\[2pt]
+$y'=2x$．\\
+$\ell_1$：点 $(-1,\ 1)$ で傾き $-2$ だから\quad $y=-2(x+1)+1=-2x-1$\\
+$\ell_2$：点 $(2,\ 4)$ で傾き $4$ だから\quad $y=4(x-2)+4=4x-4$\\
+$\ell_1$ と $\ell_2$ の交点：$-2x-1=4x-4$ より\quad $x=\dfrac12$\\[2pt]
+放物線は接線より上にあり，$x^2-(-2x-1)=(x+1)^2$，$x^2-(4x-4)=(x-2)^2$ だから\\[2pt]
+$S=\displaystyle\int_{-1}^{\frac12}(x+1)^2\,dx+\int_{\frac12}^2(x-2)^2\,dx=\left[\frac{(x+1)^3}3\right]_{-1}^{\frac12}+\left[\frac{(x-2)^3}3\right]_{\frac12}^2$\\[2pt]
+\hspace*{1.5em}$=\dfrac13\left(\dfrac32\right)^3+\dfrac13\left(\dfrac32\right)^3=\dfrac{9}{8}+\dfrac98=\dfrac94$\\
+\point{接線の交点の $x$ 座標は2接点の中点 $\dfrac{-1+2}2=\dfrac12$ になる}
 \end{kai}
 
 \ans{109}{面積（Ⅴ）}
 \begin{kai}
-$y'=3x^2-3$ より $x=1$ での接線は $y=-2$．$x^3-3x+2=(x-1)^2(x+2)$ より他の交点は $x=-2$．\\
-$-2\leqq x\leqq1$ で曲線が上にあるので\quad $S=\displaystyle\int_{-2}^1(x^3-3x+2)\,dx=\frac{27}4$
+\textbf{方針}\quad 接線の式を求め，曲線との交点を求める．\point{接点では重解になるので $(x-1)^2$ を因数にもつ}ことを使うと因数分解が楽．\\[2pt]
+$y'=3x^2-3$ より，$x=1$ での傾きは0．接線は\quad $y=-2$\\[2pt]
+曲線と接線の交点：$x^3-3x=-2$，$x^3-3x+2=0$\\
+\hspace*{1.5em}$x=1$ で接するので $(x-1)^2$ を因数にもち\quad $(x-1)^2(x+2)=0$．他の交点は $x=-2$\\[2pt]
+$-2\leqq x\leqq1$ では $(x-1)^2(x+2)\geqq0$ だから，曲線が接線より上にある．\\[2pt]
+$S=\displaystyle\int_{-2}^1\{(x^3-3x)-(-2)\}\,dx=\int_{-2}^1(x^3-3x+2)\,dx=\left[\frac{x^4}4-\frac32x^2+2x\right]_{-2}^1$\\[2pt]
+\hspace*{1.5em}$=\left(\dfrac14-\dfrac32+2\right)-(4-6-4)=\dfrac34+6=\dfrac{27}4$\\
+（公式 $\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)^2\,dx=\frac{(\beta-\alpha)^4}{12}$ を使うと $\dfrac{3^4}{12}=\dfrac{27}4$．）
 \end{kai}
 
 \ans{110}{面積（Ⅵ）}
 \begin{kai}
-放物線と $x$ 軸で囲まれた面積は $\dfrac{2^3}6=\dfrac43$．\\
-放物線と $y=mx$（$0<m<2$）の交点は $x=0,\ 2-m$ で，囲まれた面積は $\displaystyle\int_0^{2-m}\{(2-m)x-x^2\}\,dx=\frac{(2-m)^3}6$．\\
-$\dfrac{(2-m)^3}6=\dfrac23$ より $(2-m)^3=4$．\quad $m=2-\sqrt[3]4$
+\textbf{方針}\quad 全体の面積を求め，\point{直線 $y=mx$ と放物線で囲まれた部分の面積が全体の半分}になる条件を立てる．どちらも $\dfrac16$ 公式で計算できる．\\[2pt]
+放物線 $y=2x-x^2=-x(x-2)$ と $x$ 軸で囲まれた部分の面積は\\
+\hspace*{1.5em}$\displaystyle\int_0^2(2x-x^2)\,dx=\frac{2^3}6=\frac43$\\[2pt]
+直線 $y=mx$ がこの部分を2つに分けるには，原点での接線の傾き2より小さく $0<m<2$．\\
+放物線と直線の交点：$2x-x^2=mx$，$x\{x-(2-m)\}=0$ より\quad $x=0,\ 2-m$\\
+直線と放物線で囲まれた部分の面積は\\
+\hspace*{1.5em}$\displaystyle\int_0^{2-m}\{(2x-x^2)-mx\}\,dx=-\int_0^{2-m}x\{x-(2-m)\}\,dx=\frac{(2-m)^3}6$\\[2pt]
+これが全体の半分 $\dfrac23$ に等しいので\quad $\dfrac{(2-m)^3}6=\dfrac23$，\quad $(2-m)^3=4$\\
+$2-m=\sqrt[3]4$ より\quad $m=2-\sqrt[3]4$\quad （$0<m<2$ をみたす）
 \end{kai}
 
 \shouans{第7章}{数列}
 \ans{111}{等差数列（Ⅰ）}
 \begin{kai}
-初項 $a$，公差 $d$ とすると $a+4d=11$，$a+11d=32$．$d=3$，$a=-1$．\quad $a_n=-1+3(n-1)=3n-4$
+\textbf{方針}\quad \point{初項 $a$，公差 $d$ の等差数列の一般項は $a_n=a+(n-1)d$}．条件から $a,\ d$ の連立方程式をつくる．\\[2pt]
+初項を $a$，公差を $d$ とすると\\
+\hspace*{1.5em}$a_5=a+4d=11$ ……①，\quad $a_{12}=a+11d=32$ ……②\\
+②$-$①より $7d=21$，$d=3$．①より $a=11-12=-1$．\\[2pt]
+初項 $-1$，公差 $3$，\quad 一般項\quad $a_n=-1+3(n-1)=3n-4$\\
+（確認：$a_5=11$，$a_{12}=32$）
 \end{kai}
 
 \ans{112}{等差数列（Ⅱ）}
 \begin{kai}
-(1)\ $\dfrac{20\{2\cdot2+19\cdot3\}}{2}=610$\\[2pt]
-(2)\ 最小は $105=7\cdot15$，最大は $994=7\cdot142$．個数は $142-15+1=128$．\\
-\hspace*{1.5em}和は $\dfrac{128(105+994)}{2}=70336$
+\textbf{方針}\quad \point{等差数列の和 $S_n=\dfrac{n(a_1+a_n)}{2}=\dfrac{n\{2a+(n-1)d\}}{2}$}．(2)は最小・最大の7の倍数を求めて，公差7の等差数列とみる．\\[2pt]
+(1)\ $S_{20}=\dfrac{20\{2\cdot2+(20-1)\cdot3\}}{2}=10\times61=610$\\[2pt]
+(2)\ $100\div7=14$ 余り2 より，3桁の最小の7の倍数は $7\cdot15=105$．\\
+\hspace*{1.5em}$999\div7=142$ 余り5 より，最大の7の倍数は $7\cdot142=994$．\\
+\hspace*{1.5em}$7\cdot15,\ 7\cdot16,\ \cdots,\ 7\cdot142$ だから，個数は\quad $142-15+1=128$（個）\\
+\hspace*{1.5em}これは初項105，末項994，項数128の等差数列なので，和は\\
+\hspace*{1.5em}$\dfrac{128(105+994)}{2}=64\times1099=70336$
 \end{kai}
 
 \ans{113}{等差数列（Ⅲ）}
 \begin{kai}
-(1)\ $a_n=47-3(n-1)=50-3n<0$ より $n>\dfrac{50}3$．\quad 第17項\\[2pt]
-(2)\ \point{正の項をすべて加えたところで最大}\quad $a_{16}=2>0$，$a_{17}=-1<0$ だから $n=16$．\\
-\hspace*{1.5em}$S_{16}=\dfrac{16(47+2)}2=392$
+\textbf{方針}\quad 一般項を求めて $a_n<0$ を解く．公差が負の等差数列の和は，\point{正の項をすべて加えたところで最大}になる．\\[2pt]
+(1)\ $a_n=47+(n-1)\cdot(-3)=50-3n$\\
+\hspace*{1.5em}$a_n<0$ より $50-3n<0$，$n>\dfrac{50}3=16.6\cdots$．これをみたす最小の自然数は17．\quad 第17項\\[2pt]
+(2)\ $a_{16}=50-48=2>0$，$a_{17}=50-51=-1<0$．\\
+\hspace*{1.5em}第16項までは正の数を加えるので $S_n$ は増え，第17項以降は負の数を加えるので減る．\\
+\hspace*{1.5em}よって $S_n$ が最大となるのは\quad $n=16$\\
+\hspace*{1.5em}$S_{16}=\dfrac{16(a_1+a_{16})}2=\dfrac{16(47+2)}2=392$
 \end{kai}
 
 \ans{114}{等差数列（Ⅳ）}
 \begin{kai}
-\point{3数を $a-d,\ a,\ a+d$ とおく}\quad 和 $3a=15$ より $a=5$．積 $5(25-d^2)=80$ より $d^2=9$，$d=\pm3$．\\
-3つの数は\quad $2,\ 5,\ 8$
+\textbf{方針}\quad \point{等差数列をなす3数は $a-d,\ a,\ a+d$ とおく}と，和をとったとき $d$ が消えて計算が楽になる．\\[2pt]
+3つの数を $a-d,\ a,\ a+d$ とおく．\\
+和：$(a-d)+a+(a+d)=3a=15$ より\quad $a=5$\\
+積：$(5-d)\cdot5\cdot(5+d)=5(25-d^2)=80$ より $25-d^2=16$，\quad $d^2=9$，\quad $d=\pm3$\\[2pt]
+$d=3$ のとき $2,\ 5,\ 8$，\quad $d=-3$ のとき $8,\ 5,\ 2$\\
+どちらも同じ3数なので，3つの数は\quad $2,\ 5,\ 8$
 \end{kai}
 
 \ans{115}{等比数列（Ⅰ）}
 \begin{kai}
-初項 $a$，公比 $r$ とすると $ar=6$，$ar^4=162$．$r^3=27$，$r$ は実数だから $r=3$，$a=2$．\quad $a_n=2\cdot3^{n-1}$
+\textbf{方針}\quad \point{初項 $a$，公比 $r$ の等比数列の一般項は $a_n=ar^{n-1}$}．条件の2式を\point{割り算して $a$ を消去}する．\\[2pt]
+初項を $a$，公比を $r$ とすると\\
+\hspace*{1.5em}$a_2=ar=6$ ……①，\quad $a_5=ar^4=162$ ……②\\
+②÷①より\quad $r^3=27$\\
+$r$ は実数だから\quad $r=3$．①より $a=2$．\\[2pt]
+一般項は\quad $a_n=2\cdot3^{n-1}$\\
+（$r^3=27$ の虚数解 $r=\dfrac{-3\pm3\sqrt3\,i}{2}$ は「公比は実数」の条件で除かれる．）
 \end{kai}
 
 \ans{116}{等比数列（Ⅱ）}
 \begin{kai}
-(1)\ $\dfrac{3(2^{10}-1)}{2-1}=3069$\\[2pt]
-(2)\ $3(2^n-1)>1000$ より $2^n>334.3\cdots$．$2^8=256$，$2^9=512$ だから\quad $n=9$
+\textbf{方針}\quad \point{等比数列の和 $S_n=\dfrac{a(r^n-1)}{r-1}$（$r\neq1$）}．(2)は不等式を $2^n$ について解き，2の累乗の値と比べる．\\[2pt]
+(1)\ $S_{10}=\dfrac{3(2^{10}-1)}{2-1}=3(1024-1)=3069$\\[2pt]
+(2)\ $S_n=\dfrac{3(2^n-1)}{2-1}=3(2^n-1)$．$S_n>1000$ より\\
+\hspace*{1.5em}$2^n-1>\dfrac{1000}3=333.3\cdots$，\quad $2^n>334.3\cdots$\\
+\hspace*{1.5em}$2^8=256<334.3$，\quad $2^9=512>334.3$ だから，初めて超えるのは\quad $n=9$\\
+\hspace*{1.5em}（確認：$S_8=3\cdot255=765$，$S_9=3\cdot511=1533$）
 \end{kai}
 
 \ans{117}{等差中項・等比中項}
 \begin{kai}
-\point{$a,\ b,\ c$ が等差数列 $\iff2b=a+c$，等比数列 $\iff b^2=ac$}\\
-$8=a+b$，$b^2=4a$．$a=8-b$ を代入して $b^2+4b-32=0$，$b=4,\ -8$．\\
-$(a,\ b)=(4,\ 4),\ (16,\ -8)$
+\textbf{方針}\quad \point{$a,\ b,\ c$ がこの順に等差数列 $\iff2b=a+c$，等比数列 $\iff b^2=ac$}（中項の性質）．順番に注意して式を立てる．\\[2pt]
+$a,\ 4,\ b$ が等差数列だから\quad $2\cdot4=a+b$，\quad $a+b=8$ ……①\\
+$4,\ b,\ a$ が等比数列だから\quad $b^2=4a$ ……②\\[2pt]
+①より $a=8-b$．②に代入して\quad $b^2=4(8-b)$，\quad $b^2+4b-32=0$，\quad $(b+8)(b-4)=0$\\
+\hspace*{1.5em}$b=4$ のとき $a=4$，\quad $b=-8$ のとき $a=16$\\[2pt]
+よって\quad $(a,\ b)=(4,\ 4),\ (16,\ -8)$\\
+（確認：$16,\ 4,\ -8$ は公差 $-12$，$4,\ -8,\ 16$ は公比 $-2$．）
 \end{kai}
 
 \ans{118}{$\Sigma$ 記号を用いた和の計算（Ⅰ）}
 \begin{kai}
-(1)\ $2\cdot\dfrac{n(n+1)}2-n=n^2$\\[2pt]
-(2)\ $\displaystyle\sum k^2+\sum k=\frac{n(n+1)(2n+1)}6+\frac{n(n+1)}2=\frac{n(n+1)(n+2)}3$
+\textbf{方針}\quad \point{$\displaystyle\sum_{k=1}^nk=\frac{n(n+1)}2$，$\displaystyle\sum_{k=1}^nk^2=\frac{n(n+1)(2n+1)}6$，$\displaystyle\sum_{k=1}^nc=nc$}．展開して項ごとに分け，最後は共通因数でくくって整理する．\\[2pt]
+(1)\ $\displaystyle\sum_{k=1}^n(2k-1)=2\sum_{k=1}^nk-\sum_{k=1}^n1=2\cdot\frac{n(n+1)}2-n=n^2+n-n=n^2$\\
+\hspace*{1.5em}（1から始まる奇数を $n$ 個足すと $n^2$．）\\[2pt]
+(2)\ $k(k+1)=k^2+k$ だから\\
+\hspace*{1.5em}$\displaystyle\sum_{k=1}^nk(k+1)=\frac{n(n+1)(2n+1)}6+\frac{n(n+1)}2=\frac{n(n+1)}6\{(2n+1)+3\}$\\
+\hspace*{1.5em}$=\dfrac{n(n+1)(2n+4)}6=\dfrac{n(n+1)(n+2)}3$\\
+\hspace*{1.5em}（確認：$n=2$ のとき $1\cdot2+2\cdot3=8$，公式 $\dfrac{2\cdot3\cdot4}3=8$）
 \end{kai}
 
 \ans{119}{$\Sigma$ 記号を用いた和の計算（Ⅱ）}
 \begin{kai}
-(1)\ 初項3，公比3，項数 $n$ の等比数列の和で\quad $\dfrac{3(3^n-1)}2$\\[2pt]
-(2)\ $\dfrac{n(n+1)(2n+1)}6+\dfrac{2(2^n-1)}{2-1}=\dfrac{n(n+1)(2n+1)}6+2^{n+1}-2$
+\textbf{方針}\quad $\displaystyle\sum_{k=1}^nr^k$ は\point{初項 $r$，公比 $r$，項数 $n$ の等比数列の和}．初項が $r^1$ であることに注意する．\\[2pt]
+(1)\ $\displaystyle\sum_{k=1}^n3^k=3+3^2+\cdots+3^n$ は，初項3，公比3，項数 $n$ の等比数列の和だから\\
+\hspace*{1.5em}$\dfrac{3(3^n-1)}{3-1}=\dfrac{3(3^n-1)}2=\dfrac{3^{n+1}-3}2$\\[2pt]
+(2)\ $\displaystyle\sum_{k=1}^n(k^2+2^k)=\sum_{k=1}^nk^2+\sum_{k=1}^n2^k$\\
+\hspace*{1.5em}$\displaystyle\sum_{k=1}^n2^k$ は初項2，公比2，項数 $n$ の等比数列の和で $\dfrac{2(2^n-1)}{2-1}=2^{n+1}-2$\\
+\hspace*{1.5em}よって\quad $\dfrac{n(n+1)(2n+1)}6+2^{n+1}-2$
 \end{kai}
 
 \ans{120}{$\Sigma$ 記号を用いた和の計算（Ⅲ）}
 \begin{kai}
-\point{部分分数に分けて，隣り合う項を打ち消す}\\
-(1)\ $\dfrac1{k(k+1)}=\dfrac1k-\dfrac1{k+1}$ より\quad $1-\dfrac1{n+1}=\dfrac n{n+1}$\\[2pt]
-(2)\ $\dfrac1{(2k-1)(2k+1)}=\dfrac12\left(\dfrac1{2k-1}-\dfrac1{2k+1}\right)$ より\quad $\dfrac12\left(1-\dfrac1{2n+1}\right)=\dfrac n{2n+1}$
+\textbf{方針}\quad \point{部分分数に分けて，隣り合う項を打ち消す}．$\dfrac1{AB}=\dfrac1{B-A}\left(\dfrac1A-\dfrac1B\right)$ を使う．\\[2pt]
+(1)\ $\dfrac1{k(k+1)}=\dfrac1k-\dfrac1{k+1}$ だから\\
+\hspace*{1.5em}$\displaystyle\sum_{k=1}^n\frac1{k(k+1)}=\left(\frac11-\frac12\right)+\left(\frac12-\frac13\right)+\cdots+\left(\frac1n-\frac1{n+1}\right)$\\
+\hspace*{1.5em}途中が打ち消しあって最初と最後だけが残り\quad $=1-\dfrac1{n+1}=\dfrac n{n+1}$\\[2pt]
+(2)\ $(2k+1)-(2k-1)=2$ だから\quad $\dfrac1{(2k-1)(2k+1)}=\dfrac12\left(\dfrac1{2k-1}-\dfrac1{2k+1}\right)$\\
+\hspace*{1.5em}$\displaystyle\sum_{k=1}^n\frac1{(2k-1)(2k+1)}=\frac12\left\{\left(\frac11-\frac13\right)+\left(\frac13-\frac15\right)+\cdots+\left(\frac1{2n-1}-\frac1{2n+1}\right)\right\}$\\
+\hspace*{1.5em}$=\dfrac12\left(1-\dfrac1{2n+1}\right)=\dfrac12\cdot\dfrac{2n}{2n+1}=\dfrac n{2n+1}$\\
+\hspace*{1.5em}\point{係数 $\dfrac12$ を忘れない．分けた式を通分して検算するとよい}
 \end{kai}
 
 \ans{121}{$\Sigma$ 記号を用いた和の計算（Ⅳ）}
 \begin{kai}
-\point{(等差)×(等比) の和は $S-rS$ を計算する}\\
-$S_n-2S_n=2+2^2+\cdots+2^n-n\cdot2^{n+1}=2^{n+1}-2-n\cdot2^{n+1}$．\\
-$S_n=(n-1)2^{n+1}+2$
+\textbf{方針}\quad \point{(等差数列)×(等比数列) の和は，公比 $r$ を掛けた $rS$ との差 $S-rS$ をつくる}と，等比数列の和に帰着する．\\[2pt]
+$S_n=1\cdot2+2\cdot2^2+3\cdot2^3+\cdots+n\cdot2^n$\\
+$2S_n=\phantom{1\cdot2+{}}1\cdot2^2+2\cdot2^3+\cdots+(n-1)\cdot2^n+n\cdot2^{n+1}$\\[2pt]
+上の式から下の式を引くと（$2^k$ の係数をそろえて引く）\\
+\hspace*{1.5em}$S_n-2S_n=2+2^2+2^3+\cdots+2^n-n\cdot2^{n+1}$\\
+\hspace*{1.5em}$-S_n=\dfrac{2(2^n-1)}{2-1}-n\cdot2^{n+1}=2^{n+1}-2-n\cdot2^{n+1}=(1-n)2^{n+1}-2$\\[2pt]
+よって\quad $S_n=(n-1)2^{n+1}+2$\\
+（確認：$n=2$ のとき $2+8=10$，公式 $1\cdot8+2=10$）
 \end{kai}
 
 \ans{122}{階差数列}
 \begin{kai}
-階差数列は $1,\ 3,\ 5,\ 7,\ \cdots$ で，第 $k$ 項は $2k-1$．$n\geqq2$ のとき\\
-$a_n=1+\displaystyle\sum_{k=1}^{n-1}(2k-1)=1+(n-1)^2=n^2-2n+2$．これは $n=1$ のときも成りたつ．\quad $a_n=n^2-2n+2$
+\textbf{方針}\quad 差をとった数列（階差数列）$b_n=a_{n+1}-a_n$ の規則を見つける．\point{$n\geqq2$ のとき $a_n=a_1+\displaystyle\sum_{k=1}^{n-1}b_k$}．最後に $n=1$ でも成りたつか確かめる．\\[2pt]
+階差数列は $2-1,\ 5-2,\ 10-5,\ 17-10,\ \cdots$ より\quad $1,\ 3,\ 5,\ 7,\ \cdots$\\
+これは初項1，公差2の等差数列で，第 $k$ 項は $b_k=2k-1$．\\[2pt]
+$n\geqq2$ のとき\\
+\hspace*{1.5em}$a_n=1+\displaystyle\sum_{k=1}^{n-1}(2k-1)=1+(n-1)^2=n^2-2n+2$\\
+\hspace*{1.5em}（類題118(1)より，1から始まる奇数 $n-1$ 個の和は $(n-1)^2$）\\
+$n=1$ のとき $1-2+2=1=a_1$ で成りたつ．\\[2pt]
+よって\quad $a_n=n^2-2n+2$
 \end{kai}
 
 \ans{123}{2項間の漸化式（Ⅰ）}
 \begin{kai}
-階差数列が $4n$ だから，$n\geqq2$ のとき $a_n=3+\displaystyle\sum_{k=1}^{n-1}4k=3+2n(n-1)$．$n=1$ でも成りたつ．\\
-$a_n=2n^2-2n+3$
+\textbf{方針}\quad $a_{n+1}-a_n=4n$ だから，\point{階差数列が $4n$ の数列}．$a_n=a_1+\displaystyle\sum_{k=1}^{n-1}4k$（$n\geqq2$）で求める．\\[2pt]
+$a_{n+1}-a_n=4n$ より，$\{a_n\}$ の階差数列の第 $n$ 項は $4n$．\\
+$n\geqq2$ のとき\\
+\hspace*{1.5em}$a_n=3+\displaystyle\sum_{k=1}^{n-1}4k=3+4\cdot\frac{(n-1)n}2=3+2n(n-1)=2n^2-2n+3$\\
+\hspace*{1.5em}\point{$\displaystyle\sum_{k=1}^{n-1}k=\frac{(n-1)n}2$．$n$ を $n-1$ におきかえる}\\
+$n=1$ のとき $2-2+3=3=a_1$ で成りたつ．\\[2pt]
+よって\quad $a_n=2n^2-2n+3$
 \end{kai}
 
 \ans{124}{2項間の漸化式（Ⅱ）}
 \begin{kai}
-\point{$\alpha=3\alpha+2$ の解 $\alpha=-1$ を利用}\quad $a_{n+1}+1=3(a_n+1)$．\\
-数列 $\{a_n+1\}$ は初項2，公比3の等比数列．\quad $a_n=2\cdot3^{n-1}-1$
+\textbf{方針}\quad $a_{n+1}=pa_n+q$ 型は，\point{$\alpha=p\alpha+q$ をみたす $\alpha$ を引いて $a_{n+1}-\alpha=p(a_n-\alpha)$ と変形}する．$\{a_n-\alpha\}$ が等比数列になる．\\[2pt]
+$\alpha=3\alpha+2$ を解くと\quad $\alpha=-1$\\
+漸化式から $\alpha=3\alpha+2$ を辺々引くと\quad $a_{n+1}-\alpha=3(a_n-\alpha)$，すなわち\\
+\hspace*{1.5em}$a_{n+1}+1=3(a_n+1)$\\
+よって数列 $\{a_n+1\}$ は，初項 $a_1+1=2$，公比3の等比数列．\\
+\hspace*{1.5em}$a_n+1=2\cdot3^{n-1}$\\[2pt]
+よって\quad $a_n=2\cdot3^{n-1}-1$\\
+（確認：$a_2=3\cdot1+2=5$，公式 $2\cdot3-1=5$）
 \end{kai}
 
 \ans{125}{2項間の漸化式（Ⅲ）}
 \begin{kai}
-両辺を $3^{n+1}$ でわると $b_{n+1}=\dfrac23b_n+\dfrac13$．変形して $b_{n+1}-1=\dfrac23(b_n-1)$．\\
-$b_1-1=\dfrac13-1=-\dfrac23$ より $b_n-1=-\left(\dfrac23\right)^n$．\\
-$a_n=3^nb_n=3^n-2^n$
+\textbf{方針}\quad $3^n$ がじゃまなので，\point{両辺を $3^{n+1}$ で割って $b_n=\dfrac{a_n}{3^n}$ の漸化式}にすると，$b_{n+1}=pb_n+q$ 型になる．\\[2pt]
+漸化式の両辺を $3^{n+1}$ で割ると\\
+\hspace*{1.5em}$\dfrac{a_{n+1}}{3^{n+1}}=\dfrac23\cdot\dfrac{a_n}{3^n}+\dfrac{3^n}{3^{n+1}}$，\quad すなわち\quad $b_{n+1}=\dfrac23b_n+\dfrac13$\\[2pt]
+$\alpha=\dfrac23\alpha+\dfrac13$ より $\alpha=1$．よって\quad $b_{n+1}-1=\dfrac23(b_n-1)$\\
+$b_1=\dfrac{a_1}3=\dfrac13$ より $b_1-1=-\dfrac23$．$\{b_n-1\}$ は初項 $-\dfrac23$，公比 $\dfrac23$ の等比数列で\\
+\hspace*{1.5em}$b_n-1=-\dfrac23\left(\dfrac23\right)^{n-1}=-\left(\dfrac23\right)^n$，\quad $b_n=1-\left(\dfrac23\right)^n$\\[2pt]
+$a_n=3^nb_n=3^n-3^n\cdot\dfrac{2^n}{3^n}=3^n-2^n$\\
+（確認：$a_2=2\cdot1+3=5$，公式 $9-4=5$）
 \end{kai}
 
 \ans{126}{2項間の漸化式（Ⅳ）}
 \begin{kai}
-$a_1>0$ と漸化式からすべての $n$ で $a_n>0$．\point{逆数をとる}\quad $\dfrac1{a_{n+1}}=\dfrac1{a_n}+2$．\\
-$\left\{\dfrac1{a_n}\right\}$ は初項1，公差2の等差数列で $\dfrac1{a_n}=2n-1$．\quad $a_n=\dfrac1{2n-1}$
+\textbf{方針}\quad 分数型の漸化式は，\point{両辺の逆数をとる}と等差数列などの扱いやすい形になる．逆数をとる前に $a_n\neq0$ を確認する．\\[2pt]
+$a_1=1>0$ で，$a_n>0$ なら $a_{n+1}=\dfrac{a_n}{2a_n+1}>0$．よってすべての $n$ で $a_n>0$（特に $a_n\neq0$）．\\[2pt]
+両辺の逆数をとって\quad $\dfrac1{a_{n+1}}=\dfrac{2a_n+1}{a_n}=2+\dfrac1{a_n}$\\
+$c_n=\dfrac1{a_n}$ とおくと $c_{n+1}=c_n+2$ で，$\{c_n\}$ は初項 $c_1=1$，公差2の等差数列．\\
+\hspace*{1.5em}$c_n=1+2(n-1)=2n-1$\\[2pt]
+よって\quad $a_n=\dfrac1{2n-1}$
 \end{kai}
 
 \ans{127}{2項間の漸化式（Ⅴ）}
 \begin{kai}
-(1)\ 右辺を展開して整理すると $a_{n+1}=2a_n+\alpha n+\beta-\alpha$．漸化式と比べて $\alpha=1$，$\beta-\alpha=0$．\quad $\alpha=1$，$\beta=1$\\[2pt]
-(2)\ $\{a_n+n+1\}$ は初項3，公比2の等比数列．$a_n+n+1=3\cdot2^{n-1}$．\quad $a_n=3\cdot2^{n-1}-n-1$
+\textbf{方針}\quad $a_{n+1}=pa_n+(n\text{の1次式})$ 型は，\point{$a_n+\alpha n+\beta$ が等比数列になるように $\alpha,\ \beta$ を決める}．\\[2pt]
+(1)\ $a_{n+1}+\alpha(n+1)+\beta=2(a_n+\alpha n+\beta)$ を $a_{n+1}$ について解くと\\
+\hspace*{1.5em}$a_{n+1}=2a_n+2\alpha n+2\beta-\alpha n-\alpha-\beta=2a_n+\alpha n+(\beta-\alpha)$\\
+\hspace*{1.5em}これが $a_{n+1}=2a_n+n$ と一致するように，係数を比べて\quad $\alpha=1$，\quad $\beta-\alpha=0$\\
+\hspace*{1.5em}よって\quad $\alpha=1$，$\beta=1$\\[2pt]
+(2)\ (1)より\quad $a_{n+1}+(n+1)+1=2(a_n+n+1)$\\
+\hspace*{1.5em}$\{a_n+n+1\}$ は，初項 $a_1+1+1=3$，公比2の等比数列．\\
+\hspace*{1.5em}$a_n+n+1=3\cdot2^{n-1}$\\
+\hspace*{1.5em}よって\quad $a_n=3\cdot2^{n-1}-n-1$\\
+\hspace*{1.5em}（確認：$a_2=2\cdot1+1=3$，公式 $6-2-1=3$）
 \end{kai}
 
 \ans{128}{和と一般項}
 \begin{kai}
-$a_1=S_1=4$．$n\geqq2$ のとき $a_n=S_n-S_{n-1}=2n+1$．\\
-\point{$n=1$ のとき $2n+1=3\neq a_1$}\quad $a_1=4$，\ $a_n=2n+1\ (n\geqq2)$
+\textbf{方針}\quad \point{$a_1=S_1$，$n\geqq2$ のとき $a_n=S_n-S_{n-1}$}．$n\geqq2$ で求めた式が $n=1$ でも成りたつかを必ず確かめる．\\[2pt]
+$a_1=S_1=1+2+1=4$\\[2pt]
+$n\geqq2$ のとき\\
+\hspace*{1.5em}$a_n=S_n-S_{n-1}=(n^2+2n+1)-\{(n-1)^2+2(n-1)+1\}$\\
+\hspace*{1.5em}$=(n^2+2n+1)-(n^2-2n+1+2n-2+1)=(n^2+2n+1)-n^2=2n+1$\\[2pt]
+\point{$n=1$ のとき $2n+1=3\neq a_1$} なので，1つの式にはまとめられない．\\
+よって\quad $a_1=4$，\quad $a_n=2n+1\ (n\geqq2)$\\
+（$S_n$ に定数項1があるため，$a_1$ だけずれる．）
 \end{kai}
 
 \ans{129}{3項間の漸化式}
 \begin{kai}
-特性方程式 $t^2=4t-3$ の解は $t=1,\ 3$．\quad $a_{n+2}-a_{n+1}=3(a_{n+1}-a_n)$．\\
-$a_{n+1}-a_n=(3-1)\cdot3^{n-1}=2\cdot3^{n-1}$．$n\geqq2$ のとき $a_n=1+\displaystyle\sum_{k=1}^{n-1}2\cdot3^{k-1}=3^{n-1}$（$n=1$ でも成りたつ）．\\
-$a_n=3^{n-1}$
+\textbf{方針}\quad $a_{n+2}=pa_{n+1}+qa_n$ 型は，\point{特性方程式 $t^2=pt+q$ の解 $\alpha,\ \beta$ を使って $a_{n+2}-\alpha a_{n+1}=\beta(a_{n+1}-\alpha a_n)$ と変形}する．\\[2pt]
+特性方程式 $t^2=4t-3$，$t^2-4t+3=0$，$(t-1)(t-3)=0$ より\quad $t=1,\ 3$\\
+$\alpha=1$，$\beta=3$ として変形すると\quad $a_{n+2}-a_{n+1}=3(a_{n+1}-a_n)$\\
+（確認：展開すると $a_{n+2}=4a_{n+1}-3a_n$ にもどる．）\\[2pt]
+階差数列 $\{a_{n+1}-a_n\}$ は，初項 $a_2-a_1=2$，公比3の等比数列．\\
+\hspace*{1.5em}$a_{n+1}-a_n=2\cdot3^{n-1}$\\
+$n\geqq2$ のとき\\
+\hspace*{1.5em}$a_n=1+\displaystyle\sum_{k=1}^{n-1}2\cdot3^{k-1}=1+\frac{2(3^{n-1}-1)}{3-1}=3^{n-1}$\\
+$n=1$ のとき $3^0=1=a_1$ で成りたつ．\\[2pt]
+よって\quad $a_n=3^{n-1}$
 \end{kai}
 
 \ans{130}{連立型漸化式}
 \begin{kai}
-\point{和と差をつくる}\quad $a_{n+1}+b_{n+1}=3(a_n+b_n)$，\quad $a_{n+1}-b_{n+1}=-(a_n-b_n)$．\\
-$a_n+b_n=3\cdot3^{n-1}=3^n$，\quad $a_n-b_n=(-1)\cdot(-1)^{n-1}=(-1)^n$．\\
-$a_n=\dfrac{3^n+(-1)^n}2$，\quad $b_n=\dfrac{3^n-(-1)^n}2$
+\textbf{方針}\quad 係数が対称な連立漸化式は，\point{2式の和と差をつくる}と，それぞれが等比数列になる．最後に連立して $a_n,\ b_n$ を求める．\\[2pt]
+2式を辺々加えると\quad $a_{n+1}+b_{n+1}=3a_n+3b_n=3(a_n+b_n)$\\
+2式を辺々引くと\quad $a_{n+1}-b_{n+1}=-a_n+b_n=-(a_n-b_n)$\\[2pt]
+$\{a_n+b_n\}$ は初項 $a_1+b_1=3$，公比3の等比数列で\quad $a_n+b_n=3\cdot3^{n-1}=3^n$ ……①\\
+$\{a_n-b_n\}$ は初項 $a_1-b_1=-1$，公比 $-1$ の等比数列で\quad $a_n-b_n=(-1)\cdot(-1)^{n-1}=(-1)^n$ ……②\\[2pt]
+(①＋②)÷2，(①－②)÷2 より\\
+\hspace*{1.5em}$a_n=\dfrac{3^n+(-1)^n}2$，\quad $b_n=\dfrac{3^n-(-1)^n}2$\\
+（確認：$n=1$ のとき $a_1=\dfrac{3-1}2=1$，$b_1=\dfrac{3+1}2=2$）
 \end{kai}
 
 \ans{131}{群数列（Ⅰ）}
