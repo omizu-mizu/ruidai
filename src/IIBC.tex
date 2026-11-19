@@ -2638,163 +2638,273 @@ $S=\dfrac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}=\dfrac12\sqrt{10\cd
 
 \ans{153}{内積（Ⅳ）}
 \begin{kai}
-$|\vec a-\vec b|^2=|\vec a|^2-2\vec a\cdot\vec b+|\vec b|^2$ より $3=1-2\vec a\cdot\vec b+4$．\quad $\vec a\cdot\vec b=1$\\
-$\cos\theta=\dfrac{1}{1\cdot2}=\dfrac12$．\quad なす角は $60^\circ$
+\textbf{方針}\quad \point{大きさの条件は2乗して内積で展開する}．$|\vec a-\vec b|^2=|\vec a|^2-2\vec a\cdot\vec b+|\vec b|^2$ から内積が求まる．\\[2pt]
+$|\vec a-\vec b|=\sqrt3$ の両辺を2乗して\\
+\hspace*{1.5em}$|\vec a-\vec b|^2=|\vec a|^2-2\vec a\cdot\vec b+|\vec b|^2$，\quad $3=1-2\vec a\cdot\vec b+4$\\
+よって\quad $\vec a\cdot\vec b=1$\\[2pt]
+なす角を $\theta$ とすると\quad $\cos\theta=\dfrac{\vec a\cdot\vec b}{|\vec a||\vec b|}=\dfrac{1}{1\cdot2}=\dfrac12$\\
+$0^\circ\leqq\theta\leqq180^\circ$ より\quad $\theta=60^\circ$
 \end{kai}
 
 \ans{154}{正射影ベクトル}
 \begin{kai}
-\point{$\dfrac{\vec a\cdot\vec b}{|\vec b|^2}\vec b$}\quad $\vec a\cdot\vec b=14$，$|\vec b|^2=10$．\quad $\dfrac{14}{10}(3,\ 1)=\left(\dfrac{21}5,\ \dfrac75\right)$
+\textbf{方針}\quad $\vec a$ の $\vec b$ 方向への正射影ベクトルは\point{$\dfrac{\vec a\cdot\vec b}{|\vec b|^2}\vec b$}．（$\vec b$ 方向の単位ベクトル $\dfrac{\vec b}{|\vec b|}$ に，長さ $|\vec a|\cos\theta=\dfrac{\vec a\cdot\vec b}{|\vec b|}$ を掛けたもの．）\\[2pt]
+$\vec a\cdot\vec b=4\cdot3+2\cdot1=14$，\quad $|\vec b|^2=3^2+1^2=10$\\
+正射影ベクトルは\quad $\dfrac{14}{10}(3,\ 1)=\dfrac75(3,\ 1)=\left(\dfrac{21}5,\ \dfrac75\right)$\\[2pt]
+（確認：$\vec a-\left(\dfrac{21}5,\ \dfrac75\right)=\left(-\dfrac15,\ \dfrac35\right)$ と $\vec b$ の内積は $-\dfrac35+\dfrac35=0$ で垂直．）
 \end{kai}
 
 \ans{155}{ベクトル方程式（Ⅰ）}
 \begin{kai}
-(1)\ $(x,\ y)=(1,\ 2)+t(3,\ -1)$，すなわち $x=1+3t$，$y=2-t$．$t$ を消去して\quad $x+3y-7=0$\\[2pt]
-(2)\ \point{法線ベクトル $(a,\ b)$ の直線は $a(x-x_0)+b(y-y_0)=0$}\quad $2(x-2)+3(y+1)=0$，すなわち $2x+3y-1=0$
+\textbf{方針}\quad \point{点 A を通り $\vec u$ に平行な直線：$\vec p=\vec a+t\vec u$}．\point{点 $(x_0,\ y_0)$ を通り $\vec n=(a,\ b)$ に垂直な直線：$a(x-x_0)+b(y-y_0)=0$}（$\vec n\cdot(\vec p-\vec p_0)=0$）．\\[2pt]
+(1)\ $(x,\ y)=(1,\ 2)+t(3,\ -1)$，すなわち\quad $x=1+3t$，\quad $y=2-t$\\
+\hspace*{1.5em}第2式より $t=2-y$．第1式に代入して $x=1+3(2-y)=7-3y$．\\
+\hspace*{1.5em}よって\quad $x+3y-7=0$\\[2pt]
+(2)\ 直線上の点を $\mathrm P(x,\ y)$ とすると，$\vec n\perp\overrightarrow{\mathrm{AP}}$ より $\vec n\cdot\overrightarrow{\mathrm{AP}}=0$\quad （A は点 $(2,\ -1)$）\\
+\hspace*{1.5em}$2(x-2)+3(y+1)=0$，すなわち\quad $2x+3y-1=0$\\
+\hspace*{1.5em}\point{法線ベクトル $(a,\ b)$ の成分が，そのまま直線の式の $x,\ y$ の係数になる}
 \end{kai}
 
 \ans{156}{ベクトル方程式（Ⅱ）}
 \begin{kai}
-$\overrightarrow{\mathrm{AP}}\perp\overrightarrow{\mathrm{BP}}$ または P が A，B に一致するので，AB を直径とする円．\\
-中心は AB の中点 $(2,\ 2)$，半径は $\dfrac12\mathrm{AB}=\dfrac12\sqrt{4+16}=\sqrt5$
+\textbf{方針}\quad $(\vec p-\vec a)\cdot(\vec p-\vec b)=0$ は $\overrightarrow{\mathrm{AP}}\cdot\overrightarrow{\mathrm{BP}}=0$．\point{$\angle\mathrm{APB}=90^\circ$ → AB を直径とする円}（円周角の定理の逆）．\\[2pt]
+$\vec p-\vec a=\overrightarrow{\mathrm{AP}}$，$\vec p-\vec b=\overrightarrow{\mathrm{BP}}$ だから，条件は $\overrightarrow{\mathrm{AP}}\cdot\overrightarrow{\mathrm{BP}}=0$．\\
+これは「$\overrightarrow{\mathrm{AP}}\perp\overrightarrow{\mathrm{BP}}$」または「P が A または B に一致する」ことを表す．\\
+よって P の全体は\quad AB を直径とする円\\[2pt]
+中心は AB の中点\quad $\left(\dfrac{1+3}2,\ \dfrac{0+4}2\right)=(2,\ 2)$\\
+半径は\quad $\dfrac12\mathrm{AB}=\dfrac12\sqrt{(3-1)^2+(4-0)^2}=\dfrac12\sqrt{20}=\sqrt5$\\[2pt]
+（成分で計算すると $(x-1)(x-3)+y(y-4)=0$，すなわち $(x-2)^2+(y-2)^2=5$．）
 \end{kai}
 
 \ans{157}{軌跡（Ⅰ）}
 \begin{kai}
-(1)\ 線分 AB\\[2pt]
-(2)\ $\dfrac s2+\dfrac t2=1$ と変形し，$\overrightarrow{\mathrm{OA'}}=2\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB'}}=2\overrightarrow{\mathrm{OB}}$ とすると $\overrightarrow{\mathrm{OP}}=\dfrac s2\overrightarrow{\mathrm{OA'}}+\dfrac t2\overrightarrow{\mathrm{OB'}}$．\quad 線分 A$'$B$'$
+\textbf{方針}\quad \point{$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$，$s+t=1$ なら P は直線 AB 上}，さらに $s,\ t\geqq0$ なら線分 AB 上．係数の和が1でないときは，\point{和が1になるように変形}する．\\[2pt]
+(1)\ $s+t=1$ より $t=1-s$ で，$\overrightarrow{\mathrm{OP}}=(1-s)\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{OB}}$．\\
+\hspace*{1.5em}これは $\overrightarrow{\mathrm{AP}}=s\overrightarrow{\mathrm{AB}}$ を表し，$0\leqq s\leqq1$ だから P は\quad 線分 AB\\[2pt]
+(2)\ $s+t=2$ の両辺を2で割ると\quad $\dfrac s2+\dfrac t2=1$\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OP}}=\dfrac s2(2\overrightarrow{\mathrm{OA}})+\dfrac t2(2\overrightarrow{\mathrm{OB}})$ と変形し，$\overrightarrow{\mathrm{OA'}}=2\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB'}}=2\overrightarrow{\mathrm{OB}}$ とすると\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OP}}=\dfrac s2\overrightarrow{\mathrm{OA'}}+\dfrac t2\overrightarrow{\mathrm{OB'}}$，\quad $\dfrac s2+\dfrac t2=1$，\quad $\dfrac s2\geqq0$，$\dfrac t2\geqq0$\\
+\hspace*{1.5em}よって P は\quad 線分 A$'$B$'$\quad （A$'$，B$'$ は OA，OB を2倍に延長した点）
 \end{kai}
 
 \ans{158}{軌跡（Ⅱ）}
 \begin{kai}
-$s+t=k$ のとき P は，$\overrightarrow{\mathrm{OA}_k}=k\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB}_k}=k\overrightarrow{\mathrm{OB}}$ となる線分 $\mathrm A_k\mathrm B_k$ 上を動く．\\
-$1\leqq k\leqq2$ だから，存在範囲は台形 $\mathrm{ABB_2A_2}$（周を含む）．面積は\quad $3\times2^2-3=9$
+\textbf{方針}\quad \point{$s+t=k$ と固定して}類題157と同様に考えると，P は線分 $\mathrm A_k\mathrm B_k$ 上を動く．$k$ を1から2まで動かしたときに線分が通過する範囲を考える．\\[2pt]
+$s+t=k$（$1\leqq k\leqq2$）とすると，$\dfrac sk+\dfrac tk=1$ より\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OP}}=\dfrac sk(k\overrightarrow{\mathrm{OA}})+\dfrac tk(k\overrightarrow{\mathrm{OB}})$\\
+$\overrightarrow{\mathrm{OA}_k}=k\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB}_k}=k\overrightarrow{\mathrm{OB}}$ とすると，P は線分 $\mathrm A_k\mathrm B_k$ 上を動く（$\mathrm A_k\mathrm B_k/\!/\mathrm{AB}$）．\\[2pt]
+$k$ を1から2まで動かすと，線分 $\mathrm A_k\mathrm B_k$ は AB から $\mathrm A_2\mathrm B_2$ まで平行に動く．\\
+よって P の存在範囲は，台形 $\mathrm{ABB_2A_2}$ の周および内部．\\[2pt]
+$\triangle\mathrm{OA_2B_2}$ は $\triangle\mathrm{OAB}$ を2倍に拡大したもので，面積は $2^2\times3=12$．\\
+求める面積は\quad $12-3=9$
 \end{kai}
 
 \ans{159}{ベクトルと図形}
 \begin{kai}
-$\overrightarrow{\mathrm{OC}}=\vec a+\vec b$，$\overrightarrow{\mathrm{AB}}=\vec b-\vec a$．\\
-$\overrightarrow{\mathrm{OC}}\cdot\overrightarrow{\mathrm{AB}}=(\vec b+\vec a)\cdot(\vec b-\vec a)=|\vec b|^2-|\vec a|^2$．\\
-よって $\mathrm{OC}\perp\mathrm{AB}\iff|\vec b|^2-|\vec a|^2=0\iff|\vec a|=|\vec b|$（ひし形になる）．
+\textbf{方針}\quad \point{垂直 $\iff$ 内積が0}．対角線を $\vec a,\ \vec b$ で表して内積を計算する．\\[2pt]
+平行四辺形 OACB では\quad $\overrightarrow{\mathrm{OC}}=\overrightarrow{\mathrm{OA}}+\overrightarrow{\mathrm{AC}}=\vec a+\vec b$，\quad $\overrightarrow{\mathrm{AB}}=\overrightarrow{\mathrm{OB}}-\overrightarrow{\mathrm{OA}}=\vec b-\vec a$\\[2pt]
+$\overrightarrow{\mathrm{OC}}\cdot\overrightarrow{\mathrm{AB}}=(\vec b+\vec a)\cdot(\vec b-\vec a)=|\vec b|^2-|\vec a|^2$\\
+（$\vec a\cdot\vec b$ と $\vec b\cdot\vec a$ の項は打ち消しあう．）\\[2pt]
+$\overrightarrow{\mathrm{OC}}\neq\vec0$，$\overrightarrow{\mathrm{AB}}\neq\vec0$ だから\\
+\hspace*{1.5em}$\mathrm{OC}\perp\mathrm{AB}\iff\overrightarrow{\mathrm{OC}}\cdot\overrightarrow{\mathrm{AB}}=0\iff|\vec b|^2-|\vec a|^2=0\iff|\vec a|=|\vec b|$\\
+\hspace*{1.5em}（$|\vec a|,\ |\vec b|\geqq0$ なので，2乗が等しければ大きさも等しい）\\
+よって示された．（$|\vec a|=|\vec b|$ のとき平行四辺形はひし形で，「ひし形の対角線は直交する」ことを表している．）
 \end{kai}
 
 \ans{160}{空間座標}
 \begin{kai}
-(1)\ $\mathrm{AB}=\sqrt{9+16+0}=5$，\quad 中点 $\left(\dfrac52,\ 0,\ 3\right)$\\[2pt]
-(2)\ $(0,\ y,\ 0)$ とすると $1+(y-2)^2+9=16+(y+2)^2+9$，$-8y=15$．\quad $\left(0,\ -\dfrac{15}8,\ 0\right)$
+\textbf{方針}\quad 空間でも平面と同様に，\point{2点間の距離 $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$}，中点は座標の平均．等距離は距離の2乗で比べる．\\[2pt]
+(1)\ $\mathrm{AB}=\sqrt{(4-1)^2+(-2-2)^2+(3-3)^2}=\sqrt{9+16+0}=5$\\
+\hspace*{1.5em}中点は\quad $\left(\dfrac{1+4}2,\ \dfrac{2-2}2,\ \dfrac{3+3}2\right)=\left(\dfrac52,\ 0,\ 3\right)$\\[2pt]
+(2)\ $y$ 軸上の点を $\mathrm P(0,\ y,\ 0)$ とする．$\mathrm{AP}^2=\mathrm{BP}^2$ より\\
+\hspace*{1.5em}$1^2+(y-2)^2+3^2=4^2+(y+2)^2+3^2$\\
+\hspace*{1.5em}$y^2-4y+14=y^2+4y+29$，\quad $-8y=15$，\quad $y=-\dfrac{15}8$\\
+\hspace*{1.5em}よって\quad $\left(0,\ -\dfrac{15}8,\ 0\right)$
 \end{kai}
 
 \ans{161}{空間ベクトル}
 \begin{kai}
-(1)\ $|\vec a|=\sqrt{1+4+4}=3$，\quad $\vec a\cdot\vec b=2+0-2=0$\\[2pt]
-(2)\ $\vec n=(x,\ y,\ z)$ とすると $x+2y-2z=0$，$2x+z=0$．$z=-2x$，$y=-\dfrac52x$ より $\vec n=\dfrac x2(2,\ -5,\ -4)$．\\
-\hspace*{1.5em}$|(2,\ -5,\ -4)|=3\sqrt5$ だから\quad $\pm\dfrac{1}{\sqrt5}(2,\ -5,\ -4)$
+\textbf{方針}\quad 求めるベクトルを $(x,\ y,\ z)$ とおき，\point{2つのベクトルとの内積がともに0}という2式から，1つの文字で他を表す．最後に大きさの条件で決める．\\[2pt]
+(1)\ $|\vec a|=\sqrt{1^2+2^2+(-2)^2}=\sqrt9=3$\\
+\hspace*{1.5em}$\vec a\cdot\vec b=1\cdot2+2\cdot0+(-2)\cdot1=0$\quad （$\vec a\perp\vec b$ である）\\[2pt]
+(2)\ $\vec n=(x,\ y,\ z)$ とすると\\
+\hspace*{1.5em}$\vec n\cdot\vec a=x+2y-2z=0$ ……①，\quad $\vec n\cdot\vec b=2x+z=0$ ……②\\
+\hspace*{1.5em}②より $z=-2x$．①に代入して $x+2y+4x=0$，$y=-\dfrac52x$．\\
+\hspace*{1.5em}$\vec n=\left(x,\ -\dfrac52x,\ -2x\right)=\dfrac x2(2,\ -5,\ -4)$\\
+\hspace*{1.5em}$|(2,\ -5,\ -4)|=\sqrt{4+25+16}=\sqrt{45}=3\sqrt5$ だから，大きさ3にするには $\dfrac{3}{3\sqrt5}=\dfrac1{\sqrt5}$ 倍する．\\
+\hspace*{1.5em}よって\quad $\pm\dfrac{1}{\sqrt5}(2,\ -5,\ -4)$，すなわち\quad $\pm\left(\dfrac{2}{\sqrt5},\ -\dfrac{5}{\sqrt5},\ -\dfrac{4}{\sqrt5}\right)$\\
+\hspace*{1.5em}（確認：$(2,\ -5,\ -4)\cdot(1,\ 2,\ -2)=2-10+8=0$，$(2,\ -5,\ -4)\cdot(2,\ 0,\ 1)=4-4=0$）
 \end{kai}
 
 \ans{162}{三角形の面積}
 \begin{kai}
-$\overrightarrow{\mathrm{AB}}=(-1,\ 2,\ 0)$，$\overrightarrow{\mathrm{AC}}=(-1,\ 0,\ 2)$．$|\overrightarrow{\mathrm{AB}}|^2=5$，$|\overrightarrow{\mathrm{AC}}|^2=5$，$\overrightarrow{\mathrm{AB}}\cdot\overrightarrow{\mathrm{AC}}=1$．\\
-$S=\dfrac12\sqrt{25-1}=\sqrt6$
+\textbf{方針}\quad 空間の三角形の面積は\point{$S=\dfrac12\sqrt{|\overrightarrow{\mathrm{AB}}|^2|\overrightarrow{\mathrm{AC}}|^2-(\overrightarrow{\mathrm{AB}}\cdot\overrightarrow{\mathrm{AC}})^2}$} を使う（平面の成分公式 $\dfrac12|a_1b_2-a_2b_1|$ は使えない）．\\[2pt]
+$\overrightarrow{\mathrm{AB}}=(0-1,\ 2-0,\ 0-0)=(-1,\ 2,\ 0)$，\quad $\overrightarrow{\mathrm{AC}}=(-1,\ 0,\ 2)$\\
+$|\overrightarrow{\mathrm{AB}}|^2=1+4+0=5$，\quad $|\overrightarrow{\mathrm{AC}}|^2=1+0+4=5$，\quad $\overrightarrow{\mathrm{AB}}\cdot\overrightarrow{\mathrm{AC}}=1+0+0=1$\\[2pt]
+$S=\dfrac12\sqrt{5\cdot5-1^2}=\dfrac12\sqrt{24}=\dfrac12\cdot2\sqrt6=\sqrt6$
 \end{kai}
 
 \ans{163}{直方体}
 \begin{kai}
-$\mathrm G(2,\ 1,\ 1)$，$\mathrm B(2,\ 0,\ 0)$，$\mathrm H(0,\ 1,\ 1)$．$\overrightarrow{\mathrm{AG}}=(2,\ 1,\ 1)$，$\overrightarrow{\mathrm{BH}}=(-2,\ 1,\ 1)$．\\
-$\cos\theta=\dfrac{-4+1+1}{\sqrt6\cdot\sqrt6}=-\dfrac13$
+\textbf{方針}\quad \point{座標を設定して各点の座標を書き出す}．2直線のなす角は，方向ベクトルの内積から $\cos\theta=\dfrac{\vec u\cdot\vec v}{|\vec u||\vec v|}$．\\[2pt]
+A を原点とすると，$\mathrm B(2,\ 0,\ 0)$，$\mathrm D(0,\ 1,\ 0)$，$\mathrm E(0,\ 0,\ 1)$ で\\
+\hspace*{1.5em}$\mathrm G(2,\ 1,\ 1)$（A の対頂点），\quad $\mathrm H(0,\ 1,\ 1)$（E の上の面で D の真上）\\[2pt]
+$\overrightarrow{\mathrm{AG}}=(2,\ 1,\ 1)$，\quad $\overrightarrow{\mathrm{BH}}=(0-2,\ 1-0,\ 1-0)=(-2,\ 1,\ 1)$\\
+$\overrightarrow{\mathrm{AG}}\cdot\overrightarrow{\mathrm{BH}}=-4+1+1=-2$，\quad $|\overrightarrow{\mathrm{AG}}|=|\overrightarrow{\mathrm{BH}}|=\sqrt{4+1+1}=\sqrt6$\\[2pt]
+$\cos\theta=\dfrac{-2}{\sqrt6\cdot\sqrt6}=-\dfrac13$\\
+（ベクトル $\overrightarrow{\mathrm{AG}}$，$\overrightarrow{\mathrm{BH}}$ のなす角としての答え．2直線のなす鋭角を問われたら $\cos\theta=\dfrac13$ になる．）
 \end{kai}
 
 \ans{164}{四面体（Ⅰ）}
 \begin{kai}
-(1)\ $\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}3$ より\quad $\overrightarrow{\mathrm{OP}}=\dfrac34\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}4$\\[2pt]
-(2)\ $\overrightarrow{\mathrm{OQ}}=\dfrac{\vec b+\vec c}3$．$\overrightarrow{\mathrm{AP}}=\dfrac{-3\vec a+\vec b+\vec c}4$，$\overrightarrow{\mathrm{AQ}}=\dfrac{-3\vec a+\vec b+\vec c}3$．\\
-\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac34\overrightarrow{\mathrm{AQ}}$ だから A，P，Q は一直線上にあり\quad $\mathrm{AP}:\mathrm{PQ}=3:1$
+\textbf{方針}\quad 各点の位置ベクトルを $\vec a,\ \vec b,\ \vec c$ で表す．\point{$\overrightarrow{\mathrm{AP}}=k\overrightarrow{\mathrm{AQ}}$ となる実数 $k$ があれば A，P，Q は一直線上}．\\[2pt]
+(1)\ G は $\triangle\mathrm{ABC}$ の重心だから\quad $\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}3$\\
+\hspace*{1.5em}P は OG を $3:1$ に内分するので\quad $\overrightarrow{\mathrm{OP}}=\dfrac34\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}4$\\[2pt]
+(2)\ Q は $\triangle\mathrm{OBC}$ の重心だから\quad $\overrightarrow{\mathrm{OQ}}=\dfrac{\vec0+\vec b+\vec c}3=\dfrac{\vec b+\vec c}3$\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\overrightarrow{\mathrm{OP}}-\overrightarrow{\mathrm{OA}}=\dfrac{\vec a+\vec b+\vec c}4-\vec a=\dfrac{-3\vec a+\vec b+\vec c}4$\\[2pt]
+\hspace*{1.5em}$\overrightarrow{\mathrm{AQ}}=\overrightarrow{\mathrm{OQ}}-\overrightarrow{\mathrm{OA}}=\dfrac{\vec b+\vec c}3-\vec a=\dfrac{-3\vec a+\vec b+\vec c}3$\\[2pt]
+\hspace*{1.5em}よって $\overrightarrow{\mathrm{AP}}=\dfrac34\overrightarrow{\mathrm{AQ}}$ となり，3点 A，P，Q は一直線上にある．\\
+\hspace*{1.5em}$\mathrm{AP}:\mathrm{AQ}=3:4$ で，P は A と Q の間にあるから\quad $\mathrm{AP}:\mathrm{PQ}=3:1$
 \end{kai}
 
 \ans{165}{四面体（Ⅱ）}
 \begin{kai}
-X は直線 OD 上にあるので $\overrightarrow{\mathrm{OX}}=k\overrightarrow{\mathrm{OD}}=\dfrac k2\vec a+\dfrac k3\vec b+k\vec c$．\\
-\point{平面 ABC 上 $\iff$ 係数の和が1}\quad $\dfrac k2+\dfrac k3+k=1$ より $k=\dfrac6{11}$．\\
-$\overrightarrow{\mathrm{OX}}=\dfrac3{11}\vec a+\dfrac2{11}\vec b+\dfrac6{11}\vec c$
+\textbf{方針}\quad X は2つの条件をみたす：\point{直線 OD 上 → $\overrightarrow{\mathrm{OX}}=k\overrightarrow{\mathrm{OD}}$}，\point{平面 ABC 上 → $\overrightarrow{\mathrm{OX}}=s\vec a+t\vec b+u\vec c$ で $s+t+u=1$}．\\[2pt]
+X は直線 OD 上にあるので，実数 $k$ を用いて\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OX}}=k\overrightarrow{\mathrm{OD}}=\dfrac k2\vec a+\dfrac k3\vec b+k\vec c$\\[2pt]
+X は平面 ABC 上にあるので，\point{係数の和が1}：\\
+\hspace*{1.5em}$\dfrac k2+\dfrac k3+k=1$，\quad $\dfrac{11}6k=1$，\quad $k=\dfrac6{11}$\\[2pt]
+よって\quad $\overrightarrow{\mathrm{OX}}=\dfrac3{11}\vec a+\dfrac2{11}\vec b+\dfrac6{11}\vec c$\\
+（$\vec a,\ \vec b,\ \vec c$ は同じ平面上にない（1次独立）ので，係数の比較ができる．）
 \end{kai}
 
 \ans{166}{垂線の足のベクトル}
 \begin{kai}
-$\overrightarrow{\mathrm{AB}}=(-2,\ 2,\ 0)$，$\overrightarrow{\mathrm{AC}}=(-2,\ 0,\ 1)$．H は $\alpha$ 上にあるので\\
-$\overrightarrow{\mathrm{OH}}=\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}=(2-2s-2t,\ 2s,\ t)$．\\
-\point{$\overrightarrow{\mathrm{OH}}\perp\overrightarrow{\mathrm{AB}}$，$\overrightarrow{\mathrm{OH}}\perp\overrightarrow{\mathrm{AC}}$}\quad $-4+8s+4t=0$，$-4+4s+5t=0$．\quad $s=\dfrac16$，$t=\dfrac23$．\\
-$\mathrm H\left(\dfrac13,\ \dfrac13,\ \dfrac23\right)$，\quad $\mathrm{OH}=\sqrt{\dfrac19+\dfrac19+\dfrac49}=\dfrac{\sqrt6}3$
+\textbf{方針}\quad H は\point{平面上の点 → $\overrightarrow{\mathrm{OH}}=\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$}，\point{OH が平面に垂直 → 平面上の2つのベクトル $\overrightarrow{\mathrm{AB}}$，$\overrightarrow{\mathrm{AC}}$ の両方と垂直}．\\[2pt]
+$\overrightarrow{\mathrm{AB}}=(-2,\ 2,\ 0)$，\quad $\overrightarrow{\mathrm{AC}}=(-2,\ 0,\ 1)$\\
+H は平面 $\alpha$ 上にあるので\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OH}}=(2,\ 0,\ 0)+s(-2,\ 2,\ 0)+t(-2,\ 0,\ 1)=(2-2s-2t,\ 2s,\ t)$\\[2pt]
+$\overrightarrow{\mathrm{OH}}\cdot\overrightarrow{\mathrm{AB}}=-2(2-2s-2t)+4s=-4+8s+4t=0$，すなわち $2s+t=1$ ……①\\
+$\overrightarrow{\mathrm{OH}}\cdot\overrightarrow{\mathrm{AC}}=-2(2-2s-2t)+t=-4+4s+5t=0$ ……②\\
+①より $t=1-2s$．②に代入して $-4+4s+5-10s=0$，$s=\dfrac16$，$t=\dfrac23$．\\[2pt]
+$\mathrm H\left(2-\dfrac13-\dfrac43,\ \dfrac13,\ \dfrac23\right)=\left(\dfrac13,\ \dfrac13,\ \dfrac23\right)$\\
+$\mathrm{OH}=\sqrt{\dfrac19+\dfrac19+\dfrac49}=\sqrt{\dfrac69}=\dfrac{\sqrt6}3$
 \end{kai}
 
 \ans{167}{空間ベクトルにおける幾何の活用}
 \begin{kai}
-1辺を1とすると $|\vec a|=|\vec b|=|\vec c|=1$，各面は正三角形なので $\vec a\cdot\vec b=\vec a\cdot\vec c=1\cdot1\cdot\cos60^\circ=\dfrac12$．\\
-$\overrightarrow{\mathrm{OA}}\cdot\overrightarrow{\mathrm{BC}}=\vec a\cdot(\vec c-\vec b)=\dfrac12-\dfrac12=0$．よって $\mathrm{OA}\perp\mathrm{BC}$
+\textbf{方針}\quad \point{$\overrightarrow{\mathrm{BC}}=\vec c-\vec b$ と表し，$\overrightarrow{\mathrm{OA}}\cdot\overrightarrow{\mathrm{BC}}=0$ を示す}．正四面体では，どの2辺のなす角も $60^\circ$ なので内積がすべて等しい．\\[2pt]
+正四面体の1辺の長さを1とすると\quad $|\vec a|=|\vec b|=|\vec c|=1$\\
+各面は正三角形なので，$\vec a$ と $\vec b$，$\vec a$ と $\vec c$ のなす角はともに $60^\circ$．\\
+\hspace*{1.5em}$\vec a\cdot\vec b=\vec a\cdot\vec c=1\cdot1\cdot\cos60^\circ=\dfrac12$\\[2pt]
+$\overrightarrow{\mathrm{BC}}=\vec c-\vec b$ だから\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OA}}\cdot\overrightarrow{\mathrm{BC}}=\vec a\cdot(\vec c-\vec b)=\vec a\cdot\vec c-\vec a\cdot\vec b=\dfrac12-\dfrac12=0$\\
+$\overrightarrow{\mathrm{OA}}\neq\vec0$，$\overrightarrow{\mathrm{BC}}\neq\vec0$ だから\quad $\mathrm{OA}\perp\mathrm{BC}$\\
+（1辺の長さを1としなくても，$\vec a\cdot\vec b=\vec a\cdot\vec c$ であることから同様に示せる．）
 \end{kai}
 
 \ans{168}{球と直線}
 \begin{kai}
-(1)\ $z=0$ とおくと $(x-1)^2+(y+2)^2=9-4=5$．\quad 中心 $(1,\ -2,\ 0)$，半径 $\sqrt5$\\[2pt]
-(2)\ $y=z=0$ とおくと $(x-1)^2+4+4=9$，$x=0,\ 2$．\quad $(0,\ 0,\ 0)$，$(2,\ 0,\ 0)$
+\textbf{方針}\quad \point{$xy$ 平面は $z=0$，$x$ 軸は $y=0$ かつ $z=0$}．球面の方程式に代入する．\\[2pt]
+球面 $S$ は中心 $(1,\ -2,\ 2)$，半径3．\\[2pt]
+(1)\ $z=0$ を代入して\quad $(x-1)^2+(y+2)^2+4=9$，\quad $(x-1)^2+(y+2)^2=5$\\
+\hspace*{1.5em}$xy$ 平面上で，中心 $(1,\ -2,\ 0)$，半径 $\sqrt5$ の円\\
+\hspace*{1.5em}（球の中心と $xy$ 平面の距離は2なので，三平方の定理で半径 $\sqrt{3^2-2^2}=\sqrt5$ としてもよい．）\\[2pt]
+(2)\ $y=0$，$z=0$ を代入して\quad $(x-1)^2+4+4=9$，\quad $(x-1)^2=1$，\quad $x=0,\ 2$\\
+\hspace*{1.5em}交点は\quad $(0,\ 0,\ 0)$，\quad $(2,\ 0,\ 0)$
 \end{kai}
 
 \shouans{第9章}{統計的な推測}
 \ans{169}{確率変数と確率分布}
 \begin{kai}
-取り出し方は ${}_4\mathrm C_2=6$ 通り（2枚の3は区別する）．和は $(1,2)$：3，$(1,3)$：4 が2通り，$(2,3)$：5 が2通り，$(3,3)$：6．\\[2pt]
-$\begin{array}{c|cccc|c}X&3&4&5&6&\text{計}\\ \hline P&\frac16&\frac26&\frac26&\frac16&1\end{array}$
+\textbf{方針}\quad 同じ数字のカードも\point{区別して}全体を数える（同様に確からしくするため）．$X$ のとりうる値ごとに場合の数を数え，表にまとめる．\\[2pt]
+2枚の3を $3_a$，$3_b$ と区別すると，取り出し方は ${}_4\mathrm C_2=6$ 通りで，これらは同様に確からしい．\\
+\hspace*{1.5em}$\{1,\ 2\}$：和3\qquad $\{1,\ 3_a\}$，$\{1,\ 3_b\}$：和4\qquad $\{2,\ 3_a\}$，$\{2,\ 3_b\}$：和5\qquad $\{3_a,\ 3_b\}$：和6\\[2pt]
+$X$ の確率分布は\\[2pt]
+\hspace*{1.5em}$\begin{array}{c|cccc|c}X&3&4&5&6&\text{計}\\ \hline P&\frac16&\frac26&\frac26&\frac16&1\end{array}$\\[4pt]
+\point{確率の合計が1になることを確かめる}
 \end{kai}
 
 \ans{170}{確率変数の期待値}
 \begin{kai}
-$E(X)=3\cdot\dfrac16+4\cdot\dfrac26+5\cdot\dfrac26+6\cdot\dfrac16=\dfrac{27}6=\dfrac92$
+\textbf{方針}\quad \point{$E(X)=\sum x_kp_k$}（とる値×確率の和）．\\[2pt]
+類題169の確率分布より\\
+\hspace*{1.5em}$E(X)=3\cdot\dfrac16+4\cdot\dfrac26+5\cdot\dfrac26+6\cdot\dfrac16=\dfrac{3+8+10+6}6=\dfrac{27}6=\dfrac92$\\
+（分布は $X=\dfrac92$ に関して対称なので，期待値が $\dfrac92$ になることは計算前からわかる．）
 \end{kai}
 
 \ans{171}{確率変数の変換後の期待値}
 \begin{kai}
-\point{$E(aX+b)=aE(X)+b$}\quad $E(Y)=2\cdot\dfrac92-3=6$
+\textbf{方針}\quad \point{$E(aX+b)=aE(X)+b$}．$Y$ の分布をつくり直さなくてよい．\\[2pt]
+$E(Y)=E(2X-3)=2E(X)-3=2\cdot\dfrac92-3=9-3=6$\\
+（確認：$Y$ のとる値は $3,\ 5,\ 7,\ 9$ で，確率はそれぞれ $\dfrac16,\ \dfrac26,\ \dfrac26,\ \dfrac16$．$\dfrac{3+10+14+9}6=6$）
 \end{kai}
 
 \ans{172}{確率変数の分散・標準偏差}
 \begin{kai}
-$E(X^2)=\dfrac{9+32+50+36}{6}=\dfrac{127}6$．\point{$V(X)=E(X^2)-\{E(X)\}^2$}\\
-$V(X)=\dfrac{127}6-\dfrac{81}4=\dfrac{11}{12}$，\quad $\sigma(X)=\sqrt{\dfrac{11}{12}}=\dfrac{\sqrt{33}}6$
+\textbf{方針}\quad \point{$V(X)=E(X^2)-\{E(X)\}^2$} を使う（期待値が分数なので，偏差の2乗を計算するより楽）．$\sigma(X)=\sqrt{V(X)}$．\\[2pt]
+$E(X^2)=3^2\cdot\dfrac16+4^2\cdot\dfrac26+5^2\cdot\dfrac26+6^2\cdot\dfrac16=\dfrac{9+32+50+36}{6}=\dfrac{127}6$\\[2pt]
+$V(X)=E(X^2)-\{E(X)\}^2=\dfrac{127}6-\left(\dfrac92\right)^2=\dfrac{127}6-\dfrac{81}4=\dfrac{254-243}{12}=\dfrac{11}{12}$\\[2pt]
+$\sigma(X)=\sqrt{\dfrac{11}{12}}=\dfrac{\sqrt{11}}{2\sqrt3}=\dfrac{\sqrt{33}}6$\\
+（偏差で計算すると：偏差は $-\dfrac32,\ -\dfrac12,\ \dfrac12,\ \dfrac32$ で，$\dfrac94\cdot\dfrac16\cdot2+\dfrac14\cdot\dfrac26\cdot2=\dfrac34+\dfrac16=\dfrac{11}{12}$）
 \end{kai}
 
 \ans{173}{確率変数の変換後の分散・標準偏差}
 \begin{kai}
-\point{$V(aX+b)=a^2V(X)$，$\sigma(aX+b)=|a|\sigma(X)$}\quad $V(Y)=4\cdot\dfrac{11}{12}=\dfrac{11}3$，\quad $\sigma(Y)=2\cdot\dfrac{\sqrt{33}}6=\dfrac{\sqrt{33}}3$
+\textbf{方針}\quad \point{$V(aX+b)=a^2V(X)$，$\sigma(aX+b)=|a|\sigma(X)$}．定数 $b$ を加えても散らばりは変わらない．\\[2pt]
+$V(Y)=V(2X-3)=2^2V(X)=4\cdot\dfrac{11}{12}=\dfrac{11}3$\\[2pt]
+$\sigma(Y)=|2|\sigma(X)=2\cdot\dfrac{\sqrt{33}}6=\dfrac{\sqrt{33}}3$\\
+\point{$V(Y)=2V(X)-3$ や $V(Y)=2V(X)$ としない．分散は2乗の単位なので $a^2$ 倍}
 \end{kai}
 
 \ans{174}{2つの確率変数が独立であるときの積の期待値}
 \begin{kai}
-$E(X)=\dfrac72$，$E(Y)=\dfrac12$．$E(X+Y)=E(X)+E(Y)=4$．\\
-$X,\ Y$ は独立だから\quad $E(XY)=E(X)E(Y)=\dfrac74$
+\textbf{方針}\quad \point{和の期待値 $E(X+Y)=E(X)+E(Y)$ はいつでも成りたつ}．\point{積の期待値 $E(XY)=E(X)E(Y)$ は $X,\ Y$ が独立のときだけ}使える．\\[2pt]
+$E(X)=\dfrac{1+2+3+4+5+6}{6}=\dfrac72$，\quad $E(Y)=1\cdot\dfrac12+0\cdot\dfrac12=\dfrac12$\\[2pt]
+$E(X+Y)=E(X)+E(Y)=\dfrac72+\dfrac12=4$\\[2pt]
+サイコロと硬貨は互いに影響しないので，$X$ と $Y$ は独立．よって\\
+\hspace*{1.5em}$E(XY)=E(X)E(Y)=\dfrac72\cdot\dfrac12=\dfrac74$\\
+（直接：$XY$ は裏なら0，表なら $X$ なので $E(XY)=\dfrac12\cdot\dfrac72=\dfrac74$）
 \end{kai}
 
 \ans{175}{2つの確率変数が独立であるときの分散}
 \begin{kai}
-$V(X)=\dfrac{91}6-\left(\dfrac72\right)^2=\dfrac{35}{12}$，\quad $V(Y)=\dfrac12-\dfrac14=\dfrac14$．\\
-独立だから\quad $V(X+Y)=V(X)+V(Y)=\dfrac{35}{12}+\dfrac3{12}=\dfrac{19}6$
+\textbf{方針}\quad それぞれ $V=E(X^2)-\{E(X)\}^2$ で求める．\point{$X,\ Y$ が独立なら $V(X+Y)=V(X)+V(Y)$}．\\[2pt]
+$E(X^2)=\dfrac{1+4+9+16+25+36}{6}=\dfrac{91}6$ だから\\
+\hspace*{1.5em}$V(X)=\dfrac{91}6-\left(\dfrac72\right)^2=\dfrac{182-147}{12}=\dfrac{35}{12}$\\[2pt]
+$E(Y^2)=1^2\cdot\dfrac12+0^2\cdot\dfrac12=\dfrac12$ だから\quad $V(Y)=\dfrac12-\left(\dfrac12\right)^2=\dfrac14$\\[2pt]
+$X,\ Y$ は独立だから\\
+\hspace*{1.5em}$V(X+Y)=V(X)+V(Y)=\dfrac{35}{12}+\dfrac3{12}=\dfrac{38}{12}=\dfrac{19}6$
 \end{kai}
 
 \ans{176}{二項分布の期待値・分散・標準偏差}
 \begin{kai}
-$X$ は二項分布 $B\left(180,\ \dfrac16\right)$ にしたがう．\point{$E=np$，$V=np(1-p)$}\\
-$E(X)=30$，\quad $V(X)=180\cdot\dfrac16\cdot\dfrac56=25$，\quad $\sigma(X)=5$
+\textbf{方針}\quad 反復試行の回数は\point{二項分布 $B(n,\ p)$} にしたがい，\point{$E(X)=np$，$V(X)=np(1-p)$，$\sigma(X)=\sqrt{np(1-p)}$}．\\[2pt]
+1回投げて1の目が出る確率は $\dfrac16$．180回の反復試行なので，$X$ は二項分布 $B\left(180,\ \dfrac16\right)$ にしたがう．\\[2pt]
+$E(X)=180\cdot\dfrac16=30$\\
+$V(X)=180\cdot\dfrac16\cdot\dfrac56=25$\\
+$\sigma(X)=\sqrt{25}=5$
 \end{kai}
 
 \ans{177}{確率密度関数}
 \begin{kai}
-(1)\ $\displaystyle\int_0^2ax\,dx=2a=1$ より\quad $a=\dfrac12$\\[2pt]
-(2)\ $\displaystyle\int_1^2\frac x2\,dx=\frac34$\qquad
-(3)\ $\displaystyle E(X)=\int_0^2x\cdot\frac x2\,dx=\frac43$
+\textbf{方針}\quad 確率密度関数は\point{全範囲での積分が1}．確率は面積 $P(a\leqq X\leqq b)=\displaystyle\int_a^bf(x)\,dx$，期待値は $E(X)=\displaystyle\int xf(x)\,dx$．\\[2pt]
+(1)\ $\displaystyle\int_0^2ax\,dx=a\left[\frac{x^2}2\right]_0^2=2a=1$ より\quad $a=\dfrac12$\\[2pt]
+(2)\ $P(1\leqq X\leqq2)=\displaystyle\int_1^2\frac x2\,dx=\left[\frac{x^2}4\right]_1^2=1-\frac14=\frac34$\\
+\hspace*{1.5em}（グラフは原点を通る直線なので，台形の面積 $\dfrac12\left(\dfrac12+1\right)\cdot1=\dfrac34$ としてもよい．）\\[2pt]
+(3)\ $E(X)=\displaystyle\int_0^2x\cdot\frac x2\,dx=\left[\frac{x^3}6\right]_0^2=\frac86=\frac43$
 \end{kai}
 
 \ans{178}{正規分布}
 \begin{kai}
-\point{$Z=\dfrac{X-50}{10}$ で標準化}\\
-(1)\ $P(Z\geqq1.5)=0.5-0.4332=0.0668$\\[2pt]
-(2)\ $P(-1\leqq Z\leqq2)=0.3413+0.4772=0.8185$
+\textbf{方針}\quad \point{$Z=\dfrac{X-m}{\sigma}$ で標準化}して $N(0,\ 1)$ にし，正規分布表（$P(0\leqq Z\leqq u)$ の値）を使う．グラフの対称性で範囲を分ける．\\[2pt]
+$X$ は $N(50,\ 10^2)$ にしたがうので，$Z=\dfrac{X-50}{10}$ は $N(0,\ 1)$ にしたがう．\\[2pt]
+(1)\ $X\geqq65\iff Z\geqq\dfrac{65-50}{10}=1.5$\\
+\hspace*{1.5em}$P(X\geqq65)=P(Z\geqq1.5)=P(Z\geqq0)-P(0\leqq Z\leqq1.5)=0.5-0.4332=0.0668$\\[2pt]
+(2)\ $40\leqq X\leqq70\iff-1\leqq Z\leqq2$\\
+\hspace*{1.5em}$P(-1\leqq Z\leqq2)=P(-1\leqq Z\leqq0)+P(0\leqq Z\leqq2)$\\
+\hspace*{1.5em}$=P(0\leqq Z\leqq1)+P(0\leqq Z\leqq2)=0.3413+0.4772=0.8185$\\
+\hspace*{1.5em}\point{負の側は対称性で $P(-1\leqq Z\leqq0)=P(0\leqq Z\leqq1)$}
 \end{kai}
 
 \ans{179}{二項分布の正規近似}
@@ -2813,27 +2923,44 @@ $Z=\dfrac{X-200}{10}$ とおくと，$Z$ は近似的に標準正規分布 $N(0,
 
 \ans{180}{標本平均と正規分布}
 \begin{kai}
-(1)\ $E(\overline X)=60$，\quad \point{$\sigma(\overline X)=\dfrac{\sigma}{\sqrt n}$}\quad $\sigma(\overline X)=\dfrac{12}{6}=2$\\[2pt]
-(2)\ $P(\overline X\geqq63)=P\left(Z\geqq\dfrac{63-60}2\right)=P(Z\geqq1.5)=0.0668$
+\textbf{方針}\quad 母平均 $m$，母標準偏差 $\sigma$ の母集団から大きさ $n$ の標本をとると，\point{$E(\overline X)=m$，$\sigma(\overline X)=\dfrac{\sigma}{\sqrt n}$}．$n$ が大きいとき $\overline X$ は近似的に正規分布 $N\left(m,\ \dfrac{\sigma^2}n\right)$ にしたがう．\\[2pt]
+(1)\ $E(\overline X)=60$，\quad $\sigma(\overline X)=\dfrac{12}{\sqrt{36}}=\dfrac{12}{6}=2$\\[2pt]
+(2)\ $\overline X$ は近似的に $N(60,\ 2^2)$ にしたがう．$Z=\dfrac{\overline X-60}2$ とおくと\\
+\hspace*{1.5em}$\overline X\geqq63\iff Z\geqq\dfrac{63-60}2=1.5$\\
+\hspace*{1.5em}$P(\overline X\geqq63)=P(Z\geqq1.5)=0.5-0.4332=0.0668$\\
+\hspace*{1.5em}\point{標準化には母標準偏差12ではなく，標本平均の標準偏差2を使う}
 \end{kai}
 
 \ans{181}{母平均の推定}
 \begin{kai}
-\point{$\left[\overline X-1.96\dfrac{\sigma}{\sqrt n},\ \overline X+1.96\dfrac{\sigma}{\sqrt n}\right]$}\quad $1.96\cdot\dfrac{10}{10}=1.96$．\\
-$[50.04,\ 53.96]$（単位 g）
+\textbf{方針}\quad 母平均 $m$ に対する信頼度95\,\% の信頼区間は\point{$\left[\overline X-1.96\dfrac{\sigma}{\sqrt n},\ \overline X+1.96\dfrac{\sigma}{\sqrt n}\right]$}．（$P(|Z|\leqq1.96)=0.95$ による．）\\[2pt]
+$\overline X=52.0$，$\sigma=10$，$n=100$ だから\\
+\hspace*{1.5em}$1.96\cdot\dfrac{\sigma}{\sqrt n}=1.96\cdot\dfrac{10}{\sqrt{100}}=1.96\cdot1=1.96$\\[2pt]
+信頼区間は\quad $[52.0-1.96,\ 52.0+1.96]=[50.04,\ 53.96]$（単位 g）\\
+\point{「母平均がこの区間に入る確率が95\,\%」ではなく，「このように区間をつくると，その約95\,\% が母平均を含む」という意味}
 \end{kai}
 
 \ans{182}{母比率の推定}
 \begin{kai}
-標本比率 $R=\dfrac{240}{400}=0.6$．$\sqrt{\dfrac{R(1-R)}n}=\sqrt{\dfrac{0.24}{400}}=\dfrac{\sqrt{0.24}}{20}=\dfrac{2\sqrt6}{200}=0.02449$．\\
-$1.96\times0.02449\fallingdotseq0.048$．\quad $[0.552,\ 0.648]$
+\textbf{方針}\quad 母比率 $p$ に対する信頼度95\,\% の信頼区間は，標本比率を $R$ として\point{$\left[R-1.96\sqrt{\dfrac{R(1-R)}n},\ R+1.96\sqrt{\dfrac{R(1-R)}n}\right]$}．\\[2pt]
+標本比率は\quad $R=\dfrac{240}{400}=0.6$\\
+$\sqrt{\dfrac{R(1-R)}n}=\sqrt{\dfrac{0.6\times0.4}{400}}=\dfrac{\sqrt{0.24}}{20}$\\
+$\sqrt{0.24}=\sqrt{\dfrac{24}{100}}=\dfrac{2\sqrt6}{10}$ だから\quad $\dfrac{\sqrt{0.24}}{20}=\dfrac{2\sqrt6}{200}=\dfrac{\sqrt6}{100}=0.02449$\\[2pt]
+$1.96\times0.02449=0.0480\cdots\fallingdotseq0.048$\\
+信頼区間は\quad $[0.6-0.048,\ 0.6+0.048]=[0.552,\ 0.648]$
 \end{kai}
 
 \ans{183}{仮説検定}
 \begin{kai}
-帰無仮説「表の出る確率は $\dfrac12$」のもとで，表の回数 $X$ は近似的に $N(200,\ 10^2)$ にしたがう．\\
-$Z=\dfrac{220-200}{10}=2$．有意水準5\,\% の両側検定の棄却域は $|Z|\geqq1.96$．\\
-$Z=2$ は棄却域に入るので，帰無仮説は棄却される．\quad 表と裏の出やすさは等しいとはいえない．
+\textbf{方針}\quad \point{帰無仮説のもとで検定統計量（ここでは標準化した $Z$）を計算し，棄却域に入るかを調べる}．有意水準5\,\% の両側検定では，棄却域は $|Z|\geqq1.96$．\\[2pt]
+帰無仮説を「表の出る確率は $\dfrac12$」とする．\\
+このとき表の回数 $X$ は $B\left(400,\ \dfrac12\right)$ にしたがい，$E(X)=200$，$\sigma(X)=\sqrt{400\cdot\dfrac12\cdot\dfrac12}=10$．\\
+$n=400$ は大きいので，$X$ は近似的に $N(200,\ 10^2)$ にしたがう．\\[2pt]
+$Z=\dfrac{X-200}{10}$ の値は，$X=220$ のとき\quad $Z=\dfrac{220-200}{10}=2$\\
+有意水準5\,\% の両側検定の棄却域は\quad $|Z|\geqq1.96$（$P(|Z|\geqq1.96)=0.05$）\\[2pt]
+$Z=2$ は棄却域に入るので，帰無仮説は棄却される．\\
+よって，表と裏の出やすさは等しいとはいえない．\\
+\point{「両側」なので，表が多すぎる場合と少なすぎる場合の両方を棄却域に入れる}
 \end{kai}
 
 \end{document}
