@@ -1179,176 +1179,264 @@ $x^2-y^2=24$ をみたす自然数 $x,\ y$ の組をすべて求めよ．
 
 \ans{1}{指数の計算}
 \begin{kai}
-(1)\ $2^{4+3}=2^7=128$\qquad (2)\ $3^{2\times3}=3^6=729$\qquad (3)\ $x^{3+1}y^{1+4}=x^4y^5$\\[2pt]
-(4)\ $3\cdot2\cdot5\,x^{2+1}y^{1+3+1}z^{1+2}=30x^3y^5z^3$\\[2pt]
-(5)\ $9x^4y^2\times(-8x^3y^6)=-72x^7y^8$
+\textbf{方針}\quad 指数法則 \point{$a^m\times a^n=a^{m+n}$，\ $(a^m)^n=a^{mn}$，\ $(ab)^n=a^nb^n$} を使う．係数は係数どうし，文字は文字ごとにまとめる．\\[2pt]
+(1)\ $2^4\times2^3=2^{4+3}=2^7=128$\\[2pt]
+(2)\ $(3^2)^3=3^{2\times3}=3^6=729$\\[2pt]
+(3)\ $x^3y\times xy^4=x^{3+1}y^{1+4}=x^4y^5$\\[2pt]
+(4)\ 係数は $3\cdot2\cdot5=30$．文字は $x^{2+1}=x^3$，$y^{1+3+1}=y^5$，$z^{1+2}=z^3$ より\quad $30x^3y^5z^3$\\[2pt]
+(5)\ $(-3x^2y)^2=(-3)^2(x^2)^2y^2=9x^4y^2$，\quad $(-2xy^2)^3=(-2)^3x^3(y^2)^3=-8x^3y^6$\\
+\hspace*{1.5em}よって\quad $9x^4y^2\times(-8x^3y^6)=-72x^7y^8$\\
+\point{$(-2)^3=-8$ の符号に注意．先に累乗を計算してから掛ける}
 \end{kai}
 
 \ans{2}{整式の加減}
 \begin{kai}
-$A+B=(2x^2+x^2)+(-3x+5x)+(1-4)=3x^2+2x-3$\\
-$A-B=(2x^2-x^2)+(-3x-5x)+(1+4)=x^2-8x+5$\qquad \point{引くときは $B$ の全部の項の符号が変わる}
+\textbf{方針}\quad 式をかっこでくくって代入し，同類項（次数が同じ項）どうしをまとめる．\\[2pt]
+$A+B=(2x^2-3x+1)+(x^2+5x-4)$\\
+\hspace*{1.5em}$=(2x^2+x^2)+(-3x+5x)+(1-4)=3x^2+2x-3$\\[2pt]
+$A-B=(2x^2-3x+1)-(x^2+5x-4)=2x^2-3x+1-x^2-5x+4$\\
+\hspace*{1.5em}$=(2x^2-x^2)+(-3x-5x)+(1+4)=x^2-8x+5$\\
+\point{引くときは $B$ の全部の項の符号が変わる．かっこをつけて代入すれば間違えない}
 \end{kai}
 
 \ans{3}{式の展開}
 \begin{kai}
-(1)\ \point{$x-z=u$ とおく}\quad $(u+y)(u-y)=u^2-y^2=x^2-2xz+z^2-y^2$\\
-\hspace*{1.5em}$=x^2-y^2+z^2-2xz$\\[2pt]
-(2)\ $x^2-x=t$ とおくと $(t+1)(2t-3)=2t^2-t-3=2(x^2-x)^2-(x^2-x)-3$\\
-\hspace*{1.5em}$=2x^4-4x^3+2x^2-x^2+x-3=2x^4-4x^3+x^2+x-3$\\[2pt]
-(3)\ \point{$x^2+x$ が共通に出る組をつくる}\quad $\{(x-1)(x+2)\}\{(x-3)(x+4)\}=(x^2+x-2)(x^2+x-12)$\\
-\hspace*{1.5em}$x^2+x=t$ とおくと $(t-2)(t-12)=t^2-14t+24$\\
-\hspace*{1.5em}$=x^4+2x^3+x^2-14x^2-14x+24=x^4+2x^3-13x^2-14x+24$\\[2pt]
-(4)\ $(x^2-4)(x^2+4)=x^4-16$\\[2pt]
-(5)\ \point{$(a+b+c)(a^2+b^2+c^2-ab-bc-ca)=a^3+b^3+c^3-3abc$ の $b,\ c$ を $-b,\ -c$ にしたもの}\\
-\hspace*{1.5em}$a^3+(-b)^3+(-c)^3-3a(-b)(-c)=a^3-b^3-c^3-3abc$
+\textbf{方針}\quad そのまま展開せず，\point{共通な部分を1つの文字におきかえる}か，\point{組み合わせを工夫して}公式が使える形にする．\\[2pt]
+(1)\ $x-z=u$ とおくと，$(x+y-z)(x-y-z)=(u+y)(u-y)=u^2-y^2$\\
+\hspace*{1.5em}$=(x-z)^2-y^2=x^2-2xz+z^2-y^2=x^2-y^2+z^2-2xz$\\[2pt]
+(2)\ $x^2-x=t$ とおくと，$x^2-x+1=t+1$，$2x^2-2x-3=2t-3$ だから\\
+\hspace*{1.5em}$(t+1)(2t-3)=2t^2-t-3=2(x^2-x)^2-(x^2-x)-3$\\
+\hspace*{1.5em}$=2(x^4-2x^3+x^2)-x^2+x-3=2x^4-4x^3+x^2+x-3$\\[2pt]
+(3)\ \point{$x^2+x$ が共通に出る組をつくる}．$-1+2=1$，$-3+4=1$ に注目して\\
+\hspace*{1.5em}$\{(x-1)(x+2)\}\{(x-3)(x+4)\}=(x^2+x-2)(x^2+x-12)$\\
+\hspace*{1.5em}$x^2+x=t$ とおくと\quad $(t-2)(t-12)=t^2-14t+24$\\
+\hspace*{1.5em}$=(x^2+x)^2-14(x^2+x)+24=x^4+2x^3+x^2-14x^2-14x+24$\\
+\hspace*{1.5em}$=x^4+2x^3-13x^2-14x+24$\\[2pt]
+(4)\ 前から順に和と差の積を使う．\\
+\hspace*{1.5em}$(x-2)(x+2)(x^2+4)=(x^2-4)(x^2+4)=(x^2)^2-4^2=x^4-16$\\[2pt]
+(5)\ \point{$(a+b+c)(a^2+b^2+c^2-ab-bc-ca)=a^3+b^3+c^3-3abc$ の $b,\ c$ を $-b,\ -c$ におきかえたもの}\\
+\hspace*{1.5em}実際，$a^2+(-b)^2+(-c)^2-a(-b)-(-b)(-c)-(-c)a=a^2+b^2+c^2+ab-bc+ca$ だから\\
+\hspace*{1.5em}与式 $=a^3+(-b)^3+(-c)^3-3a(-b)(-c)=a^3-b^3-c^3-3abc$
 \end{kai}
 
 \ans{4}{因数分解}
 \begin{kai}
-(1)\ $x^2(3x+2)-4(3x+2)=(x^2-4)(3x+2)=(x+2)(x-2)(3x+2)$\\[2pt]
-(2)\ \point{$x$ について整理}\quad $(y-1)x-(y-1)=(x-1)(y-1)$\\[2pt]
-(3)\ $ab(2a^2+ab-3b^2)=ab(2a+3b)(a-b)$\\[2pt]
-(4)\ $(x^2-1)(x^2-9)=(x+1)(x-1)(x+3)(x-3)$\\[2pt]
-(5)\ $x^2+x=t$ とおくと $(t-5)(t-3)-3=t^2-8t+12=(t-2)(t-6)$\\
-\hspace*{1.5em}$=(x^2+x-2)(x^2+x-6)=(x+2)(x-1)(x+3)(x-2)$\\[2pt]
-(6)\ \point{$z$ について整理}\quad $(xy-x-y+1)z-(xy-x-y+1)=(xy-x-y+1)(z-1)$\\
+\textbf{方針}\quad 共通因数をくくる → 公式 → たすきがけ，の順に考える．文字が多いときは\point{次数の低い文字について整理}する．\\[2pt]
+(1)\ 前2項と後2項に分けてくくると\\
+\hspace*{1.5em}$x^2(3x+2)-4(3x+2)=(x^2-4)(3x+2)=(x+2)(x-2)(3x+2)$\\[2pt]
+(2)\ \point{$x$ について整理}\quad $xy-x-y+1=(y-1)x-(y-1)=(x-1)(y-1)$\\[2pt]
+(3)\ 共通因数 $ab$ をくくって\quad $ab(2a^2+ab-3b^2)$\\
+\hspace*{1.5em}たすきがけで $2a^2+ab-3b^2=(2a+3b)(a-b)$\quad よって\quad $ab(2a+3b)(a-b)$\\[2pt]
+(4)\ $x^2=X$ とおくと $X^2-10X+9=(X-1)(X-9)$ だから\\
+\hspace*{1.5em}$(x^2-1)(x^2-9)=(x+1)(x-1)(x+3)(x-3)$\\[2pt]
+(5)\ $x^2+x=t$ とおくと\quad $(t-5)(t-3)-3=t^2-8t+15-3=t^2-8t+12=(t-2)(t-6)$\\
+\hspace*{1.5em}$=(x^2+x-2)(x^2+x-6)=(x+2)(x-1)(x+3)(x-2)$\\
+\hspace*{1.5em}\point{$t$ のまま終わらせない．もとの文字にもどしてさらに因数分解できるか確かめる}\\[2pt]
+(6)\ \point{$z$ について整理}（どの文字も1次なので，どれで整理してもよい）\\
+\hspace*{1.5em}$z$ を含む項：$xyz-yz-zx+z=(xy-x-y+1)z$\\
+\hspace*{1.5em}$z$ を含まない項：$-xy+x+y-1=-(xy-x-y+1)$\\
+\hspace*{1.5em}よって与式 $=(xy-x-y+1)(z-1)$．さらに(2)より $xy-x-y+1=(x-1)(y-1)$ だから\\
 \hspace*{1.5em}$=(x-1)(y-1)(z-1)$
 \end{kai}
 
 \ans{5}{対称式}
 \begin{kai}
-(1)\ (i)\ $(x+y)^2-2xy=9-2=7$\qquad (ii)\ $(x+y)^3-3xy(x+y)=27-9=18$\\
-\hspace*{1.5em}(iii)\ $(x^2+y^2)^2-2(xy)^2=49-2=47$\\[2pt]
-(2)\ (i)\ $\left(x+\dfrac1x\right)^2-2=9-2=7$\qquad (ii)\ $\left(x+\dfrac1x\right)^3-3\left(x+\dfrac1x\right)=27-9=18$\\[2pt]
-(3)\ (i)\ $(x+y+z)^2-2(xy+yz+zx)=4+2=6$\\
-\hspace*{1.5em}(ii)\ $(xy+yz+zx)^2-2xyz(x+y+z)=1-2\cdot(-2)\cdot2=9$
+\textbf{方針}\quad 対称式は\point{基本対称式（和と積）で表して}から値を代入する．\\[2pt]
+(1)\ (i)\ $x^2+y^2=(x+y)^2-2xy=3^2-2\cdot1=7$\\
+\hspace*{1.5em}(ii)\ $x^3+y^3=(x+y)^3-3xy(x+y)=27-3\cdot1\cdot3=18$\\
+\hspace*{1.5em}(iii)\ $x^4+y^4=(x^2+y^2)^2-2x^2y^2=(x^2+y^2)^2-2(xy)^2=7^2-2\cdot1^2=47$\\[2pt]
+(2)\ $x\cdot\dfrac1x=1$ なので，(1)で $y=\dfrac1x$，$xy=1$ としたのと同じ．\\
+\hspace*{1.5em}(i)\ $x^2+\dfrac1{x^2}=\left(x+\dfrac1x\right)^2-2=9-2=7$\\[2pt]
+\hspace*{1.5em}(ii)\ $x^3+\dfrac1{x^3}=\left(x+\dfrac1x\right)^3-3\left(x+\dfrac1x\right)=27-9=18$\\[2pt]
+(3)\ (i)\ $(x+y+z)^2=x^2+y^2+z^2+2(xy+yz+zx)$ より\\
+\hspace*{1.5em}$x^2+y^2+z^2=(x+y+z)^2-2(xy+yz+zx)=2^2-2\cdot(-1)=6$\\[2pt]
+\hspace*{1.5em}(ii)\ $(xy+yz+zx)^2=x^2y^2+y^2z^2+z^2x^2+2(xy\cdot yz+yz\cdot zx+zx\cdot xy)$\\
+\hspace*{1.5em}ここで $xy\cdot yz+yz\cdot zx+zx\cdot xy=xyz(x+y+z)$ だから\\
+\hspace*{1.5em}$x^2y^2+y^2z^2+z^2x^2=(xy+yz+zx)^2-2xyz(x+y+z)=(-1)^2-2\cdot(-2)\cdot2=9$
 \end{kai}
 
 \ans{6}{実数（有理数・無理数）}
 \begin{kai}
-(1)\ (i)\ $x=\rpt7$ とおくと $10x-x=7$，$x=\dfrac79$\qquad
-(ii)\ $100y-y=45$，$y=\dfrac{45}{99}=\dfrac5{11}$\\[2pt]
-\hspace*{1.5em}(iii)\ $1000z-z=216$，$z=\dfrac{216}{999}=\dfrac{8}{37}$\\[2pt]
-(2)\ (i)\ $3\div7=0.428571428571\cdots$ より\quad $\dfrac37=0.\dot42857\dot1$\\[2pt]
-\hspace*{1.5em}(ii)\ \point{6個の数字のくり返し}\quad $2000=6\times333+2$ より，小数第2位の数字と同じで\quad $2$
+\textbf{方針}\quad 循環小数は，\point{循環する部分の桁数だけ10倍（100倍，1000倍）してもとの数を引く}と，循環部分が消える．\\[2pt]
+(1)\ (i)\ $x=0.777\cdots$ とおくと $10x=7.777\cdots$．引いて $9x=7$．\quad $x=\dfrac79$\\[2pt]
+\hspace*{1.5em}(ii)\ $y=0.4545\cdots$ とおくと $100y=45.4545\cdots$．引いて $99y=45$．\quad $y=\dfrac{45}{99}=\dfrac5{11}$\\[2pt]
+\hspace*{1.5em}(iii)\ $z=0.216216\cdots$ とおくと $1000z=216.216\cdots$．引いて $999z=216$．\\
+\hspace*{1.5em}$z=\dfrac{216}{999}=\dfrac{8}{37}$\quad（分子分母を27で約分）\\[2pt]
+(2)\ (i)\ 実際に割り算すると $3\div7=0.428571\,428571\cdots$ となり，428571 がくり返される．\\
+\hspace*{1.5em}よって\quad $\dfrac37=0.\dot42857\dot1$\\[2pt]
+\hspace*{1.5em}(ii)\ \point{6個の数字のくり返し}．小数第 $n$ 位の数字は，$n$ を6で割った余りで決まる．\\
+\hspace*{1.5em}$2000=6\times333+2$ より余りは2なので，小数第2位の数字と同じで\quad $2$
 \end{kai}
 
 \ans{7}{無理数の計算（有理化）}
 \begin{kai}
-(1)\ $\dfrac{\sqrt7-2}{(\sqrt7+2)(\sqrt7-2)}=\dfrac{\sqrt7-2}{7-4}=\dfrac{\sqrt7-2}{3}$\\[4pt]
-(2)\ \point{$(2+\sqrt2)^2-(\sqrt6)^2$ で $\sqrt{\ }$ が1つ減る}\\
-\hspace*{1.5em}$\dfrac{2+\sqrt2-\sqrt6}{(2+\sqrt2)^2-6}=\dfrac{2+\sqrt2-\sqrt6}{4\sqrt2}
-=\dfrac{(2+\sqrt2-\sqrt6)\sqrt2}{8}=\dfrac{2\sqrt2+2-2\sqrt3}{8}=\dfrac{1+\sqrt2-\sqrt3}{4}$
+\textbf{方針}\quad $(a+b)(a-b)=a^2-b^2$ を使って分母の $\sqrt{\ }$ を消す．\\[2pt]
+(1)\ 分母分子に $\sqrt7-2$ を掛けて\\
+\hspace*{1.5em}$\dfrac{1}{\sqrt7+2}=\dfrac{\sqrt7-2}{(\sqrt7+2)(\sqrt7-2)}=\dfrac{\sqrt7-2}{7-4}=\dfrac{\sqrt7-2}{3}$\\[4pt]
+(2)\ 項が3つあるので，\point{2つをひとまとめにして} $(2+\sqrt2)+\sqrt6$ と見る．\\
+\hspace*{1.5em}分母分子に $(2+\sqrt2)-\sqrt6$ を掛けると，分母は\\
+\hspace*{1.5em}$(2+\sqrt2)^2-(\sqrt6)^2=4+4\sqrt2+2-6=4\sqrt2$\quad（$\sqrt{\ }$ が1つ減る）\\
+\hspace*{1.5em}よって\quad $\dfrac{2+\sqrt2-\sqrt6}{4\sqrt2}$．さらに分母分子に $\sqrt2$ を掛けて\\[2pt]
+\hspace*{1.5em}$=\dfrac{(2+\sqrt2-\sqrt6)\sqrt2}{8}=\dfrac{2\sqrt2+2-2\sqrt3}{8}=\dfrac{1+\sqrt2-\sqrt3}{4}$
 \end{kai}
 
 \ans{8}{無理数の計算（数値代入）}
 \begin{kai}
-(1)\ \point{$\sqrt5$ を単独にして2乗}\quad $2x-1=\sqrt5$ より $4x^2-4x+1=5$，$x^2-x=1$\\[2pt]
-(2)\ (1)より $x^2=x+1$．$x^3=x\cdot x^2=x^2+x=2x+1$．\\
-\hspace*{1.5em}$2x^3-3x^2-x+4=2(2x+1)-3(x+1)-x+4=3$
+\textbf{方針}\quad $x$ をそのまま代入すると計算が大変．\point{$x$ がみたす2次方程式をつくり，次数を下げる}．\\[2pt]
+(1)\ \point{$\sqrt5$ を単独にして2乗}\quad $x=\dfrac{\sqrt5+1}{2}$ より $2x-1=\sqrt5$．\\
+\hspace*{1.5em}両辺を2乗して $4x^2-4x+1=5$，\quad $4x^2-4x=4$．\quad よって\quad $x^2-x=1$\\[2pt]
+(2)\ (1)より $x^2=x+1$．これを使って次数を下げる．\\
+\hspace*{1.5em}$x^3=x\cdot x^2=x(x+1)=x^2+x=(x+1)+x=2x+1$\\
+\hspace*{1.5em}よって\quad $2x^3-3x^2-x+4=2(2x+1)-3(x+1)-x+4$\\
+\hspace*{1.5em}$=4x+2-3x-3-x+4=3$\\
+\hspace*{1.5em}\point{別解：$2x^3-3x^2-x+4$ を $x^2-x-1$ で割ると，商 $2x-1$，余り $3$．$x^2-x-1=0$ だから値は余りの $3$}
 \end{kai}
 
 \ans{9}{無理数の大小比較}
 \begin{kai}
+\textbf{方針}\quad 正の数どうしなら，\point{2乗して比べても大小は変わらない}．分母に $\sqrt{\ }$ があるときは有理化してから比べる．\\[2pt]
 (1)\ $16<19<25$ より $\sqrt{16}<\sqrt{19}<\sqrt{25}$．\quad よって $4<\sqrt{19}<5$\\
 \hspace*{1.5em}\point{示すべき式を先に書かない．根拠 → 結論の順に書く}\\[2pt]
-(2)\ $\dfrac{1}{3-\sqrt7}=\dfrac{3+\sqrt7}{9-7}=\dfrac{3+\sqrt7}{2}$，\quad
-$\dfrac{2}{\sqrt{11}-\sqrt7}=\dfrac{2(\sqrt{11}+\sqrt7)}{11-7}=\dfrac{\sqrt{11}+\sqrt7}{2}$\\[2pt]
-\hspace*{1.5em}$9<11$ より $3<\sqrt{11}$．両辺に $\sqrt7$ を加えて2で割ると\quad
-$\dfrac{1}{3-\sqrt7}<\dfrac{2}{\sqrt{11}-\sqrt7}$
+(2)\ それぞれ分母を有理化する．\\
+\hspace*{1.5em}$\dfrac{1}{3-\sqrt7}=\dfrac{3+\sqrt7}{(3-\sqrt7)(3+\sqrt7)}=\dfrac{3+\sqrt7}{9-7}=\dfrac{3+\sqrt7}{2}$\\[2pt]
+\hspace*{1.5em}$\dfrac{2}{\sqrt{11}-\sqrt7}=\dfrac{2(\sqrt{11}+\sqrt7)}{11-7}=\dfrac{\sqrt{11}+\sqrt7}{2}$\\[2pt]
+\hspace*{1.5em}あとは分子の $3$ と $\sqrt{11}$ を比べればよい．$3=\sqrt9$ で，$9<11$ より $3<\sqrt{11}$．\\
+\hspace*{1.5em}両辺に $\sqrt7$ を加えて2で割ると\quad $\dfrac{3+\sqrt7}{2}<\dfrac{\sqrt{11}+\sqrt7}{2}$\\[2pt]
+\hspace*{1.5em}よって\quad $\dfrac{1}{3-\sqrt7}<\dfrac{2}{\sqrt{11}-\sqrt7}$
 \end{kai}
 
 \ans{10}{整数部分・小数部分}
 \begin{kai}
-(1)\ $4<7<9$ より $2<\sqrt7<3$．\quad $a=2$，$b=\sqrt7-2$\\[2pt]
-(2)\ \point{$b+2=\sqrt7$ を利用}\quad $b(b+4)=(b+2)^2-4=7-4=3$\\[2pt]
-(3)\ $\dfrac1b=\dfrac1{\sqrt7-2}=\dfrac{\sqrt7+2}{3}$．$4<\sqrt7+2<5$ より $\dfrac43<\dfrac1b<\dfrac53$．\quad 整数部分は\quad 1
+\textbf{方針}\quad 整数部分 $a$ は\point{平方数ではさんで}求める．小数部分は $b=(\text{もとの数})-a$．\\[2pt]
+(1)\ $4<7<9$ より $2<\sqrt7<3$．よって整数部分は\quad $a=2$\\
+\hspace*{1.5em}小数部分は\quad $b=\sqrt7-2$\\
+\hspace*{1.5em}\point{「小数部分 $=0.6457\cdots$」のように答えない．$\sqrt7-a$ の形で表す}\\[2pt]
+(2)\ \point{$b+2=\sqrt7$ を利用}．$b(b+4)=b^2+4b=(b+2)^2-4$ だから\\
+\hspace*{1.5em}$b(b+4)=(\sqrt7)^2-4=7-4=3$\\[2pt]
+(3)\ $\dfrac1b=\dfrac1{\sqrt7-2}=\dfrac{\sqrt7+2}{(\sqrt7-2)(\sqrt7+2)}=\dfrac{\sqrt7+2}{3}$\\[2pt]
+\hspace*{1.5em}$2<\sqrt7<3$ より $4<\sqrt7+2<5$．各辺を3で割って\quad $\dfrac43<\dfrac1b<\dfrac53$\\[2pt]
+\hspace*{1.5em}$1.33\cdots<\dfrac1b<1.66\cdots$ だから，整数部分は\quad $1$
 \end{kai}
 
 \ans{11}{絶対値記号}
 \begin{kai}
-(1)\ $\sqrt3-2<0$，$1-\sqrt3<0$ だから\quad $-(\sqrt3-2)-(1-\sqrt3)=1$\\[2pt]
-(2)\ (i)\ $x<-2$ のとき $P=-(x+2)-(x-3)=-2x+1$\\
-\hspace*{1.5em}(ii)\ $-2\leqq x\leqq3$ のとき $P=(x+2)-(x-3)=5$\\
-\hspace*{1.5em}(iii)\ $3<x$ のとき $P=(x+2)+(x-3)=2x-1$
+\textbf{方針}\quad \point{$|A|=\begin{cases}A & (A\geqq0)\\ -A & (A<0)\end{cases}$}．中身の符号を調べてから絶対値をはずす．\\[2pt]
+(1)\ $\sqrt3=1.73\cdots$ だから，$\sqrt3-2<0$，\quad $1-\sqrt3<0$．\\
+\hspace*{1.5em}よって\quad $|\sqrt3-2|+|1-\sqrt3|=-(\sqrt3-2)-(1-\sqrt3)=-\sqrt3+2-1+\sqrt3=1$\\[2pt]
+(2)\ 中身が0になるのは $x=-2,\ 3$．この2点で符号が変わる．\\
+\hspace*{1.5em}(i)\ $x<-2$ のとき，$x+2<0$，$x-3<0$ だから\\
+\hspace*{3em}$P=-(x+2)-(x-3)=-2x+1$\\
+\hspace*{1.5em}(ii)\ $-2\leqq x\leqq3$ のとき，$x+2\geqq0$，$x-3\leqq0$ だから\\
+\hspace*{3em}$P=(x+2)-(x-3)=5$\\
+\hspace*{1.5em}(iii)\ $3<x$ のとき，$x+2>0$，$x-3>0$ だから\\
+\hspace*{3em}$P=(x+2)+(x-3)=2x-1$
 \end{kai}
 
 \ans{12}{文字式の平方根}
 \begin{kai}
-\point{$\sqrt{A^2}=|A|$}\quad 与式 $=\sqrt{(x-2)^2}+\sqrt{(x+3)^2}=|x-2|+|x+3|$\\[2pt]
-$x<-3$ のとき\quad $-(x-2)-(x+3)=-2x-1$\\
-$-3\leqq x\leqq2$ のとき\quad $-(x-2)+(x+3)=5$\\
-$2<x$ のとき\quad $(x-2)+(x+3)=2x+1$
+\textbf{方針}\quad 根号の中を平方の形にして，\point{$\sqrt{A^2}=|A|$}（$\sqrt{A^2}=A$ ではない）を使う．\\[2pt]
+$x^2-4x+4=(x-2)^2$，$x^2+6x+9=(x+3)^2$ だから\\
+\hspace*{1.5em}与式 $=\sqrt{(x-2)^2}+\sqrt{(x+3)^2}=|x-2|+|x+3|$\\
+中身が0になる $x=-3,\ 2$ で場合分けする．\\[2pt]
+(i)\ $x<-3$ のとき\quad $x-2<0$，$x+3<0$ より\quad $-(x-2)-(x+3)=-2x-1$\\
+(ii)\ $-3\leqq x\leqq2$ のとき\quad $x-2\leqq0$，$x+3\geqq0$ より\quad $-(x-2)+(x+3)=5$\\
+(iii)\ $2<x$ のとき\quad $x-2>0$，$x+3>0$ より\quad $(x-2)+(x+3)=2x+1$
 \end{kai}
 
 \ans{13}{2重根号}
 \begin{kai}
-(1)\ たして7，かけて10 は 5 と 2．\quad $(\sqrt5+\sqrt2)+(\sqrt5-\sqrt2)=2\sqrt5$\\[2pt]
-(2)\ $4\sqrt6=2\sqrt{24}$．たして11，かけて24 は 8 と 3．\\
-\hspace*{1.5em}$\sqrt{11\mp2\sqrt{24}}=\sqrt8\mp\sqrt3=2\sqrt2\mp\sqrt3$（複号同順）．\quad
-与式 $=(2\sqrt2-\sqrt3)-(2\sqrt2+\sqrt3)=-2\sqrt3$\\[2pt]
-(3)\ \point{内側の $\sqrt{\ }$ の前に2をつくる}\quad
-$\sqrt{4\pm\sqrt{15}}=\sqrt{\dfrac{8\pm2\sqrt{15}}{2}}=\dfrac{\sqrt5\pm\sqrt3}{\sqrt2}$（複号同順）\\[2pt]
+\textbf{方針}\quad \point{$\sqrt{(a+b)\pm2\sqrt{ab}}=\sqrt a\pm\sqrt b$\ \ （$a>b>0$）}．内側を「$2\sqrt{\ }$」の形にし，たして○，かけて△となる2数を探す．\\[2pt]
+(1)\ たして7，かけて10 となる2数は 5 と 2．\\
+\hspace*{1.5em}$\sqrt{7+2\sqrt{10}}=\sqrt5+\sqrt2$，\quad $\sqrt{7-2\sqrt{10}}=\sqrt5-\sqrt2$\\
+\hspace*{1.5em}よって\quad 与式 $=(\sqrt5+\sqrt2)+(\sqrt5-\sqrt2)=2\sqrt5$\\[2pt]
+(2)\ $4\sqrt6=2\sqrt{24}$ と変形する．たして11，かけて24 となる2数は 8 と 3．\\
+\hspace*{1.5em}$\sqrt{11\mp2\sqrt{24}}=\sqrt8\mp\sqrt3=2\sqrt2\mp\sqrt3$（複号同順）\\
+\hspace*{1.5em}与式 $=(2\sqrt2-\sqrt3)-(2\sqrt2+\sqrt3)=-2\sqrt3$\\
+\hspace*{1.5em}\point{$\sqrt8-\sqrt3$ のように大きい方を前に書く．$\sqrt3-\sqrt8<0$ は根号の値として不適}\\[2pt]
+(3)\ \point{内側の $\sqrt{\ }$ の前に2をつくる}．分母分子に2を掛けて\\
+\hspace*{1.5em}$\sqrt{4\pm\sqrt{15}}=\sqrt{\dfrac{8\pm2\sqrt{15}}{2}}=\dfrac{\sqrt{8\pm2\sqrt{15}}}{\sqrt2}=\dfrac{\sqrt5\pm\sqrt3}{\sqrt2}$（複号同順）\\[2pt]
 \hspace*{1.5em}与式 $=\dfrac{(\sqrt5+\sqrt3)-(\sqrt5-\sqrt3)}{\sqrt2}=\dfrac{2\sqrt3}{\sqrt2}=\sqrt6$
 \end{kai}
 
 \ans{14}{文字係数の方程式}
 \begin{kai}
-$(a-1)x=b-2$ と変形する．\point{$a-1$ で割れるかどうかで場合分け}\\
-(i)\ $a\neq1$ のとき\quad $x=\dfrac{b-2}{a-1}$\\
-(ii)\ $a=1$ のとき，方程式は $0\cdot x=b-2$．\\
-\hspace*{1.5em}$b\neq2$ のとき，これをみたす $x$ は存在しない．\quad $b=2$ のとき，すべての $x$ がみたす．\\[2pt]
+\textbf{方針}\quad $(\text{係数})\times x=(\text{定数})$ の形にし，\point{係数が0かどうかで場合分け}する．0で割ることはできない．\\[2pt]
+$ax+2=x+b$ より\quad $(a-1)x=b-2$\\[2pt]
+(i)\ $a\neq1$ のとき，両辺を $a-1\ (\neq0)$ で割って\quad $x=\dfrac{b-2}{a-1}$\\[2pt]
+(ii)\ $a=1$ のとき，方程式は $0\cdot x=b-2$ となる．左辺はつねに0．\\
+\hspace*{1.5em}$b\neq2$ のとき，右辺は0でないので，これをみたす $x$ は存在しない．\\
+\hspace*{1.5em}$b=2$ のとき，$0\cdot x=0$ となり，すべての $x$ がみたす．\\[2pt]
 以上より\quad
 $\begin{cases}a\neq1\ \text{のとき，}\ x=\dfrac{b-2}{a-1}\\ a=1,\ b\neq2\ \text{のとき，解なし}\\ a=1,\ b=2\ \text{のとき，すべての実数}\end{cases}$
 \end{kai}
 
 \ans{15}{1次不等式}
 \begin{kai}
-(1)\ $3x-5x>-4-2$，$-2x>-6$．\point{負の数で割ると向きが逆}\quad $x<3$\\[2pt]
-(2)\ 両辺を12倍して $8x-6\geqq9x-4$，$-x\geqq2$．\quad $x\leqq-2$
+\textbf{方針}\quad 移項して $ax>b$ の形にする．\point{負の数で割る（掛ける）と不等号の向きが逆}になる．分数があれば分母の最小公倍数を掛けて整数係数にする．\\[2pt]
+(1)\ $x$ の項を左辺，定数項を右辺に移項して\quad $3x-5x>-4-2$，\quad $-2x>-6$\\
+\hspace*{1.5em}両辺を $-2$ で割って（向きが逆）\quad $x<3$\\[2pt]
+(2)\ 分母 3，2，4 の最小公倍数12を両辺に掛けて\\
+\hspace*{1.5em}$8x-6\geqq9x-4$\\
+\hspace*{1.5em}移項して $8x-9x\geqq-4+6$，\quad $-x\geqq2$．\quad 両辺に $-1$ を掛けて\quad $x\leqq-2$
 \end{kai}
 
 \ans{16}{連立不等式}
 \begin{kai}
-①は $2x>6$ より $x>3$．\quad ②は $3x\leqq15$ より $x\leqq5$．\\
-数直線で重なった部分をとって\quad $3<x\leqq5$
+\textbf{方針}\quad それぞれの不等式を解き，\point{数直線上で共通部分}をとる．\\[2pt]
+①より\quad $2x>7-1$，$2x>6$，\quad $x>3$\\
+②より\quad $3x\leqq10+5$，$3x\leqq15$，\quad $x\leqq5$\\[2pt]
+数直線で重なった部分をとって\quad $3<x\leqq5$\\
+\point{端の点が含まれるか（$>$ か $\geqq$ か）に注意．$x=3$ は含まず，$x=5$ は含む}
 \end{kai}
 
 \ans{17}{文字係数の1次不等式}
 \begin{kai}
-(i)\ $a>0$ のとき\quad $x<\dfrac ba$\qquad
-(ii)\ $a<0$ のとき\quad $x>\dfrac ba$\quad\point{負の数で割ると向きが逆}\\[2pt]
-(iii)\ $a=0$ のとき，不等式は $0\cdot x<b$．左辺はつねに0なので，\\
+\textbf{方針}\quad $x$ の係数 $a$ で割るが，\point{$a$ の符号で不等号の向きが変わる}．$a=0$ のときは割れないので別に考える．\\[2pt]
+(i)\ $a>0$ のとき，両辺を $a$ で割って（向きはそのまま）\quad $x<\dfrac ba$\\[2pt]
+(ii)\ $a<0$ のとき，両辺を $a$ で割って（向きが逆）\quad $x>\dfrac ba$\\[2pt]
+(iii)\ $a=0$ のとき，不等式は $0\cdot x<b$，つまり $0<b$ となる．左辺はつねに0なので，\\
 \hspace*{1.5em}$b>0$ のとき，すべての実数．\quad $b\leqq0$ のとき，解なし．
 \end{kai}
 
 \ans{18}{絶対値記号のついた1次方程式}
 \begin{kai}
-(1)\ $x+2=\pm3$ より\quad $x=1,\ -5$\\[2pt]
+\textbf{方針}\quad $|A|=c\ (c>0)$ なら $A=\pm c$．絶対値が2つ以上あるときは，\point{中身が0になる値で場合分け}して絶対値をはずす．\\[2pt]
+(1)\ $|x+2|=3$ より $x+2=3$ または $x+2=-3$．\quad よって\quad $x=1,\ -5$\\[2pt]
 (2)\ \point{絶対値の中身が0になる $x=0,\ 2$ で場合分け}\\
-\hspace*{1.5em}(i)\ $x<0$ のとき\quad $-x-(x-2)=4$，$x=-1$．これは $x<0$ をみたす．\\
-\hspace*{1.5em}(ii)\ $0\leqq x\leqq2$ のとき\quad $x-(x-2)=4$，$0\cdot x=2$ となり，解なし．\\
-\hspace*{1.5em}(iii)\ $2<x$ のとき\quad $x+(x-2)=4$，$x=3$．これは $2<x$ をみたす．\\
-\hspace*{1.5em}よって\quad $x=-1,\ 3$
+\hspace*{1.5em}(i)\ $x<0$ のとき，$|x|=-x$，$|x-2|=-(x-2)$ だから\\
+\hspace*{3em}$-x-(x-2)=4$，\quad $-2x=2$，\quad $x=-1$．これは $x<0$ をみたす．\\
+\hspace*{1.5em}(ii)\ $0\leqq x\leqq2$ のとき，$|x|=x$，$|x-2|=-(x-2)$ だから\\
+\hspace*{3em}$x-(x-2)=4$，\quad $0\cdot x=2$ となり，解なし．\\
+\hspace*{1.5em}(iii)\ $2<x$ のとき，$|x|=x$，$|x-2|=x-2$ だから\\
+\hspace*{3em}$x+(x-2)=4$，\quad $2x=6$，\quad $x=3$．これは $2<x$ をみたす．\\
+\hspace*{1.5em}よって\quad $x=-1,\ 3$\\
+\hspace*{1.5em}\point{求めた値が，場合分けの範囲に入っているかを必ず確かめる}
 \end{kai}
 
 \ans{19}{絶対値記号のついた1次不等式}
 \begin{kai}
-(1)\ $-3<x+1<3$ より\quad $-4<x<2$\\[2pt]
-(2)\ (i)\ $x<0$ のとき\quad $-x-(x-2)<4$，$x>-1$．よって $-1<x<0$\\
-\hspace*{1.5em}(ii)\ $0\leqq x\leqq2$ のとき\quad $x-(x-2)<4$，$0\cdot x<2$ はつねに成り立つ．よって $0\leqq x\leqq2$\\
-\hspace*{1.5em}(iii)\ $2<x$ のとき\quad $x+(x-2)<4$，$x<3$．よって $2<x<3$\\
+\textbf{方針}\quad $|A|<c\ (c>0)$ なら $-c<A<c$．絶対値が2つあるときは場合分けし，\point{各範囲で解いた結果と，その範囲の共通部分}をとってから最後に合わせる．\\[2pt]
+(1)\ $|x+1|<3$ より $-3<x+1<3$．各辺から1を引いて\quad $-4<x<2$\\[2pt]
+(2)\ 中身が0になる $x=0,\ 2$ で場合分けする．\\
+\hspace*{1.5em}(i)\ $x<0$ のとき\quad $-x-(x-2)<4$，$-2x<2$，$x>-1$．\\
+\hspace*{3em}$x<0$ との共通部分は\quad $-1<x<0$\\
+\hspace*{1.5em}(ii)\ $0\leqq x\leqq2$ のとき\quad $x-(x-2)<4$，すなわち $2<4$ となり，つねに成り立つ．\\
+\hspace*{3em}よって\quad $0\leqq x\leqq2$ のすべて\\
+\hspace*{1.5em}(iii)\ $2<x$ のとき\quad $x+(x-2)<4$，$2x<6$，$x<3$．\\
+\hspace*{3em}$2<x$ との共通部分は\quad $2<x<3$\\
 \hspace*{1.5em}(i)〜(iii)をあわせて\quad $-1<x<3$
 \end{kai}
 
 \ans{20}{1次不等式の応用}
 \begin{kai}
-4\,\% の食塩水を $x$\,g 使うとすると，10\,\% の食塩水は $(600-x)$\,g．\\
-含まれる食塩の量は\quad $x\times\dfrac{4}{100}+(600-x)\times\dfrac{10}{100}$\,(g)．\\
-\point{濃度の条件を食塩の量の条件に言いかえる}\quad 600\,g の 6\,\% は 36\,g，8\,\% は 48\,g だから
+\textbf{方針}\quad 求めたい量を $x$ とおき，\point{濃度の条件を食塩の量の条件に言いかえて}不等式をつくる．\\[2pt]
+4\,\% の食塩水を $x$\,g 使うとすると，10\,\% の食塩水は $(600-x)$\,g．\quad ただし $0\leqq x\leqq600$．\\
+含まれる食塩の量は\quad $x\times\dfrac{4}{100}+(600-x)\times\dfrac{10}{100}$\,(g)．\\[2pt]
+600\,g の 6\,\% は $600\times\dfrac{6}{100}=36$\,g，8\,\% は $600\times\dfrac{8}{100}=48$\,g だから
 \[36\leqq\frac{4x}{100}+\frac{10(600-x)}{100}\leqq48\]
-100倍して $3600\leqq4x+6000-10x\leqq4800$，\quad $-2400\leqq-6x\leqq-1200$，\quad $200\leqq x\leqq400$．\\
+各辺を100倍して\quad $3600\leqq4x+6000-10x\leqq4800$，\quad $3600\leqq6000-6x\leqq4800$\\
+各辺から6000を引いて\quad $-2400\leqq-6x\leqq-1200$\\
+各辺を $-6$ で割って（向きが逆）\quad $200\leqq x\leqq400$．これは $0\leqq x\leqq600$ をみたす．\\[2pt]
 よって，4\,\% の食塩水を \textbf{200\,g 以上 400\,g 以下}にすればよい．
 \end{kai}
 
@@ -1356,61 +1444,95 @@ $\begin{cases}a\neq1\ \text{のとき，}\ x=\dfrac{b-2}{a-1}\\ a=1,\ b\neq2\ \t
 \shouans{第2章}{集合と論理}
 \ans{21}{集合に関する様々な記号}
 \begin{kai}
-$A=\{2,4,\cdots,20\}$，$B=\{3,6,9,12,15,18\}$，$A\cap B=\{6,12,18\}$\\
-(1)\ (i)\ $\notin$\qquad (ii)\ $\in$\qquad (iii)\ $\subset$\qquad (iv)\ $\supset$\\
-\hspace*{1.5em}\point{要素と集合は $\in$，集合と集合は $\subset$}\\[2pt]
-(2)\ $\overline A\cap B$ は「奇数である3の倍数」．\quad $\{3,\ 9,\ 15\}$
+\textbf{方針}\quad まず $A,\ B,\ A\cap B$ の要素を書き並べる．\point{要素と集合の関係は $\in,\ \notin$，集合と集合の関係は $\subset,\ \supset$}．\\[2pt]
+$A=\{2,\ 4,\ 6,\ \cdots,\ 20\}$，\quad $B=\{3,\ 6,\ 9,\ 12,\ 15,\ 18\}$\\
+$A\cap B$ は2の倍数かつ3の倍数，つまり6の倍数だから\quad $A\cap B=\{6,\ 12,\ 18\}$\\[2pt]
+(1)\ (i)\ 9は奇数なので $A$ の要素でない．\quad $9\notin A$\\
+\hspace*{1.5em}(ii)\ 12は6の倍数．\quad $12\in A\cap B$\\
+\hspace*{1.5em}(iii)\ $A\cap B$ の要素はすべて $A$ の要素．\quad $A\cap B\subset A$\\
+\hspace*{1.5em}(iv)\ $\{6,\ 12,\ 18\}$ の要素はすべて $B$ の要素．\quad $B\supset\{6,\ 12,\ 18\}$\\[2pt]
+(2)\ $\overline A$ は2の倍数でない数，つまり奇数の集合．\\
+\hspace*{1.5em}$\overline A\cap B$ は「奇数である3の倍数」だから\quad $\{3,\ 9,\ 15\}$
 \end{kai}
 
 \ans{22}{集合の関係}
 \begin{kai}
-\point{数直線で考える．「$=$」がつくかつかないかに注意}\\
-(1)\ $\overline A=\{x\,|\,x<-2,\ 2<x\}$\qquad
-(2)\ $\overline B=\{x\,|\,0\leqq x\leqq3\}$\qquad
-(3)\ $A\cap B=\{x\,|\,-2\leqq x<0\}$\\[2pt]
-(4)\ $A\cup B=\{x\,|\,x\leqq2,\ 3<x\}$\qquad
-(5)\ $\overline A\cap B=\{x\,|\,x<-2,\ 3<x\}$\qquad
-(6)\ $A\cup\overline B=\{x\,|\,-2\leqq x\leqq3\}$\\[2pt]
+\textbf{方針}\quad \point{数直線に $A,\ B$ を図示して考える}．端の点に「$=$」がつくかつかないかに注意する．\\[2pt]
+$A$ は $-2$ 以上 $2$ 以下，$B$ は $0$ より小さいか $3$ より大きい範囲．\\[2pt]
+(1)\ $A$ に含まれない部分だから\quad $\overline A=\{x\,|\,x<-2,\ 2<x\}$\\
+\hspace*{1.5em}\point{補集合では端の等号がつけかわる（$\leqq$ ↔ $<$）}\\[2pt]
+(2)\ $B$ に含まれない部分だから\quad $\overline B=\{x\,|\,0\leqq x\leqq3\}$\\[2pt]
+(3)\ $A$ と $B$ が重なる部分は $-2\leqq x<0$ だから\quad $A\cap B=\{x\,|\,-2\leqq x<0\}$\\[2pt]
+(4)\ $A$ と $B$ を合わせると，$x<0$ と $-2\leqq x\leqq2$ はつながって $x\leqq2$ となるから\\
+\hspace*{1.5em}$A\cup B=\{x\,|\,x\leqq2,\ 3<x\}$\\[2pt]
+(5)\ $\overline A$（$x<-2,\ 2<x$）と $B$（$x<0,\ 3<x$）の重なりだから\\
+\hspace*{1.5em}$\overline A\cap B=\{x\,|\,x<-2,\ 3<x\}$\\[2pt]
+(6)\ $A$（$-2\leqq x\leqq2$）と $\overline B$（$0\leqq x\leqq3$）を合わせて\quad $A\cup\overline B=\{x\,|\,-2\leqq x\leqq3\}$\\[2pt]
 （(5)と(6)はド・モルガンの法則 $\overline{A\cup\overline B}=\overline A\cap B$ により，互いに補集合の関係になっている．）
 \end{kai}
 
 \ans{23}{集合の要素の個数}
 \begin{kai}
-\point{1から $N$ までに $m$ の倍数は $N\div m$ の商の個数だけある}\\
-(1)\ $200\div2=100$，$200\div3=66$ 余り2，$200\div7=28$ 余り4 より\quad $n(A)=100$，$n(B)=66$，$n(C)=28$\\[2pt]
-(2)\ $A\cap B$ は6の倍数：$200\div6=33$ 余り2 より $n(A\cap B)=33$\\
-\hspace*{1.5em}$B\cap C$ は21の倍数：$n(B\cap C)=9$\qquad $C\cap A$ は14の倍数：$n(C\cap A)=14$\\[2pt]
-(3)\ $A\cap B\cap C$ は42の倍数：$n(A\cap B\cap C)=4$\\
+\textbf{方針}\quad \point{1から $N$ までに $m$ の倍数は「$N\div m$ の商」の個数だけある}．「かつ」は公倍数，和集合は包含と排除の原理で求める．\\[2pt]
+(1)\ $200\div2=100$，\quad $200\div3=66$ 余り2，\quad $200\div7=28$ 余り4 より\\
+\hspace*{1.5em}$n(A)=100$，\quad $n(B)=66$，\quad $n(C)=28$\\[2pt]
+(2)\ 2と3，3と7，7と2はそれぞれ互いに素なので，最小公倍数はその積．\\
+\hspace*{1.5em}$A\cap B$ は6の倍数：$200\div6=33$ 余り2 より\quad $n(A\cap B)=33$\\
+\hspace*{1.5em}$B\cap C$ は21の倍数：$200\div21=9$ 余り11 より\quad $n(B\cap C)=9$\\
+\hspace*{1.5em}$C\cap A$ は14の倍数：$200\div14=14$ 余り4 より\quad $n(C\cap A)=14$\\[2pt]
+(3)\ $A\cap B\cap C$ は42の倍数：$200\div42=4$ 余り32 より\quad $n(A\cap B\cap C)=4$\\[2pt]
+\hspace*{1.5em}\point{$n(A\cup B\cup C)=n(A)+n(B)+n(C)-n(A\cap B)-n(B\cap C)-n(C\cap A)+n(A\cap B\cap C)$}\\
 \hspace*{1.5em}$n(A\cup B\cup C)=100+66+28-33-9-14+4=142$
 \end{kai}
 
 \ans{24}{命題の真偽}
 \begin{kai}
-(1)\ 逆：$xy\geqq4$ ならば $x\geqq2$ かつ $y\geqq2$．\quad $x=1,\ y=4$ のとき成り立たないから\quad 偽\\
-\hspace*{1.5em}裏：$x<2$ または $y<2$ ならば $xy<4$．\quad $x=1,\ y=4$ のとき成り立たないから\quad 偽\\
-\hspace*{1.5em}対偶：$xy<4$ ならば $x<2$ または $y<2$．\quad もとの命題が真だから，対偶も\quad 真\\[2pt]
-(2)\ 与えられた命題の対偶は「$x=2$ ならば $x^2=4$」で，これは真．よって，もとの命題も真．\\[2pt]
-(3)\ \point{結論を否定して始める}\quad $\sqrt3$ が有理数であると仮定すると，互いに素な自然数 $m,\ n$ を用いて $\sqrt3=\dfrac nm$ と表せる．\\
-\hspace*{1.5em}両辺を2乗して $3m^2=n^2$．よって $n^2$ は3の倍数．\\
-\hspace*{1.5em}$n$ が3の倍数でないとすると $n=3k\pm1$（$k$ は整数）で，$n^2=3(3k^2\pm2k)+1$ は3の倍数でない．\\
-\hspace*{1.5em}したがって $n$ は3の倍数．$n=3l$ とおくと $3m^2=9l^2$，$m^2=3l^2$ となり，同様に $m$ も3の倍数．\\
-\hspace*{1.5em}これは $m,\ n$ が互いに素であることに矛盾する．よって $\sqrt3$ は無理数である．
+\textbf{方針}\quad 「$p\Rightarrow q$」に対し，逆は「$q\Rightarrow p$」，裏は「$\overline p\Rightarrow\overline q$」，対偶は「$\overline q\Rightarrow\overline p$」．\point{もとの命題と対偶の真偽は一致する}．偽を示すには反例を1つあげる．\\[2pt]
+(1)\ まず，もとの命題は真（$x\geqq2>0$，$y\geqq2>0$ より $xy\geqq2\cdot2=4$）．\\
+\hspace*{1.5em}「$x\geqq2$ かつ $y\geqq2$」の否定は「$x<2$ または $y<2$」であることに注意する．\\[2pt]
+\hspace*{1.5em}逆：$xy\geqq4$ ならば $x\geqq2$ かつ $y\geqq2$．\\
+\hspace*{3em}$x=1,\ y=4$ のとき $xy=4\geqq4$ だが $x<2$．成り立たないから\quad 偽\\
+\hspace*{1.5em}裏：$x<2$ または $y<2$ ならば $xy<4$．\\
+\hspace*{3em}$x=1,\ y=4$ のとき $x<2$ だが $xy=4$．成り立たないから\quad 偽\\
+\hspace*{1.5em}対偶：$xy<4$ ならば $x<2$ または $y<2$．\\
+\hspace*{3em}もとの命題が真だから，対偶も\quad 真\\
+\hspace*{1.5em}\point{逆と裏は互いに対偶の関係なので，真偽が一致する}\\[2pt]
+(2)\ 与えられた命題の対偶は「$x=2$ ならば $x^2=4$」．\\
+\hspace*{1.5em}$x=2$ のとき $x^2=2^2=4$ だから，対偶は真．よって，もとの命題も真である．\\[2pt]
+(3)\ \point{結論を否定して始め，矛盾を導く}\\
+\hspace*{1.5em}$\sqrt3$ が有理数であると仮定すると，互いに素な自然数 $m,\ n$ を用いて $\sqrt3=\dfrac nm$ と表せる．\\
+\hspace*{1.5em}両辺を2乗して $3=\dfrac{n^2}{m^2}$，\quad $3m^2=n^2$ ……①．よって $n^2$ は3の倍数．\\
+\hspace*{1.5em}$n$ が3の倍数でないとすると $n=3k\pm1$（$k$ は整数）と表せて\\
+\hspace*{3em}$n^2=9k^2\pm6k+1=3(3k^2\pm2k)+1$\\
+\hspace*{1.5em}となり，$n^2$ は3の倍数でない．したがって $n$ は3の倍数である．\\
+\hspace*{1.5em}$n=3l$（$l$ は自然数）とおくと，①より $3m^2=9l^2$，\quad $m^2=3l^2$ となり，同様に $m$ も3の倍数．\\
+\hspace*{1.5em}$m,\ n$ がともに3の倍数となり，互いに素であることに矛盾する．\\
+\hspace*{1.5em}よって $\sqrt3$ は無理数である．
 \end{kai}
 
 \ans{25}{必要条件・十分条件}
 \begin{kai}
-(1)\ $x^2=9$ を解くと $x=\pm3$．「$x=3\Rightarrow x^2=9$」は真，逆は偽．\quad \textbf{十分条件}\\[2pt]
-(2)\ $|p-2|<3$ より $-1<p<5$．$|p|<1$ より $-1<p<1$．\\
-\hspace*{1.5em}$\{p\,|\,-1<p<1\}\subset\{p\,|\,-1<p<5\}$ だから\quad \textbf{必要条件}\\[2pt]
-(3)\ $5m+n=4m+(m+n)$ で $4m$ は4の倍数だから，$5m+n$ と $m+n$ は一方が4の倍数なら他方も4の倍数．\quad \textbf{必要十分条件}\\[2pt]
-(4)\ $\mathrm{AB}=\mathrm{AC}$ なら二等辺三角形．逆は，$\mathrm{BA}=\mathrm{BC}$ の二等辺三角形などがあるので偽．\quad \textbf{十分条件}\\[2pt]
-(5)\ \point{否定を含むので対偶で考える}\quad「$x+y\neq5\Rightarrow(x\neq2$ または $y\neq3)$」の対偶は「$(x=2$ かつ $y=3)\Rightarrow x+y=5$」で真．\\
-\hspace*{1.5em}逆の対偶は「$x+y=5\Rightarrow(x=2$ かつ $y=3)$」で，$x=1,\ y=4$ が反例．偽．\quad \textbf{十分条件}
+\textbf{方針}\quad \point{「$p\Rightarrow q$」が真のとき，$p$ は $q$ であるための十分条件，$q$ は $p$ であるための必要条件}．$p\Rightarrow q$ と $q\Rightarrow p$ の真偽をそれぞれ調べる．範囲で表せる条件は，集合の包含関係（小さい方が十分条件）で判断する．\\[2pt]
+(1)\ $x^2=9$ を解くと $x=\pm3$．\\
+\hspace*{1.5em}「$x=3\Rightarrow x^2=9$」は真．「$x^2=9\Rightarrow x=3$」は $x=-3$ が反例で偽．\quad \textbf{十分条件}\\[2pt]
+(2)\ $|p-2|<3$ より $-3<p-2<3$，\quad $-1<p<5$．\quad $|p|<1$ より $-1<p<1$．\\
+\hspace*{1.5em}$\{p\,|\,-1<p<1\}\subset\{p\,|\,-1<p<5\}$ だから，「$|p|<1\Rightarrow|p-2|<3$」は真，逆は偽（反例 $p=3$）．\\
+\hspace*{1.5em}よって $|p-2|<3$ は\quad \textbf{必要条件}\\[2pt]
+(3)\ $5m+n=4m+(m+n)$ で，$4m$ は4の倍数．\\
+\hspace*{1.5em}$m+n$ が4の倍数なら $5m+n$ も4の倍数．逆に $5m+n$ が4の倍数なら $m+n=(5m+n)-4m$ も4の倍数．\\
+\hspace*{1.5em}両方向とも真だから\quad \textbf{必要十分条件}\\[2pt]
+(4)\ $\mathrm{AB}=\mathrm{AC}$ なら $\triangle\mathrm{ABC}$ は二等辺三角形．\\
+\hspace*{1.5em}逆は，$\mathrm{BA}=\mathrm{BC}$ の二等辺三角形（$\mathrm{AB}\neq\mathrm{AC}$）が反例となり偽．\quad \textbf{十分条件}\\[2pt]
+(5)\ \point{否定を含む条件は対偶で考える}\\
+\hspace*{1.5em}「$x+y\neq5\Rightarrow(x\neq2$ または $y\neq3)$」の対偶は「$(x=2$ かつ $y=3)\Rightarrow x+y=5$」で真．\\
+\hspace*{1.5em}逆「$(x\neq2$ または $y\neq3)\Rightarrow x+y\neq5$」の対偶は「$x+y=5\Rightarrow(x=2$ かつ $y=3)$」で，\\
+\hspace*{1.5em}$x=1,\ y=4$ が反例．偽．\quad \textbf{十分条件}
 \end{kai}
 
 \shouans{第3章}{2次関数}
 \ans{26}{1次関数のグラフ}
 \begin{kai}
+\textbf{方針}\quad $y=mx+n$ は傾き $m$，$y$ 切片 $n$ の直線．$y=k$ は $x$ 軸に平行，$x=k$ は $y$ 軸に平行な直線．絶対値を含む関数は，\point{中身の符号で場合分けしてから}値域を考える．\\[2pt]
 (1)\\
 \begin{tikzpicture}[scale=0.42]
 \ax{-3}{3}{-2.5}{2.5}
@@ -1436,29 +1558,47 @@ $A=\{2,4,\cdots,20\}$，$B=\{3,6,9,12,15,18\}$，$A\cap B=\{6,12,18\}$\\
 \node[left] at (0,1){\scriptsize 1}; \node[above right] at (0.5,0){\scriptsize $\frac12$};
 \node at (0,-3.4){\scriptsize (iv)};
 \end{tikzpicture}\\[4pt]
-(iii)は傾き1，$y$ 切片 $-2$．(iv)は傾き $-2$，$y$ 切片 $1$．(ii)は $y$ 軸に平行な直線．\\[4pt]
+(i)は点 $(0,\ -1)$ を通り $x$ 軸に平行な直線．(ii)は点 $(-2,\ 0)$ を通り $y$ 軸に平行な直線．\\
+(iii)は傾き1，$y$ 切片 $-2$．$x$ 軸との交点は $y=0$ として $x=2$．\\
+(iv)は傾き $-2$，$y$ 切片 $1$．$x$ 軸との交点は $-2x+1=0$ より $x=\dfrac12$．\\[4pt]
 (2)\ (i)\ $f(0)=|-2|+1=3$，\ $f(2)=0+1=1$，\ $f(5)=3+1=4$\\[2pt]
-\hspace*{1.5em}(ii)\ $0\leqq x\leqq3$ より $-2\leqq x-2\leqq1$，よって $0\leqq|x-2|\leqq2$．\quad 値域は\quad $1\leqq f(x)\leqq3$\\
+\hspace*{1.5em}(ii)\ 絶対値をはずすと\quad $f(x)=\begin{cases}-x+3 & (x<2)\\ x-1 & (x\geqq2)\end{cases}$\\
+\hspace*{1.5em}グラフは $x=2$ で折れ曲がるV字形で，$x=2$ のとき最小値 $f(2)=1$．\\
+\hspace*{1.5em}$0\leqq x\leqq3$ では，$f(0)=3$，$f(2)=1$，$f(3)=2$ より\quad 値域は\quad $1\leqq f(x)\leqq3$\\
 \hspace*{1.5em}\point{両端の値 $f(0)=3$，$f(3)=2$ だけで「$2\leqq f(x)\leqq3$」としてはいけない}
 \end{kai}
 
 \ans{27}{点の移動}
 \begin{kai}
-(1)\ $(2+3,\ -3-2)=(5,\ -5)$\qquad (2)\ $(2,\ 3)$\qquad (3)\ $(-2,\ -3)$\qquad (4)\ $(-2,\ 3)$\\
+\textbf{方針}\quad 平行移動は座標に移動量を加える．対称移動は\point{どの座標の符号が変わるか}を考える．\\[2pt]
+(1)\ $x$ 座標に3，$y$ 座標に $-2$ を加えて\quad $(2+3,\ -3-2)=(5,\ -5)$\\[2pt]
+(2)\ $x$ 軸に関して対称：$y$ 座標の符号が変わる．\quad $(2,\ 3)$\\[2pt]
+(3)\ $y$ 軸に関して対称：$x$ 座標の符号が変わる．\quad $(-2,\ -3)$\\[2pt]
+(4)\ 原点に関して対称：両方の符号が変わる．\quad $(-2,\ 3)$\\
 \point{$x$ 軸対称は $y$ 座標の符号，$y$ 軸対称は $x$ 座標の符号，原点対称は両方の符号が変わる}
 \end{kai}
 
 \ans{28}{平方完成}
 \begin{kai}
-(1)\ $y=-(x^2-4x)-1=-\{(x-2)^2-4\}-1=-(x-2)^2+3$\\[2pt]
-(2)\ $y=3(x^2+2x)+1=3\{(x+1)^2-1\}+1=3(x+1)^2-2$
+\textbf{方針}\quad \point{$x^2$ の係数で $x$ の項までをくくり}，$x^2+2px=(x+p)^2-p^2$ を使う．定数項はくくらない．\\[2pt]
+(1)\ $y=-x^2+4x-1=-(x^2-4x)-1$\\
+\hspace*{1.5em}$x^2-4x=(x-2)^2-4$ だから\\
+\hspace*{1.5em}$y=-\{(x-2)^2-4\}-1=-(x-2)^2+4-1=-(x-2)^2+3$\\
+\hspace*{1.5em}\point{$-\{\ \}$ をはずすとき，$-4$ が $+4$ になることに注意}\\[2pt]
+(2)\ $y=3x^2+6x+1=3(x^2+2x)+1$\\
+\hspace*{1.5em}$x^2+2x=(x+1)^2-1$ だから\\
+\hspace*{1.5em}$y=3\{(x+1)^2-1\}+1=3(x+1)^2-3+1=3(x+1)^2-2$\\
+\hspace*{1.5em}検算：$3(x+1)^2-2=3x^2+6x+3-2=3x^2+6x+1$\quad（一致）
 \end{kai}
 
 \ans{29}{2次関数 $y=a(x-p)^2+q$ のグラフ}
 \begin{kai}
+\textbf{方針}\quad 平方完成して $y=a(x-p)^2+q$ の形にすると，\point{頂点 $(p,\ q)$，$a>0$ なら下に凸，$a<0$ なら上に凸}．$y$ 切片（$x=0$ のときの $y$）もかき込む．\\[2pt]
 (1)\ 下に凸，頂点 $(-2,\ -1)$，$y$ 切片 $3$\qquad
-(2)\ $y=2(x+1)^2-3$．下に凸，頂点 $(-1,\ -3)$，$y$ 切片 $-1$\\[2pt]
-(3)\ $y=-2\left(x^2-\dfrac52x\right)-2=-2\left(x-\dfrac54\right)^2+\dfrac98$．上に凸，頂点 $\left(\dfrac54,\ \dfrac98\right)$，$y$ 切片 $-2$\\[2pt]
+(2)\ $y=2(x^2+2x)-1=2\{(x+1)^2-1\}-1=2(x+1)^2-3$．下に凸，頂点 $(-1,\ -3)$，$y$ 切片 $-1$\\[2pt]
+(3)\ $y=-2\left(x^2-\dfrac52x\right)-2=-2\left\{\left(x-\dfrac54\right)^2-\dfrac{25}{16}\right\}-2=-2\left(x-\dfrac54\right)^2+\dfrac98$．\\
+\hspace*{1.5em}上に凸，頂点 $\left(\dfrac54,\ \dfrac98\right)$，$y$ 切片 $-2$．\\
+\hspace*{1.5em}$x$ 軸との交点は $-2x^2+5x-2=0$，$(2x-1)(x-2)=0$ より $x=\dfrac12,\ 2$\\[2pt]
 (4)\ $y=\dfrac12(x^2+4x)+1=\dfrac12(x+2)^2-1$．下に凸，頂点 $(-2,\ -1)$，$y$ 切片 $1$\\[4pt]
 \begin{tikzpicture}[scale=0.42]
 \ax{-4.5}{1.5}{-1.8}{4}
@@ -1496,48 +1636,74 @@ $A=\{2,4,\cdots,20\}$，$B=\{3,6,9,12,15,18\}$，$A\cap B=\{6,12,18\}$\\
 
 \ans{30}{放物線の平行移動}
 \begin{kai}
-\point{$x^2$ の係数はそのままで，頂点を移動する}\\
-(1)\ (i)\ $y=3(x-2)^2-3$\\
-\hspace*{1.5em}(ii)\ $y=(x+2)^2-3$ より頂点は $(-2,\ -3)$．これを移動すると $(0,\ -6)$．\quad $y=x^2-6$\\[2pt]
-(2)\ ①は $y=2(x-1)^2+1$ で頂点 $(1,\ 1)$．②は $y=2(x+2)^2-3$ で頂点 $(-2,\ -3)$．\\
-\hspace*{1.5em}よって，②を $x$ 軸方向に $3$，$y$ 軸方向に $4$ だけ平行移動すると①になる．
+\textbf{方針}\quad 平行移動しても\point{$x^2$ の係数（形と凸の向き）は変わらない}．頂点がどこへ移るかを考える．\\
+（$x$ 軸方向に $p$，$y$ 軸方向に $q$ の平行移動は，$x$ を $x-p$，$y$ を $y-q$ におきかえてもよい．）\\[2pt]
+(1)\ (i)\ $y=3x^2$ の頂点 $(0,\ 0)$ は $(2,\ -3)$ に移る．\quad $y=3(x-2)^2-3$\\
+\hspace*{1.5em}(ii)\ $y=x^2+4x+1=(x+2)^2-3$ より頂点は $(-2,\ -3)$．\\
+\hspace*{1.5em}これを移動すると $(-2+2,\ -3-3)=(0,\ -6)$．\quad $y=x^2-6$\\[2pt]
+(2)\ どちらも $x^2$ の係数は2なので，頂点の移動を調べればよい．\\
+\hspace*{1.5em}①：$y=2(x^2-2x)+3=2(x-1)^2+1$ で頂点 $(1,\ 1)$\\
+\hspace*{1.5em}②：$y=2(x^2+4x)+5=2(x+2)^2-3$ で頂点 $(-2,\ -3)$\\
+\hspace*{1.5em}②の頂点から①の頂点へは，$x$ 方向に $1-(-2)=3$，$y$ 方向に $1-(-3)=4$．\\
+\hspace*{1.5em}よって，②を $x$ 軸方向に $3$，$y$ 軸方向に $4$ だけ平行移動すると①になる．\\
+\hspace*{1.5em}\point{「どのグラフをどのグラフに移すか」の向きを逆にしない}
 \end{kai}
 
 \ans{31}{放物線の対称移動}
 \begin{kai}
-$y=(x+3)^2-4$ より頂点は $(-3,\ -4)$，下に凸．\point{頂点を移動し，凸の向きも確認}\\
-(i)\ 頂点 $(-3,\ 4)$，上に凸．\quad $y=-(x+3)^2+4$，すなわち $y=-x^2-6x-5$\\
-(ii)\ 頂点 $(3,\ -4)$，下に凸．\quad $y=(x-3)^2-4$，すなわち $y=x^2-6x+5$\\
-(iii)\ 頂点 $(3,\ 4)$，上に凸．\quad $y=-(x-3)^2+4$，すなわち $y=-x^2+6x-5$
+\textbf{方針}\quad \point{頂点を移動し，凸の向きも確認}する．$x$ 軸対称・原点対称では凸の向きが逆になる．\\
+（式で考えるなら，$x$ 軸対称は $y\to-y$，$y$ 軸対称は $x\to-x$，原点対称は両方をおきかえる．）\\[2pt]
+$y=x^2+6x+5=(x+3)^2-4$ より，頂点は $(-3,\ -4)$，下に凸．\\[2pt]
+(i)\ $x$ 軸に関して対称移動：頂点 $(-3,\ 4)$，上に凸．\\
+\hspace*{1.5em}$y=-(x+3)^2+4$，すなわち\quad $y=-x^2-6x-5$\\
+\hspace*{1.5em}（$y$ を $-y$ におきかえて $-y=x^2+6x+5$ としても同じ）\\[2pt]
+(ii)\ $y$ 軸に関して対称移動：頂点 $(3,\ -4)$，下に凸．\\
+\hspace*{1.5em}$y=(x-3)^2-4$，すなわち\quad $y=x^2-6x+5$\\
+\hspace*{1.5em}（$x$ を $-x$ におきかえて $y=(-x)^2+6(-x)+5$ としても同じ）\\[2pt]
+(iii)\ 原点に関して対称移動：頂点 $(3,\ 4)$，上に凸．\\
+\hspace*{1.5em}$y=-(x-3)^2+4$，すなわち\quad $y=-x^2+6x-5$
 \end{kai}
 
 \ans{32}{放物線の移動}
 \begin{kai}
-\point{具体的にわかっている移動後の式から逆にたどる}\\
-$y=-x^2+4x-1=-(x-2)^2+3$ より頂点 $(2,\ 3)$，上に凸．\\
-これを $x$ 軸に関して対称移動すると，頂点 $(2,\ -3)$ で下に凸．\\
-さらに $x$ 軸方向に $-3$ だけ平行移動すると，頂点 $(-1,\ -3)$ で下に凸の放物線 $y=(x+1)^2-3=x^2+2x-2$．\\
-これが $y=x^2+ax+b$ と一致するので\quad $a=2$，$b=-2$
+\textbf{方針}\quad \point{具体的にわかっている移動後の式から，移動を逆にたどる}．逆にたどるときは移動の順番も逆にする．\\[2pt]
+移動後の放物線は $y=-x^2+4x-1=-(x-2)^2+3$ より，頂点 $(2,\ 3)$，上に凸．\\[2pt]
+最後の移動「$x$ 軸に関する対称移動」をもとにもどす（もう一度 $x$ 軸に関して対称移動する）と，\\
+\hspace*{1.5em}頂点 $(2,\ -3)$ で下に凸．\\
+その前の移動「$x$ 軸方向に3」をもとにもどす（$x$ 軸方向に $-3$ 移動する）と，\\
+\hspace*{1.5em}頂点 $(-1,\ -3)$ で下に凸の放物線 $y=(x+1)^2-3=x^2+2x-2$．\\[2pt]
+これが $y=x^2+ax+b$ と一致するので\quad $a=2$，$b=-2$\\[2pt]
+（確認：$y=x^2+2x-2=(x+1)^2-3$ の頂点 $(-1,\ -3)$ を $x$ 方向に3動かすと $(2,\ -3)$，$x$ 軸対称で $(2,\ 3)$．一致する．）
 \end{kai}
 
 \ans{33}{2次関数の決定}
 \begin{kai}
-(1)\ $y=a(x-1)^2-2$ とおく．$(3,\ 6)$ を通るので $6=4a-2$，$a=2$．\quad $y=2(x-1)^2-2$\\[2pt]
-(2)\ $y=a(x+1)(x-3)$ とおく．$(0,\ 6)$ を通るので $6=-3a$，$a=-2$．\quad $y=-2(x+1)(x-3)$\\[2pt]
-(3)\ $y=ax^2+bx+c$ とおく．$a-b+c=6$，$a+b+c=2$，$4a+2b+c=6$．\\
-\hspace*{1.5em}第1式と第2式から $b=-2$，$a+c=4$．第3式は $4a+c=10$．よって $a=2$，$c=2$．\quad $y=2x^2-2x+2$\\[2pt]
-(4)\ 2点 $(-2,\ 7)$，$(2,\ 7)$ を通るので，軸は $y$ 軸．$y=ax^2+c$ とおける．\\
-\hspace*{1.5em}$4a+c=7$，$a+c=4$ より $a=1$，$c=3$．\quad $y=x^2+3$\\[2pt]
-(5)\ 2点 $(0,\ 8)$，$(4,\ 8)$ を通るので軸は $x=2$．$x$ 軸に接するので頂点は $(2,\ 0)$．\\
-\hspace*{1.5em}$y=a(x-2)^2$ とおく．$(0,\ 8)$ を通るので $a=2$．\quad $y=2(x-2)^2$
+\textbf{方針}\quad 条件に合わせて式の形を選ぶ．\point{頂点がわかれば $y=a(x-p)^2+q$，$x$ 軸との交点がわかれば $y=a(x-\alpha)(x-\beta)$，3点なら $y=ax^2+bx+c$}．\\[2pt]
+(1)\ 頂点が $(1,\ -2)$ だから $y=a(x-1)^2-2$ とおく．\\
+\hspace*{1.5em}点 $(3,\ 6)$ を通るので $6=a(3-1)^2-2$，\quad $4a=8$，\quad $a=2$．\quad $y=2(x-1)^2-2$\\[2pt]
+(2)\ $x$ 軸と $x=-1,\ 3$ で交わるから $y=a(x+1)(x-3)$ とおく．\\
+\hspace*{1.5em}点 $(0,\ 6)$ を通るので $6=a\cdot1\cdot(-3)$，\quad $a=-2$．\quad $y=-2(x+1)(x-3)$\\[2pt]
+(3)\ $y=ax^2+bx+c$ とおく．3点を通るので\\
+\hspace*{1.5em}$a-b+c=6$ ……①，\quad $a+b+c=2$ ……②，\quad $4a+2b+c=6$ ……③\\
+\hspace*{1.5em}②$-$①より $2b=-4$，$b=-2$．①より $a+c=4$ ……④\\
+\hspace*{1.5em}③に $b=-2$ を代入して $4a+c=10$ ……⑤．\quad ⑤$-$④より $3a=6$，$a=2$，$c=2$\\
+\hspace*{1.5em}よって\quad $y=2x^2-2x+2$\\[2pt]
+(4)\ \point{$y$ 座標が等しい2点 $(-2,\ 7)$，$(2,\ 7)$ の中点の $x$ 座標が軸}．軸は $x=0$（$y$ 軸）．\\
+\hspace*{1.5em}よって $y=ax^2+c$ とおける．$(2,\ 7)$，$(1,\ 4)$ を通るので\\
+\hspace*{1.5em}$4a+c=7$，\quad $a+c=4$．\quad 引いて $3a=3$，$a=1$，$c=3$．\quad $y=x^2+3$\\[2pt]
+(5)\ 2点 $(0,\ 8)$，$(4,\ 8)$ の $y$ 座標が等しいので，軸は $x=\dfrac{0+4}{2}=2$．\\
+\hspace*{1.5em}$x$ 軸に接するので，頂点は $x$ 軸上にあり $(2,\ 0)$．\\
+\hspace*{1.5em}$y=a(x-2)^2$ とおく．$(0,\ 8)$ を通るので $8=4a$，$a=2$．\quad $y=2(x-2)^2$
 \end{kai}
 
 \ans{34}{絶対値記号のついた関数のグラフ}
 \begin{kai}
-(1)\ $y=x+2$ のグラフの $x$ 軸より下の部分を折り返す．\\
-(2)\ $y=\begin{cases}-2x+2 & (x<0)\\ 2 & (0\leqq x<2)\\ 2x-2 & (2\leqq x)\end{cases}$\\[2pt]
+\textbf{方針}\quad 絶対値は\point{中身の符号で場合分けしてはずす}．$y=|f(x)|$ のグラフは，$y=f(x)$ のグラフの $x$ 軸より下の部分を $x$ 軸に関して折り返したもの．\\[2pt]
+(1)\ $y=\begin{cases}x+2 & (x\geqq-2)\\ -x-2 & (x<-2)\end{cases}$\quad $y=x+2$ のグラフの $x$ 軸より下の部分を折り返す．\\
+(2)\ 中身が0になる $x=0,\ 2$ で場合分けして\quad $y=\begin{cases}-2x+2 & (x<0)\\ 2 & (0\leqq x<2)\\ 2x-2 & (2\leqq x)\end{cases}$\\[2pt]
 (3)\ $y=x^2-2x-3=(x-1)^2-4$ のグラフの $x$ 軸より下の部分を折り返す．$x$ 軸との交点は $x=-1,\ 3$．\\
-(4)\ $y=\begin{cases}(x-1)^2-4 & (x\geqq0)\\ (x+1)^2-4 & (x<0)\end{cases}$\quad（$y$ 軸に関して対称なグラフ）\\[4pt]
+(4)\ $x\geqq0$ のとき $y=x^2-2x-3=(x-1)^2-4$，\quad $x<0$ のとき $y=x^2+2x-3=(x+1)^2-4$\\
+\hspace*{1.5em}\point{$x$ を $-x$ にしても式が変わらないので，グラフは $y$ 軸に関して対称}．$x\geqq0$ の部分をかいて折り返せばよい．\\[4pt]
 \begin{tikzpicture}[scale=0.4]
 \ax{-4.5}{1.5}{-0.8}{3.5}
 \draw[thick] (-4.5,2.5)--(-2,0)--(1.2,3.2);
@@ -1573,110 +1739,178 @@ $y=-x^2+4x-1=-(x-2)^2+3$ より頂点 $(2,\ 3)$，上に凸．\\
 
 \ans{35}{最大・最小（Ⅰ）}
 \begin{kai}
-(1)\ 右下がりの直線だから，$x=-1$ のとき最大値 $5$，$x=2$ のとき最小値 $-4$\\[2pt]
-(2)\ $y=\begin{cases}-x+3 & (0\leqq x<1)\\ 3x-1 & (1\leqq x\leqq3)\end{cases}$\quad グラフより $x=3$ のとき最大値 $8$，$x=1$ のとき最小値 $2$\\[2pt]
-(3)\ $y=(x-2)^2-3$．頂点 $(2,\ -3)$ で下に凸．\point{両端と頂点の $y$ 座標を比べる}\\
-\hspace*{1.5em}(i)\ 最大値なし，最小値 $-3$（$x=2$）\\
-\hspace*{1.5em}(ii)\ 減少するので，最大値 $6$（$x=-1$），最小値 $-2$（$x=1$）\\
-\hspace*{1.5em}(iii)\ 増加するので，最大値 $6$（$x=5$），最小値 $-2$（$x=3$）\\
-\hspace*{1.5em}(iv)\ $y(1)=-2$，$y(4)=1$ より，最大値 $1$（$x=4$），最小値 $-3$（$x=2$）\\
-\hspace*{1.5em}(v)\ $-3\leqq y<1$ より，最大値なし，最小値 $-3$（$x=2$）\\
-\hspace*{1.5em}(vi)\ $1<y<6$ より，最大値，最小値ともになし
+\textbf{方針}\quad グラフをかき，\point{定義域の両端と頂点の $y$ 座標を比べる}．定義域の端が含まれない（$<$）ときは，その値をとらないことに注意．\\[2pt]
+(1)\ 傾きが負なので右下がりの直線．$x=-1$ のとき $y=5$，$x=2$ のとき $y=-4$．\\
+\hspace*{1.5em}$x=-1$ のとき最大値 $5$，\quad $x=2$ のとき最小値 $-4$\\[2pt]
+(2)\ $2x-2$ の符号で場合分けする．\\
+\hspace*{1.5em}$0\leqq x<1$ のとき\quad $y=x+1-(2x-2)=-x+3$\\
+\hspace*{1.5em}$1\leqq x\leqq3$ のとき\quad $y=x+1+(2x-2)=3x-1$\\
+\hspace*{1.5em}$y(0)=3$，$y(1)=2$，$y(3)=8$．グラフは $x=1$ で折れ曲がり，$x=1$ まで減少，その後増加．\\
+\hspace*{1.5em}$x=3$ のとき最大値 $8$，\quad $x=1$ のとき最小値 $2$\\[2pt]
+(3)\ $y=x^2-4x+1=(x-2)^2-3$．頂点 $(2,\ -3)$ で下に凸．軸は $x=2$．\\
+\hspace*{1.5em}(i)\ $y$ はいくらでも大きくなる．\quad 最大値なし，最小値 $-3$（$x=2$）\\
+\hspace*{1.5em}(ii)\ $-1\leqq x\leqq1$ は軸より左なので減少する．$y(-1)=6$，$y(1)=-2$．\\
+\hspace*{3em}最大値 $6$（$x=-1$），最小値 $-2$（$x=1$）\\
+\hspace*{1.5em}(iii)\ $3\leqq x\leqq5$ は軸より右なので増加する．$y(3)=-2$，$y(5)=6$．\\
+\hspace*{3em}最大値 $6$（$x=5$），最小値 $-2$（$x=3$）\\
+\hspace*{1.5em}(iv)\ 軸 $x=2$ を含む．$y(1)=-2$，$y(2)=-3$，$y(4)=1$．\\
+\hspace*{3em}軸から遠い $x=4$ で最大．\quad 最大値 $1$（$x=4$），最小値 $-3$（$x=2$）\\
+\hspace*{1.5em}(v)\ $0<x<3$ では，$x=2$ で $y=-3$．端の値 $y(0)=1$，$y(3)=-2$ はとらない．\\
+\hspace*{3em}値域は $-3\leqq y<1$ となり，最大値なし，最小値 $-3$（$x=2$）\\
+\hspace*{1.5em}(vi)\ $4<x<5$ では増加し，$y(4)=1$，$y(5)=6$ はとらない．値域は $1<y<6$．\\
+\hspace*{3em}最大値，最小値ともになし\\
+\hspace*{1.5em}\point{「最大値なし」は，いくらでも近づくがその値にはならない場合も含む}
 \end{kai}
 
 \ans{36}{最大・最小（Ⅱ）}
 \begin{kai}
-$f(x)=(x-a)^2+3-a^2$．軸は $x=a$．\point{軸と定義域の位置関係で場合分け}\\
-(1)\ $a<0$ のとき $m(a)=f(0)=3$，\quad $0\leqq a\leqq2$ のとき $m(a)=f(a)=3-a^2$，\quad $2<a$ のとき $m(a)=f(2)=7-4a$\\[2pt]
-(2)\ \point{最大値は軸と定義域の中央 $x=1$ の位置関係で決まる}\\
-\hspace*{1.5em}$a\leqq1$ のとき $M(a)=f(2)=7-4a$，\quad $1<a$ のとき $M(a)=f(0)=3$\\[2pt]
-(3)\ $a<0$ では $m(a)=3$ で不適．$0\leqq a\leqq2$ では $3-a^2=-1$ より $a=2$（適する）．$2<a$ では $7-4a=-1$ より $a=2$ で不適．\quad $a=2$
+\textbf{方針}\quad 平方完成して軸 $x=a$ を求め，\point{軸と定義域 $0\leqq x\leqq2$ の位置関係で場合分け}する．最小値は「軸が定義域の左・中・右」，最大値は「軸が定義域の中央 $x=1$ より左か右か」で分ける．\\[2pt]
+$f(x)=x^2-2ax+3=(x-a)^2+3-a^2$．下に凸で，軸は $x=a$．\\
+$f(0)=3$，\quad $f(2)=4-4a+3=7-4a$，\quad $f(a)=3-a^2$\\[2pt]
+(1)\ (i)\ $a<0$ のとき（軸が定義域の左），$f(x)$ は $0\leqq x\leqq2$ で増加．\quad $m(a)=f(0)=3$\\
+\hspace*{1.5em}(ii)\ $0\leqq a\leqq2$ のとき（軸が定義域の中），頂点で最小．\quad $m(a)=f(a)=3-a^2$\\
+\hspace*{1.5em}(iii)\ $2<a$ のとき（軸が定義域の右），$f(x)$ は減少．\quad $m(a)=f(2)=7-4a$\\[2pt]
+(2)\ \point{下に凸のグラフでは，軸から遠い方の端で最大になる}．定義域の中央は $x=1$．\\
+\hspace*{1.5em}(i)\ $a\leqq1$ のとき，$x=2$ の方が軸から遠い（$a=1$ のときは両端で等しい）．\\
+\hspace*{3em}$M(a)=f(2)=7-4a$\\
+\hspace*{1.5em}(ii)\ $1<a$ のとき，$x=0$ の方が軸から遠い．\quad $M(a)=f(0)=3$\\[2pt]
+(3)\ (1)の場合ごとに $m(a)=-1$ を解く．\\
+\hspace*{1.5em}(i)\ $a<0$ のとき，$m(a)=3\neq-1$ で不適．\\
+\hspace*{1.5em}(ii)\ $0\leqq a\leqq2$ のとき，$3-a^2=-1$ より $a^2=4$，$a=\pm2$．$0\leqq a\leqq2$ より $a=2$．\\
+\hspace*{1.5em}(iii)\ $2<a$ のとき，$7-4a=-1$ より $a=2$ となり，$2<a$ をみたさないので不適．\\
+\hspace*{1.5em}よって\quad $a=2$\\
+\hspace*{1.5em}\point{求めた $a$ が場合分けの範囲に入っているかを必ず確かめる}
 \end{kai}
 
 \ans{37}{最大・最小（Ⅲ）}
 \begin{kai}
-(1)\ $y=4-2x$．$y\geqq0$ より $0\leqq x\leqq2$．\point{消した文字の条件を残った文字に移す}\\
-\hspace*{1.5em}$xy=x(4-2x)=-2(x-1)^2+2$．$x=1$，$y=2$ のとき最大値 $2$．\\
-\hspace*{1.5em}$x^2+y^2=5x^2-16x+16=5\left(x-\dfrac85\right)^2+\dfrac{16}{5}$．$x=\dfrac85$，$y=\dfrac45$ のとき最小値 $\dfrac{16}5$\\[2pt]
-(2)\ $t=(x+1)^2-1$ で $-2\leqq x\leqq1$ より $-1\leqq t\leqq3$．$y=t^2-2t+3=(t-1)^2+2$．\\
-\hspace*{1.5em}最小値 $2$（$t=1$：$x^2+2x=1$，$-2\leqq x\leqq1$ より $x=-1+\sqrt2$）\\
-\hspace*{1.5em}最大値 $6$（$t=-1$：$x=-1$，\ $t=3$：$x=1$）
+\textbf{方針}\quad (1)は条件式で1文字を消去して1変数の2次関数にする．(2)はおきかえで2次関数にする．どちらも\point{新しい変数の動く範囲を必ず求める}．\\[2pt]
+(1)\ $2x+y=4$ より $y=4-2x$．\point{消した文字の条件を残った文字に移す}\\
+\hspace*{1.5em}$y\geqq0$ より $4-2x\geqq0$，$x\leqq2$．$x\geqq0$ とあわせて\quad $0\leqq x\leqq2$\\[2pt]
+\hspace*{1.5em}$xy=x(4-2x)=-2x^2+4x=-2(x-1)^2+2$\\
+\hspace*{1.5em}$x=1$ は $0\leqq x\leqq2$ に含まれるので，$x=1$，$y=2$ のとき最大値 $2$．\\[2pt]
+\hspace*{1.5em}$x^2+y^2=x^2+(4-2x)^2=5x^2-16x+16=5\left(x-\dfrac85\right)^2-\dfrac{64}5+16=5\left(x-\dfrac85\right)^2+\dfrac{16}{5}$\\
+\hspace*{1.5em}$x=\dfrac85$ は $0\leqq x\leqq2$ に含まれ，このとき $y=4-\dfrac{16}5=\dfrac45$．\\
+\hspace*{1.5em}$x=\dfrac85$，$y=\dfrac45$ のとき最小値 $\dfrac{16}5$\\[2pt]
+(2)\ $t=x^2+2x=(x+1)^2-1$．$-2\leqq x\leqq1$ における $t$ の範囲を調べる．\\
+\hspace*{1.5em}$x=-1$ で最小値 $-1$．両端は $x=-2$ で $t=0$，$x=1$ で $t=3$．よって\quad $-1\leqq t\leqq3$\\
+\hspace*{1.5em}$y=t^2-2t+3=(t-1)^2+2$\quad （$-1\leqq t\leqq3$）\\[2pt]
+\hspace*{1.5em}最小値：$t=1$ のとき $2$．このとき $x^2+2x=1$，$x=-1\pm\sqrt2$．\\
+\hspace*{3em}$-2\leqq x\leqq1$ より $x=-1+\sqrt2$（$-1-\sqrt2<-2$ なので不適）\\
+\hspace*{1.5em}最大値：$t=-1,\ 3$ のとき，ともに $y=6$．\\
+\hspace*{3em}$t=-1$ のとき $x=-1$，\quad $t=3$ のとき $x^2+2x-3=0$，$x=1$（$x=-3$ は不適）\\[2pt]
+\hspace*{1.5em}よって\quad 最大値 $6$（$x=-1,\ 1$），\quad 最小値 $2$（$x=-1+\sqrt2$）
 \end{kai}
 
 \ans{38}{最大・最小（Ⅳ）}
 \begin{kai}
-(1)\ \point{$x$ について整理して平方完成}\\
-\hspace*{1.5em}$z=x^2-2(2y-1)x+5y^2-6y+4=\{x-(2y-1)\}^2-(2y-1)^2+5y^2-6y+4=\{x-(2y-1)\}^2+y^2-2y+3$\\
-\hspace*{1.5em}よって\quad $m=y^2-2y+3$\\[2pt]
-(2)\ $z=\{x-(2y-1)\}^2+(y-1)^2+2\geqq2$．等号は $x-(2y-1)=0$ かつ $y=1$，すなわち $x=1$，$y=1$ のとき．\\
-\hspace*{1.5em}最小値 $2$（$x=1$，$y=1$）
+\textbf{方針}\quad 2変数の2次式は，\point{まず一方の文字について平方完成し，残りをもう一方の文字について平方完成}する．\\[2pt]
+(1)\ \point{$x$ について整理して平方完成}．$x$ を含む項は $x^2-4xy+2x=x^2-2(2y-1)x$ だから\\
+\hspace*{1.5em}$z=x^2-2(2y-1)x+5y^2-6y+4$\\
+\hspace*{1.5em}$=\{x-(2y-1)\}^2-(2y-1)^2+5y^2-6y+4$\\
+\hspace*{1.5em}$=\{x-(2y-1)\}^2-4y^2+4y-1+5y^2-6y+4$\\
+\hspace*{1.5em}$=\{x-(2y-1)\}^2+y^2-2y+3$\\
+\hspace*{1.5em}$y$ を固定すると，$x=2y-1$ のとき最小．\quad $m=y^2-2y+3$\\[2pt]
+(2)\ $m=y^2-2y+3=(y-1)^2+2$ だから\\
+\hspace*{1.5em}$z=\{x-(2y-1)\}^2+(y-1)^2+2\geqq2$\\
+\hspace*{1.5em}等号は $x-(2y-1)=0$ かつ $y-1=0$，すなわち $y=1$，$x=2\cdot1-1=1$ のとき成り立つ．\\
+\hspace*{1.5em}最小値 $2$\quad（$x=1$，$y=1$）
 \end{kai}
 
 \ans{39}{最大・最小（Ⅴ）}
 \begin{kai}
-$\mathrm{AB}=\sqrt{6^2+8^2}=10$．\\
-(1)\ DF $/\!/$ BC より $\mathrm{AD}:\mathrm{DF}=\mathrm{AB}:\mathrm{BC}=10:6$，\quad $\mathrm{DF}=\dfrac35x$\\
-\hspace*{1.5em}DE $/\!/$ AC より $\mathrm{BD}:\mathrm{DE}=\mathrm{BA}:\mathrm{AC}=10:8$，\quad $\mathrm{DE}=\dfrac45(10-x)$\\
-\hspace*{1.5em}$S=\mathrm{DF}\cdot\mathrm{DE}=\dfrac{12}{25}x(10-x)$\\[2pt]
-(2)\ \point{図形の問題は変数に範囲がつく}\quad $0<x<10$．\quad $S=-\dfrac{12}{25}(x-5)^2+12$\\
-\hspace*{1.5em}$x=5$ のとき最大値 $12$
+\textbf{方針}\quad 平行線による相似（比）を使って，長方形の2辺を $x$ で表す．\point{図形の問題では変数に範囲がつく}．\\[2pt]
+$\angle\mathrm{ACB}=90^\circ$ だから，三平方の定理より\quad $\mathrm{AB}=\sqrt{6^2+8^2}=10$\\[2pt]
+(1)\ DF $\perp$ AC，BC $\perp$ AC だから DF $/\!/$ BC．よって $\triangle\mathrm{ADF}\backsim\triangle\mathrm{ABC}$ で\\
+\hspace*{1.5em}$\mathrm{AD}:\mathrm{DF}=\mathrm{AB}:\mathrm{BC}=10:6$，\quad $\mathrm{DF}=\dfrac{6}{10}x=\dfrac35x$\\[2pt]
+\hspace*{1.5em}DE $\perp$ BC，AC $\perp$ BC だから DE $/\!/$ AC．よって $\triangle\mathrm{BDE}\backsim\triangle\mathrm{BAC}$ で，$\mathrm{BD}=10-x$ より\\
+\hspace*{1.5em}$\mathrm{BD}:\mathrm{DE}=\mathrm{BA}:\mathrm{AC}=10:8$，\quad $\mathrm{DE}=\dfrac{8}{10}(10-x)=\dfrac45(10-x)$\\[2pt]
+\hspace*{1.5em}長方形 DECF の縦と横は DE と DF（$\mathrm{FC}=\mathrm{DE}$，$\mathrm{CE}=\mathrm{DF}$）だから\\
+\hspace*{1.5em}$S=\mathrm{DF}\cdot\mathrm{DE}=\dfrac35x\cdot\dfrac45(10-x)=\dfrac{12}{25}x(10-x)$\\[2pt]
+(2)\ D は辺 AB 上にあり，長方形ができるためには $0<x<10$．\\
+\hspace*{1.5em}$S=-\dfrac{12}{25}(x^2-10x)=-\dfrac{12}{25}\{(x-5)^2-25\}=-\dfrac{12}{25}(x-5)^2+12$\\
+\hspace*{1.5em}$x=5$ は $0<x<10$ に含まれるので，$x=5$ のとき最大値 $12$
 \end{kai}
 
 \ans{40}{2次方程式の解とその判別}
 \begin{kai}
-(1)\ (i)\ $x=-3\pm\sqrt{9+3}=-3\pm2\sqrt3$\\
-\hspace*{1.5em}(ii)\ $(x^2-4)(x^2-9)=0$ より $x^2=4,\ 9$．\quad $x=\pm2,\ \pm3$\\
-\hspace*{1.5em}(iii)\ $x^2+2x=t$ とおくと $t=(x+1)^2-1$ だから $t\geqq-1$．\\
-\hspace*{1.5em}$(t-3)(t+2)-14=0$，$t^2-t-20=0$，$(t-5)(t+4)=0$．$t\geqq-1$ より $t=5$．\\
-\hspace*{1.5em}$x^2+2x-5=0$ より\quad $x=-1\pm\sqrt6$\\[2pt]
-(2)\ 判別式を $D$ とすると $\dfrac D4=9-k$．\\
-\hspace*{1.5em}$k<9$ のとき異なる2つの実数解，$k=9$ のとき重解，$k>9$ のとき実数解をもたない．
+\textbf{方針}\quad 因数分解できなければ解の公式．\point{同じ式のかたまりはおきかえ}，4次式は $x^2$ の2次式と見る．おきかえた文字の範囲にも注意．\\[2pt]
+(1)\ (i)\ $x^2+6x-3=0$．$x$ の係数が偶数なので $b'=3$ の公式を使って\\
+\hspace*{1.5em}$x=-3\pm\sqrt{3^2-1\cdot(-3)}=-3\pm\sqrt{12}=-3\pm2\sqrt3$\\[2pt]
+\hspace*{1.5em}(ii)\ $x^2=X$ とおくと $X^2-13X+36=0$，$(X-4)(X-9)=0$．\\
+\hspace*{1.5em}よって $x^2=4,\ 9$．\quad $x=\pm2,\ \pm3$\\[2pt]
+\hspace*{1.5em}(iii)\ $x^2+2x=t$ とおく．$t=(x+1)^2-1$ だから，$x$ が実数のとき $t\geqq-1$．\\
+\hspace*{1.5em}$(t-3)(t+2)-14=0$，\quad $t^2-t-20=0$，\quad $(t-5)(t+4)=0$\\
+\hspace*{1.5em}$t\geqq-1$ より $t=5$（$t=-4$ のとき $x^2+2x+4=0$ は実数解をもたない）．\\
+\hspace*{1.5em}$x^2+2x-5=0$ より\quad $x=-1\pm\sqrt{1+5}=-1\pm\sqrt6$\\[2pt]
+(2)\ \point{$ax^2+2b'x+c=0$ の判別式は $\dfrac D4=b'^2-ac$ が使える}\\
+\hspace*{1.5em}$\dfrac D4=3^2-1\cdot k=9-k$．\\
+\hspace*{1.5em}$D>0$，すなわち $k<9$ のとき\quad 異なる2つの実数解\\
+\hspace*{1.5em}$D=0$，すなわち $k=9$ のとき\quad 重解\\
+\hspace*{1.5em}$D<0$，すなわち $k>9$ のとき\quad 実数解をもたない
 \end{kai}
 
 \ans{41}{放物線と $x$ 軸との位置関係}
 \begin{kai}
-\point{凸の向きと頂点の $y$ 座標の符号で判断}\\
-(1)\ $y=(x-1)^2-4$．下に凸で頂点の $y$ 座標 $<0$．異なる2点で交わる．$(x+1)(x-3)=0$ より $x=-1,\ 3$\\[2pt]
-(2)\ $y=-(x-3)^2+2$．上に凸で頂点の $y$ 座標 $>0$．異なる2点で交わる．$(x-3)^2=2$ より $x=3\pm\sqrt2$\\[2pt]
-(3)\ $y=(x-3)^2$．頂点の $y$ 座標 $=0$ だから $x$ 軸と接する．接点の $x$ 座標は $3$\\[2pt]
-(4)\ $y=-(x-1)^2-2$．上に凸で頂点の $y$ 座標 $<0$．$x$ 軸と共有点をもたない．
+\textbf{方針}\quad 平方完成して，\point{凸の向きと頂点の $y$ 座標の符号で判断}する（判別式の符号で判断してもよい）．共有点の $x$ 座標は $y=0$ とおいた2次方程式の解．\\[2pt]
+(1)\ $y=(x-1)^2-4$．下に凸で頂点の $y$ 座標 $-4<0$ だから，$x$ 軸と異なる2点で交わる．\\
+\hspace*{1.5em}$x^2-2x-3=0$，$(x+1)(x-3)=0$ より\quad $x=-1,\ 3$\\[2pt]
+(2)\ $y=-(x^2-6x)-7=-(x-3)^2+2$．上に凸で頂点の $y$ 座標 $2>0$ だから，異なる2点で交わる．\\
+\hspace*{1.5em}$-(x-3)^2+2=0$，$(x-3)^2=2$ より\quad $x=3\pm\sqrt2$\\[2pt]
+(3)\ $y=(x-3)^2$．頂点 $(3,\ 0)$ が $x$ 軸上にあるので，$x$ 軸と接する．\quad 接点の $x$ 座標は $3$\\[2pt]
+(4)\ $y=-(x^2-2x)-3=-(x-1)^2-2$．上に凸で頂点の $y$ 座標 $-2<0$ だから，グラフ全体が $x$ 軸より下にある．\\
+\hspace*{1.5em}$x$ 軸と共有点をもたない．\\
+\hspace*{1.5em}（判別式でも：$-x^2+2x-3=0$ すなわち $x^2-2x+3=0$ の $\dfrac D4=1-3<0$）
 \end{kai}
 
 \ans{42}{放物線と直線との位置関係}
 \begin{kai}
-\point{連立してできる2次方程式の判別式を調べる}\\
-(1)\ $x^2-4x+5=2x$ より $x^2-6x+5=0$．$\dfrac D4=9-5=4>0$．\quad 共有点は2個\\[2pt]
-(2)\ $x^2-4x+5=2x-4$ より $x^2-6x+9=0$．$\dfrac D4=9-9=0$．\quad 共有点は1個\\[2pt]
-(3)\ $x^2-4x+5=-x+1$ より $x^2-3x+4=0$．$D=9-16=-7<0$．\quad 共有点は0個
+\textbf{方針}\quad 共有点の $x$ 座標は2式を連立した方程式の実数解．\point{連立してできる2次方程式の判別式の符号}で個数がわかる．\\[2pt]
+(1)\ $x^2-4x+5=2x$ より $x^2-6x+5=0$．\quad $\dfrac D4=(-3)^2-5=4>0$．\quad 共有点は2個\\
+\hspace*{1.5em}（実際，$(x-1)(x-5)=0$ より共有点の $x$ 座標は $1,\ 5$）\\[2pt]
+(2)\ $x^2-4x+5=2x-4$ より $x^2-6x+9=0$．\quad $\dfrac D4=(-3)^2-9=0$．\quad 共有点は1個（接する）\\[2pt]
+(3)\ $x^2-4x+5=-x+1$ より $x^2-3x+4=0$．\quad $D=(-3)^2-4\cdot1\cdot4=-7<0$．\quad 共有点は0個
 \end{kai}
 
 \ans{43}{放物線の接線}
 \begin{kai}
-$x^2+4x+1=-2x+a$ を整理して $x^2+6x+(1-a)=0$ ……①\\
-接するのは①が重解をもつときで，$\dfrac D4=9-(1-a)=8+a=0$．\quad $a=-8$\\
-（このとき①は $(x+3)^2=0$ で，接点は $(-3,\ -2)$．）
+\textbf{方針}\quad \point{放物線と直線が接する ⇔ 連立した2次方程式が重解をもつ ⇔ 判別式 $=0$}．\\[2pt]
+$y$ を消去して $x^2+4x+1=-2x+a$．整理して\quad $x^2+6x+(1-a)=0$ ……①\\
+放物線と直線が接するのは①が重解をもつときだから\\
+\hspace*{1.5em}$\dfrac D4=3^2-1\cdot(1-a)=8+a=0$．\quad $a=-8$\\[2pt]
+（このとき①は $x^2+6x+9=0$，$(x+3)^2=0$ で $x=-3$．接点は $y=-2\cdot(-3)-8=-2$ より $(-3,\ -2)$．）
 \end{kai}
 
 \ans{44}{2次不等式}
 \begin{kai}
+\textbf{方針}\quad $x^2$ の係数を正にしてから，\point{$y=(\text{左辺})$ のグラフが $x$ 軸より上（下）にある $x$ の範囲}を読む．$(x-\alpha)(x-\beta)<0$ なら $\alpha<x<\beta$，$>0$ なら $x<\alpha,\ \beta<x$（$\alpha<\beta$）．\\[2pt]
 (1)\ $(x-1)(x-4)<0$ より\quad $1<x<4$\\[2pt]
-(2)\ $x^2+4x+1=0$ の解は $x=-2\pm\sqrt3$．\quad $x\leqq-2-\sqrt3,\ -2+\sqrt3\leqq x$\\[2pt]
-(3)\ $(3x+1)^2\leqq0$ より\quad $x=-\dfrac13$\\[2pt]
-(4)\ $x^2+4x+5>0$，$(x+2)^2+1>0$ はつねに成り立つ．\quad すべての実数\\[2pt]
-(5)\ \point{$x^2$ の係数を正にする（向きが変わる）}\quad $3x^2-5x-2<0$，$(3x+1)(x-2)<0$．\quad $-\dfrac13<x<2$\\[2pt]
-(6)\ 第1式は $x(x-2)\leqq0$ より $0\leqq x\leqq2$．第2式は $(2x-1)(x-3)>0$ より $x<\dfrac12,\ 3<x$．\\
-\hspace*{1.5em}共通部分をとって\quad $0\leqq x<\dfrac12$
+(2)\ 因数分解できないので，$x^2+4x+1=0$ を解くと $x=-2\pm\sqrt{4-1}=-2\pm\sqrt3$．\\
+\hspace*{1.5em}$\geqq0$ なので2つの解の外側（等号を含む）．\quad $x\leqq-2-\sqrt3,\ -2+\sqrt3\leqq x$\\[2pt]
+(3)\ $9x^2+6x+1=(3x+1)^2\leqq0$．\\
+\hspace*{1.5em}$(3x+1)^2\geqq0$ はつねに成り立つので，成り立つのは $(3x+1)^2=0$ のときだけ．\quad $x=-\dfrac13$\\[2pt]
+(4)\ 移項して $x^2+4x+5>0$．$x^2+4x+5=(x+2)^2+1\geqq1>0$ はつねに成り立つ．\\
+\hspace*{1.5em}（判別式 $\dfrac D4=4-5<0$ で，グラフは $x$ 軸より上にある．）\quad すべての実数\\[2pt]
+(5)\ \point{$x^2$ の係数を正にする（両辺に $-1$ を掛けると向きが変わる）}\\
+\hspace*{1.5em}$3x^2-5x-2<0$，\quad $(3x+1)(x-2)<0$．\quad $-\dfrac13<x<2$\\[2pt]
+(6)\ 第1式：$x(x-2)\leqq0$ より\quad $0\leqq x\leqq2$\\
+\hspace*{1.5em}第2式：$(2x-1)(x-3)>0$ より\quad $x<\dfrac12,\ 3<x$\\
+\hspace*{1.5em}数直線で共通部分をとって\quad $0\leqq x<\dfrac12$
 \end{kai}
 
 \ans{45}{係数の符号}
 \begin{kai}
-(1)\ 上に凸だから $a<0$\\
-(2)\ 軸 $x=-\dfrac{b}{2a}<0$ で $a<0$ だから $b<0$\\
-(3)\ $y$ 切片が正だから $c>0$\\
-(4)\ $x$ 軸と2点で交わるから $b^2-4ac>0$\\
-(5)\ $x=1$ のとき $y>0$ だから $a+b+c>0$\\
-(6)\ $x=2$ のとき $y<0$ だから $4a+2b+c<0$\\
-(7)\ $x=-1$ のとき $y>0$ だから $a-b+c>0$
+\textbf{方針}\quad グラフから読みとれること（\point{凸の向き，軸の位置，$y$ 切片，$x$ 軸との交点の個数，特定の $x$ での $y$ の符号}）を，それぞれ係数の式に言いかえる．$f(x)=ax^2+bx+c$ とおく．\\[2pt]
+(1)\ グラフは上に凸だから\quad $a<0$\\[2pt]
+(2)\ 軸は $x=-\dfrac{b}{2a}$ で，これが $y$ 軸より左にあるから $-\dfrac{b}{2a}<0$，すなわち $\dfrac{b}{2a}>0$．\\
+\hspace*{1.5em}$a<0$ だから $b$ も負．\quad $b<0$\\[2pt]
+(3)\ $c=f(0)$ は $y$ 切片で，グラフから正．\quad $c>0$\\[2pt]
+(4)\ $x$ 軸と異なる2点で交わるから，$ax^2+bx+c=0$ の判別式は正．\quad $b^2-4ac>0$\\[2pt]
+(5)\ $a+b+c=f(1)$．$x$ 軸との交点は $1<x<2$ にあり，$x=1$ はまだ交点より左（グラフが $x$ 軸より上）．\\
+\hspace*{1.5em}よって $f(1)>0$．\quad $a+b+c>0$\\[2pt]
+(6)\ $4a+2b+c=f(2)$．$x=2$ は右側の交点より右で，グラフは $x$ 軸より下．\quad $4a+2b+c<0$\\[2pt]
+(7)\ $a-b+c=f(-1)$．$x=-1$ は2つの交点（$-3<x<-2$ と $1<x<2$）の間にあり，グラフは $x$ 軸より上．\\
+\hspace*{1.5em}$a-b+c>0$
 \end{kai}
 
 \ans{46}{解の配置}
@@ -1702,195 +1936,298 @@ $f(x)=x^2+2ax+a+2=(x+a)^2-a^2+a+2$ より，軸は直線 $x=-a$．\\
 
 \ans{47}{絶対不等式（Ⅰ）}
 \begin{kai}
-$f(x)=2x+a\ (x\geqq2)$ は増加するので最小値は $f(2)=4+a$．\\
-\point{最小値 $\geqq0$}\quad $4+a\geqq0$ より\quad $a\geqq-4$
+\textbf{方針}\quad 「範囲内のすべての $x$ で $f(x)\geqq0$」 ⇔ \point{範囲内での $f(x)$ の最小値 $\geqq0$}．\\[2pt]
+$f(x)=2x+a$ とおく．傾きが正なので，$x\geqq2$ で $f(x)$ は増加する．\\
+よって，$x\geqq2$ における最小値は\quad $f(2)=4+a$\\[2pt]
+すべての $x\geqq2$ で $f(x)\geqq0$ となる条件は，最小値 $\geqq0$ だから\\
+\hspace*{1.5em}$4+a\geqq0$\quad より\quad $a\geqq-4$
 \end{kai}
 
 \ans{48}{絶対不等式（Ⅱ）}
 \begin{kai}
-$f(x)=(x+a)^2-a^2+2a+8$．すべての $x$ で $f(x)>0$ となる条件は，頂点の $y$ 座標が正であること．\\
-$-a^2+2a+8>0$，$a^2-2a-8<0$，$(a+2)(a-4)<0$．\quad $-2<a<4$\\
-（別解：$x^2+2ax+2a+8=0$ の判別式 $\dfrac D4=a^2-2a-8<0$ としても同じ．）
+\textbf{方針}\quad 下に凸の放物線 $y=f(x)$ が\point{つねに $x$ 軸より上にある ⇔ 頂点の $y$ 座標 $>0$ ⇔ 判別式 $D<0$}．\\[2pt]
+$f(x)=x^2+2ax+2a+8=(x+a)^2-a^2+2a+8$\\
+頂点の $y$ 座標は $-a^2+2a+8$．すべての $x$ で $f(x)>0$ となる条件は\\
+\hspace*{1.5em}$-a^2+2a+8>0$，\quad $a^2-2a-8<0$，\quad $(a+2)(a-4)<0$\\
+\hspace*{1.5em}よって\quad $-2<a<4$\\[2pt]
+（別解：$x^2+2ax+2a+8=0$ の判別式 $\dfrac D4=a^2-(2a+8)=a^2-2a-8<0$ としても同じ．）
 \end{kai}
 
 \ans{49}{文字係数の2次不等式}
 \begin{kai}
-(1)\ ①は $(x-2)(x-a)<0$．\point{2と $a$ の大小で場合分け}\\
-\hspace*{1.5em}$a<2$ のとき $a<x<2$，\quad $a=2$ のとき $(x-2)^2<0$ で解なし，\quad $a>2$ のとき $2<x<a$\\[2pt]
-(2)\ $a>2$ のとき，整数解が 3，4 の2個となるのは\quad $4<a\leqq5$\\
-\hspace*{1.5em}$a<2$ のとき，整数解が 1，0 の2個となるのは\quad $-1\leqq a<0$\\
+\textbf{方針}\quad 左辺を因数分解すると解が $2$ と $a$．\point{2と $a$ の大小で場合分け}する．整数解の個数は数直線で考える．\\[2pt]
+(1)\ $x^2-(a+2)x+2a=(x-2)(x-a)$ だから，①は $(x-2)(x-a)<0$．\\
+\hspace*{1.5em}(i)\ $a<2$ のとき\quad $a<x<2$\\
+\hspace*{1.5em}(ii)\ $a=2$ のとき，$(x-2)^2<0$ となり\quad 解なし\\
+\hspace*{1.5em}(iii)\ $a>2$ のとき\quad $2<x<a$\\[2pt]
+(2)\ (ii)の $a=2$ では整数解はない．\\
+\hspace*{1.5em}(iii)\ $a>2$ のとき，解は $2<x<a$．整数解は小さい方から 3，4，5，…．\\
+\hspace*{1.5em}ちょうど 3，4 の2個となるのは，4 は含み 5 は含まないときだから\quad $4<a\leqq5$\\
+\hspace*{1.5em}\point{$a=5$ のとき解は $2<x<5$ で，5 は含まれない．端の等号は代入して確かめる}\\[2pt]
+\hspace*{1.5em}(i)\ $a<2$ のとき，解は $a<x<2$．整数解は大きい方から 1，0，$-1$，…．\\
+\hspace*{1.5em}ちょうど 1，0 の2個となるのは，0 は含み $-1$ は含まないときだから\quad $-1\leqq a<0$\\[2pt]
 \hspace*{1.5em}よって\quad $-1\leqq a<0,\ 4<a\leqq5$
 \end{kai}
 
 \ans{50}{絶対値記号のついた2次方程式}
 \begin{kai}
-(1)\ \point{$x^2=|x|^2$}\quad $|x|^2-3|x|-4=0$，$(|x|+1)(|x|-4)=0$．$|x|\geqq0$ より $|x|=4$．\quad $x=\pm4$\\[2pt]
-(2)\ $x^2-x-6=(x+2)(x-3)$ だから\\
-\hspace*{1.5em}(i)\ $x\leqq-2,\ 3\leqq x$ のとき：②は $x^2-x-6=2x+4$，$x^2-3x-10=0$，$(x+2)(x-5)=0$．\\
-\hspace*{1.5em}\hspace*{1.5em}$x=-2,\ 5$ はともに適する．\\
-\hspace*{1.5em}(ii)\ $-2<x<3$ のとき：②は $-(x^2-x-6)=2x+4$，$x^2+x-2=0$，$(x+2)(x-1)=0$．\\
-\hspace*{1.5em}\hspace*{1.5em}$-2<x<3$ より $x=1$．\\
-\hspace*{1.5em}(i)，(ii)より\quad $x=-2,\ 1,\ 5$
+\textbf{方針}\quad (1)は \point{$x^2=|x|^2$} を使い $|x|$ の2次方程式と見る．(2)は絶対値の中身の符号で場合分けし，\point{求めた解が場合分けの範囲に入るか}を確かめる．\\[2pt]
+(1)\ $x^2=|x|^2$ だから，①は $|x|^2-3|x|-4=0$，\quad $(|x|+1)(|x|-4)=0$\\
+\hspace*{1.5em}$|x|\geqq0$ より $|x|+1>0$ だから $|x|=4$．\quad $x=\pm4$\\[2pt]
+(2)\ $x^2-x-6=(x+2)(x-3)$ は，$x\leqq-2,\ 3\leqq x$ で $0$ 以上，$-2<x<3$ で負．\\[2pt]
+\hspace*{1.5em}(i)\ $x\leqq-2,\ 3\leqq x$ のとき：②は $x^2-x-6=2x+4$\\
+\hspace*{3em}$x^2-3x-10=0$，\quad $(x+2)(x-5)=0$，\quad $x=-2,\ 5$\\
+\hspace*{3em}どちらも範囲に入るので適する．\\
+\hspace*{1.5em}(ii)\ $-2<x<3$ のとき：②は $-(x^2-x-6)=2x+4$\\
+\hspace*{3em}$x^2+x-2=0$，\quad $(x+2)(x-1)=0$，\quad $x=-2,\ 1$\\
+\hspace*{3em}$-2<x<3$ より $x=1$．\\[2pt]
+\hspace*{1.5em}(i)，(ii)より\quad $x=-2,\ 1,\ 5$\\
+\hspace*{1.5em}（検算：$x=5$ のとき左辺 $|14|=14$，右辺 $14$．$x=1$ のとき左辺 $|-6|=6$，右辺 $6$．）
 \end{kai}
 
 \ans{51}{絶対値記号のついた2次不等式}
 \begin{kai}
-(1)\ $|x|^2-|x|-6\leqq0$，$(|x|+2)(|x|-3)\leqq0$．$|x|+2>0$ より $|x|\leqq3$．\quad $-3\leqq x\leqq3$\\[2pt]
-(2)\ $x^2+4x+3=(x+1)(x+3)$ だから\\
-\hspace*{1.5em}(i)\ $x\leqq-3,\ -1\leqq x$ のとき：$x^2+4x+3<2x+5$，$x^2+2x-2<0$，$-1-\sqrt3<x<-1+\sqrt3$．\\
-\hspace*{1.5em}\hspace*{1.5em}$-1-\sqrt3>-3$ に注意して，範囲と合わせると\quad $-1\leqq x<-1+\sqrt3$\\
-\hspace*{1.5em}(ii)\ $-3<x<-1$ のとき：$-(x^2+4x+3)<2x+5$，$x^2+6x+8>0$，$(x+2)(x+4)>0$，$x<-4,\ -2<x$．\\
-\hspace*{1.5em}\hspace*{1.5em}範囲と合わせると\quad $-2<x<-1$\\
-\hspace*{1.5em}(i)，(ii)より\quad $-2<x<-1+\sqrt3$
+\textbf{方針}\quad (1)は $x^2=|x|^2$ を使う．(2)は場合分けし，\point{各場合で「解いた結果」と「場合分けの範囲」の共通部分}をとってから合わせる．\\[2pt]
+(1)\ $x^2=|x|^2$ だから，①は $|x|^2-|x|-6\leqq0$，\quad $(|x|+2)(|x|-3)\leqq0$\\
+\hspace*{1.5em}$|x|+2>0$ だから $|x|-3\leqq0$，\quad $|x|\leqq3$．\quad よって\quad $-3\leqq x\leqq3$\\[2pt]
+(2)\ $x^2+4x+3=(x+1)(x+3)$ は，$x\leqq-3,\ -1\leqq x$ で $0$ 以上，$-3<x<-1$ で負．\\[2pt]
+\hspace*{1.5em}(i)\ $x\leqq-3,\ -1\leqq x$ のとき：$x^2+4x+3<2x+5$，\quad $x^2+2x-2<0$\\
+\hspace*{3em}$x^2+2x-2=0$ の解は $x=-1\pm\sqrt3$ だから\quad $-1-\sqrt3<x<-1+\sqrt3$\\
+\hspace*{3em}$-1-\sqrt3=-2.73\cdots>-3$ なので，$x\leqq-3$ の部分とは重ならない．\\
+\hspace*{3em}範囲と合わせると\quad $-1\leqq x<-1+\sqrt3$\\
+\hspace*{1.5em}(ii)\ $-3<x<-1$ のとき：$-(x^2+4x+3)<2x+5$，\quad $x^2+6x+8>0$\\
+\hspace*{3em}$(x+2)(x+4)>0$ より $x<-4,\ -2<x$．範囲と合わせると\quad $-2<x<-1$\\[2pt]
+\hspace*{1.5em}(i)，(ii)をあわせて\quad $-2<x<-1+\sqrt3$\\
+\hspace*{1.5em}（$x=-1$ は(i)に含まれるので，$-2<x<-1$ と $-1\leqq x<-1+\sqrt3$ がつながる．）
 \end{kai}
 
 \shouans{第4章}{図形の性質}
 \ans{52}{三角形の重心，外心，内心，垂心}
 \begin{kai}
-(1)\ 外心\qquad (2)\ 内心\qquad (3)\ 重心\qquad (4)\ 垂心\\
-外接円の中心は外心，内接円の中心は内心．\\
+\textbf{方針}\quad 三角形の五心のうち4つの定義を整理する．\point{何の交点か}と，\point{どの円の中心か}をセットで覚える．\\[2pt]
+(1)\ 3辺の垂直二等分線の交点は\quad \textbf{外心}\\
+\hspace*{1.5em}垂直二等分線上の点は両端から等距離なので，交点は3頂点から等距離 → 外接円の中心．\\[2pt]
+(2)\ 3つの内角の二等分線の交点は\quad \textbf{内心}\\
+\hspace*{1.5em}角の二等分線上の点は2辺から等距離なので，交点は3辺から等距離 → 内接円の中心．\\[2pt]
+(3)\ 3本の中線の交点は\quad \textbf{重心}\quad （各中線を頂点の側から $2:1$ に内分する）\\[2pt]
+(4)\ 3つの頂点から対辺（またはその延長）に下ろした垂線の交点は\quad \textbf{垂心}\\[2pt]
+外接円の中心は\textbf{外心}，内接円の中心は\textbf{内心}．\\
 \point{重心：3中線の交点\quad 外心：3辺の垂直2等分線の交点\quad 内心：3内角の2等分線の交点\quad 垂心：3垂線の交点}
 \end{kai}
 
 \ans{53}{角の2等分線の性質}
 \begin{kai}
-(1)\ \point{$\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}$}\quad $\mathrm{BD}:\mathrm{DC}=6:4=3:2$\\[2pt]
-(2)\ $\mathrm{BD}=5\times\dfrac35=3$．$\triangle\mathrm{ABD}$ で BI は $\angle\mathrm B$ の2等分線だから\quad $\mathrm{AI}:\mathrm{ID}=\mathrm{BA}:\mathrm{BD}=6:3=2:1$\\[2pt]
-(3)\ $\mathrm{AE}:\mathrm{EC}=\mathrm{BA}:\mathrm{BC}=6:5$ より $\mathrm{AE}=4\times\dfrac6{11}=\dfrac{24}{11}$．\\
-\hspace*{1.5em}$\triangle\mathrm{ABE}$ で AI は $\angle\mathrm A$ の2等分線だから\quad $\mathrm{BI}:\mathrm{IE}=\mathrm{AB}:\mathrm{AE}=6:\dfrac{24}{11}=11:4$
+\textbf{方針}\quad \point{角の二等分線は，対辺をはさむ2辺の比に内分する}：$\angle\mathrm A$ の二等分線と BC の交点 D について $\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}$．どの三角形のどの角の二等分線かをはっきりさせて使う．\\[2pt]
+(1)\ AD は $\angle\mathrm{BAC}$ の二等分線だから\quad $\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}=6:4=3:2$\\[2pt]
+(2)\ (1)より\quad $\mathrm{BD}=\mathrm{BC}\times\dfrac{3}{3+2}=5\times\dfrac35=3$\\
+\hspace*{1.5em}$\triangle\mathrm{ABD}$ に注目すると，BI は $\angle\mathrm{ABD}$ の二等分線で，対辺 AD と I で交わる．よって\\
+\hspace*{1.5em}$\mathrm{AI}:\mathrm{ID}=\mathrm{BA}:\mathrm{BD}=6:3=2:1$\\[2pt]
+(3)\ BE は $\angle\mathrm{ABC}$ の二等分線だから\quad $\mathrm{AE}:\mathrm{EC}=\mathrm{BA}:\mathrm{BC}=6:5$\\
+\hspace*{1.5em}よって\quad $\mathrm{AE}=\mathrm{CA}\times\dfrac{6}{11}=4\times\dfrac6{11}=\dfrac{24}{11}$\\[2pt]
+\hspace*{1.5em}I は内心なので，AI は $\angle\mathrm A$ の二等分線．$\triangle\mathrm{ABE}$ に注目して\\
+\hspace*{1.5em}$\mathrm{BI}:\mathrm{IE}=\mathrm{AB}:\mathrm{AE}=6:\dfrac{24}{11}=66:24=11:4$
 \end{kai}
 
 \ans{54}{チェバの定理}
 \begin{kai}
+\textbf{方針}\quad 三角形の3頂点から引いた3直線が1点で交わるときは\point{チェバの定理}．頂点 → 分点 → 頂点 → … と三角形を1周するように比を並べる．\\[2pt]
+条件より $\mathrm{BD}:\mathrm{DC}=2:3$，\quad $\mathrm{CE}:\mathrm{EA}=4:3$．\\
+3直線 AD，BE，CF は1点 P で交わるから，\\
 チェバの定理より\quad $\dfrac{\mathrm{AF}}{\mathrm{FB}}\cdot\dfrac{\mathrm{BD}}{\mathrm{DC}}\cdot\dfrac{\mathrm{CE}}{\mathrm{EA}}=1$，\quad
-$\dfrac{\mathrm{AF}}{\mathrm{FB}}\cdot\dfrac23\cdot\dfrac43=1$，\quad $\dfrac{\mathrm{AF}}{\mathrm{FB}}=\dfrac98$\\
+$\dfrac{\mathrm{AF}}{\mathrm{FB}}\cdot\dfrac23\cdot\dfrac43=1$，\quad $\dfrac{\mathrm{AF}}{\mathrm{FB}}\cdot\dfrac89=1$，\quad $\dfrac{\mathrm{AF}}{\mathrm{FB}}=\dfrac98$\\
 よって\quad $\mathrm{AF}:\mathrm{FB}=9:8$
 \end{kai}
 
 \ans{55}{メネラウスの定理}
 \begin{kai}
-(1)\ $\triangle\mathrm{ABD}$ と直線 EC にメネラウスの定理を用いて\quad
+\textbf{方針}\quad 三角形と，その辺（の延長）を横切る1本の直線があるときは\point{メネラウスの定理}．どの三角形とどの直線に使うかを決め，頂点 → 分点 → 頂点 → … と1周する．\\[2pt]
+(1)\ AP:PD を求めたいので，AD を辺にもつ $\triangle\mathrm{ABD}$ と，それを横切る直線 EC を考える．\\
+\hspace*{1.5em}$\mathrm{BD}:\mathrm{DC}=2:1$ より $\mathrm{BC}:\mathrm{CD}=3:1$．メネラウスの定理より\\
+\hspace*{1.5em}
 $\dfrac{\mathrm{AE}}{\mathrm{EB}}\cdot\dfrac{\mathrm{BC}}{\mathrm{CD}}\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$，\quad
 $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \hspace*{1.5em}$\dfrac{\mathrm{DP}}{\mathrm{PA}}=\dfrac23$．\quad よって\quad $\mathrm{AP}:\mathrm{PD}=3:2$\\[2pt]
 (2)\ \point{高さが共通な三角形の面積比は底辺の比}\\
-\hspace*{1.5em}$\triangle\mathrm{ADC}=\dfrac13\triangle\mathrm{ABC}$，\quad $\triangle\mathrm{PDC}=\dfrac25\triangle\mathrm{ADC}=\dfrac25\cdot\dfrac13\triangle\mathrm{ABC}=\dfrac{2}{15}\triangle\mathrm{ABC}$\\
+\hspace*{1.5em}$\triangle\mathrm{ADC}$ と $\triangle\mathrm{ABC}$ は頂点 A を共有し，底辺の比は $\mathrm{DC}:\mathrm{BC}=1:3$ だから\quad $\triangle\mathrm{ADC}=\dfrac13\triangle\mathrm{ABC}$\\
+\hspace*{1.5em}$\triangle\mathrm{PDC}$ と $\triangle\mathrm{ADC}$ は頂点 C を共有し，底辺の比は $\mathrm{PD}:\mathrm{AD}=2:5$ だから\\
+\hspace*{1.5em}\quad $\triangle\mathrm{PDC}=\dfrac25\triangle\mathrm{ADC}=\dfrac25\cdot\dfrac13\triangle\mathrm{ABC}=\dfrac{2}{15}\triangle\mathrm{ABC}$\\
 \hspace*{1.5em}よって\quad $\triangle\mathrm{PDC}:\triangle\mathrm{ABC}=2:15$
 \end{kai}
 
 \ans{56}{円周角}
 \begin{kai}
-(1)\ \point{同じ弧に対する円周角は等しい}\quad $\angle\mathrm{ACD}=\angle\mathrm{ABD}=40^\circ$（弧 AD），\quad $\angle\mathrm{BAC}=\angle\mathrm{BDC}=25^\circ$（弧 BC）\\[2pt]
-(2)\ 中心角は円周角の2倍だから\quad $\angle\mathrm{AOD}=2\angle\mathrm{ABD}=80^\circ$\\[2pt]
-(3)\ $\triangle\mathrm{ABP}$ で $\angle\mathrm{BAP}=25^\circ$，$\angle\mathrm{ABP}=40^\circ$ より\quad $\angle\mathrm{APB}=180^\circ-65^\circ=115^\circ$\\[2pt]
-(4)\ $\triangle\mathrm{ABP}$ と $\triangle\mathrm{DCP}$ において，$\angle\mathrm{BAP}=\angle\mathrm{CDP}$（弧 BC に対する円周角），$\angle\mathrm{APB}=\angle\mathrm{DPC}$（対頂角）．\\
-\hspace*{1.5em}2角がそれぞれ等しいので\quad $\triangle\mathrm{ABP}\backsim\triangle\mathrm{DCP}$
+\textbf{方針}\quad \point{同じ弧に対する円周角は等しい}，\point{中心角は円周角の2倍}．どの弧に対する角かを確かめてから使う．\\[2pt]
+(1)\ $\angle\mathrm{ACD}$ と $\angle\mathrm{ABD}$ はともに弧 AD に対する円周角だから\quad $\angle\mathrm{ACD}=\angle\mathrm{ABD}=40^\circ$\\
+\hspace*{1.5em}$\angle\mathrm{BAC}$ と $\angle\mathrm{BDC}$ はともに弧 BC に対する円周角だから\quad $\angle\mathrm{BAC}=\angle\mathrm{BDC}=25^\circ$\\[2pt]
+(2)\ $\angle\mathrm{AOD}$ は弧 AD に対する中心角で，同じ弧に対する円周角は $\angle\mathrm{ABD}=40^\circ$．\\
+\hspace*{1.5em}中心角は円周角の2倍だから\quad $\angle\mathrm{AOD}=2\times40^\circ=80^\circ$\\[2pt]
+(3)\ $\triangle\mathrm{ABP}$ において，$\angle\mathrm{BAP}=\angle\mathrm{BAC}=25^\circ$，$\angle\mathrm{ABP}=\angle\mathrm{ABD}=40^\circ$ だから\\
+\hspace*{1.5em}$\angle\mathrm{APB}=180^\circ-(25^\circ+40^\circ)=115^\circ$\\[2pt]
+(4)\ $\triangle\mathrm{ABP}$ と $\triangle\mathrm{DCP}$ において\\
+\hspace*{1.5em}$\angle\mathrm{BAP}=\angle\mathrm{CDP}$\quad（弧 BC に対する円周角）\\
+\hspace*{1.5em}$\angle\mathrm{APB}=\angle\mathrm{DPC}$\quad（対頂角）\\
+\hspace*{1.5em}2組の角がそれぞれ等しいので\quad $\triangle\mathrm{ABP}\backsim\triangle\mathrm{DCP}$\\
+\hspace*{1.5em}\point{相似の証明では，対応する頂点の順に書く（A↔D，B↔C，P↔P）}
 \end{kai}
 
 \ans{57}{接弦定理}
 \begin{kai}
-(1)\ \point{接線と弦のつくる角は，その角の内部にある弧に対する円周角に等しい}\quad $\angle\mathrm{ACB}=\angle\mathrm{TAB}=55^\circ$\\[2pt]
-(2)\ $\angle\mathrm{BAC}=180^\circ-(70^\circ+55^\circ)=55^\circ$\\[2pt]
-(3)\ $\angle\mathrm{BAC}=\angle\mathrm{BCA}=55^\circ$ だから，$\mathrm{BA}=\mathrm{BC}$ の二等辺三角形
+\textbf{方針}\quad \point{接弦定理：接線と弦のつくる角は，その角の内部にある弧に対する円周角に等しい}．\\[2pt]
+(1)\ $\angle\mathrm{TAB}$ は接線 AT と弦 AB のつくる角．その内部にある弧 AB（C を含まない方）に対する円周角は $\angle\mathrm{ACB}$．\\
+\hspace*{1.5em}接弦定理より\quad $\angle\mathrm{ACB}=\angle\mathrm{TAB}=55^\circ$\\[2pt]
+(2)\ $\triangle\mathrm{ABC}$ の内角の和は $180^\circ$ だから\\
+\hspace*{1.5em}$\angle\mathrm{BAC}=180^\circ-(\angle\mathrm{ABC}+\angle\mathrm{ACB})=180^\circ-(70^\circ+55^\circ)=55^\circ$\\[2pt]
+(3)\ $\angle\mathrm{BAC}=\angle\mathrm{BCA}=55^\circ$ だから，2つの底角が等しい．\\
+\hspace*{1.5em}よって $\triangle\mathrm{ABC}$ は\quad \textbf{$\mathrm{BA}=\mathrm{BC}$ の二等辺三角形}
 \end{kai}
 
 \ans{58}{方べきの定理}
 \begin{kai}
+\textbf{方針}\quad 円に内接する四角形では\point{1つの内角は，その対角の外角に等しい}．相似から比をつくると方べきの定理 $\mathrm{OA}\cdot\mathrm{OB}=\mathrm{OC}\cdot\mathrm{OD}$ が得られる．\\[2pt]
 (1)\ $\triangle\mathrm{OAC}$ と $\triangle\mathrm{ODB}$ において，$\angle\mathrm{AOC}=\angle\mathrm{DOB}$（共通）．\\
 \hspace*{1.5em}四角形 ABDC は円に内接しているので $\angle\mathrm{OAC}=180^\circ-\angle\mathrm{CAB}=\angle\mathrm{CDB}=\angle\mathrm{ODB}$．\\
 \hspace*{1.5em}2角がそれぞれ等しいので\quad $\triangle\mathrm{OAC}\backsim\triangle\mathrm{ODB}$\\[2pt]
-(2)\ (1)より $\mathrm{OA}:\mathrm{OC}=\mathrm{OD}:\mathrm{OB}$，すなわち $\mathrm{OA}\cdot\mathrm{OB}=\mathrm{OC}\cdot\mathrm{OD}$．\\
-\hspace*{1.5em}$\mathrm{CD}=x$ とおくと $\mathrm{OD}=4+x$．$3\cdot8=4(4+x)$ より $x=2$．\quad $\mathrm{CD}=2$
+(2)\ (1)の相似で対応する辺の比は等しいから $\mathrm{OA}:\mathrm{OD}=\mathrm{OC}:\mathrm{OB}$．\\
+\hspace*{1.5em}よって\quad $\mathrm{OA}\cdot\mathrm{OB}=\mathrm{OC}\cdot\mathrm{OD}$\quad （方べきの定理）\\
+\hspace*{1.5em}$\mathrm{CD}=x$ とおくと $\mathrm{OD}=4+x$．$3\cdot8=4(4+x)$，\quad $24=16+4x$ より $x=2$．\quad $\mathrm{CD}=2$
 \end{kai}
 
 \ans{59}{2円の位置関係}
 \begin{kai}
+\textbf{方針}\quad 共通接線の長さは，\point{中心どうしを結び，直角三角形をつくって三平方の定理}．接点と中心を結ぶ半径は接線に垂直．\\[2pt]
 \point{接するときは中心と接点を結ぶ．円どうしなら中心どうしを結ぶ}\\
-(1)\ A を通り直線 $\mathrm T_1\mathrm T_2$ に平行な直線と直線 $\mathrm{BT}_2$ の交点を H とすると，$\mathrm{BH}=9-4=5$．\\
-\hspace*{1.5em}外接しているので $\mathrm{AB}=4+9=13$．$\mathrm T_1\mathrm T_2=\mathrm{AH}=\sqrt{13^2-5^2}=12$\\[2pt]
+(1)\ $\mathrm{AT}_1\perp\mathrm T_1\mathrm T_2$，$\mathrm{BT}_2\perp\mathrm T_1\mathrm T_2$ だから $\mathrm{AT}_1/\!/\mathrm{BT}_2$．\\
+\hspace*{1.5em}A を通り直線 $\mathrm T_1\mathrm T_2$ に平行な直線と線分 $\mathrm{BT}_2$ の交点を H とすると，四角形 $\mathrm{AT}_1\mathrm T_2\mathrm H$ は長方形．\\
+\hspace*{1.5em}よって $\mathrm{AH}=\mathrm T_1\mathrm T_2$，\quad $\mathrm{HT}_2=\mathrm{AT}_1=4$ より $\mathrm{BH}=9-4=5$．\\
+\hspace*{1.5em}外接しているので，中心間の距離は半径の和で $\mathrm{AB}=4+9=13$．\\
+\hspace*{1.5em}直角三角形 ABH に三平方の定理を用いて\quad $\mathrm T_1\mathrm T_2=\mathrm{AH}=\sqrt{13^2-5^2}=\sqrt{144}=12$\\[2pt]
 (2)\ 同様に $\mathrm{BH}=b-a$，$\mathrm{AB}=a+b$ だから\\
-\hspace*{1.5em}$\mathrm T_1\mathrm T_2{}^2=(a+b)^2-(b-a)^2=4ab$．\quad $\mathrm T_1\mathrm T_2=2\sqrt{ab}$
+\hspace*{1.5em}$\mathrm T_1\mathrm T_2{}^2=\mathrm{AB}^2-\mathrm{BH}^2=(a+b)^2-(b-a)^2=4ab$．\quad $\mathrm T_1\mathrm T_2=2\sqrt{ab}$
 \end{kai}
 
 \ans{60}{平面幾何（Ⅰ）}
 \begin{kai}
-(1)\ $\triangle\mathrm{ABC}$ と直線 DF にメネラウスの定理を用いて\quad $\dfrac{\mathrm{AD}}{\mathrm{DB}}\cdot\dfrac{\mathrm{BF}}{\mathrm{FC}}\cdot\dfrac{\mathrm{CE}}{\mathrm{EA}}=1$\\
-\hspace*{1.5em}$\dfrac32\cdot\dfrac{\mathrm{BF}}{\mathrm{FC}}\cdot\dfrac21=1$ より $\dfrac{\mathrm{BF}}{\mathrm{FC}}=\dfrac13$．\quad $\mathrm{BF}:\mathrm{FC}=1:3$（F は辺 CB の B 側の延長上）\\[2pt]
-(2)\ \point{4点が同一円周上 → 方べきの定理}\quad $\mathrm{AD}\cdot\mathrm{AB}=\mathrm{AE}\cdot\mathrm{AC}$．\\
-\hspace*{1.5em}$\mathrm{AD}=6$，$\mathrm{AE}=\dfrac13\mathrm{AC}$ だから $60=\dfrac13\mathrm{AC}^2$，$\mathrm{AC}^2=180$．\quad $\mathrm{AC}=6\sqrt5$
+\textbf{方針}\quad (1)は $\triangle\mathrm{ABC}$ と直線 DEF に\point{メネラウスの定理}．(2)は\point{4点が同一円周上 → 方べきの定理}．\\[2pt]
+(1)\ 条件より $\mathrm{AD}:\mathrm{DB}=3:2$，\quad $\mathrm{AE}:\mathrm{EC}=1:2$．\\
+\hspace*{1.5em}$\triangle\mathrm{ABC}$ と直線 DF にメネラウスの定理を用いて\quad $\dfrac{\mathrm{AD}}{\mathrm{DB}}\cdot\dfrac{\mathrm{BF}}{\mathrm{FC}}\cdot\dfrac{\mathrm{CE}}{\mathrm{EA}}=1$\\[2pt]
+\hspace*{1.5em}$\dfrac32\cdot\dfrac{\mathrm{BF}}{\mathrm{FC}}\cdot\dfrac21=1$ より $\dfrac{\mathrm{BF}}{\mathrm{FC}}=\dfrac13$．\quad よって\quad $\mathrm{BF}:\mathrm{FC}=1:3$\\
+\hspace*{1.5em}（$\mathrm{BF}<\mathrm{FC}$ なので，F は辺 CB の B 側の延長上にある．）\\[2pt]
+(2)\ $\mathrm{AD}=10\times\dfrac35=6$，\quad $\mathrm{AE}=\dfrac13\mathrm{AC}$．\\
+\hspace*{1.5em}4点 B，C，E，D が同一円周上にあり，点 A を通る2直線 AB，AC がこの円とそれぞれ D，B および E，C で交わる．\\
+\hspace*{1.5em}方べきの定理より\quad $\mathrm{AD}\cdot\mathrm{AB}=\mathrm{AE}\cdot\mathrm{AC}$\\
+\hspace*{1.5em}$6\cdot10=\dfrac13\mathrm{AC}\cdot\mathrm{AC}$，\quad $\mathrm{AC}^2=180$．$\mathrm{AC}>0$ より\quad $\mathrm{AC}=6\sqrt5$
 \end{kai}
 
 \ans{61}{平面幾何（Ⅱ）}
 \begin{kai}
-(1)\ $\mathrm{BC}=\sqrt{36+64}=10$．面積を2通りに表して $\dfrac12\cdot6\cdot8=\dfrac12\cdot10\cdot\mathrm{AH}$，\quad $\mathrm{AH}=\dfrac{24}{5}$\\
-\hspace*{1.5em}$\triangle\mathrm{ABH}\backsim\triangle\mathrm{CBA}$ より $\mathrm{BH}=\dfrac{\mathrm{AB}^2}{\mathrm{BC}}=\dfrac{36}{10}=\dfrac{18}{5}$\\[2pt]
-(2)\ $\angle\mathrm{BAC}=90^\circ$ だから，A は BC を直径とする円周上にある．その中心は BC の中点 M だから，M は外心．\quad $\mathrm{AM}=\dfrac12\mathrm{BC}=5$\\[2pt]
-(3)\ $\mathrm{HM}=\mathrm{BM}-\mathrm{BH}=5-\dfrac{18}{5}=\dfrac75$．\quad $\triangle\mathrm{AHM}=\dfrac12\cdot\dfrac75\cdot\dfrac{24}{5}=\dfrac{84}{25}$
+\textbf{方針}\quad 直角三角形の斜辺への垂線は\point{面積を2通りに表す}か\point{相似}で求める．直角三角形の外心は斜辺の中点．\\[2pt]
+(1)\ 三平方の定理より\quad $\mathrm{BC}=\sqrt{6^2+8^2}=\sqrt{100}=10$\\
+\hspace*{1.5em}$\triangle\mathrm{ABC}$ の面積を2通りに表して\quad $\dfrac12\cdot6\cdot8=\dfrac12\cdot10\cdot\mathrm{AH}$，\quad $\mathrm{AH}=\dfrac{24}{5}$\\[2pt]
+\hspace*{1.5em}$\triangle\mathrm{ABH}$ と $\triangle\mathrm{CBA}$ は，$\angle\mathrm B$ 共通，$\angle\mathrm{AHB}=\angle\mathrm{CAB}=90^\circ$ で相似．\\
+\hspace*{1.5em}$\mathrm{BH}:\mathrm{BA}=\mathrm{BA}:\mathrm{BC}$ より\quad $\mathrm{BH}=\dfrac{\mathrm{AB}^2}{\mathrm{BC}}=\dfrac{36}{10}=\dfrac{18}{5}$\\
+\hspace*{1.5em}（三平方の定理で $\mathrm{BH}=\sqrt{6^2-\left(\dfrac{24}5\right)^2}=\sqrt{\dfrac{324}{25}}=\dfrac{18}5$ としてもよい．）\\[2pt]
+(2)\ $\angle\mathrm{BAC}=90^\circ$ だから，円周角の定理の逆より，A は BC を直径とする円周上にある．\\
+\hspace*{1.5em}この円は3頂点 A，B，C を通り，その中心は BC の中点 M．よって M は $\triangle\mathrm{ABC}$ の外心．\\
+\hspace*{1.5em}AM は外接円の半径だから\quad $\mathrm{AM}=\mathrm{BM}=\dfrac12\mathrm{BC}=5$\\[2pt]
+(3)\ $\mathrm{BH}=\dfrac{18}5<5=\mathrm{BM}$ だから，H は B と M の間にある．\\
+\hspace*{1.5em}$\mathrm{HM}=\mathrm{BM}-\mathrm{BH}=5-\dfrac{18}{5}=\dfrac75$\\
+\hspace*{1.5em}AH は底辺 HM に対する高さだから\quad $\triangle\mathrm{AHM}=\dfrac12\cdot\dfrac75\cdot\dfrac{24}{5}=\dfrac{84}{25}$
 \end{kai}
 
 \ans{62}{四角形への応用（トレミーの定理）}
 \begin{kai}
-(1)\ AC は直径だから $\angle\mathrm{ABC}=\angle\mathrm{ADC}=90^\circ$．\quad $\mathrm{BC}=\mathrm{CD}=\sqrt{25-9}=4$\\[2pt]
-(2)\ $3\cdot4+4\cdot3=5\cdot\mathrm{BD}$ より\quad $\mathrm{BD}=\dfrac{24}{5}$\\[2pt]
-(3)\ $\mathrm{AB}=\mathrm{AD}$，$\mathrm{CB}=\mathrm{CD}$ だから，AC は BD の垂直二等分線．交点を K とすると BK は直角三角形 ABC の斜辺 AC への垂線．\\
-\hspace*{1.5em}$\dfrac12\cdot3\cdot4=\dfrac12\cdot5\cdot\mathrm{BK}$ より $\mathrm{BK}=\dfrac{12}5$．\quad $\mathrm{BD}=2\mathrm{BK}=\dfrac{24}{5}$ で一致する．
+\textbf{方針}\quad \point{直径に対する円周角は $90^\circ$}．トレミーの定理は円に内接する四角形の「対辺の積の和 $=$ 対角線の積」．\\[2pt]
+(1)\ AC は直径だから\quad $\angle\mathrm{ABC}=\angle\mathrm{ADC}=90^\circ$\\
+\hspace*{1.5em}直角三角形 ABC，ADC に三平方の定理を用いて\\
+\hspace*{1.5em}$\mathrm{BC}=\sqrt{\mathrm{AC}^2-\mathrm{AB}^2}=\sqrt{25-9}=4$，\quad 同様に\quad $\mathrm{CD}=4$\\[2pt]
+(2)\ トレミーの定理より\quad $\mathrm{AB}\cdot\mathrm{CD}+\mathrm{BC}\cdot\mathrm{DA}=\mathrm{AC}\cdot\mathrm{BD}$\\
+\hspace*{1.5em}$3\cdot4+4\cdot3=5\cdot\mathrm{BD}$，\quad $24=5\,\mathrm{BD}$ より\quad $\mathrm{BD}=\dfrac{24}{5}$\\[2pt]
+(3)\ $\mathrm{AB}=\mathrm{AD}$ より A は BD の垂直二等分線上，$\mathrm{CB}=\mathrm{CD}$ より C も BD の垂直二等分線上にある．\\
+\hspace*{1.5em}よって AC は BD の垂直二等分線．AC と BD の交点を K とすると，$\mathrm{BK}\perp\mathrm{AC}$，$\mathrm{BD}=2\mathrm{BK}$．\\
+\hspace*{1.5em}BK は直角三角形 ABC の斜辺 AC への垂線だから，面積を2通りに表して\\
+\hspace*{1.5em}$\dfrac12\cdot3\cdot4=\dfrac12\cdot5\cdot\mathrm{BK}$ より $\mathrm{BK}=\dfrac{12}5$．\quad $\mathrm{BD}=2\mathrm{BK}=\dfrac{24}{5}$ で，(2)と一致する．
 \end{kai}
 
 \ans{63}{内接球・外接球}
 \begin{kai}
-\point{球の中心と接点を含む平面（円錐の軸を含む平面）で切る}\\
-断面の二等辺三角形を ABC（A が頂点），底面の中心を D，球の中心を O，AB と球の接点を E とする．$\mathrm{AB}=\sqrt{5^2+12^2}=13$．\\
-(1)\ $\triangle\mathrm{ABD}\backsim\triangle\mathrm{AOE}$ より $\mathrm{AB}:\mathrm{BD}=\mathrm{AO}:\mathrm{OE}$，$13:5=(12-R):R$．\\
+\textbf{方針}\quad 立体は\point{球の中心と接点を含む平面で切って，平面図形の問題にする}．円錐の軸を含む平面で切ると，断面は二等辺三角形とその内接円になる．\\[2pt]
+断面の二等辺三角形を ABC（A が頂点），底面の中心を D，球の中心を O，AB と球の接点を E とする．$\mathrm{AD}=12$，$\mathrm{BD}=5$ より\quad $\mathrm{AB}=\sqrt{5^2+12^2}=13$．\\
+(1)\ O は AD 上にあり，$\mathrm{OD}=\mathrm{OE}=R$，$\mathrm{AO}=12-R$．また $\mathrm{OE}\perp\mathrm{AB}$．\\
+\hspace*{1.5em}$\triangle\mathrm{ABD}$ と $\triangle\mathrm{AOE}$ は，$\angle\mathrm A$ 共通，$\angle\mathrm{ADB}=\angle\mathrm{AEO}=90^\circ$ で相似．\\
+\hspace*{1.5em}$\mathrm{AB}:\mathrm{BD}=\mathrm{AO}:\mathrm{OE}$ より\quad $13:5=(12-R):R$\\
 \hspace*{1.5em}$13R=60-5R$ より\quad $R=\dfrac{10}{3}$\\[2pt]
 (2)\ $\mathrm{AO}=12-\dfrac{10}3=\dfrac{26}3$，\quad $\mathrm{AE}=\sqrt{\left(\dfrac{26}3\right)^2-\left(\dfrac{10}3\right)^2}=8$．\\
-\hspace*{1.5em}AC と球の接点を F とすると，$\triangle\mathrm{AEF}\backsim\triangle\mathrm{ABC}$ で相似比は $8:13$．$\mathrm{EF}=10\times\dfrac{8}{13}=\dfrac{80}{13}$．\\
+\hspace*{1.5em}AC と球の接点を F とすると，対称性から $\mathrm{AF}=\mathrm{AE}=8$ で EF $/\!/$ BC．\\
+\hspace*{1.5em}$\triangle\mathrm{AEF}\backsim\triangle\mathrm{ABC}$ で相似比は $8:13$．$\mathrm{EF}=10\times\dfrac{8}{13}=\dfrac{80}{13}$．\\
 \hspace*{1.5em}求める円の半径は\quad $r=\dfrac12\mathrm{EF}=\dfrac{40}{13}$
 \end{kai}
 
 \ans{64}{特殊な四面体（Ⅰ）}
 \begin{kai}
-(1)\ $\triangle\mathrm{OAH}$，$\triangle\mathrm{OBH}$，$\triangle\mathrm{OCH}$ は，OH が共通，$\angle\mathrm{OHA}=\angle\mathrm{OHB}=\angle\mathrm{OHC}=90^\circ$，$\mathrm{OA}=\mathrm{OB}=\mathrm{OC}$ の直角三角形なので合同．\\
-\hspace*{1.5em}よって $\mathrm{HA}=\mathrm{HB}=\mathrm{HC}$ となり，H は $\triangle\mathrm{ABC}$ の外心．\\[2pt]
-(2)\ 正弦定理より $2\mathrm{AH}=\dfrac{6}{\sin60^\circ}$，\quad $\mathrm{AH}=2\sqrt3$．\quad $\mathrm{OH}=\sqrt{25-12}=\sqrt{13}$\\[2pt]
-(3)\ $\triangle\mathrm{ABC}=\dfrac{\sqrt3}4\cdot6^2=9\sqrt3$．\quad $V=\dfrac13\cdot9\sqrt3\cdot\sqrt{13}=3\sqrt{39}$
+\textbf{方針}\quad \point{頂点から等距離にある点への垂線の足は外心}．底面の外接円の半径がわかれば，三平方の定理で高さが出る．\\[2pt]
+(1)\ $\triangle\mathrm{OAH}$，$\triangle\mathrm{OBH}$，$\triangle\mathrm{OCH}$ において\\
+\hspace*{1.5em}OH は共通，\quad $\angle\mathrm{OHA}=\angle\mathrm{OHB}=\angle\mathrm{OHC}=90^\circ$，\quad $\mathrm{OA}=\mathrm{OB}=\mathrm{OC}=5$\\
+\hspace*{1.5em}斜辺と他の1辺がそれぞれ等しい直角三角形なので，3つは合同．\\
+\hspace*{1.5em}よって $\mathrm{HA}=\mathrm{HB}=\mathrm{HC}$ となり，H は3頂点から等距離．H は $\triangle\mathrm{ABC}$ の外心である．\\[2pt]
+(2)\ AH は正三角形 ABC の外接円の半径．正弦定理より\\
+\hspace*{1.5em}$2\mathrm{AH}=\dfrac{\mathrm{BC}}{\sin\mathrm A}=\dfrac{6}{\sin60^\circ}=\dfrac{6}{\frac{\sqrt3}2}=4\sqrt3$，\quad $\mathrm{AH}=2\sqrt3$\\
+\hspace*{1.5em}直角三角形 OAH に三平方の定理を用いて\quad $\mathrm{OH}=\sqrt{\mathrm{OA}^2-\mathrm{AH}^2}=\sqrt{25-12}=\sqrt{13}$\\[2pt]
+(3)\ 底面積は\quad $\triangle\mathrm{ABC}=\dfrac12\cdot6\cdot6\cdot\sin60^\circ=\dfrac{\sqrt3}4\cdot6^2=9\sqrt3$\\
+\hspace*{1.5em}$V=\dfrac13\times(\text{底面積})\times(\text{高さ})=\dfrac13\cdot9\sqrt3\cdot\sqrt{13}=3\sqrt{39}$
 \end{kai}
 
 \ans{65}{特殊な四面体（Ⅱ）}
 \begin{kai}
-(1)\ 垂線の足を G とすると，類題64と同様に G は正三角形 BCD の外心．$\mathrm{BG}=\dfrac{6}{2\sin60^\circ}=2\sqrt3$．\\
-\hspace*{1.5em}$h=\mathrm{AG}=\sqrt{36-12}=2\sqrt6$\\[2pt]
-(2)\ $\triangle\mathrm{BCD}=9\sqrt3$．\quad $V=\dfrac13\cdot9\sqrt3\cdot2\sqrt6=18\sqrt2$\\[2pt]
-(3)\ \point{内心 I と4頂点を結んで4つの四面体に分ける}\quad $V=\dfrac13r\times(4\times9\sqrt3)=12\sqrt3\,r$．\\
-\hspace*{1.5em}$12\sqrt3\,r=18\sqrt2$ より\quad $r=\dfrac{3\sqrt2}{2\sqrt3}=\dfrac{\sqrt6}{2}$
+\textbf{方針}\quad (1)(2)は類題64と同じく，垂線の足が底面の外心になることを使う．(3)は\point{内接球の中心と4頂点を結んで4つの四面体に分け}，体積を2通りに表す．\\[2pt]
+(1)\ A から平面 BCD に下ろした垂線の足を G とすると，$\mathrm{AB}=\mathrm{AC}=\mathrm{AD}$ より，類題64と同様に G は正三角形 BCD の外心．\\
+\hspace*{1.5em}正弦定理より $2\mathrm{BG}=\dfrac{6}{\sin60^\circ}=4\sqrt3$，\quad $\mathrm{BG}=2\sqrt3$\\
+\hspace*{1.5em}直角三角形 ABG に三平方の定理を用いて\quad $h=\mathrm{AG}=\sqrt{6^2-(2\sqrt3)^2}=\sqrt{24}=2\sqrt6$\\[2pt]
+(2)\ $\triangle\mathrm{BCD}=\dfrac{\sqrt3}4\cdot6^2=9\sqrt3$．\quad $V=\dfrac13\cdot9\sqrt3\cdot2\sqrt6=6\sqrt{18}=18\sqrt2$\\[2pt]
+(3)\ \point{内接球の中心 I と4頂点を結んで4つの四面体に分ける}\\
+\hspace*{1.5em}I から各面までの距離はすべて $r$ で，4つの面の面積はすべて $9\sqrt3$．よって\\
+\hspace*{1.5em}$V=\dfrac13\cdot9\sqrt3\cdot r\times4=12\sqrt3\,r$\\
+\hspace*{1.5em}$12\sqrt3\,r=18\sqrt2$ より\quad $r=\dfrac{18\sqrt2}{12\sqrt3}=\dfrac{3\sqrt2}{2\sqrt3}=\dfrac{3\sqrt6}{6}=\dfrac{\sqrt6}{2}$\\
+\hspace*{1.5em}（$r=\dfrac14h$ になっている．正四面体の内接球の半径は高さの $\dfrac14$．）
 \end{kai}
 
 
 \shouans{第5章}{図形と計量}
 \ans{66}{鋭角の三角比}
 \begin{kai}
-(1)\ 斜辺は $\sqrt{15^2+8^2}=17$．\quad $\sin\theta=\dfrac8{17}$，$\cos\theta=\dfrac{15}{17}$，$\tan\theta=\dfrac8{15}$\\[2pt]
-(2)\ 底辺は $\sqrt{25^2-7^2}=24$．\quad $\sin\theta=\dfrac7{25}$，$\cos\theta=\dfrac{24}{25}$，$\tan\theta=\dfrac7{24}$\\
-\point{角 $\theta$ を左下，直角を右下にした図で考える}
+\textbf{方針}\quad \point{角 $\theta$ を左下，直角を右下に置いた図で}，$\sin\theta=\dfrac{\text{高さ}}{\text{斜辺}}$，$\cos\theta=\dfrac{\text{底辺}}{\text{斜辺}}$，$\tan\theta=\dfrac{\text{高さ}}{\text{底辺}}$．足りない辺は三平方の定理で求める．\\[2pt]
+(1)\ 底辺 15，高さ 8 だから，斜辺は\quad $\sqrt{15^2+8^2}=\sqrt{289}=17$\\
+\hspace*{1.5em}$\sin\theta=\dfrac8{17}$，\quad $\cos\theta=\dfrac{15}{17}$，\quad $\tan\theta=\dfrac8{15}$\\[2pt]
+(2)\ 斜辺 25，高さ 7 だから，底辺は\quad $\sqrt{25^2-7^2}=\sqrt{576}=24$\\
+\hspace*{1.5em}$\sin\theta=\dfrac7{25}$，\quad $\cos\theta=\dfrac{24}{25}$，\quad $\tan\theta=\dfrac7{24}$\\
+\point{図の向きが違うときは，$\theta$ が左下・直角が右下になるように見る向きを変える}
 \end{kai}
 
 \ans{67}{有名角の三角比}
 \begin{kai}
-(1)\ $\left(\dfrac{\sqrt3}2\right)^2=\dfrac34$\qquad
-(2)\ $2\cdot\dfrac1{\sqrt2}-4\cdot\dfrac12=\sqrt2-2$\\[2pt]
-(3)\ $\dfrac1{\sqrt3}+\dfrac{\sqrt3}2=\dfrac{\sqrt3}3+\dfrac{\sqrt3}2=\dfrac{5\sqrt3}{6}$\qquad
-(4)\ $\dfrac12\cdot\dfrac{\sqrt3}2+\dfrac{\sqrt3}2\cdot\dfrac12=\dfrac{\sqrt3}2$
+\textbf{方針}\quad $30^\circ,\ 45^\circ,\ 60^\circ$ の三角比は，\point{$1:1:\sqrt2$ と $1:\sqrt3:2$ の直角三角形}から求める．\\[2pt]
+$\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\sqrt3}2$，\quad $\sin45^\circ=\cos45^\circ=\dfrac1{\sqrt2}$，\quad $\tan30^\circ=\dfrac1{\sqrt3}$\\[4pt]
+(1)\ $\sin^260^\circ=(\sin60^\circ)^2=\left(\dfrac{\sqrt3}2\right)^2=\dfrac34$\\
+\hspace*{1.5em}\point{$\sin^2\theta$ は $(\sin\theta)^2$ のこと．$\sin(\theta^2)$ ではない}\\[2pt]
+(2)\ $2\cos45^\circ-4\sin30^\circ=2\cdot\dfrac1{\sqrt2}-4\cdot\dfrac12=\sqrt2-2$\\[2pt]
+(3)\ $\tan30^\circ+\sin60^\circ=\dfrac1{\sqrt3}+\dfrac{\sqrt3}2=\dfrac{\sqrt3}3+\dfrac{\sqrt3}2=\dfrac{2\sqrt3+3\sqrt3}{6}=\dfrac{5\sqrt3}{6}$\\[2pt]
+(4)\ $\cos60^\circ\cos30^\circ+\sin60^\circ\sin30^\circ=\dfrac12\cdot\dfrac{\sqrt3}2+\dfrac{\sqrt3}2\cdot\dfrac12=\dfrac{\sqrt3}4+\dfrac{\sqrt3}4=\dfrac{\sqrt3}2$
 \end{kai}
 
 \ans{68}{鈍角の三角比}
 \begin{kai}
-\point{半径 $r$ の半円上の点 $\mathrm P(x,\ y)$ で $\sin\theta=\dfrac yr$，$\cos\theta=\dfrac xr$，$\tan\theta=\dfrac yx$}\\
-(1)\ 半径2の半円で $150^\circ$ の点は $\mathrm P(-\sqrt3,\ 1)$．\quad $\cos150^\circ=-\dfrac{\sqrt3}2$\\[2pt]
-(2)\ 半径 $\sqrt2$ の半円で $135^\circ$ の点は $\mathrm P(-1,\ 1)$．\quad $\sin135^\circ=\dfrac1{\sqrt2}$\\[2pt]
-(3)\ 半径2の半円で $120^\circ$ の点は $\mathrm P(-1,\ \sqrt3)$．\quad $\tan120^\circ=\dfrac{\sqrt3}{-1}=-\sqrt3$
+\textbf{方針}\quad \point{半径 $r$ の半円上で，$x$ 軸の正の向きから角 $\theta$ の点を $\mathrm P(x,\ y)$ とすると，$\sin\theta=\dfrac yr$，$\cos\theta=\dfrac xr$，$\tan\theta=\dfrac yx$}．半径は，座標がきれいになるように選ぶ．\\[2pt]
+(1)\ $150^\circ$ は $x$ 軸の負の向きと $30^\circ$ をなす．$1:\sqrt3:2$ の三角形が使えるので半径2の半円をとると\\
+\hspace*{1.5em}点は $\mathrm P(-\sqrt3,\ 1)$．\quad $\cos150^\circ=\dfrac{-\sqrt3}{2}=-\dfrac{\sqrt3}2$\\[2pt]
+(2)\ $135^\circ$ は $x$ 軸の負の向きと $45^\circ$ をなす．$1:1:\sqrt2$ の三角形が使えるので半径 $\sqrt2$ の半円をとると\\
+\hspace*{1.5em}点は $\mathrm P(-1,\ 1)$．\quad $\sin135^\circ=\dfrac1{\sqrt2}=\dfrac{\sqrt2}{2}$\\[2pt]
+(3)\ $120^\circ$ は $x$ 軸の負の向きと $60^\circ$ をなす．半径2の半円をとると\\
+\hspace*{1.5em}点は $\mathrm P(-1,\ \sqrt3)$．\quad $\tan120^\circ=\dfrac{\sqrt3}{-1}=-\sqrt3$\\
+\point{鈍角では $x$ 座標が負なので，$\cos$，$\tan$ は負，$\sin$ は正}
 \end{kai}
 
 \ans{69}{補角・余角の三角比}
 \begin{kai}
+\textbf{方針}\quad \point{$\sin(180^\circ-\theta)=\sin\theta$，\ $\cos(180^\circ-\theta)=-\cos\theta$，\ $\tan(180^\circ-\theta)=-\tan\theta$} を使って鋭角の三角比に直す．（半円上で $\theta$ と $180^\circ-\theta$ の点は $y$ 軸に関して対称．）\\[2pt]
 (1)\ $\sin150^\circ=\sin(180^\circ-30^\circ)=\sin30^\circ=\dfrac12$\\[2pt]
 (2)\ $\cos120^\circ=\cos(180^\circ-60^\circ)=-\cos60^\circ=-\dfrac12$\\[2pt]
 (3)\ $\tan135^\circ=\tan(180^\circ-45^\circ)=-\tan45^\circ=-1$
@@ -1898,32 +2235,49 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 
 \ans{70}{三角比の相互関係}
 \begin{kai}
-(1)\ $\sin^2\theta=1-\dfrac49=\dfrac59$．$\sin\theta\geqq0$ より $\sin\theta=\dfrac{\sqrt5}3$，\quad $\tan\theta=\dfrac{\sin\theta}{\cos\theta}=-\dfrac{\sqrt5}{2}$\\[2pt]
-(2)\ $\dfrac1{\cos^2\theta}=1+\tan^2\theta=5$．\point{$\tan\theta<0$ だから $\theta$ は鈍角，$\cos\theta<0$}\\
-\hspace*{1.5em}$\cos\theta=-\dfrac1{\sqrt5}=-\dfrac{\sqrt5}5$，\quad $\sin\theta=\tan\theta\cos\theta=\dfrac2{\sqrt5}=\dfrac{2\sqrt5}5$\\[2pt]
-(3)\ $\cos^2\theta=1-\dfrac{25}{169}=\dfrac{144}{169}$．\point{$\theta$ は鋭角とも鈍角ともありうる}\\
-\hspace*{1.5em}$\cos\theta=\pm\dfrac{12}{13}$，\quad $\tan\theta=\pm\dfrac{5}{12}$（複号同順）
+\textbf{方針}\quad 相互関係 \point{$\sin^2\theta+\cos^2\theta=1$，\ $\tan\theta=\dfrac{\sin\theta}{\cos\theta}$，\ $1+\tan^2\theta=\dfrac1{\cos^2\theta}$} を使う．平方根をとるときは，\point{$\theta$ の範囲から符号を決める}（$0^\circ\leqq\theta\leqq180^\circ$ では $\sin\theta\geqq0$）．\\[2pt]
+(1)\ $\sin^2\theta=1-\cos^2\theta=1-\dfrac49=\dfrac59$．$0^\circ\leqq\theta\leqq180^\circ$ では $\sin\theta\geqq0$ だから\quad $\sin\theta=\dfrac{\sqrt5}3$\\[2pt]
+\hspace*{1.5em}$\tan\theta=\dfrac{\sin\theta}{\cos\theta}=\dfrac{\sqrt5}3\div\left(-\dfrac23\right)=-\dfrac{\sqrt5}{2}$\\[2pt]
+(2)\ $\dfrac1{\cos^2\theta}=1+\tan^2\theta=1+4=5$ より $\cos^2\theta=\dfrac15$．\\
+\hspace*{1.5em}\point{$\tan\theta<0$ だから $\theta$ は鈍角で，$\cos\theta<0$}．よって\quad $\cos\theta=-\dfrac1{\sqrt5}=-\dfrac{\sqrt5}5$\\[2pt]
+\hspace*{1.5em}$\sin\theta=\tan\theta\cos\theta=(-2)\cdot\left(-\dfrac1{\sqrt5}\right)=\dfrac2{\sqrt5}=\dfrac{2\sqrt5}5$\\[2pt]
+(3)\ $\cos^2\theta=1-\sin^2\theta=1-\dfrac{25}{169}=\dfrac{144}{169}$．\\
+\hspace*{1.5em}\point{$\sin\theta>0$ だけでは，$\theta$ は鋭角とも鈍角ともありうる}ので，両方の場合を答える．\\
+\hspace*{1.5em}$\theta$ が鋭角のとき\quad $\cos\theta=\dfrac{12}{13}$，\quad $\tan\theta=\dfrac{5}{12}$\\
+\hspace*{1.5em}$\theta$ が鈍角のとき\quad $\cos\theta=-\dfrac{12}{13}$，\quad $\tan\theta=-\dfrac{5}{12}$
 \end{kai}
 
 \ans{71}{三角比の計算（Ⅰ）}
 \begin{kai}
-(1)\ $(\sin^2\theta+2\sin\theta\cos\theta+\cos^2\theta)+(\sin^2\theta-2\sin\theta\cos\theta+\cos^2\theta)=2(\sin^2\theta+\cos^2\theta)=2$\\[2pt]
-(2)\ \point{$\tan\theta$ を $\sin\theta$，$\cos\theta$ で表す}\quad
-$\dfrac{\sin\theta}{1+\cos\theta}+\dfrac{\cos\theta}{\sin\theta}=\dfrac{\sin^2\theta+\cos\theta+\cos^2\theta}{(1+\cos\theta)\sin\theta}=\dfrac{1+\cos\theta}{(1+\cos\theta)\sin\theta}=\dfrac1{\sin\theta}$
+\textbf{方針}\quad 展開・通分して，\point{$\sin^2\theta+\cos^2\theta=1$ が使える形}をつくる．$\tan\theta$ は $\dfrac{\sin\theta}{\cos\theta}$ に直す．\\[2pt]
+(1)\ $(\sin\theta+\cos\theta)^2=\sin^2\theta+2\sin\theta\cos\theta+\cos^2\theta$\\
+\hspace*{1.5em}$(\sin\theta-\cos\theta)^2=\sin^2\theta-2\sin\theta\cos\theta+\cos^2\theta$\\
+\hspace*{1.5em}たすと $2\sin\theta\cos\theta$ の項は消えて\quad 与式 $=2(\sin^2\theta+\cos^2\theta)=2$\\[2pt]
+(2)\ \point{$\tan\theta$ を $\sin\theta$，$\cos\theta$ で表す}．$\dfrac1{\tan\theta}=\dfrac{\cos\theta}{\sin\theta}$ だから\\[2pt]
+\hspace*{1.5em}与式 $=\dfrac{\sin\theta}{1+\cos\theta}+\dfrac{\cos\theta}{\sin\theta}=\dfrac{\sin^2\theta+\cos\theta(1+\cos\theta)}{(1+\cos\theta)\sin\theta}$\\[2pt]
+\hspace*{1.5em}分子は $\sin^2\theta+\cos\theta+\cos^2\theta=1+\cos\theta$ だから\\
+\hspace*{1.5em}与式 $=\dfrac{1+\cos\theta}{(1+\cos\theta)\sin\theta}=\dfrac1{\sin\theta}$
 \end{kai}
 
 \ans{72}{三角比の計算（Ⅱ）}
 \begin{kai}
-(1)\ $(\sin\theta-\cos\theta)^2=1-2\sin\theta\cos\theta$ だから $\dfrac14=1-2\sin\theta\cos\theta$．\quad $\sin\theta\cos\theta=\dfrac38$\\[2pt]
-(2)\ $\sin^3\theta-\cos^3\theta=(\sin\theta-\cos\theta)(\sin^2\theta+\sin\theta\cos\theta+\cos^2\theta)=\dfrac12\left(1+\dfrac38\right)=\dfrac{11}{16}$
+\textbf{方針}\quad \point{$\sin\theta\pm\cos\theta$ が与えられたら2乗する}．$\sin^2\theta+\cos^2\theta=1$ から $\sin\theta\cos\theta$ が求まる．3乗の式は因数分解の公式で $\sin\theta-\cos\theta$ と $\sin\theta\cos\theta$ で表す．\\[2pt]
+(1)\ $\sin\theta-\cos\theta=\dfrac12$ の両辺を2乗して\\
+\hspace*{1.5em}$\sin^2\theta-2\sin\theta\cos\theta+\cos^2\theta=\dfrac14$，\quad $1-2\sin\theta\cos\theta=\dfrac14$\\
+\hspace*{1.5em}よって\quad $\sin\theta\cos\theta=\dfrac38$\\[2pt]
+(2)\ $a^3-b^3=(a-b)(a^2+ab+b^2)$ を使って\\
+\hspace*{1.5em}$\sin^3\theta-\cos^3\theta=(\sin\theta-\cos\theta)(\sin^2\theta+\sin\theta\cos\theta+\cos^2\theta)$\\
+\hspace*{1.5em}$=(\sin\theta-\cos\theta)(1+\sin\theta\cos\theta)=\dfrac12\left(1+\dfrac38\right)=\dfrac12\cdot\dfrac{11}8=\dfrac{11}{16}$
 \end{kai}
 
 \ans{73}{三角方程式（Ⅰ）}
 \begin{kai}
-(1)\ (i)\ $\cos\theta=\dfrac12$ より\quad $\theta=60^\circ$\qquad
-(ii)\ $\sin\theta=\dfrac1{\sqrt2}$ より\quad $\theta=45^\circ,\ 135^\circ$\\[2pt]
-\hspace*{1.5em}(iii)\ $\tan\theta=-\sqrt3$ より\quad $\theta=120^\circ$\\[2pt]
-(2)\ \point{$0^\circ\leqq2\theta\leqq180^\circ$ で $2\theta$ を求めてから2で割る}\\
+\textbf{方針}\quad $\sin\theta=k$ の形にして，\point{単位円（半径1の半円）で $y$ 座標が $k$ の点}を探す（$\cos$ なら $x$ 座標，$\tan$ なら直線 $x=1$ 上の点）．角が $2\theta$ のときは，$2\theta$ の範囲を先に求める．\\[2pt]
+(1)\ (i)\ $\cos\theta=\dfrac12$．$x$ 座標が $\dfrac12$ の点は1つで\quad $\theta=60^\circ$\\[2pt]
+\hspace*{1.5em}(ii)\ $\sin\theta=\dfrac1{\sqrt2}$．$y$ 座標が $\dfrac1{\sqrt2}$ の点は2つあり\quad $\theta=45^\circ,\ 135^\circ$\\
+\hspace*{1.5em}\point{$\sin\theta=k\ (0<k<1)$ の解は $\theta$ と $180^\circ-\theta$ の2つ}\\[2pt]
+\hspace*{1.5em}(iii)\ $\tan\theta=-\sqrt3$．$\tan\theta<0$ なので鈍角で，$\tan(180^\circ-\theta)=\sqrt3$ より $180^\circ-\theta=60^\circ$．\quad $\theta=120^\circ$\\[2pt]
+(2)\ \point{$0^\circ\leqq\theta\leqq90^\circ$ より $0^\circ\leqq2\theta\leqq180^\circ$．この範囲で $2\theta$ を求めてから2で割る}\\
 \hspace*{1.5em}(i)\ $\cos2\theta=-\dfrac12$ より $2\theta=120^\circ$．\quad $\theta=60^\circ$\\[2pt]
 \hspace*{1.5em}(ii)\ $\sin2\theta=\dfrac{\sqrt3}2$ より $2\theta=60^\circ,\ 120^\circ$．\quad $\theta=30^\circ,\ 60^\circ$\\[2pt]
 \hspace*{1.5em}(iii)\ $\tan2\theta=\dfrac1{\sqrt3}$ より $2\theta=30^\circ$．\quad $\theta=15^\circ$
@@ -1931,128 +2285,189 @@ $\dfrac{\sin\theta}{1+\cos\theta}+\dfrac{\cos\theta}{\sin\theta}=\dfrac{\sin^2\t
 
 \ans{74}{三角不等式（Ⅰ）}
 \begin{kai}
-\point{方程式を解いて境界の角を求め，単位円で範囲を読む}\\
-(1)\ (i)\ $\cos\theta\geqq\dfrac12$ より\quad $0^\circ\leqq\theta\leqq60^\circ$\\[2pt]
-\hspace*{1.5em}(ii)\ $\sin\theta<\dfrac{\sqrt3}2$ より\quad $0^\circ\leqq\theta<60^\circ,\ 120^\circ<\theta\leqq180^\circ$\\[2pt]
-\hspace*{1.5em}(iii)\ $\tan\theta\geqq1$ より\quad $45^\circ\leqq\theta<90^\circ$\quad（$\tan90^\circ$ は定義されない）\\[2pt]
-(2)\ (i)\ $\cos2\theta>\dfrac12$，$0^\circ\leqq2\theta\leqq180^\circ$ より $0^\circ\leqq2\theta<60^\circ$．\quad $0^\circ\leqq\theta<30^\circ$\\[2pt]
+\textbf{方針}\quad \point{まず等号の場合（方程式）を解いて境界の角を求め，単位円で不等号をみたす範囲を読む}．$2\theta$ のときは $2\theta$ の範囲で考えてから2で割る．\\[2pt]
+(1)\ (i)\ $\cos\theta\geqq\dfrac12$．$\cos\theta=\dfrac12$ となるのは $\theta=60^\circ$．\\
+\hspace*{3em}$x$ 座標が $\dfrac12$ 以上の部分を読んで\quad $0^\circ\leqq\theta\leqq60^\circ$\\[2pt]
+\hspace*{1.5em}(ii)\ $\sin\theta<\dfrac{\sqrt3}2$．$\sin\theta=\dfrac{\sqrt3}2$ となるのは $\theta=60^\circ,\ 120^\circ$．\\
+\hspace*{3em}$y$ 座標が $\dfrac{\sqrt3}2$ より小さい部分（両端側）を読んで\quad $0^\circ\leqq\theta<60^\circ,\ 120^\circ<\theta\leqq180^\circ$\\[2pt]
+\hspace*{1.5em}(iii)\ $\tan\theta\geqq1$．$\tan\theta=1$ となるのは $\theta=45^\circ$．$\tan\theta$ は $0^\circ\leqq\theta<90^\circ$ で増加し，鈍角では負．\\
+\hspace*{3em}よって\quad $45^\circ\leqq\theta<90^\circ$\quad（$\tan90^\circ$ は定義されない）\\[2pt]
+(2)\ $0^\circ\leqq2\theta\leqq180^\circ$ で考える．\\
+\hspace*{1.5em}(i)\ $\cos2\theta>\dfrac12$ より $0^\circ\leqq2\theta<60^\circ$．\quad $0^\circ\leqq\theta<30^\circ$\\[2pt]
 \hspace*{1.5em}(ii)\ $\sin2\theta\geqq\dfrac{\sqrt3}2$ より $60^\circ\leqq2\theta\leqq120^\circ$．\quad $30^\circ\leqq\theta\leqq60^\circ$\\[2pt]
-\hspace*{1.5em}(iii)\ $\tan2\theta<-\sqrt3$ より $90^\circ<2\theta<120^\circ$．\quad $45^\circ<\theta<60^\circ$
+\hspace*{1.5em}(iii)\ $\tan2\theta<-\sqrt3$．$\tan2\theta<0$ となるのは $90^\circ<2\theta\leqq180^\circ$ で，このとき $\tan2\theta$ は増加し，\\
+\hspace*{3em}$\tan120^\circ=-\sqrt3$．よって $90^\circ<2\theta<120^\circ$．\quad $45^\circ<\theta<60^\circ$
 \end{kai}
 
 \ans{75}{三角方程式（Ⅱ）}
 \begin{kai}
-(1)\ \point{$\sin x$ に統一する}\quad $2(1-\sin^2x)-3\sin x=0$，$2\sin^2x+3\sin x-2=0$．\\
-\hspace*{1.5em}$\sin x=t$ とおくと $0\leqq t\leqq1$．$(2t-1)(t+2)=0$ より $t=\dfrac12$．\quad $\sin x=\dfrac12$\\[2pt]
-(2)\ $0^\circ\leqq x\leqq180^\circ$ だから\quad $x=30^\circ,\ 150^\circ$
+\textbf{方針}\quad $\cos^2x=1-\sin^2x$ で\point{$\sin x$ に統一}し，$\sin x=t$ の2次方程式にする．\point{$t$ の範囲}に注意．\\[2pt]
+(1)\ $\cos^2x=1-\sin^2x$ を代入して\quad $2(1-\sin^2x)-3\sin x=0$，\quad $2\sin^2x+3\sin x-2=0$\\
+\hspace*{1.5em}$\sin x=t$ とおくと，$0^\circ\leqq x\leqq180^\circ$ より $0\leqq t\leqq1$．\\
+\hspace*{1.5em}$2t^2+3t-2=0$，\quad $(2t-1)(t+2)=0$ より $t=\dfrac12,\ -2$．\\
+\hspace*{1.5em}$0\leqq t\leqq1$ より $t=\dfrac12$．\quad よって\quad $\sin x=\dfrac12$\\[2pt]
+(2)\ $\sin x=\dfrac12$ となるのは，$0^\circ\leqq x\leqq180^\circ$ で\quad $x=30^\circ,\ 150^\circ$
 \end{kai}
 
 \ans{76}{三角不等式（Ⅱ）}
 \begin{kai}
-(1)\ $2(1-\cos^2x)+\cos x>2$ より $2\cos^2x-\cos x<0$．\\
-\hspace*{1.5em}$\cos x=t$ とおくと $-1\leqq t\leqq1$．$t(2t-1)<0$ より $0<t<\dfrac12$．\quad $0<\cos x<\dfrac12$\\[2pt]
-(2)\ 単位円より\quad $60^\circ<x<90^\circ$
+\textbf{方針}\quad $\sin^2x=1-\cos^2x$ で\point{$\cos x$ に統一}し，$\cos x=t$ の2次不等式にする．最後に単位円で $x$ の範囲を読む．\\[2pt]
+(1)\ $\sin^2x=1-\cos^2x$ を代入して\quad $2(1-\cos^2x)+\cos x>2$，\quad $-2\cos^2x+\cos x>0$\\
+\hspace*{1.5em}$\cos x=t$ とおくと，$0^\circ\leqq x\leqq180^\circ$ より $-1\leqq t\leqq1$．\\
+\hspace*{1.5em}$2t^2-t<0$，\quad $t(2t-1)<0$ より $0<t<\dfrac12$．これは $-1\leqq t\leqq1$ をみたす．\\
+\hspace*{1.5em}よって\quad $0<\cos x<\dfrac12$\\[2pt]
+(2)\ $\cos x=0$ となるのは $x=90^\circ$，$\cos x=\dfrac12$ となるのは $x=60^\circ$．\\
+\hspace*{1.5em}$\cos x$ は $0^\circ\leqq x\leqq180^\circ$ で減少するので，$x$ 座標が $0$ と $\dfrac12$ の間にある部分を読んで\quad $60^\circ<x<90^\circ$
 \end{kai}
 
 \ans{77}{最大値・最小値}
 \begin{kai}
-(1)\ $y=(1-\sin^2x)+\sin x$ より\quad $y=-t^2+t+1$\\[2pt]
-(2)\ $0^\circ\leqq x\leqq180^\circ$ だから\quad $0\leqq t\leqq1$\\[2pt]
-(3)\ $y=-\left(t-\dfrac12\right)^2+\dfrac54$．$0\leqq t\leqq1$ において\\
-\hspace*{1.5em}$t=\dfrac12$，すなわち $x=30^\circ,\ 150^\circ$ のとき最大値 $\dfrac54$\\
-\hspace*{1.5em}$t=0,\ 1$，すなわち $x=0^\circ,\ 90^\circ,\ 180^\circ$ のとき最小値 $1$
+\textbf{方針}\quad $\sin x$ に統一して $t$ の2次関数にする．\point{$t$ の範囲で最大・最小を求め，それを与える $x$ に戻す}．\\[2pt]
+(1)\ $\cos^2x=1-\sin^2x$ だから\quad $y=(1-\sin^2x)+\sin x=-t^2+t+1$\\[2pt]
+(2)\ $0^\circ\leqq x\leqq180^\circ$ では $0\leqq\sin x\leqq1$ だから\quad $0\leqq t\leqq1$\\[2pt]
+(3)\ $y=-(t^2-t)+1=-\left(t-\dfrac12\right)^2+\dfrac14+1=-\left(t-\dfrac12\right)^2+\dfrac54$\\
+\hspace*{1.5em}上に凸で軸は $t=\dfrac12$（範囲の中央）．\\
+\hspace*{1.5em}最大値：$t=\dfrac12$ のとき $\dfrac54$．$\sin x=\dfrac12$ より $x=30^\circ,\ 150^\circ$\\
+\hspace*{1.5em}最小値：$t=0,\ 1$ のとき，ともに $y=1$．\\
+\hspace*{3em}$\sin x=0$ より $x=0^\circ,\ 180^\circ$，\quad $\sin x=1$ より $x=90^\circ$\\[2pt]
+\hspace*{1.5em}よって\quad $x=30^\circ,\ 150^\circ$ のとき最大値 $\dfrac54$，\quad $x=0^\circ,\ 90^\circ,\ 180^\circ$ のとき最小値 $1$
 \end{kai}
 
 \ans{78}{正弦定理}
 \begin{kai}
-(1)\ $\angle\mathrm B=180^\circ-(75^\circ+60^\circ)=45^\circ$．正弦定理より $\dfrac{\mathrm{AB}}{\sin60^\circ}=\dfrac{3}{\sin45^\circ}$．\\
-\hspace*{1.5em}$\mathrm{AB}=3\cdot\dfrac{\sqrt3}2\cdot\sqrt2=\dfrac{3\sqrt6}2$\\[2pt]
-(2)\ $2R=\dfrac3{\sin45^\circ}=3\sqrt2$．\quad $R=\dfrac{3\sqrt2}{2}$
+\textbf{方針}\quad \point{1辺とその対角がわかっていれば正弦定理} $\dfrac a{\sin A}=\dfrac b{\sin B}=\dfrac c{\sin C}=2R$．まず残りの角を求める．\\[2pt]
+(1)\ 内角の和より\quad $\angle\mathrm B=180^\circ-(75^\circ+60^\circ)=45^\circ$\\
+\hspace*{1.5em}CA は $\angle\mathrm B$ の対辺，AB は $\angle\mathrm C$ の対辺．正弦定理より\quad $\dfrac{\mathrm{AB}}{\sin60^\circ}=\dfrac{3}{\sin45^\circ}$\\[2pt]
+\hspace*{1.5em}$\mathrm{AB}=\dfrac{3\sin60^\circ}{\sin45^\circ}=3\cdot\dfrac{\sqrt3}2\div\dfrac1{\sqrt2}=\dfrac{3\sqrt3\cdot\sqrt2}2=\dfrac{3\sqrt6}2$\\[2pt]
+(2)\ 正弦定理より\quad $2R=\dfrac{\mathrm{CA}}{\sin B}=\dfrac3{\sin45^\circ}=3\sqrt2$．\quad $R=\dfrac{3\sqrt2}{2}$
 \end{kai}
 
 \ans{79}{余弦定理}
 \begin{kai}
-$\mathrm{AB}^2=2^2+3^2-2\cdot2\cdot3\cos60^\circ=7$．\quad $\mathrm{AB}=\sqrt7$\\
-\point{2辺とその間の角 → 余弦定理}
+\textbf{方針}\quad \point{2辺とその間の角がわかっていれば余弦定理} $c^2=a^2+b^2-2ab\cos C$．\\[2pt]
+AB は $\angle\mathrm C$ の対辺だから，余弦定理より\\
+\hspace*{1.5em}$\mathrm{AB}^2=\mathrm{BC}^2+\mathrm{CA}^2-2\cdot\mathrm{BC}\cdot\mathrm{CA}\cos60^\circ=2^2+3^2-2\cdot2\cdot3\cdot\dfrac12=4+9-6=7$\\
+$\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \end{kai}
 
 \ans{80}{正弦定理・余弦定理の使い分け}
 \begin{kai}
-(1)\ \point{2辺と1角（間の角でない）→ 余弦定理で方程式}\quad $\mathrm{BC}=x$ とすると $7^2=5^2+x^2-2\cdot5\cdot x\cos60^\circ$．\\
-\hspace*{1.5em}$x^2-5x-24=0$，$(x-8)(x+3)=0$，$x>0$ より\quad $\mathrm{BC}=8$\\[2pt]
-(2)\ 正弦定理より $\dfrac{5}{\sin C}=\dfrac{7}{\sin60^\circ}$．\quad $\sin C=\dfrac{5}{7}\cdot\dfrac{\sqrt3}{2}=\dfrac{5\sqrt3}{14}$\\[2pt]
-(3)\ $2R=\dfrac{7}{\sin60^\circ}=\dfrac{14}{\sqrt3}$．\quad $R=\dfrac{7\sqrt3}{3}$
+\textbf{方針}\quad わかっているものと求めるものから定理を選ぶ．\point{2辺と，その間でない角 → 余弦定理で方程式}．辺と対角の組がそろえば正弦定理．\\[2pt]
+(1)\ $\angle\mathrm B$ をはさむ辺は AB と BC．$\mathrm{BC}=x$ とおき，$\angle\mathrm B$ の対辺 CA について余弦定理を用いると\\
+\hspace*{1.5em}$7^2=5^2+x^2-2\cdot5\cdot x\cos60^\circ$，\quad $49=25+x^2-5x$\\
+\hspace*{1.5em}$x^2-5x-24=0$，\quad $(x-8)(x+3)=0$．$x>0$ より\quad $\mathrm{BC}=8$\\[2pt]
+(2)\ $\angle\mathrm C$ の対辺は AB $=5$，$\angle\mathrm B$ の対辺は CA $=7$．正弦定理より\quad $\dfrac{5}{\sin C}=\dfrac{7}{\sin60^\circ}$\\[2pt]
+\hspace*{1.5em}$\sin C=\dfrac{5\sin60^\circ}{7}=\dfrac{5}{7}\cdot\dfrac{\sqrt3}{2}=\dfrac{5\sqrt3}{14}$\\[2pt]
+(3)\ 正弦定理より\quad $2R=\dfrac{7}{\sin60^\circ}=7\div\dfrac{\sqrt3}2=\dfrac{14}{\sqrt3}$．\quad $R=\dfrac{7}{\sqrt3}=\dfrac{7\sqrt3}{3}$
 \end{kai}
 
 \ans{81}{中線定理}
 \begin{kai}
-(1)\ $\triangle\mathrm{ABC}$ に余弦定理を用いて\quad $\cos C=\dfrac{(2a)^2+b^2-c^2}{2\cdot2a\cdot b}=\dfrac{4a^2+b^2-c^2}{4ab}$\\[2pt]
-(2)\ \point{$\angle\mathrm C$ を $\triangle\mathrm{AMC}$ の内角として2度使う}\\
-\hspace*{1.5em}$\mathrm{AM}^2=b^2+a^2-2ab\cos C=a^2+b^2-\dfrac{4a^2+b^2-c^2}{2}=\dfrac{b^2+c^2-2a^2}{2}$\\[2pt]
-(3)\ (2)より $2\mathrm{AM}^2=b^2+c^2-2a^2$．$a=\mathrm{BM}$，$b=\mathrm{AC}$，$c=\mathrm{AB}$ だから\\
-\hspace*{1.5em}$\mathrm{AB}^2+\mathrm{AC}^2=2\mathrm{AM}^2+2\mathrm{BM}^2=2(\mathrm{AM}^2+\mathrm{BM}^2)$
+\textbf{方針}\quad \point{$\angle\mathrm C$ は $\triangle\mathrm{ABC}$ と $\triangle\mathrm{AMC}$ の共通の内角}．$\triangle\mathrm{ABC}$ で $\cos C$ を求め，それを $\triangle\mathrm{AMC}$ の余弦定理に使う．\\[2pt]
+(1)\ $\triangle\mathrm{ABC}$ に余弦定理を用いて（$\angle\mathrm C$ をはさむ辺は $\mathrm{BC}=2a$，$\mathrm{CA}=b$，対辺は $\mathrm{AB}=c$）\\
+\hspace*{1.5em}$\cos C=\dfrac{(2a)^2+b^2-c^2}{2\cdot2a\cdot b}=\dfrac{4a^2+b^2-c^2}{4ab}$\\[2pt]
+(2)\ \point{$\angle\mathrm C$ を $\triangle\mathrm{AMC}$ の内角として2度使う}．$\mathrm{MC}=a$，$\mathrm{CA}=b$ だから\\
+\hspace*{1.5em}$\mathrm{AM}^2=a^2+b^2-2ab\cos C=a^2+b^2-2ab\cdot\dfrac{4a^2+b^2-c^2}{4ab}$\\
+\hspace*{1.5em}$=a^2+b^2-\dfrac{4a^2+b^2-c^2}{2}=\dfrac{2a^2+2b^2-4a^2-b^2+c^2}{2}=\dfrac{b^2+c^2-2a^2}{2}$\\[2pt]
+(3)\ (2)より $2\mathrm{AM}^2=b^2+c^2-2a^2$，すなわち $b^2+c^2=2\mathrm{AM}^2+2a^2$．\\
+\hspace*{1.5em}$a=\mathrm{BM}$，$b=\mathrm{AC}$，$c=\mathrm{AB}$ だから\quad $\mathrm{AB}^2+\mathrm{AC}^2=2(\mathrm{AM}^2+\mathrm{BM}^2)$\quad （中線定理）
 \end{kai}
 
 \ans{82}{三角形の重心}
 \begin{kai}
-(1)\ 中線定理より $\mathrm{AB}^2+\mathrm{AC}^2=2(\mathrm{AM}^2+\mathrm{BM}^2)$，\quad $49+25=2(\mathrm{AM}^2+16)$．\quad $\mathrm{AM}=\sqrt{21}$\\[2pt]
-(2)\ \point{重心は中線を $2:1$ に内分する}\quad $\mathrm{AG}=\dfrac23\sqrt{21}$，\quad $\mathrm{GM}=\dfrac13\sqrt{21}$
+\textbf{方針}\quad 中線の長さは\point{中線定理}．重心は\point{中線を頂点の側から $2:1$ に内分する}．\\[2pt]
+(1)\ M は BC の中点だから $\mathrm{BM}=4$．中線定理より\\
+\hspace*{1.5em}$\mathrm{AB}^2+\mathrm{AC}^2=2(\mathrm{AM}^2+\mathrm{BM}^2)$，\quad $49+25=2(\mathrm{AM}^2+16)$\\
+\hspace*{1.5em}$74=2\mathrm{AM}^2+32$，\quad $\mathrm{AM}^2=21$．$\mathrm{AM}>0$ より\quad $\mathrm{AM}=\sqrt{21}$\\[2pt]
+(2)\ G は中線 AM を $2:1$ に内分するから\\
+\hspace*{1.5em}$\mathrm{AG}=\dfrac23\mathrm{AM}=\dfrac{2\sqrt{21}}3$，\quad $\mathrm{GM}=\dfrac13\mathrm{AM}=\dfrac{\sqrt{21}}3$
 \end{kai}
 
 \ans{83}{三角形の形状決定}
 \begin{kai}
-\point{正弦定理・余弦定理で辺だけの関係式にする}\\
-(1)\ 外接円の半径を $R$ とすると $\sin A=\dfrac a{2R}$ などより $\dfrac{a^2}{4R^2}=\dfrac{b^2}{4R^2}+\dfrac{c^2}{4R^2}$，$a^2=b^2+c^2$．\\
-\hspace*{1.5em}よって，\textbf{BC を斜辺とする直角三角形}（$\angle\mathrm A=90^\circ$）\\[2pt]
-(2)\ 余弦定理より $a\cdot\dfrac{c^2+a^2-b^2}{2ca}=b\cdot\dfrac{b^2+c^2-a^2}{2bc}$．両辺に $2c$ をかけて $c^2+a^2-b^2=b^2+c^2-a^2$．\\
-\hspace*{1.5em}$a^2=b^2$，$a>0$，$b>0$ より $a=b$．よって，\textbf{$\mathrm{BC}=\mathrm{CA}$ の二等辺三角形}
+\textbf{方針}\quad \point{正弦定理・余弦定理で角を辺に直し，辺だけの関係式にする}．$\sin A=\dfrac a{2R}$，$\cos A=\dfrac{b^2+c^2-a^2}{2bc}$ など．\\[2pt]
+(1)\ 外接円の半径を $R$ とすると，正弦定理より $\sin A=\dfrac a{2R}$，$\sin B=\dfrac b{2R}$，$\sin C=\dfrac c{2R}$．代入して\\
+\hspace*{1.5em}$\dfrac{a^2}{4R^2}=\dfrac{b^2}{4R^2}+\dfrac{c^2}{4R^2}$．両辺に $4R^2$ を掛けて\quad $a^2=b^2+c^2$\\
+\hspace*{1.5em}三平方の定理の逆より，$\angle\mathrm A=90^\circ$．\\
+\hspace*{1.5em}よって\quad \textbf{$\angle\mathrm A=90^\circ$ の直角三角形}（BC が斜辺）\\[2pt]
+(2)\ 余弦定理より $\cos B=\dfrac{c^2+a^2-b^2}{2ca}$，$\cos A=\dfrac{b^2+c^2-a^2}{2bc}$．代入して\\
+\hspace*{1.5em}$a\cdot\dfrac{c^2+a^2-b^2}{2ca}=b\cdot\dfrac{b^2+c^2-a^2}{2bc}$，\quad $\dfrac{c^2+a^2-b^2}{2c}=\dfrac{b^2+c^2-a^2}{2c}$\\[2pt]
+\hspace*{1.5em}両辺に $2c$ を掛けて $c^2+a^2-b^2=b^2+c^2-a^2$，\quad $2a^2=2b^2$，\quad $a^2=b^2$\\
+\hspace*{1.5em}$a>0$，$b>0$ より $a=b$．よって\quad \textbf{$\mathrm{BC}=\mathrm{CA}$ の二等辺三角形}\\
+\hspace*{1.5em}\point{「$a=b$ の二等辺三角形」だけでなく，どの辺が等しいかを書く}
 \end{kai}
 
 \ans{84}{三角形の成立条件}
 \begin{kai}
-(1)\ \point{2辺の差 $<$ 残りの辺 $<$ 2辺の和}\quad $5-4<x<5+4$．\quad $1<x<9$\\[2pt]
-(2)\ \point{最大辺の対角が鋭角であればよい}\\
-\hspace*{1.5em}最大辺が5（$x\leqq5$）のとき $5^2<4^2+x^2$ より $x>3$．\quad 最大辺が $x$（$x\geqq5$）のとき $x^2<16+25$ より $x<\sqrt{41}$．\\
-\hspace*{1.5em}(1)とあわせて\quad $3<x<\sqrt{41}$\\[2pt]
-(3)\ $x=3$，$x=\sqrt{41}$ のときは直角三角形だから，(1)，(2)より\quad $1<x<3,\ \sqrt{41}<x<9$
+\textbf{方針}\quad 三角形の成立条件は\point{「2辺の差 $<$ 残りの辺 $<$ 2辺の和」}．鋭角・鈍角は\point{最大辺の対角}で決まる：最大辺を $l$，他の2辺を $m,\ n$ とすると，$l^2<m^2+n^2$ なら鋭角三角形，$l^2>m^2+n^2$ なら鈍角三角形．\\[2pt]
+(1)\ $5-4<x<5+4$ より\quad $1<x<9$\\[2pt]
+(2)\ 最大辺がどれかで場合分けする．\\
+\hspace*{1.5em}(i)\ $1<x\leqq5$ のとき，最大辺は5．$5^2<4^2+x^2$ より $x^2>9$，$x>3$．よって $3<x\leqq5$\\
+\hspace*{1.5em}(ii)\ $5\leqq x<9$ のとき，最大辺は $x$．$x^2<4^2+5^2=41$ より $x<\sqrt{41}$．よって $5\leqq x<\sqrt{41}$\\
+\hspace*{1.5em}（$\sqrt{41}=6.4\cdots<9$）．(i)，(ii)をあわせて\quad $3<x<\sqrt{41}$\\[2pt]
+(3)\ $x=3$ のとき $5^2=4^2+3^2$，$x=\sqrt{41}$ のとき $x^2=4^2+5^2$ でどちらも直角三角形．\\
+\hspace*{1.5em}(1)の範囲から，鋭角三角形と直角三角形の場合を除いて\quad $1<x<3,\ \sqrt{41}<x<9$
 \end{kai}
 
 \ans{85}{三角形の面積}
 \begin{kai}
-(1)\ $S=\dfrac12\cdot4\cdot5\sin120^\circ=5\sqrt3$\\[2pt]
-(2)\ \point{3辺がわかっている → ヘロンの公式}\quad $s=\dfrac{4+13+15}2=16$．\\
-\hspace*{1.5em}$S=\sqrt{16(16-4)(16-13)(16-15)}=\sqrt{16\cdot12\cdot3\cdot1}=24$
+\textbf{方針}\quad \point{2辺とその間の角がわかれば $S=\dfrac12ab\sin C$}．\point{3辺がわかればヘロンの公式}（または余弦定理で $\cos$ → $\sin$ を求めて上の公式）．\\[2pt]
+(1)\ $\angle\mathrm B$ をはさむ2辺は AB と BC だから\\
+\hspace*{1.5em}$S=\dfrac12\cdot\mathrm{AB}\cdot\mathrm{BC}\sin120^\circ=\dfrac12\cdot4\cdot5\cdot\dfrac{\sqrt3}2=5\sqrt3$\\[2pt]
+(2)\ ヘロンの公式 $S=\sqrt{s(s-a)(s-b)(s-c)}$\quad （$s=\dfrac{a+b+c}2$）を使う．\\
+\hspace*{1.5em}$s=\dfrac{4+13+15}2=16$．\quad $S=\sqrt{16(16-4)(16-13)(16-15)}=\sqrt{16\cdot12\cdot3\cdot1}=\sqrt{576}=24$\\[2pt]
+\hspace*{1.5em}（別解：余弦定理より $\cos B=\dfrac{4^2+13^2-15^2}{2\cdot4\cdot13}=-\dfrac{40}{104}=-\dfrac5{13}$，$\sin B=\dfrac{12}{13}$．\\
+\hspace*{1.5em}$S=\dfrac12\cdot4\cdot13\cdot\dfrac{12}{13}=24$）
 \end{kai}
 
 \ans{86}{角の2等分線の長さ}
 \begin{kai}
-(1)\ $\mathrm{BC}=\sqrt{9+36}=3\sqrt5$．$\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}=1:2$ より\quad $\mathrm{BD}=\sqrt5$\\[2pt]
-(2)\ $\mathrm{AD}=x$ とおく．$\angle\mathrm{BAD}=\angle\mathrm{CAD}=45^\circ$ だから\\
-\hspace*{1.5em}$\dfrac12\cdot3\cdot x\sin45^\circ+\dfrac12\cdot6\cdot x\sin45^\circ=\dfrac12\cdot3\cdot6$，\quad $\dfrac{9\sqrt2}{4}x=9$．\quad $\mathrm{AD}=2\sqrt2$
+\textbf{方針}\quad (1)は角の二等分線の性質．(2)は\point{面積を「分けた三角形の和」と「全体」の2通りに表して}方程式をつくる．\\[2pt]
+(1)\ 三平方の定理より\quad $\mathrm{BC}=\sqrt{3^2+6^2}=\sqrt{45}=3\sqrt5$\\
+\hspace*{1.5em}AD は $\angle\mathrm A$ の二等分線だから\quad $\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}=3:6=1:2$\\
+\hspace*{1.5em}よって\quad $\mathrm{BD}=\dfrac13\mathrm{BC}=\sqrt5$\\[2pt]
+(2)\ $\mathrm{AD}=x$ とおく．$\angle\mathrm{BAD}=\angle\mathrm{CAD}=\dfrac{90^\circ}{2}=45^\circ$ だから\\
+\hspace*{1.5em}$\triangle\mathrm{ABD}=\dfrac12\cdot3\cdot x\sin45^\circ$，\quad $\triangle\mathrm{ACD}=\dfrac12\cdot6\cdot x\sin45^\circ$，\quad $\triangle\mathrm{ABC}=\dfrac12\cdot3\cdot6=9$\\[2pt]
+\hspace*{1.5em}$\dfrac12\cdot3x\cdot\dfrac{\sqrt2}2+\dfrac12\cdot6x\cdot\dfrac{\sqrt2}2=9$，\quad $\dfrac{9\sqrt2}{4}x=9$\\
+\hspace*{1.5em}$x=\dfrac{4}{\sqrt2}=2\sqrt2$．\quad よって\quad $\mathrm{AD}=2\sqrt2$
 \end{kai}
 
 \ans{87}{内接円の半径（Ⅰ）}
 \begin{kai}
-(1)\ $s=\dfrac{7+8+9}2=12$．\quad $S=\sqrt{12\cdot5\cdot4\cdot3}=\sqrt{720}=12\sqrt5$\\[2pt]
-(2)\ \point{$S=\dfrac12(a+b+c)r$}\quad $12\sqrt5=12r$ より\quad $r=\sqrt5$
+\textbf{方針}\quad 3辺から面積はヘロンの公式．内接円の半径は\point{内心と3頂点を結んで3つの三角形に分け，$S=\dfrac12(a+b+c)r$}．\\[2pt]
+(1)\ $s=\dfrac{7+8+9}2=12$．ヘロンの公式より\\
+\hspace*{1.5em}$S=\sqrt{12(12-7)(12-8)(12-9)}=\sqrt{12\cdot5\cdot4\cdot3}=\sqrt{720}=12\sqrt5$\\[2pt]
+(2)\ 内心を I とすると，$\triangle\mathrm{ABC}=\triangle\mathrm{IBC}+\triangle\mathrm{ICA}+\triangle\mathrm{IAB}$ で，3つの三角形の高さはすべて $r$．\\
+\hspace*{1.5em}$S=\dfrac12r(7+8+9)=12r$．\quad $12\sqrt5=12r$ より\quad $r=\sqrt5$
 \end{kai}
 
 \ans{88}{内接円の半径（Ⅱ）}
 \begin{kai}
-(1)\ $c=\sqrt{25+144}=13$．面積は $\dfrac12\cdot5\cdot12=30$．$30=\dfrac12r(5+12+13)$ より\quad $r=2$\\[2pt]
-(2)\ 内接円と BC，CA，AB の接点を D，E，F，内心を I とする．四角形 IDCE は1辺 $r$ の正方形だから $\mathrm{CD}=\mathrm{CE}=r$．\\
-\hspace*{1.5em}接線の長さは等しいから $\mathrm{BF}=\mathrm{BD}=a-r$，$\mathrm{AF}=\mathrm{AE}=b-r$．\\
-\hspace*{1.5em}$c=\mathrm{AF}+\mathrm{FB}=a+b-2r$ より\quad $r=\dfrac{a+b-c}{2}$\quad（(1)では $\dfrac{5+12-13}2=2$ で一致）
+\textbf{方針}\quad (1)は面積を2通りに表す．(2)は\point{円外の点から引いた2本の接線の長さは等しい}ことを使う．\\[2pt]
+(1)\ $c=\sqrt{5^2+12^2}=\sqrt{169}=13$．面積は $\dfrac12\cdot5\cdot12=30$．\\
+\hspace*{1.5em}$S=\dfrac12r(a+b+c)$ より $30=\dfrac12r(5+12+13)=15r$．\quad $r=2$\\[2pt]
+(2)\ 内接円と BC，CA，AB の接点を D，E，F，内心を I とする．\\
+\hspace*{1.5em}$\mathrm{ID}\perp\mathrm{BC}$，$\mathrm{IE}\perp\mathrm{CA}$，$\angle\mathrm C=90^\circ$，$\mathrm{ID}=\mathrm{IE}=r$ だから，四角形 IDCE は1辺 $r$ の正方形．\\
+\hspace*{1.5em}よって\quad $\mathrm{CD}=\mathrm{CE}=r$\\
+\hspace*{1.5em}接線の長さは等しいから\quad $\mathrm{BF}=\mathrm{BD}=a-r$，\quad $\mathrm{AF}=\mathrm{AE}=b-r$\\
+\hspace*{1.5em}$c=\mathrm{AF}+\mathrm{FB}=(b-r)+(a-r)=a+b-2r$ より\quad $r=\dfrac{a+b-c}{2}$\\
+\hspace*{1.5em}（(1)では $\dfrac{5+12-13}2=2$ で一致する．）
 \end{kai}
 
 \ans{89}{円に内接する四角形}
 \begin{kai}
-(1)\ $\mathrm{AC}^2=25+64-2\cdot5\cdot8\cos60^\circ=49$．\quad $\mathrm{AC}=7$\\[2pt]
-(2)\ \point{円に内接する四角形の対角の和は $180^\circ$}\quad $\angle\mathrm{ADC}=120^\circ$．$\mathrm{CD}=\mathrm{DA}=x$ とすると\\
-\hspace*{1.5em}$49=x^2+x^2-2x^2\cos120^\circ=3x^2$．\quad $\mathrm{CD}=\dfrac{7}{\sqrt3}=\dfrac{7\sqrt3}{3}$\\[2pt]
-(3)\ $\triangle\mathrm{ABC}=\dfrac12\cdot5\cdot8\sin60^\circ=10\sqrt3$，\quad $\triangle\mathrm{ACD}=\dfrac12\cdot\dfrac{49}{3}\sin120^\circ=\dfrac{49\sqrt3}{12}$\\
-\hspace*{1.5em}面積は\quad $10\sqrt3+\dfrac{49\sqrt3}{12}=\dfrac{169\sqrt3}{12}$\\[2pt]
-(4)\ 外接円は $\triangle\mathrm{ABC}$ の外接円だから $2R=\dfrac{7}{\sin60^\circ}$．\quad $R=\dfrac{7\sqrt3}{3}$
+\textbf{方針}\quad 対角線 AC で2つの三角形に分ける．\point{円に内接する四角形の対角の和は $180^\circ$}．外接円は四角形と $\triangle\mathrm{ABC}$ で共通．\\[2pt]
+(1)\ $\triangle\mathrm{ABC}$ に余弦定理を用いて\\
+\hspace*{1.5em}$\mathrm{AC}^2=5^2+8^2-2\cdot5\cdot8\cos60^\circ=25+64-40=49$．\quad $\mathrm{AC}=7$\\[2pt]
+(2)\ 四角形 ABCD は円に内接するから\quad $\angle\mathrm{ADC}=180^\circ-\angle\mathrm{ABC}=120^\circ$\\
+\hspace*{1.5em}$\mathrm{CD}=\mathrm{DA}=x$ とおき，$\triangle\mathrm{ACD}$ に余弦定理を用いて\\
+\hspace*{1.5em}$49=x^2+x^2-2x^2\cos120^\circ=2x^2+x^2=3x^2$，\quad $x^2=\dfrac{49}3$\\
+\hspace*{1.5em}$x>0$ より\quad $\mathrm{CD}=\dfrac{7}{\sqrt3}=\dfrac{7\sqrt3}{3}$\\[2pt]
+(3)\ $\triangle\mathrm{ABC}=\dfrac12\cdot5\cdot8\sin60^\circ=10\sqrt3$\\
+\hspace*{1.5em}$\triangle\mathrm{ACD}=\dfrac12x^2\sin120^\circ=\dfrac12\cdot\dfrac{49}{3}\cdot\dfrac{\sqrt3}2=\dfrac{49\sqrt3}{12}$\\
+\hspace*{1.5em}四角形 ABCD $=10\sqrt3+\dfrac{49\sqrt3}{12}=\dfrac{120\sqrt3+49\sqrt3}{12}=\dfrac{169\sqrt3}{12}$\\[2pt]
+(4)\ 四角形 ABCD の外接円は $\triangle\mathrm{ABC}$ の外接円でもある．正弦定理より\\
+\hspace*{1.5em}$2R=\dfrac{\mathrm{AC}}{\sin\angle\mathrm{ABC}}=\dfrac{7}{\sin60^\circ}=\dfrac{14}{\sqrt3}$．\quad $R=\dfrac{7}{\sqrt3}=\dfrac{7\sqrt3}{3}$
 \end{kai}
 
 
