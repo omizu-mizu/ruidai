@@ -14,6 +14,16 @@
   borderline west={0.8pt}{0pt}{black},arc=0pt,left=8pt,right=0pt,top=2pt,bottom=2pt,
   before skip=3pt,after skip=8pt}
 
+% 確認（定義・公式）と STEP（手順）の枠
+\newtcolorbox{kakunin}{enhanced,colback=blue!3,colframe=blue!45!black,boxrule=0.4pt,arc=1pt,
+  left=4pt,right=4pt,top=1pt,bottom=1pt,fontupper=\small,before skip=2pt,after skip=3pt,
+  title={確認},fonttitle=\sffamily\bfseries\scriptsize,coltitle=white,colbacktitle=blue!45!black,
+  attach boxed title to top left={xshift=4pt,yshift=-2pt},boxed title style={boxrule=0pt,arc=1pt,top=0pt,bottom=0pt}}
+\newtcolorbox{steps}{enhanced,colback=green!3,colframe=green!35!black,boxrule=0.4pt,arc=1pt,
+  left=4pt,right=4pt,top=1pt,bottom=1pt,fontupper=\small,before skip=2pt,after skip=3pt,
+  title={STEP},fonttitle=\sffamily\bfseries\scriptsize,coltitle=white,colbacktitle=green!35!black,
+  attach boxed title to top left={xshift=4pt,yshift=-2pt},boxed title style={boxrule=0pt,arc=1pt,top=0pt,bottom=0pt}}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\sffamily 数学Ⅰ・A 類題集}
@@ -1334,6 +1344,15 @@ $A-B=(2x^2-3x+1)-(x^2+5x-4)=2x^2-3x+1-x^2-5x+4$\\
 
 \ans{12}{文字式の平方根}
 \begin{kai}
+\begin{kakunin}
+$\sqrt{A^2}=|A|$\quad（$\sqrt{A^2}=A$ とは限らない．たとえば $\sqrt{(-3)^2}=3=|-3|$）\\
+$|A|=\begin{cases}A & (A\geqq0)\\ -A & (A<0)\end{cases}$
+\end{kakunin}
+\begin{steps}
+\textbf{1}\ 根号の中を $(\ \ )^2$ の形にする\\
+\textbf{2}\ $\sqrt{A^2}=|A|$ で絶対値に直す\\
+\textbf{3}\ 絶対値の中身が0になる値で場合分けし，絶対値をはずす
+\end{steps}
 \textbf{方針}\quad 根号の中を平方の形にして，\point{$\sqrt{A^2}=|A|$}（$\sqrt{A^2}=A$ ではない）を使う．\\[2pt]
 $x^2-4x+4=(x-2)^2$，$x^2+6x+9=(x+3)^2$ だから\\
 \hspace*{1.5em}与式 $=\sqrt{(x-2)^2}+\sqrt{(x+3)^2}=|x-2|+|x+3|$\\
@@ -1922,6 +1941,16 @@ $y=x^2+6x+5=(x+3)^2-4$ より，頂点は $(-3,\ -4)$，下に凸．\\[2pt]
 
 \ans{36}{最大・最小（Ⅱ）}
 \begin{kai}
+\begin{kakunin}
+下に凸の2次関数の定義域 $p\leqq x\leqq q$ での最大・最小は，\textbf{頂点}と\textbf{定義域の両端}のどれかでとる．\\
+最小：軸が定義域の中なら頂点，外なら軸に近い端．\quad 最大：軸から遠い方の端．
+\end{kakunin}
+\begin{steps}
+\textbf{1}\ 平方完成して軸 $x=a$ を求める\\
+\textbf{2}\ 最小値：軸が定義域の「左・中・右」で場合分け\\
+\textbf{3}\ 最大値：軸が定義域の中央 $x=1$ より「左・右」で場合分け\\
+\textbf{4}\ (3)は場合ごとに方程式を解き，その場合の範囲に入るか確かめる
+\end{steps}
 \textbf{方針}\quad 平方完成して軸 $x=a$ を求め，\point{軸と定義域 $0\leqq x\leqq2$ の位置関係で場合分け}する．最小値は「軸が定義域の左・中・右」，最大値は「軸が定義域の中央 $x=1$ より左か右か」で分ける．\\[2pt]
 $f(x)=x^2-2ax+3=(x-a)^2+3-a^2$．下に凸で，軸は $x=a$．\\
 $f(0)=3$，\quad $f(2)=4-4a+3=7-4a$，\quad $f(a)=3-a^2$\\[2pt]

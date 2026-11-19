@@ -14,6 +14,16 @@
   borderline west={0.8pt}{0pt}{black},arc=0pt,left=8pt,right=0pt,top=2pt,bottom=2pt,
   before skip=3pt,after skip=8pt}
 
+% 確認（定義・公式）と STEP（手順）の枠
+\newtcolorbox{kakunin}{enhanced,colback=blue!3,colframe=blue!45!black,boxrule=0.4pt,arc=1pt,
+  left=4pt,right=4pt,top=1pt,bottom=1pt,fontupper=\small,before skip=2pt,after skip=3pt,
+  title={確認},fonttitle=\sffamily\bfseries\scriptsize,coltitle=white,colbacktitle=blue!45!black,
+  attach boxed title to top left={xshift=4pt,yshift=-2pt},boxed title style={boxrule=0pt,arc=1pt,top=0pt,bottom=0pt}}
+\newtcolorbox{steps}{enhanced,colback=green!3,colframe=green!35!black,boxrule=0.4pt,arc=1pt,
+  left=4pt,right=4pt,top=1pt,bottom=1pt,fontupper=\small,before skip=2pt,after skip=3pt,
+  title={STEP},fonttitle=\sffamily\bfseries\scriptsize,coltitle=white,colbacktitle=green!35!black,
+  attach boxed title to top left={xshift=4pt,yshift=-2pt},boxed title style={boxrule=0pt,arc=1pt,top=0pt,bottom=0pt}}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\sffamily 数学Ⅱ・B・C 類題集}
@@ -2907,6 +2917,16 @@ $n=1$ のとき $2-2+3=3=a_1$ で成りたつ．\\[2pt]
 
 \ans{124}{2項間の漸化式（Ⅱ）}
 \begin{kai}
+\begin{kakunin}
+等比数列：$b_{n+1}=rb_n$ なら\quad $b_n=b_1r^{n-1}$\\
+$a_{n+1}=pa_n+q$ 型は，$\alpha=p\alpha+q$ をみたす $\alpha$ を使うと\quad $a_{n+1}-\alpha=p(a_n-\alpha)$
+\end{kakunin}
+\begin{steps}
+\textbf{1}\ $\alpha=3\alpha+2$ を解く（$\alpha=-1$）\\
+\textbf{2}\ 漸化式を $a_{n+1}-\alpha=3(a_n-\alpha)$ の形に変形する\\
+\textbf{3}\ $\{a_n-\alpha\}$ を等比数列として一般項を求める\\
+\textbf{4}\ $a_n$ にもどす
+\end{steps}
 \textbf{方針}\quad $a_{n+1}=pa_n+q$ 型は，\point{$\alpha=p\alpha+q$ をみたす $\alpha$ を引いて $a_{n+1}-\alpha=p(a_n-\alpha)$ と変形}する．$\{a_n-\alpha\}$ が等比数列になる．\\[2pt]
 $\alpha=3\alpha+2$ を解くと\quad $\alpha=-1$\\
 漸化式から $\alpha=3\alpha+2$ を辺々引くと\quad $a_{n+1}-\alpha=3(a_n-\alpha)$，すなわち\\

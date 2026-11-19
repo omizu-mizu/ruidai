@@ -259,6 +259,9 @@ class Conv:
             return f'<div class="{cls}" style="--w:{pct:.0f}%">{self.conv(b)}</div>'
         if env == 'tabular':
             return self.tabular(body)
+        if env in ('kakunin', 'steps'):
+            label = '確認' if env == 'kakunin' else 'STEP'
+            return f'<details class="{env}"><summary>{label}</summary><div class="dbody">{self.conv(body.strip())}</div></details>'
         if env == 'kai':
             return self.conv(body)
         unknown['env:' + env] = unknown.get('env:' + env, 0) + 1

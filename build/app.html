@@ -56,6 +56,17 @@ header.top button{background:rgba(255,255,255,.15);border:0;border-radius:8px;pa
 .body .katex{font-size:1.08em}
 .body .hs{display:inline-block}
 .body .ind{display:block}
+.body .kst{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
+.body .kst details[open]{flex-basis:100%}
+.body details summary{list-style:none;cursor:pointer;display:inline-block;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700;color:#fff;user-select:none}
+.body details summary::-webkit-details-marker{display:none}
+.body details summary::before{content:"▸ ";}
+.body details[open] summary::before{content:"▾ ";}
+.body details.kakunin summary{background:#2f4f8a}
+.body details.steps summary{background:#2e6b3a}
+.body details .dbody{margin-top:4px;border-left:3px solid #2f4f8a;background:#f4f7fc;padding:4px 10px;border-radius:0 6px 6px 0;font-size:.95em}
+.body details.steps .dbody{border-left-color:#2e6b3a;background:#f3f9f4}
+
 .body .pt{font-weight:700;color:#8a4b00;font-size:.92em}
 .body .blank{display:inline-block;width:2.2em;height:1.3em;border:1px solid #333;vertical-align:middle}
 .body .box{display:inline-block;border:1px solid #333;padding:0 .35em;line-height:1.3}

@@ -33,6 +33,8 @@ for b in books:
                 s = re.sub(r'(^|<br>|<br class="par">|<div[^>]*>|</div>)(\s*)<span class="hsi" style="width:([^"]+)"></span>(' + seg + r')(<br>|(?=<br class="par">)|(?=</div>)|$)',
                            lambda m: f'{m.group(1)}{m.group(2)}<div class="ind" style="padding-left:{m.group(3)}">{m.group(4)}</div>', s)
             s = s.replace('<span class="hsi"', '<span class="hs"')
+            # 確認・STEP のボタンを1行にまとめ，本文はその下から始める
+            s = re.sub(r'(<details class="kakunin">.*?</details>)\s*(<details class="steps">.*?</details>)\s*', r'<div class="kst">\1\2</div>', s, flags=re.S)
             p[k] = s
 
 figs = {}
