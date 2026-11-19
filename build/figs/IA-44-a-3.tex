@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=3.2mm,y=2.5mm]
+\ax{-1.5}{3.2}{-4}{4}
+\draw[thick,domain=-0.9:2.6,samples=80] plot (\x,{3*(\x)^2-5*\x-2});
+\fill (-0.333,0) circle (1.6pt);
+\fill (2,0) circle (1.6pt);
+\node[above] at (2,0){\scriptsize 2};
+\draw[line width=2.5pt,blue!50] (-0.333,0)--(2,0);
+\node[below] at (current bounding box.south){\scriptsize (5) $y<0$ の部分};
+\end{tikzpicture}

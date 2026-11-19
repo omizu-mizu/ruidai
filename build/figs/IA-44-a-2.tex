@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=3.2mm,y=2.5mm]
+\ax{-5.199999999999999}{1.2}{-4}{4}
+\draw[thick,domain=-4.6:0.6,samples=80] plot (\x,{(\x)^2+4*\x+1});
+\fill (-3.732,0) circle (1.6pt);
+\fill (-0.268,0) circle (1.6pt);
+\draw[line width=2.5pt,blue!50] (-4.8,0)--(-3.732,0);\draw[line width=2.5pt,blue!50] (-0.268,0)--(0.8,0);
+\node[below] at (current bounding box.south){\scriptsize (2) $y\geqq0$ の部分};
+\end{tikzpicture}

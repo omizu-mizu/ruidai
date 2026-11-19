@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=4mm,y=4mm]
+\ax{-3}{3}{-0.8}{4}
+\draw[thick,domain=-2.2:2.2,samples=80] plot (\x,{(\x)^2*0.7+0.6});
+\fill (0,0.6) circle (1.6pt);
+\node[above right] at (0.3,0.6){\scriptsize 頂点の $y$ 座標 $>0$};
+\node[below] at (current bounding box.south){\scriptsize グラフ全体が $x$ 軸より上};
+\end{tikzpicture}

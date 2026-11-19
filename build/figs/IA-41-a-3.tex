@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=3mm,y=3mm]
+\ax{-2}{5.5}{-1.5}{4.5}
+\draw[thick,domain=1:5,samples=80] plot (\x,{(\x-3)^2});
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize 3};
+\node[below] at (current bounding box.south){\scriptsize (3) 接する};
+\end{tikzpicture}

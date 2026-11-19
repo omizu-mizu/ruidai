@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=2.6mm,y=2.6mm]
+\ax{-6.5}{6.5}{-5}{5.5}
+\draw[dashed,domain=-6:0,samples=80] plot (\x,{(\x+3)^2-4});
+\draw[thick,domain=-6:0,samples=80] plot (\x,{-(\x+3)^2+4});
+\fill (-3,4) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (i)};
+\end{tikzpicture}

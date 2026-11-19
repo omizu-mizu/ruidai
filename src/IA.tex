@@ -1576,6 +1576,22 @@ $A$ は $-2$ 以上 $2$ 以下，$B$ は $0$ より小さいか $3$ より大き
 (3)\ $y$ 軸に関して対称：$x$ 座標の符号が変わる．\quad $(-2,\ -3)$\\[2pt]
 (4)\ 原点に関して対称：両方の符号が変わる．\quad $(-2,\ 3)$\\
 \point{$x$ 軸対称は $y$ 座標の符号，$y$ 軸対称は $x$ 座標の符号，原点対称は両方の符号が変わる}
+\begin{center}
+\begin{tikzpicture}[x=4mm,y=4mm]
+\ax{-3.5}{6.5}{-6}{4.5}
+\fill (2,-3) circle (1.6pt);
+\node[below left] at (2,-3){\scriptsize P$(2,-3)$};
+\fill (5,-5) circle (1.6pt);
+\node[right] at (5,-5){\scriptsize (1)};
+\fill (2,3) circle (1.6pt);
+\node[right] at (2,3){\scriptsize (2)};
+\fill (-2,-3) circle (1.6pt);
+\node[left] at (-2,-3){\scriptsize (3)};
+\fill (-2,3) circle (1.6pt);
+\node[left] at (-2,3){\scriptsize (4)};
+\draw[dashed,->] (2,-3)--(4.85,-4.9); \draw[dotted] (2,-3)--(2,3); \draw[dotted] (2,-3)--(-2,-3); \draw[dotted] (2,-3)--(-2,3);
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{28}{平方完成}
@@ -1646,6 +1662,18 @@ $A$ は $-2$ 以上 $2$ 以下，$B$ は $0$ より小さいか $3$ より大き
 \hspace*{1.5em}②：$y=2(x^2+4x)+5=2(x+2)^2-3$ で頂点 $(-2,\ -3)$\\
 \hspace*{1.5em}②の頂点から①の頂点へは，$x$ 方向に $1-(-2)=3$，$y$ 方向に $1-(-3)=4$．\\
 \hspace*{1.5em}よって，②を $x$ 軸方向に $3$，$y$ 軸方向に $4$ だけ平行移動すると①になる．\\
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=3.5mm]
+\ax{-4.5}{3.5}{-4}{6.5}
+\draw[thick,dashed,domain=-4.1:0.1,samples=80] plot (\x,{2*(\x+2)^2-3});
+\draw[thick,domain=-0.58:2.58,samples=80] plot (\x,{2*(\x-1)^2+1});
+\fill (-2,-3) circle (1.6pt);
+\node[below] at (-2,-3){\scriptsize $(-2,-3)$};
+\fill (1,1) circle (1.6pt);
+\node[right] at (1,1){\scriptsize $(1,1)$};
+\draw[->,thick,blue!60!black] (-1.9,-2.8)--(0.9,0.85); \node at (-2.6,4.8){\scriptsize ②}; \node at (2.6,5.2){\scriptsize ①};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}\point{「どのグラフをどのグラフに移すか」の向きを逆にしない}
 \end{kai}
 
@@ -1654,6 +1682,30 @@ $A$ は $-2$ 以上 $2$ 以下，$B$ は $0$ より小さいか $3$ より大き
 \textbf{方針}\quad \point{頂点を移動し，凸の向きも確認}する．$x$ 軸対称・原点対称では凸の向きが逆になる．\\
 （式で考えるなら，$x$ 軸対称は $y\to-y$，$y$ 軸対称は $x\to-x$，原点対称は両方をおきかえる．）\\[2pt]
 $y=x^2+6x+5=(x+3)^2-4$ より，頂点は $(-3,\ -4)$，下に凸．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=2.6mm,y=2.6mm]
+\ax{-6.5}{6.5}{-5}{5.5}
+\draw[dashed,domain=-6:0,samples=80] plot (\x,{(\x+3)^2-4});
+\draw[thick,domain=-6:0,samples=80] plot (\x,{-(\x+3)^2+4});
+\fill (-3,4) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (i)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=2.6mm,y=2.6mm]
+\ax{-6.5}{6.5}{-5}{5.5}
+\draw[dashed,domain=-6:0,samples=80] plot (\x,{(\x+3)^2-4});
+\draw[thick,domain=0:6,samples=80] plot (\x,{(\x-3)^2-4});
+\fill (3,-4) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (ii)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=2.6mm,y=2.6mm]
+\ax{-6.5}{6.5}{-5}{5.5}
+\draw[dashed,domain=-6:0,samples=80] plot (\x,{(\x+3)^2-4});
+\draw[thick,domain=0:6,samples=80] plot (\x,{-(\x-3)^2+4});
+\fill (3,4) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (iii)};
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}（点線がもとの放物線，実線が移動後）\\
 (i)\ $x$ 軸に関して対称移動：頂点 $(-3,\ 4)$，上に凸．\\
 \hspace*{1.5em}$y=-(x+3)^2+4$，すなわち\quad $y=-x^2-6x-5$\\
 \hspace*{1.5em}（$y$ を $-y$ におきかえて $-y=x^2+6x+5$ としても同じ）\\[2pt]
@@ -1673,6 +1725,22 @@ $y=x^2+6x+5=(x+3)^2-4$ より，頂点は $(-3,\ -4)$，下に凸．\\[2pt]
 その前の移動「$x$ 軸方向に3」をもとにもどす（$x$ 軸方向に $-3$ 移動する）と，\\
 \hspace*{1.5em}頂点 $(-1,\ -3)$ で下に凸の放物線 $y=(x+1)^2-3=x^2+2x-2$．\\[2pt]
 これが $y=x^2+ax+b$ と一致するので\quad $a=2$，$b=-2$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=4mm]
+\ax{-4}{5}{-4.5}{4.5}
+\draw[thick,domain=-0.2:4.2,samples=80] plot (\x,{-(\x-2)^2+3});
+\draw[dashed,domain=-0.2:4.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[thick,blue!60!black,domain=-3.2:1.2,samples=80] plot (\x,{(\x+1)^2-3});
+\fill (2,3) circle (1.6pt);
+\node[above] at (2,3){\scriptsize $(2,3)$};
+\fill (2,-3) circle (1.6pt);
+\node[below] at (2,-3){\scriptsize $(2,-3)$};
+\fill (-1,-3) circle (1.6pt);
+\node[below] at (-1,-3){\scriptsize $(-1,-3)$};
+\draw[->] (2.15,2.7)--(2.15,-2.7); \draw[->] (1.75,-3.15)--(-0.75,-3.15);
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}（移動後の放物線から，対称移動・平行移動の順にもどす）\\
 （確認：$y=x^2+2x-2=(x+1)^2-3$ の頂点 $(-1,\ -3)$ を $x$ 方向に3動かすと $(2,\ -3)$，$x$ 軸対称で $(2,\ 3)$．一致する．）
 \end{kai}
 
@@ -1768,19 +1836,74 @@ $y=x^2+6x+5=(x+3)^2-4$ より，頂点は $(-3,\ -4)$，下に凸．\\[2pt]
 \hspace*{1.5em}$y(0)=3$，$y(1)=2$，$y(3)=8$．グラフは $x=1$ で折れ曲がり，$x=1$ まで減少，その後増加．\\
 \hspace*{1.5em}$x=3$ のとき最大値 $8$，\quad $x=1$ のとき最小値 $2$\\[2pt]
 (3)\ $y=x^2-4x+1=(x-2)^2-3$．頂点 $(2,\ -3)$ で下に凸．軸は $x=2$．\\
-\hspace*{1.5em}グラフは下の図．定義域の部分だけを切り取って，いちばん高い点・低い点を読む．
+\hspace*{1.5em}定義域（色の帯）の部分のグラフ（太線）で，いちばん高い点・低い点を読む．白丸はその点を含まないことを表す．
 \begin{center}
-\begin{tikzpicture}[x=6mm,y=3.2mm]
-\ax{-1.8}{5.8}{-4}{7}
-\draw[thick,domain=-1.2:5.2,samples=60] plot (\x,{(\x-2)^2-3});
-\draw[dashed] (2,0)--(2,-3);
-\foreach \a/\b in {-1/6,1/-2,3/-2,4/1,5/6} {\draw[dotted] (\a,0)--(\a,\b); \fill (\a,\b) circle (1.8pt);}
-\fill (2,-3) circle (1.8pt);
-\node[below right] at (2,-3){\scriptsize $(2,\,-3)$};
-\foreach \a in {-1,1,3,4,5} \node[above] at (\a,0.1){\tiny $\a$};
-\node[left] at (-1,6){\scriptsize 6}; \node[right] at (5,6){\scriptsize 6};
-\node[right] at (4,1){\scriptsize 1}; \node[left] at (1,-2.3){\scriptsize $-2$}; \node[right] at (3,-2.3){\scriptsize $-2$};
-\node[left] at (0,1.3){\scriptsize 1};
+\begin{tikzpicture}[x=2.8mm,y=2mm]
+\ax{-1.6}{5.6}{-4}{7}
+\draw[dashed,gray,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[very thick,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\fill (2,-3) circle (1.6pt);
+\node[below] at (2,-3){\scriptsize $-3$};
+\node[below] at (current bounding box.south){\scriptsize (i)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=2.8mm,y=2mm]
+\fill[blue!10] (-1,-4) rectangle (1,7);
+\ax{-1.6}{5.6}{-4}{7}
+\draw[dashed,gray,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[very thick,domain=-1:1,samples=80] plot (\x,{(\x-2)^2-3});
+\fill (-1,6) circle (1.6pt);
+\node[right] at (-1,6){\scriptsize 6};
+\fill (1,-2) circle (1.6pt);
+\node[right] at (1,-2){\scriptsize $-2$};
+\node[below] at (current bounding box.south){\scriptsize (ii)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=2.8mm,y=2mm]
+\fill[blue!10] (3,-4) rectangle (5,7);
+\ax{-1.6}{5.6}{-4}{7}
+\draw[dashed,gray,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[very thick,domain=3:5,samples=80] plot (\x,{(\x-2)^2-3});
+\fill (3,-2) circle (1.6pt);
+\node[left] at (3,-2){\scriptsize $-2$};
+\fill (5,6) circle (1.6pt);
+\node[left] at (5,6){\scriptsize 6};
+\node[below] at (current bounding box.south){\scriptsize (iii)};
+\end{tikzpicture}
+\end{center}
+\begin{center}
+\begin{tikzpicture}[x=2.8mm,y=2mm]
+\fill[blue!10] (1,-4) rectangle (4,7);
+\ax{-1.6}{5.6}{-4}{7}
+\draw[dashed,gray,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[very thick,domain=1:4,samples=80] plot (\x,{(\x-2)^2-3});
+\fill (2,-3) circle (1.6pt);
+\node[below] at (2,-3){\scriptsize $-3$};
+\fill (4,1) circle (1.6pt);
+\node[right] at (4,1){\scriptsize 1};
+\fill (1,-2) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (iv)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=2.8mm,y=2mm]
+\fill[blue!10] (0,-4) rectangle (3,7);
+\ax{-1.6}{5.6}{-4}{7}
+\draw[dashed,gray,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[very thick,domain=0:3,samples=80] plot (\x,{(\x-2)^2-3});
+\fill (2,-3) circle (1.6pt);
+\node[below] at (2,-3){\scriptsize $-3$};
+\draw[fill=white] (0,1) circle (1.6pt);
+\node[left] at (0,1){\scriptsize 1};
+\draw[fill=white] (3,-2) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (v)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=2.8mm,y=2mm]
+\fill[blue!10] (4,-4) rectangle (5,7);
+\ax{-1.6}{5.6}{-4}{7}
+\draw[dashed,gray,domain=-1.2:5.2,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[very thick,domain=4:5,samples=80] plot (\x,{(\x-2)^2-3});
+\draw[fill=white] (4,1) circle (1.6pt);
+\node[left] at (4,1){\scriptsize 1};
+\draw[fill=white] (5,6) circle (1.6pt);
+\node[left] at (5,6){\scriptsize 6};
+\node[below] at (current bounding box.south){\scriptsize (vi)};
 \end{tikzpicture}
 \end{center}
 \hspace*{1.5em}(i)\ $y$ はいくらでも大きくなる．\quad 最大値なし，最小値 $-3$（$x=2$）\\
@@ -1805,10 +1928,54 @@ $f(0)=3$，\quad $f(2)=4-4a+3=7-4a$，\quad $f(a)=3-a^2$\\[2pt]
 (1)\ (i)\ $a<0$ のとき（軸が定義域の左），$f(x)$ は $0\leqq x\leqq2$ で増加．\quad $m(a)=f(0)=3$\\
 \hspace*{1.5em}(ii)\ $0\leqq a\leqq2$ のとき（軸が定義域の中），頂点で最小．\quad $m(a)=f(a)=3-a^2$\\
 \hspace*{1.5em}(iii)\ $2<a$ のとき（軸が定義域の右），$f(x)$ は減少．\quad $m(a)=f(2)=7-4a$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=4mm,y=3.5mm]
+\fill[blue!10] (0,-0.3) rectangle (2,3.6);\draw[->] (-1.6,0)--(3.6,0) node[right]{\tiny $x$};
+\draw[thick,domain=-3.0999999999999996:1.4999999999999998,samples=80] plot (\x,{0.6*(\x-(-0.8))^2+0.3});
+\fill (0,0.6839999999999999) circle (1.6pt);
+\node[right] at (0,0.6839999999999999){\scriptsize 最小};
+\draw[dashed] (-0.8,-0.3)--(-0.8,3.6) node[above]{\tiny $x=a$};\draw (0,0.1)--(0,-0.1) node[below]{\tiny 0}; \draw (2,0.1)--(2,-0.1) node[below]{\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (i) $a<0$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=4mm,y=3.5mm]
+\fill[blue!10] (0,-0.3) rectangle (2,3.6);\draw[->] (-1.6,0)--(3.6,0) node[right]{\tiny $x$};
+\draw[thick,domain=-1.2999999999999998:3.3,samples=80] plot (\x,{0.6*(\x-(1))^2+0.3});
+\fill (1,0.3) circle (1.6pt);
+\node[above] at (1,0.3){\scriptsize 最小};
+\draw[dashed] (1,-0.3)--(1,3.6) node[above]{\tiny $x=a$};\draw (0,0.1)--(0,-0.1) node[below]{\tiny 0}; \draw (2,0.1)--(2,-0.1) node[below]{\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (ii) $0\leqq a\leqq2$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=4mm,y=3.5mm]
+\fill[blue!10] (0,-0.3) rectangle (2,3.6);\draw[->] (-1.6,0)--(3.6,0) node[right]{\tiny $x$};
+\draw[thick,domain=0.5:5.1,samples=80] plot (\x,{0.6*(\x-(2.8))^2+0.3});
+\fill (2,0.6839999999999999) circle (1.6pt);
+\node[left] at (2,0.6839999999999999){\scriptsize 最小};
+\draw[dashed] (2.8,-0.3)--(2.8,3.6) node[above]{\tiny $x=a$};\draw (0,0.1)--(0,-0.1) node[below]{\tiny 0}; \draw (2,0.1)--(2,-0.1) node[below]{\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (iii) $2<a$};
+\end{tikzpicture}
+\end{center}
 (2)\ \point{下に凸のグラフでは，軸から遠い方の端で最大になる}．定義域の中央は $x=1$．\\
 \hspace*{1.5em}(i)\ $a\leqq1$ のとき，$x=2$ の方が軸から遠い（$a=1$ のときは両端で等しい）．\\
 \hspace*{3em}$M(a)=f(2)=7-4a$\\
 \hspace*{1.5em}(ii)\ $1<a$ のとき，$x=0$ の方が軸から遠い．\quad $M(a)=f(0)=3$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=4mm,y=3.5mm]
+\fill[blue!10] (0,-0.3) rectangle (2,3.6);\draw[->] (-1.6,0)--(3.6,0) node[right]{\tiny $x$};
+\draw[thick,domain=-1.9:2.6999999999999997,samples=80] plot (\x,{0.6*(\x-(0.4))^2+0.3});
+\fill (2,1.836) circle (1.6pt);
+\node[left] at (2,1.836){\scriptsize 最大};
+\draw[dashed] (0.4,-0.3)--(0.4,3.6) node[above]{\tiny $x=a$};\draw (0,0.1)--(0,-0.1) node[below]{\tiny 0}; \draw (2,0.1)--(2,-0.1) node[below]{\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (i) $a\leqq1$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=4mm,y=3.5mm]
+\fill[blue!10] (0,-0.3) rectangle (2,3.6);\draw[->] (-1.6,0)--(3.6,0) node[right]{\tiny $x$};
+\draw[thick,domain=-0.6999999999999997:3.9,samples=80] plot (\x,{0.6*(\x-(1.6))^2+0.3});
+\fill (0,1.836) circle (1.6pt);
+\node[right] at (0,1.836){\scriptsize 最大};
+\draw[dashed] (1.6,-0.3)--(1.6,3.6) node[above]{\tiny $x=a$};\draw (0,0.1)--(0,-0.1) node[below]{\tiny 0}; \draw (2,0.1)--(2,-0.1) node[below]{\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (ii) $1<a$};
+\end{tikzpicture}
+\end{center}
 (3)\ (1)の場合ごとに $m(a)=-1$ を解く．\\
 \hspace*{1.5em}(i)\ $a<0$ のとき，$m(a)=3\neq-1$ で不適．\\
 \hspace*{1.5em}(ii)\ $0\leqq a\leqq2$ のとき，$3-a^2=-1$ より $a^2=4$，$a=\pm2$．$0\leqq a\leqq2$ より $a=2$．\\
@@ -1827,9 +1994,62 @@ $f(0)=3$，\quad $f(2)=4-4a+3=7-4a$，\quad $f(a)=3-a^2$\\[2pt]
 \hspace*{1.5em}$x^2+y^2=x^2+(4-2x)^2=5x^2-16x+16=5\left(x-\dfrac85\right)^2-\dfrac{64}5+16=5\left(x-\dfrac85\right)^2+\dfrac{16}{5}$\\
 \hspace*{1.5em}$x=\dfrac85$ は $0\leqq x\leqq2$ に含まれ，このとき $y=4-\dfrac{16}5=\dfrac45$．\\
 \hspace*{1.5em}$x=\dfrac85$，$y=\dfrac45$ のとき最小値 $\dfrac{16}5$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\fill[blue!10] (0,-0.5) rectangle (2,2.8);
+\ax{-0.6}{2.8}{-0.5}{2.8}
+\draw[thick,domain=0:2,samples=80] plot (\x,{-2*(\x-1)^2+2});
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (1,2) circle (1.6pt);
+\node[above] at (1,2){\scriptsize 最大 2};
+\node[below] at (current bounding box.south){\scriptsize $xy$（$0\leqq x\leqq2$）};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=6mm,y=0.7mm]
+\fill[blue!10] (0,-0.5) rectangle (2,17);
+\ax{-0.6}{2.8}{-0.5}{17}
+\draw[thick,domain=0:2,samples=80] plot (\x,{5*(\x-1.6)^2+3.2});
+\draw (1.6,0.12)--(1.6,-0.12); \node[below] at (1.6,0){\tiny $\frac85$};
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\node[left] at (0,16){\tiny $16$};
+\fill (1.6,3.2) circle (1.6pt);
+\node[above right] at (1.6,3.2){\scriptsize 最小 $\frac{16}5$};
+\fill (0,16) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $x^2+y^2$（$0\leqq x\leqq2$）};
+\end{tikzpicture}
+\end{center}
 (2)\ $t=x^2+2x=(x+1)^2-1$．$-2\leqq x\leqq1$ における $t$ の範囲を調べる．\\
 \hspace*{1.5em}$x=-1$ で最小値 $-1$．両端は $x=-2$ で $t=0$，$x=1$ で $t=3$．よって\quad $-1\leqq t\leqq3$\\
 \hspace*{1.5em}$y=t^2-2t+3=(t-1)^2+2$\quad （$-1\leqq t\leqq3$）\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=7mm,y=6mm]
+\ax{-2.6}{1.6}{-1.6}{3.6}
+\draw[thick,domain=-2:1,samples=80] plot (\x,{(\x+1)^2-1});
+\draw (-2,0.12)--(-2,-0.12); \node[below] at (-2,0){\tiny $-2$};
+\draw (-1,0.12)--(-1,-0.12); \node[below] at (-1,0){\tiny $-1$};
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\node[left] at (0,3){\tiny $3$};
+\node[left] at (0,-1){\tiny $-1$};
+\fill (-1,-1) circle (1.6pt);
+\fill (1,3) circle (1.6pt);
+\fill (-2,0) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $t=(x+1)^2-1$ より $-1\leqq t\leqq3$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=7mm,y=4mm]
+\fill[blue!10] (-1,-0.6) rectangle (3,7);
+\ax{-1.6}{3.6}{-0.6}{7}
+\draw[thick,domain=-1:3,samples=80] plot (\x,{(\x-1)^2+2});
+\draw (-1,0.12)--(-1,-0.12); \node[below] at (-1,0){\tiny $-1$};
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\draw (3,0.12)--(3,-0.12); \node[below] at (3,0){\tiny $3$};
+\node[left] at (0,6){\tiny $6$};
+\fill (1,2) circle (1.6pt);
+\node[below] at (1,2){\scriptsize 最小 2};
+\fill (-1,6) circle (1.6pt);
+\fill (3,6) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $y=(t-1)^2+2$（横軸は $t$）};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}最小値：$t=1$ のとき $2$．このとき $x^2+2x=1$，$x=-1\pm\sqrt2$．\\
 \hspace*{3em}$-2\leqq x\leqq1$ より $x=-1+\sqrt2$（$-1-\sqrt2<-2$ なので不適）\\
 \hspace*{1.5em}最大値：$t=-1,\ 3$ のとき，ともに $y=6$．\\
@@ -1856,6 +2076,20 @@ $f(0)=3$，\quad $f(2)=4-4a+3=7-4a$，\quad $f(a)=3-a^2$\\[2pt]
 \begin{kai}
 \textbf{方針}\quad 平行線による相似（比）を使って，長方形の2辺を $x$ で表す．\point{図形の問題では変数に範囲がつく}．\\[2pt]
 $\angle\mathrm{ACB}=90^\circ$ だから，三平方の定理より\quad $\mathrm{AB}=\sqrt{6^2+8^2}=10$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.42]
+\coordinate (C) at (0,0); \coordinate (B) at (6,0); \coordinate (A) at (0,8);
+\coordinate (D) at (2.4,4.8); \coordinate (F) at (0,4.8); \coordinate (E) at (2.4,0);
+\fill[blue!10] (C)--(E)--(D)--(F)--cycle;
+\draw[thick] (A)--(B)--(C)--cycle; \draw (D)--(F); \draw (D)--(E);
+\draw (0,0.4)--(0.4,0.4)--(0.4,0);
+\node[left] at (A){\scriptsize A}; \node[below right] at (B){\scriptsize B}; \node[below left] at (C){\scriptsize C};
+\node[above right] at (D){\scriptsize D}; \node[left] at (F){\scriptsize F}; \node[below] at (E){\scriptsize E};
+\node[left] at (0,2.4){\scriptsize 8}; \node[below] at (4.2,0){\scriptsize 6};
+\node[above right] at ($(A)!0.5!(D)$){\scriptsize $x$};
+\node[above] at (1.2,4.8){\tiny $\frac35x$}; \node[right] at (2.4,2.4){\tiny $\frac45(10-x)$};
+\end{tikzpicture}
+\end{center}
 (1)\ DF $\perp$ AC，BC $\perp$ AC だから DF $/\!/$ BC．よって $\triangle\mathrm{ADF}\backsim\triangle\mathrm{ABC}$ で\\
 \hspace*{1.5em}$\mathrm{AD}:\mathrm{DF}=\mathrm{AB}:\mathrm{BC}=10:6$，\quad $\mathrm{DF}=\dfrac{6}{10}x=\dfrac35x$\\[2pt]
 \hspace*{1.5em}DE $\perp$ BC，AC $\perp$ BC だから DE $/\!/$ AC．よって $\triangle\mathrm{BDE}\backsim\triangle\mathrm{BAC}$ で，$\mathrm{BD}=10-x$ より\\
@@ -1896,6 +2130,39 @@ $\angle\mathrm{ACB}=90^\circ$ だから，三平方の定理より\quad $\mathrm
 (4)\ $y=-(x^2-2x)-3=-(x-1)^2-2$．上に凸で頂点の $y$ 座標 $-2<0$ だから，グラフ全体が $x$ 軸より下にある．\\
 \hspace*{1.5em}$x$ 軸と共有点をもたない．\\
 \hspace*{1.5em}（判別式でも：$-x^2+2x-3=0$ すなわち $x^2-2x+3=0$ の $\dfrac D4=1-3<0$）
+\begin{center}
+\begin{tikzpicture}[x=3mm,y=3mm]
+\ax{-2}{5.5}{-4.5}{3.5}
+\draw[thick,domain=-1.6:3.6,samples=80] plot (\x,{(\x-1)^2-4});
+\fill (-1,0) circle (1.6pt);
+\node[above left] at (-1,0){\scriptsize $-1$};
+\fill (3,0) circle (1.6pt);
+\node[above right] at (3,0){\scriptsize 3};
+\fill (1,-4) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (1) 2点で交わる};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=3mm,y=3mm]
+\ax{-2}{5.5}{-4.5}{3.5}
+\draw[thick,domain=0.8:5.2,samples=80] plot (\x,{-(\x-3)^2+2});
+\fill (1.586,0) circle (1.6pt);
+\fill (4.414,0) circle (1.6pt);
+\fill (3,2) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (2) 2点で交わる};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=3mm,y=3mm]
+\ax{-2}{5.5}{-1.5}{4.5}
+\draw[thick,domain=1:5,samples=80] plot (\x,{(\x-3)^2});
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize 3};
+\node[below] at (current bounding box.south){\scriptsize (3) 接する};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=3mm,y=3mm]
+\ax{-2}{5.5}{-4.5}{3.5}
+\draw[thick,domain=-0.7:2.7,samples=80] plot (\x,{-(\x-1)^2-2});
+\fill (1,-2) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize (4) 共有点なし};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{42}{放物線と直線との位置関係}
@@ -1905,6 +2172,20 @@ $\angle\mathrm{ACB}=90^\circ$ だから，三平方の定理より\quad $\mathrm
 \hspace*{1.5em}（実際，$(x-1)(x-5)=0$ より共有点の $x$ 座標は $1,\ 5$）\\[2pt]
 (2)\ $x^2-4x+5=2x-4$ より $x^2-6x+9=0$．\quad $\dfrac D4=(-3)^2-9=0$．\quad 共有点は1個（接する）\\[2pt]
 (3)\ $x^2-4x+5=-x+1$ より $x^2-3x+4=0$．\quad $D=(-3)^2-4\cdot1\cdot4=-7<0$．\quad 共有点は0個
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=3mm]
+\ax{-1.5}{6.5}{-3}{9.5}
+\draw[thick,domain=-0.8:5,samples=80] plot (\x,{(\x-2)^2+1});
+\draw[blue!60!black,domain=-0.5:4.6,samples=80] plot (\x,{2*\x});
+\draw[red!70!black,domain=0.6:6.2,samples=80] plot (\x,{2*\x-4});
+\draw[green!50!black,domain=-1.4:4,samples=80] plot (\x,{-\x+1});
+\fill (1,2) circle (1.6pt);
+\fill (5,10) circle (1.6pt);
+\fill (3,2) circle (1.6pt);
+\node[right] at (3,2){\scriptsize 接点};
+\node[blue!60!black] at (4.9,8){\tiny (1)}; \node[red!70!black] at (6.2,7.5){\tiny (2)}; \node[green!50!black] at (-1.2,2.8){\tiny (3)};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{43}{放物線の接線}
@@ -1914,23 +2195,76 @@ $y$ を消去して $x^2+4x+1=-2x+a$．整理して\quad $x^2+6x+(1-a)=0$ ……
 放物線と直線が接するのは①が重解をもつときだから\\
 \hspace*{1.5em}$\dfrac D4=3^2-1\cdot(1-a)=8+a=0$．\quad $a=-8$\\[2pt]
 （このとき①は $x^2+6x+9=0$，$(x+3)^2=0$ で $x=-3$．接点は $y=-2\cdot(-3)-8=-2$ より $(-3,\ -2)$．）
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=3.5mm]
+\ax{-6}{1.5}{-5.5}{6.5}
+\draw[thick,domain=-5.2:1.2,samples=80] plot (\x,{(\x+2)^2-3});
+\draw[blue!60!black,domain=-6:-1.2,samples=80] plot (\x,{-2*\x-8});
+\fill (-3,-2) circle (1.6pt);
+\node[left] at (-3,-2){\scriptsize 接点 $(-3,-2)$};
+\node[blue!60!black] at (-5.2,0.9){\tiny $y=-2x-8$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{44}{2次不等式}
 \begin{kai}
 \textbf{方針}\quad $x^2$ の係数を正にしてから，\point{$y=(\text{左辺})$ のグラフが $x$ 軸より上（下）にある $x$ の範囲}を読む．$(x-\alpha)(x-\beta)<0$ なら $\alpha<x<\beta$，$>0$ なら $x<\alpha,\ \beta<x$（$\alpha<\beta$）．\\[2pt]
 (1)\ $(x-1)(x-4)<0$ より\quad $1<x<4$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=3.2mm,y=2.5mm]
+\ax{-0.6}{5.6}{-4}{4}
+\draw[thick,domain=0:5,samples=80] plot (\x,{(\x-1)*(\x-4)});
+\fill (1,0) circle (1.6pt);
+\node[above] at (1,0){\scriptsize 1};
+\fill (4,0) circle (1.6pt);
+\node[above] at (4,0){\scriptsize 4};
+\draw[line width=2.5pt,blue!50] (1,0)--(4,0);
+\node[below] at (current bounding box.south){\scriptsize (1) $y<0$ の部分};
+\end{tikzpicture}
+\end{center}
 (2)\ 因数分解できないので，$x^2+4x+1=0$ を解くと $x=-2\pm\sqrt{4-1}=-2\pm\sqrt3$．\\
 \hspace*{1.5em}$\geqq0$ なので2つの解の外側（等号を含む）．\quad $x\leqq-2-\sqrt3,\ -2+\sqrt3\leqq x$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=3.2mm,y=2.5mm]
+\ax{-5.199999999999999}{1.2}{-4}{4}
+\draw[thick,domain=-4.6:0.6,samples=80] plot (\x,{(\x)^2+4*\x+1});
+\fill (-3.732,0) circle (1.6pt);
+\fill (-0.268,0) circle (1.6pt);
+\draw[line width=2.5pt,blue!50] (-4.8,0)--(-3.732,0);\draw[line width=2.5pt,blue!50] (-0.268,0)--(0.8,0);
+\node[below] at (current bounding box.south){\scriptsize (2) $y\geqq0$ の部分};
+\end{tikzpicture}
+\end{center}
 (3)\ $9x^2+6x+1=(3x+1)^2\leqq0$．\\
 \hspace*{1.5em}$(3x+1)^2\geqq0$ はつねに成り立つので，成り立つのは $(3x+1)^2=0$ のときだけ．\quad $x=-\dfrac13$\\[2pt]
 (4)\ 移項して $x^2+4x+5>0$．$x^2+4x+5=(x+2)^2+1\geqq1>0$ はつねに成り立つ．\\
 \hspace*{1.5em}（判別式 $\dfrac D4=4-5<0$ で，グラフは $x$ 軸より上にある．）\quad すべての実数\\[2pt]
 (5)\ \point{$x^2$ の係数を正にする（両辺に $-1$ を掛けると向きが変わる）}\\
 \hspace*{1.5em}$3x^2-5x-2<0$，\quad $(3x+1)(x-2)<0$．\quad $-\dfrac13<x<2$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=3.2mm,y=2.5mm]
+\ax{-1.5}{3.2}{-4}{4}
+\draw[thick,domain=-0.9:2.6,samples=80] plot (\x,{3*(\x)^2-5*\x-2});
+\fill (-0.333,0) circle (1.6pt);
+\fill (2,0) circle (1.6pt);
+\node[above] at (2,0){\scriptsize 2};
+\draw[line width=2.5pt,blue!50] (-0.333,0)--(2,0);
+\node[below] at (current bounding box.south){\scriptsize (5) $y<0$ の部分};
+\end{tikzpicture}
+\end{center}
 (6)\ 第1式：$x(x-2)\leqq0$ より\quad $0\leqq x\leqq2$\\
 \hspace*{1.5em}第2式：$(2x-1)(x-3)>0$ より\quad $x<\dfrac12,\ 3<x$\\
 \hspace*{1.5em}数直線で共通部分をとって\quad $0\leqq x<\dfrac12$
+\begin{center}
+\begin{tikzpicture}[x=12mm]
+\draw[->] (-1,0)--(4,0);
+\fill[blue!25] (0,0.05) rectangle (2,0.35); \draw (0,0.05)--(0,0.35); \draw (2,0.05)--(2,0.35);
+\fill[red!25] (-1,-0.35) rectangle (0.5,-0.05); \fill[red!25] (3,-0.35) rectangle (4,-0.05);
+\foreach \a/\b in {0/0,0.5/\frac12,2/2,3/3} \node[below] at (\a,-0.4){\tiny $\b$};
+\node[right] at (4,0.2){\tiny 第1式}; \node[right] at (4,-0.2){\tiny 第2式};
+\draw[very thick] (0,0)--(0.5,0); \fill (0,0) circle (1.5pt); \draw[fill=white] (0.5,0) circle (1.5pt);
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{45}{係数の符号}
@@ -1959,10 +2293,40 @@ $f(x)=x^2+2ax+a+2=(x+a)^2-a^2+a+2$ より，軸は直線 $x=-a$．\\
 \hspace*{1.5em}(iii)\ $f(0)>0$：$a+2>0$ より\quad $a>-2$\\[2pt]
 \hspace*{1.5em}(i)〜(iii) の共通部分をとって\quad $-2<a<-1$\\
 \hspace*{1.5em}\point{(iii) がないと，交点の1つが $x\leqq0$ にある場合を除けない}\\[4pt]
+\begin{center}
+\begin{tikzpicture}[x=4.5mm,y=4mm]
+\ax{-2.5}{3.5}{-1.3}{3.2}
+\draw[thick,domain=-0.30000000000000004:3.3,samples=80] plot (\x,{(\x-1.5)^2-0.8});
+\fill (0,1.45) circle (1.6pt);
+\node[right] at (0,1.45){\scriptsize $f(0)>0$};
+\draw[dashed] (1.5,-1)--(1.5,3);
+\node[below] at (current bounding box.south){\scriptsize  (1) 2つとも $x>0$};
+\end{tikzpicture}
+\end{center}
 (2)\ 下に凸の放物線では，$f(0)<0$ ならグラフは $x=0$ の左右で1回ずつ $x$ 軸と交わる．\\
 \hspace*{1.5em}よって条件は $f(0)=a+2<0$ だけでよく\quad $a<-2$\\
+\begin{center}
+\begin{tikzpicture}[x=4.5mm,y=4mm]
+\ax{-2.5}{3.5}{-1.3}{3.2}
+\draw[thick,domain=-1.2000000000000002:2.4,samples=80] plot (\x,{(\x-0.6)^2-1.5});
+\fill (0,-1.14) circle (1.6pt);
+\node[left] at (0,-1.14){\scriptsize $f(0)<0$};
+\draw[dashed] (0.6,-1)--(0.6,3);
+\node[below] at (current bounding box.south){\scriptsize  (2) $f(0)<0$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}\point{$f(0)<0$ なら $\dfrac D4>0$ は自動的に成りたつので，判別式の条件は不要}\\[4pt]
 (3)\ (1) の「$0$」を「$-1$」におきかえて考える．\\
+\begin{center}
+\begin{tikzpicture}[x=4.5mm,y=4mm]
+\ax{-2.5}{3.5}{-1.3}{3.2}
+\draw[thick,domain=-1.0:2.6,samples=80] plot (\x,{(\x-0.8)^2-0.8});
+\fill (-1,2.44) circle (1.6pt);
+\node[left] at (-1,2.44){\scriptsize $f(-1)>0$};
+\draw[dashed] (0.8,-1)--(0.8,3);\draw[densely dotted,red!70!black] (-1,-1.2)--(-1,3.2);
+\node[below] at (current bounding box.south){\scriptsize  (3) 2つとも $x>-1$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}(i)\ $\dfrac D4>0$ より\quad $a<-1,\ 2<a$\\[2pt]
 \hspace*{1.5em}(ii)\ 軸 $x=-a$ が $x>-1$ の部分にある：$-a>-1$ より\quad $a<1$\\[2pt]
 \hspace*{1.5em}(iii)\ $f(-1)>0$：$f(-1)=1-2a+a+2=3-a>0$ より\quad $a<3$\\[2pt]
@@ -1974,6 +2338,17 @@ $f(x)=x^2+2ax+a+2=(x+a)^2-a^2+a+2$ より，軸は直線 $x=-a$．\\
 \textbf{方針}\quad 「範囲内のすべての $x$ で $f(x)\geqq0$」 ⇔ \point{範囲内での $f(x)$ の最小値 $\geqq0$}．\\[2pt]
 $f(x)=2x+a$ とおく．傾きが正なので，$x\geqq2$ で $f(x)$ は増加する．\\
 よって，$x\geqq2$ における最小値は\quad $f(2)=4+a$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=3.5mm]
+\fill[blue!10] (2,-2) rectangle (4.5,6);
+\ax{-0.8}{4.5}{-2}{6}
+\draw[thick,domain=2:4.4,samples=80] plot (\x,{2*\x-3});
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\fill (2,1) circle (1.6pt);
+\node[right] at (2,1){\scriptsize 最小 $f(2)=4+a$};
+\node[below] at (current bounding box.south){\scriptsize $y=2x+a$ のグラフ（$x\geqq2$ の部分）};
+\end{tikzpicture}
+\end{center}
 すべての $x\geqq2$ で $f(x)\geqq0$ となる条件は，最小値 $\geqq0$ だから\\
 \hspace*{1.5em}$4+a\geqq0$\quad より\quad $a\geqq-4$
 \end{kai}
@@ -1985,6 +2360,15 @@ $f(x)=x^2+2ax+2a+8=(x+a)^2-a^2+2a+8$\\
 頂点の $y$ 座標は $-a^2+2a+8$．すべての $x$ で $f(x)>0$ となる条件は\\
 \hspace*{1.5em}$-a^2+2a+8>0$，\quad $a^2-2a-8<0$，\quad $(a+2)(a-4)<0$\\
 \hspace*{1.5em}よって\quad $-2<a<4$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=4mm,y=4mm]
+\ax{-3}{3}{-0.8}{4}
+\draw[thick,domain=-2.2:2.2,samples=80] plot (\x,{(\x)^2*0.7+0.6});
+\fill (0,0.6) circle (1.6pt);
+\node[above right] at (0.3,0.6){\scriptsize 頂点の $y$ 座標 $>0$};
+\node[below] at (current bounding box.south){\scriptsize グラフ全体が $x$ 軸より上};
+\end{tikzpicture}
+\end{center}
 （別解：$x^2+2ax+2a+8=0$ の判別式 $\dfrac D4=a^2-(2a+8)=a^2-2a-8<0$ としても同じ．）
 \end{kai}
 
@@ -1999,8 +2383,18 @@ $f(x)=x^2+2ax+2a+8=(x+a)^2-a^2+2a+8$\\
 \hspace*{1.5em}(iii)\ $a>2$ のとき，解は $2<x<a$．整数解は小さい方から 3，4，5，…．\\
 \hspace*{1.5em}ちょうど 3，4 の2個となるのは，4 は含み 5 は含まないときだから\quad $4<a\leqq5$\\
 \hspace*{1.5em}\point{$a=5$ のとき解は $2<x<5$ で，5 は含まれない．端の等号は代入して確かめる}\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=9mm]
+\draw[->] (1.4,0)--(6.6,0);\draw (2,0.08)--(2,-0.08) node[below]{\tiny 2};\draw (3,0.08)--(3,-0.08) node[below]{\tiny 3};\draw (4,0.08)--(4,-0.08) node[below]{\tiny 4};\draw (5,0.08)--(5,-0.08) node[below]{\tiny 5};\fill[red!70!black] (3,0) circle (2pt);\fill[red!70!black] (4,0) circle (2pt);\fill[blue!20] (4,0.12) rectangle (5,0.32); \node[above] at (4.5,0.32){\tiny $a$ の範囲};\node[below] at (current bounding box.south){\scriptsize $a>2$：解 $2<x<a$ に 3，4 だけが入る};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}(i)\ $a<2$ のとき，解は $a<x<2$．整数解は大きい方から 1，0，$-1$，…．\\
 \hspace*{1.5em}ちょうど 1，0 の2個となるのは，0 は含み $-1$ は含まないときだから\quad $-1\leqq a<0$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=9mm]
+\draw[->] (-2.6,0)--(2.6,0);\draw (-1,0.08)--(-1,-0.08) node[below]{\tiny -1};\draw (0,0.08)--(0,-0.08) node[below]{\tiny 0};\draw (1,0.08)--(1,-0.08) node[below]{\tiny 1};\fill[red!70!black] (0,0) circle (2pt);\fill[red!70!black] (1,0) circle (2pt);\fill[blue!20] (-1,0.12) rectangle (0,0.32); \node[above] at (-0.5,0.32){\tiny $a$ の範囲};\node[below] at (current bounding box.south){\scriptsize $a<2$：解 $a<x<2$ に 0，1 だけが入る};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}よって\quad $-1\leqq a<0,\ 4<a\leqq5$
 \end{kai}
 
@@ -2017,6 +2411,21 @@ $f(x)=x^2+2ax+2a+8=(x+a)^2-a^2+2a+8$\\
 \hspace*{3em}$x^2+x-2=0$，\quad $(x+2)(x-1)=0$，\quad $x=-2,\ 1$\\
 \hspace*{3em}$-2<x<3$ より $x=1$．\\[2pt]
 \hspace*{1.5em}(i)，(ii)より\quad $x=-2,\ 1,\ 5$\\
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=1.2mm]
+\ax{-3}{6.5}{-1}{15.5}
+\draw[thick,domain=-2.8:5.6,samples=80] plot (\x,{abs((\x)^2-\x-6)});
+\draw[blue!60!black,domain=-2.5:5.8,samples=80] plot (\x,{2*\x+4});
+\fill (-2,0) circle (1.6pt);
+\node[below left] at (-2,0){\scriptsize $-2$};
+\fill (1,6) circle (1.6pt);
+\node[left] at (1,6){\scriptsize $x=1$};
+\fill (5,14) circle (1.6pt);
+\node[left] at (5,14){\scriptsize $x=5$};
+\node[blue!60!black] at (6.2,13){\tiny $y=2x+4$};
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}（$y=|x^2-x-6|$ のグラフと直線 $y=2x+4$ の交点の $x$ 座標が解）\\
 \hspace*{1.5em}（検算：$x=5$ のとき左辺 $|14|=14$，右辺 $14$．$x=1$ のとき左辺 $|-6|=6$，右辺 $6$．）
 \end{kai}
 
@@ -2033,6 +2442,20 @@ $f(x)=x^2+2ax+2a+8=(x+a)^2-a^2+2a+8$\\
 \hspace*{1.5em}(ii)\ $-3<x<-1$ のとき：$-(x^2+4x+3)<2x+5$，\quad $x^2+6x+8>0$\\
 \hspace*{3em}$(x+2)(x+4)>0$ より $x<-4,\ -2<x$．範囲と合わせると\quad $-2<x<-1$\\[2pt]
 \hspace*{1.5em}(i)，(ii)をあわせて\quad $-2<x<-1+\sqrt3$\\
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=1.6mm]
+\fill[blue!10] (-2,-1) rectangle (0.732,9.5);
+\ax{-5}{2}{-1}{9.5}
+\draw[thick,domain=-4.8:1.3,samples=80] plot (\x,{abs((\x)^2+4*\x+3)});
+\draw[blue!60!black,domain=-3:2,samples=80] plot (\x,{2*\x+5});
+\draw (-2,0.12)--(-2,-0.12); \node[below] at (-2,0){\tiny $-2$};
+\draw (0.732,0.12)--(0.732,-0.12); \node[below] at (0.732,0){\tiny $-1+\sqrt3$};
+\fill (-2,1) circle (1.6pt);
+\fill (0.732,6.46) circle (1.6pt);
+\node[blue!60!black,right] at (2,9){\tiny $y=2x+5$};
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}（直線が $y=|x^2+4x+3|$ のグラフより上にある $x$ の範囲が解）\\
 \hspace*{1.5em}（$x=-1$ は(i)に含まれるので，$-2<x<-1$ と $-1\leqq x<-1+\sqrt3$ がつながる．）
 \end{kai}
 

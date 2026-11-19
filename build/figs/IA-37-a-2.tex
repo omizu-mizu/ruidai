@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=6mm,y=0.7mm]
+\fill[blue!10] (0,-0.5) rectangle (2,17);
+\ax{-0.6}{2.8}{-0.5}{17}
+\draw[thick,domain=0:2,samples=80] plot (\x,{5*(\x-1.6)^2+3.2});
+\draw (1.6,0.12)--(1.6,-0.12); \node[below] at (1.6,0){\tiny $\frac85$};
+\draw (2,0.12)--(2,-0.12); \node[below] at (2,0){\tiny $2$};
+\node[left] at (0,16){\tiny $16$};
+\fill (1.6,3.2) circle (1.6pt);
+\node[above right] at (1.6,3.2){\scriptsize 最小 $\frac{16}5$};
+\fill (0,16) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $x^2+y^2$（$0\leqq x\leqq2$）};
+\end{tikzpicture}

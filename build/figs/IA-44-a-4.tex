@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=12mm]
+\draw[->] (-1,0)--(4,0);
+\fill[blue!25] (0,0.05) rectangle (2,0.35); \draw (0,0.05)--(0,0.35); \draw (2,0.05)--(2,0.35);
+\fill[red!25] (-1,-0.35) rectangle (0.5,-0.05); \fill[red!25] (3,-0.35) rectangle (4,-0.05);
+\foreach \a/\b in {0/0,0.5/\frac12,2/2,3/3} \node[below] at (\a,-0.4){\tiny $\b$};
+\node[right] at (4,0.2){\tiny 第1式}; \node[right] at (4,-0.2){\tiny 第2式};
+\draw[very thick] (0,0)--(0.5,0); \fill (0,0) circle (1.5pt); \draw[fill=white] (0.5,0) circle (1.5pt);
+\end{tikzpicture}

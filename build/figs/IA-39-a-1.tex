@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=0.42]
+\coordinate (C) at (0,0); \coordinate (B) at (6,0); \coordinate (A) at (0,8);
+\coordinate (D) at (2.4,4.8); \coordinate (F) at (0,4.8); \coordinate (E) at (2.4,0);
+\fill[blue!10] (C)--(E)--(D)--(F)--cycle;
+\draw[thick] (A)--(B)--(C)--cycle; \draw (D)--(F); \draw (D)--(E);
+\draw (0,0.4)--(0.4,0.4)--(0.4,0);
+\node[left] at (A){\scriptsize A}; \node[below right] at (B){\scriptsize B}; \node[below left] at (C){\scriptsize C};
+\node[above right] at (D){\scriptsize D}; \node[left] at (F){\scriptsize F}; \node[below] at (E){\scriptsize E};
+\node[left] at (0,2.4){\scriptsize 8}; \node[below] at (4.2,0){\scriptsize 6};
+\node[above right] at ($(A)!0.5!(D)$){\scriptsize $x$};
+\node[above] at (1.2,4.8){\tiny $\frac35x$}; \node[right] at (2.4,2.4){\tiny $\frac45(10-x)$};
+\end{tikzpicture}

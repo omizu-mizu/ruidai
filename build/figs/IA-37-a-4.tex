@@ -1,0 +1,14 @@
+\begin{tikzpicture}[x=7mm,y=4mm]
+\fill[blue!10] (-1,-0.6) rectangle (3,7);
+\ax{-1.6}{3.6}{-0.6}{7}
+\draw[thick,domain=-1:3,samples=80] plot (\x,{(\x-1)^2+2});
+\draw (-1,0.12)--(-1,-0.12); \node[below] at (-1,0){\tiny $-1$};
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\draw (3,0.12)--(3,-0.12); \node[below] at (3,0){\tiny $3$};
+\node[left] at (0,6){\tiny $6$};
+\fill (1,2) circle (1.6pt);
+\node[below] at (1,2){\scriptsize 最小 2};
+\fill (-1,6) circle (1.6pt);
+\fill (3,6) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize $y=(t-1)^2+2$（横軸は $t$）};
+\end{tikzpicture}

@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=4mm,y=3.5mm]
+\fill[blue!10] (0,-0.3) rectangle (2,3.6);\draw[->] (-1.6,0)--(3.6,0) node[right]{\tiny $x$};
+\draw[thick,domain=-0.6999999999999997:3.9,samples=80] plot (\x,{0.6*(\x-(1.6))^2+0.3});
+\fill (0,1.836) circle (1.6pt);
+\node[right] at (0,1.836){\scriptsize 最大};
+\draw[dashed] (1.6,-0.3)--(1.6,3.6) node[above]{\tiny $x=a$};\draw (0,0.1)--(0,-0.1) node[below]{\tiny 0}; \draw (2,0.1)--(2,-0.1) node[below]{\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (ii) $1<a$};
+\end{tikzpicture}
