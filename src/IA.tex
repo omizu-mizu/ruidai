@@ -1741,13 +1741,48 @@ $y=x^2+6x+5=(x+3)^2-4$ より，頂点は $(-3,\ -4)$，下に凸．\\[2pt]
 \begin{kai}
 \textbf{方針}\quad グラフをかき，\point{定義域の両端と頂点の $y$ 座標を比べる}．定義域の端が含まれない（$<$）ときは，その値をとらないことに注意．\\[2pt]
 (1)\ 傾きが負なので右下がりの直線．$x=-1$ のとき $y=5$，$x=2$ のとき $y=-4$．\\
-\hspace*{1.5em}$x=-1$ のとき最大値 $5$，\quad $x=2$ のとき最小値 $-4$\\[2pt]
+\hspace*{1.5em}$x=-1$ のとき最大値 $5$，\quad $x=2$ のとき最小値 $-4$
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=3mm]
+\ax{-2}{3}{-5.5}{6.5}
+\draw[thick] (-1,5)--(2,-4);
+\draw[dashed] (-1,0)--(-1,5)--(0,5); \draw[dashed] (2,0)--(2,-4)--(0,-4);
+\fill (-1,5) circle (2pt); \fill (2,-4) circle (2pt);
+\node[below] at (-1,0){\scriptsize $-1$}; \node[above] at (2,0){\scriptsize 2};
+\node[right] at (0,5){\scriptsize 5}; \node[left] at (0,-4){\scriptsize $-4$};
+\node at (0.5,-6.8){\scriptsize (1)};
+\end{tikzpicture}\hspace{2em}
+\begin{tikzpicture}[x=6mm,y=3mm]
+\ax{-0.8}{4}{-0.8}{9}
+\draw[thick] (0,3)--(1,2)--(3,8);
+\draw[dashed] (1,0)--(1,2); \draw[dashed] (3,0)--(3,8)--(0,8); \draw[dashed] (0,2)--(1,2);
+\fill (0,3) circle (2pt); \fill (1,2) circle (2pt); \fill (3,8) circle (2pt);
+\node[below] at (1,0){\scriptsize 1}; \node[below] at (3,0){\scriptsize 3};
+\node[left] at (0,8){\scriptsize 8}; \node[left] at (0,3){\scriptsize 3}; \node[left] at (0,1.7){\scriptsize 2};
+\node at (1.5,-2.3){\scriptsize (2)};
+\end{tikzpicture}
+\end{center}
 (2)\ $2x-2$ の符号で場合分けする．\\
 \hspace*{1.5em}$0\leqq x<1$ のとき\quad $y=x+1-(2x-2)=-x+3$\\
 \hspace*{1.5em}$1\leqq x\leqq3$ のとき\quad $y=x+1+(2x-2)=3x-1$\\
 \hspace*{1.5em}$y(0)=3$，$y(1)=2$，$y(3)=8$．グラフは $x=1$ で折れ曲がり，$x=1$ まで減少，その後増加．\\
 \hspace*{1.5em}$x=3$ のとき最大値 $8$，\quad $x=1$ のとき最小値 $2$\\[2pt]
 (3)\ $y=x^2-4x+1=(x-2)^2-3$．頂点 $(2,\ -3)$ で下に凸．軸は $x=2$．\\
+\hspace*{1.5em}グラフは下の図．定義域の部分だけを切り取って，いちばん高い点・低い点を読む．
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=3.2mm]
+\ax{-1.8}{5.8}{-4}{7}
+\draw[thick,domain=-1.2:5.2,samples=60] plot (\x,{(\x-2)^2-3});
+\draw[dashed] (2,0)--(2,-3);
+\foreach \a/\b in {-1/6,1/-2,3/-2,4/1,5/6} {\draw[dotted] (\a,0)--(\a,\b); \fill (\a,\b) circle (1.8pt);}
+\fill (2,-3) circle (1.8pt);
+\node[below right] at (2,-3){\scriptsize $(2,\,-3)$};
+\foreach \a in {-1,1,3,4,5} \node[above] at (\a,0.1){\tiny $\a$};
+\node[left] at (-1,6){\scriptsize 6}; \node[right] at (5,6){\scriptsize 6};
+\node[right] at (4,1){\scriptsize 1}; \node[left] at (1,-2.3){\scriptsize $-2$}; \node[right] at (3,-2.3){\scriptsize $-2$};
+\node[left] at (0,1.3){\scriptsize 1};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}(i)\ $y$ はいくらでも大きくなる．\quad 最大値なし，最小値 $-3$（$x=2$）\\
 \hspace*{1.5em}(ii)\ $-1\leqq x\leqq1$ は軸より左なので減少する．$y(-1)=6$，$y(1)=-2$．\\
 \hspace*{3em}最大値 $6$（$x=-1$），最小値 $-2$（$x=1$）\\
@@ -2056,7 +2091,30 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 
 \ans{56}{円周角}
 \begin{kai}
-\textbf{方針}\quad \point{同じ弧に対する円周角は等しい}，\point{中心角は円周角の2倍}．どの弧に対する角かを確かめてから使う．\\[2pt]
+\textbf{方針}\quad \point{同じ弧に対する円周角は等しい}，\point{中心角は円周角の2倍}．どの弧に対する角かを確かめてから使う．
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+\draw (0,0) circle (1.6);
+\coordinate (O) at (0,0);
+\coordinate (A) at (150:1.6); \coordinate (B) at (210:1.6); \coordinate (C) at (260:1.6); \coordinate (D) at (70:1.6);
+\draw[thick] (A)--(B)--(C)--(D)--cycle;
+\draw[name path=ac] (A)--(C); \draw[name path=bd] (B)--(D);
+\path[name intersections={of=ac and bd,by=P}];
+\draw[dashed] (A)--(O)--(D);
+\fill (O) circle (1.2pt); \fill (P) circle (1.2pt);
+\node[above left] at (A){\scriptsize A}; \node[left] at (B){\scriptsize B};
+\node[below] at (C){\scriptsize C}; \node[above right] at (D){\scriptsize D};
+\node[below right] at (O){\scriptsize O}; \node[right] at ($(P)+(0.05,-0.12)$){\scriptsize P};
+\coordinate (mAD) at ($(A)!0.5!(D)$); \coordinate (mBC) at ($(B)!0.5!(C)$);
+\coordinate (mDB) at ($(D)!0.5!(B)$); \coordinate (mAC) at ($(A)!0.5!(C)$);
+\coordinate (mBDx) at ($(B)!0.5!(D)$);
+\node[blue!70!black] at ($(B)!0.3!(mAD)$){\tiny $40^\circ$};
+\node[blue!70!black] at ($(C)!0.3!(mAD)$){\tiny $40^\circ$};
+\node[red!70!black] at ($(A)!0.3!(mBC)$){\tiny $25^\circ$};
+\node[red!70!black] at ($(D)!0.28!(mBC)$){\tiny $25^\circ$};
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}同じ印の角は，同じ弧に対する円周角．$40^\circ$ は弧 AD，$25^\circ$ は弧 BC に対する角．\\[2pt]
 (1)\ $\angle\mathrm{ACD}$ と $\angle\mathrm{ABD}$ はともに弧 AD に対する円周角だから\quad $\angle\mathrm{ACD}=\angle\mathrm{ABD}=40^\circ$\\
 \hspace*{1.5em}$\angle\mathrm{BAC}$ と $\angle\mathrm{BDC}$ はともに弧 BC に対する円周角だから\quad $\angle\mathrm{BAC}=\angle\mathrm{BDC}=25^\circ$\\[2pt]
 (2)\ $\angle\mathrm{AOD}$ は弧 AD に対する中心角で，同じ弧に対する円周角は $\angle\mathrm{ABD}=40^\circ$．\\

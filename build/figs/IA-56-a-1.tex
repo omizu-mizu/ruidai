@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1.1]
+\draw (0,0) circle (1.6);
+\coordinate (O) at (0,0);
+\coordinate (A) at (150:1.6); \coordinate (B) at (210:1.6); \coordinate (C) at (260:1.6); \coordinate (D) at (70:1.6);
+\draw[thick] (A)--(B)--(C)--(D)--cycle;
+\draw[name path=ac] (A)--(C); \draw[name path=bd] (B)--(D);
+\path[name intersections={of=ac and bd,by=P}];
+\draw[dashed] (A)--(O)--(D);
+\fill (O) circle (1.2pt); \fill (P) circle (1.2pt);
+\node[above left] at (A){\scriptsize A}; \node[left] at (B){\scriptsize B};
+\node[below] at (C){\scriptsize C}; \node[above right] at (D){\scriptsize D};
+\node[below right] at (O){\scriptsize O}; \node[right] at ($(P)+(0.05,-0.12)$){\scriptsize P};
+\coordinate (mAD) at ($(A)!0.5!(D)$); \coordinate (mBC) at ($(B)!0.5!(C)$);
+\coordinate (mDB) at ($(D)!0.5!(B)$); \coordinate (mAC) at ($(A)!0.5!(C)$);
+\coordinate (mBDx) at ($(B)!0.5!(D)$);
+\node[blue!70!black] at ($(B)!0.3!(mAD)$){\tiny $40^\circ$};
+\node[blue!70!black] at ($(C)!0.3!(mAD)$){\tiny $40^\circ$};
+\node[red!70!black] at ($(A)!0.3!(mBC)$){\tiny $25^\circ$};
+\node[red!70!black] at ($(D)!0.28!(mBC)$){\tiny $25^\circ$};
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=6mm,y=3mm]
+\ax{-0.8}{4}{-0.8}{9}
+\draw[thick] (0,3)--(1,2)--(3,8);
+\draw[dashed] (1,0)--(1,2); \draw[dashed] (3,0)--(3,8)--(0,8); \draw[dashed] (0,2)--(1,2);
+\fill (0,3) circle (2pt); \fill (1,2) circle (2pt); \fill (3,8) circle (2pt);
+\node[below] at (1,0){\scriptsize 1}; \node[below] at (3,0){\scriptsize 3};
+\node[left] at (0,8){\scriptsize 8}; \node[left] at (0,3){\scriptsize 3}; \node[left] at (0,1.7){\scriptsize 2};
+\node at (1.5,-2.3){\scriptsize (2)};
+\end{tikzpicture}

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=9mm,y=4.5mm]
+\fill[blue!15] plot[domain=-1:2,samples=50] (\x,{\x*\x}) -- (0.5,-2) -- cycle;
+\ax{-2.2}{3}{-4.5}{6.5}
+\draw[thick,domain=-2.1:2.45,samples=60] plot (\x,{\x*\x});
+\node[left] at (-2.1,4.4){\scriptsize $y=x^2$};
+\draw (-2,3)--(1.5,-4) node[below]{\scriptsize $\ell_1$};
+\draw (0,-4)--(2.6,6.4); \node[right] at (2.3,5){\scriptsize $\ell_2$};
+\fill (-1,1) circle (1.6pt); \fill (2,4) circle (1.6pt); \fill (0.5,-2) circle (1.6pt);
+\node[left] at (-1,1.2){\scriptsize $(-1,\,1)$}; \node[left] at (2,4.3){\scriptsize $(2,\,4)$};
+\node[right] at (0.55,-2.2){\scriptsize $\left(\frac12,\,-2\right)$};
+\draw[dashed] (0.5,0)--(0.5,-2);
+\end{tikzpicture}

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1f3a5f">
-<title>類題カード</title>
+<title>基礎問題演習 Ⅰ・A／Ⅱ・B・C</title>
 <style>/*KATEX_CSS*/</style>
 <style>
 :root{
@@ -107,7 +107,7 @@ header.top button{background:rgba(255,255,255,.15);border:0;border-radius:8px;pa
 </style>
 </head>
 <body>
-<header class="top"><h1 id="hd">類題カード</h1><span id="hdbtns"></span></header>
+<header class="top"><h1 id="hd">基礎問題演習</h1><span id="hdbtns"></span></header>
 <div id="progwrap" class="prog hidden"><i id="prog"></i></div>
 <main class="wrap" id="main"></main>
 <div class="rate hidden" id="rate"></div>
@@ -192,7 +192,7 @@ function renderBody(el){
   el.querySelectorAll('.fig').forEach(n => {
     const f = FIGS[n.dataset.fig]; if(!f) return;
     const img = new Image(); img.className='fig'; img.alt='図';
-    img.src = f.src; img.style.width = Math.round(f.w*1.45)+'px';
+    img.src = f.src; img.style.width = Math.round(f.w*1.8)+'px';
     n.replaceWith(img);
   });
 }
@@ -215,7 +215,7 @@ function chrome(study){
 // ---------- ホーム ----------
 function home(){
   chrome(false);
-  header('類題カード', [['記録', records]]);
+  header('基礎問題演習 Ⅰ・A／Ⅱ・B・C', [['記録', records]]);
   const m = $('#main');
   const ses = S.session;
   let h = '';
