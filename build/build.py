@@ -25,6 +25,14 @@ for b in books:
             s = p[k]
             s = re.sub(rf'(?<={cjk})\n(?={cjk})', '', s)
             s = re.sub(r'^(\s|<br class="par">)+|(\s|<br class="par">|<br>)+$', '', s)
+            # 行頭の \hspace* は、その行全体のぶら下げ字下げにする
+            seg = r'(?:[^<]|<(?!/?div|br\b))*?'
+            prev = None
+            while prev != s:
+                prev = s
+                s = re.sub(r'(^|<br>|<br class="par">|<div[^>]*>|</div>)(\s*)<span class="hsi" style="width:([^"]+)"></span>(' + seg + r')(<br>|(?=<br class="par">)|(?=</div>)|$)',
+                           lambda m: f'{m.group(1)}{m.group(2)}<div class="ind" style="padding-left:{m.group(3)}">{m.group(4)}</div>', s)
+            s = s.replace('<span class="hsi"', '<span class="hs"')
             p[k] = s
 
 figs = {}

@@ -199,7 +199,12 @@ class Conv:
                     out.append(f'<span class="box">{self.conv(a)}</span>')
             elif name == 'hspace':
                 w = arg()
-                out.append(f'<span class="hs" style="width:{w}"></span>' if not w.startswith('-') else '')
+                if w.startswith('-'):
+                    pass
+                elif m.group(0).endswith('*'):
+                    out.append(f'<span class="hsi" style="width:{w}"></span>')
+                else:
+                    out.append(f'<span class="hs" style="width:{w}"></span>')
             elif name == 'quad':
                 out.append('<span class="hs" style="width:1em"></span>')
             elif name == 'qquad':
