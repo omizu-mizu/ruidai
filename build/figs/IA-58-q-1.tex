@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=0.5]
+\coordinate (O) at (0,0); \coordinate (M) at (5,1.2);
+\draw[name path=circ] (M) circle (1.9);
+\path[name path=l1] (O)--(8,0); \path[name path=l2] (O)--($(O)!1!(15:8)$);
+\draw[name intersections={of=circ and l1,by={B1,A1}}] (O)--(B1);
+\draw[name intersections={of=circ and l2,by={D1,C1}}] (O)--(D1);
+\draw (A1)--(C1) (B1)--(D1);
+\node[left] at (O){\scriptsize O}; \node[below] at (A1){\scriptsize A}; \node[below] at (B1){\scriptsize B};
+\node[above left] at (C1){\scriptsize C}; \node[above] at (D1){\scriptsize D};
+\end{tikzpicture}

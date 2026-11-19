@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=5mm,y=3.2mm]
+\draw[->] (-3.4,0)--(2.6,0) node[right]{\scriptsize $x$};
+\draw[->] (0,-2.8)--(0,5.2) node[above]{\scriptsize $y$};
+\node[below left] at (0,0){\scriptsize O};
+\draw[thick,domain=-3.0:2.0,samples=50] plot (\x,{-\x*\x-\x+4});
+\foreach \t in {-2,1} {\draw (\t,0.15)--(\t,-0.15); \node[below] at (\t,0){\tiny \t};}
+\end{tikzpicture}

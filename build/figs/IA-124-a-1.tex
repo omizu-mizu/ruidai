@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=0.6mm,y=5mm]
+\draw[->] (30,0)--(108,0) node[right]{\scriptsize 点};
+\draw[->] (30,0)--(30,6) node[above]{\scriptsize 人};
+\foreach \a/\h in {30/1,40/2,50/4,60/5,70/5,80/2,90/1} \draw (\a,0) rectangle (\a+10,\h);
+\foreach \t in {30,40,...,100} \node[below] at (\t,0){\tiny \t};
+\foreach \t in {1,...,5} \node[left] at (30,\t){\tiny \t};
+\end{tikzpicture}

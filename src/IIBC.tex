@@ -1,0 +1,2100 @@
+\documentclass[a4paper,11pt]{ltjsarticle}
+\usepackage[top=18mm,bottom=18mm,left=20mm,right=20mm]{geometry}
+\usepackage{luatexja-fontspec}
+\setmainjfont{Noto Serif CJK JP}[BoldFont=Noto Sans CJK JP Bold]
+\setsansjfont{Noto Sans CJK JP}[BoldFont=Noto Sans CJK JP Bold]
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{kai}{enhanced,breakable,colback=white,colframe=black,boxrule=0pt,
+  borderline west={0.8pt}{0pt}{black},arc=0pt,left=8pt,right=0pt,top=2pt,bottom=2pt,
+  before skip=3pt,after skip=8pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily 数学Ⅱ・B・C 類題集}
+\fancyhead[R]{\small\sffamily\leftmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
+\setlist[enumerate,1]{label={(\arabic*)},leftmargin=2.2em,itemsep=2pt,topsep=2pt}
+
+% 問題
+\newcommand{\mon}[2]{\Needspace{7\baselineskip}\vspace{10pt}%
+  {\sffamily\bfseries 類題 #1\quad #2\par}\vspace{2pt}\hrule\vspace{4pt}}
+% 解答
+\newcommand{\ans}[2]{\Needspace{5\baselineskip}\vspace{6pt}%
+  {\sffamily\bfseries 類題 #1\quad #2}\par}
+\newcommand{\point}[1]{\textsf{\bfseries ▶ #1}}
+\newcommand{\rpt}[1]{0.\dot{#1}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections}
+\newcommand{\ax}[4]{\draw[->] (#1,0)--(#2,0) node[right]{\scriptsize $x$};
+  \draw[->] (0,#3)--(0,#4) node[above]{\scriptsize $y$};
+  \node[below left] at (0,0){\scriptsize O};}
+\newcommand{\shou}[2]{\clearpage\markboth{#1\quad #2}{}%
+  {\sffamily\bfseries\LARGE #1\quad #2\par}\vspace{2pt}\hrule height 1.2pt\vspace{4pt}}
+\newcommand{\shouans}[2]{\Needspace{8\baselineskip}\vspace{10pt}\markboth{解答\quad #1\quad #2}{}%
+  {\sffamily\bfseries\Large #1\quad #2\par}\vspace{2pt}\hrule height 0.8pt\vspace{2pt}}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+\vspace*{50mm}
+{\sffamily\bfseries\Huge 数学Ⅱ・B・C 類題集\par}
+\vspace{8mm}
+{\sffamily\Large 基礎問 類題1〜183\par}
+\vspace{15mm}
+\begin{minipage}{0.75\linewidth}\small
+類題の番号は基礎問の番号に対応している．基礎問を学習したあと，同じテーマの問題が解けるかを確かめるのに使う．解答は後半にまとめてある．
+\end{minipage}
+\end{center}
+\clearpage
+\setcounter{page}{1}
+\shou{第1章}{式と証明}
+\mon{1}{3次式の展開}
+次の式を展開せよ．
+\[\text{(1)}\ (2x-y)^3\qquad\text{(2)}\ (a+2)(a^2-2a+4)\qquad\text{(3)}\ (x-1)(x^2+x+1)(x^3+1)\]
+
+\mon{2}{3次式の因数分解}
+次の式を因数分解せよ．
+\[\text{(1)}\ 27x^3-8\qquad\text{(2)}\ x^3+6x^2y+12xy^2+8y^3\qquad\text{(3)}\ x^6-64\]
+
+\mon{3}{パスカルの三角形}
+パスカルの三角形を5段目までかき，それを利用して $(a+b)^5$ を展開せよ．
+
+\mon{4}{2項定理・多項定理}
+\begin{enumerate}
+\item $(2x-1)^6$ の展開式における $x^4$ の係数を求めよ．
+\item $\left(x^2-\dfrac2x\right)^6$ の展開式における定数項を求めよ．
+\item $(x+y+2z)^5$ の展開式における $x^2yz^2$ の係数を求めよ．
+\end{enumerate}
+
+\mon{5}{整式のわり算}
+\begin{enumerate}
+\item $2x^3-3x^2+4x-5$ を $x^2-x+2$ でわったときの商と余りを求めよ．
+\item 整式 $A$ を $x+2$ でわると，商が $x^2-3$，余りが $5$ であった．$A$ を求めよ．
+\end{enumerate}
+
+\mon{6}{分数式の計算}
+次の式を計算せよ．
+\[\text{(1)}\ \ \frac1{x-1}-\frac1{x+1}-\frac2{x^2+1}\qquad\qquad\text{(2)}\ \ \frac{x^2-x-6}{x^2-4}\times\frac{x^2+3x+2}{x^2-9}\]
+
+\mon{7}{繁分数式の計算}
+次の式を簡単にせよ．
+\[\text{(1)}\ \ \frac{1}{1-\dfrac{1}{1-\dfrac1x}}\qquad\qquad\text{(2)}\ \ \frac{\dfrac1x-\dfrac1y}{\dfrac1{x^2}-\dfrac1{y^2}}\]
+
+\mon{8}{式の値}
+$x+\dfrac1x=4$ のとき，次の式の値を求めよ．
+\[\text{(1)}\ x^2+\frac1{x^2}\qquad\text{(2)}\ x^3+\frac1{x^3}\qquad\text{(3)}\ \left(x-\frac1x\right)^2\]
+
+\mon{9}{比例式（Ⅰ）}
+$\dfrac x2=\dfrac y3=\dfrac z4\ (\neq0)$ のとき，次の式の値を求めよ．
+\[\text{(1)}\ \ \frac{x+y+z}{x-y+z}\qquad\qquad\text{(2)}\ \ \frac{xy+yz+zx}{x^2+y^2+z^2}\]
+
+\mon{10}{比例式（Ⅱ）}
+$\dfrac{b+c}{a}=\dfrac{c+a}{b}=\dfrac{a+b}{c}=k$ のとき，$k$ の値を求めよ．
+
+\mon{11}{恒等式}
+\begin{enumerate}
+\item 等式 $a(x+1)^2+b(x+1)+c=2x^2-x+3$ が $x$ についての恒等式となるように，定数 $a,\ b,\ c$ の値を定めよ．
+\item 等式 $\dfrac{1}{(x+1)(x+3)}=\dfrac{a}{x+1}+\dfrac{b}{x+3}$ が恒等式となるように，定数 $a,\ b$ の値を定めよ．
+\end{enumerate}
+
+\mon{12}{等式の証明}
+\begin{enumerate}
+\item $a+b+c=0$ のとき，$a^3+b^3+c^3=3abc$ であることを示せ．
+\item $\dfrac ab=\dfrac cd$ のとき，$\dfrac{a+c}{b+d}=\dfrac{a-2c}{b-2d}$ であることを示せ．ただし，分母は0でないとする．
+\end{enumerate}
+
+\mon{13}{不等式の証明}
+\begin{enumerate}
+\item 実数 $x,\ y$ について，$x^2+y^2\geqq2(x+y)-2$ を示せ．また，等号が成りたつのはどのようなときか．
+\item $x>0$ のとき，$x+\dfrac9x\geqq6$ を示せ．また，等号が成りたつ $x$ の値を求めよ．
+\item $a>0$，$b>0$ のとき，$\sqrt a+\sqrt b>\sqrt{a+b}$ を示せ．
+\end{enumerate}
+
+\shou{第2章}{複素数と方程式}
+\mon{14}{2次方程式の解}
+次の2次方程式を複素数の範囲で解け．
+\[\text{(1)}\ \ x^2+4=0\qquad\qquad\text{(2)}\ \ 3x^2-2x+1=0\]
+
+\mon{15}{複素数の計算（Ⅰ）}
+次の式を計算し，$a+bi$（$a,\ b$ は実数）の形で表せ．
+\[\text{(1)}\ (2+3i)(1-2i)\qquad\text{(2)}\ (3-i)^2\qquad\text{(3)}\ \frac{1+i}{1-i}\]
+
+\mon{16}{複素数の計算（Ⅱ）}
+\begin{enumerate}
+\item $(1+i)^8$ を計算せよ．
+\item $(x+yi)(2-i)=5+5i$ をみたす実数 $x,\ y$ を求めよ．
+\end{enumerate}
+
+\mon{17}{解の判別（Ⅰ）}
+$k$ を実数の定数とする．2次方程式 $x^2+(k-1)x+k+2=0$ の解を判別せよ．
+
+\mon{18}{解の判別（Ⅱ）}
+$a$ を実数の定数とする．2つの2次方程式
+\[x^2+2ax+4=0\quad\cdots\cdots\text{①}\qquad\qquad x^2-2x+a=0\quad\cdots\cdots\text{②}\]
+について，次の条件をみたす $a$ の値の範囲を求めよ．
+\begin{enumerate}
+\item ①，②の少なくとも一方が虚数解をもつ．
+\item ①，②の一方だけが虚数解をもつ．
+\end{enumerate}
+
+\mon{19}{$i$ を含んだ方程式（Ⅰ）}
+等式 $(2+i)x+(1-3i)y=5-i$ をみたす実数 $x,\ y$ を求めよ．
+
+\mon{20}{$i$ を含んだ方程式（Ⅱ）}
+$x$ の2次方程式 $x^2-(2+i)x+1+ai=0$ が実数解をもつように，実数 $a$ の値を定めよ．また，そのときの実数解を求めよ．
+
+\mon{21}{解と係数の関係（Ⅰ）}
+2次方程式 $x^2-3x+5=0$ の2つの解を $\alpha,\ \beta$ とするとき，次の値を求めよ．
+\[\text{(1)}\ \alpha^2+\beta^2\qquad\text{(2)}\ \alpha^3+\beta^3\qquad\text{(3)}\ \frac1\alpha+\frac1\beta\qquad\text{(4)}\ (\alpha-1)(\beta-1)\]
+
+\mon{22}{解と係数の関係（Ⅱ）}
+2次方程式 $x^2-3x+5=0$ の2つの解を $\alpha,\ \beta$ とするとき，次の2数を解とする2次方程式を1つ求めよ．
+\[\text{(1)}\ \alpha+1,\ \beta+1\qquad\qquad\text{(2)}\ \alpha^2,\ \beta^2\]
+
+\mon{23}{虚数解}
+実数 $a,\ b$ に対して，2次方程式 $x^2+ax+b=0$ の1つの解が $2+3i$ であるとき，$a,\ b$ の値と他の解を求めよ．
+
+\mon{24}{剰余の定理（Ⅰ）}
+整式 $P(x)=x^3-2x^2+ax+3$ を $x-2$ でわった余りが5であるとき，定数 $a$ の値を求めよ．
+
+\mon{25}{剰余の定理（Ⅱ）}
+整式 $P(x)$ を $x-1$ でわると余りが3，$x+2$ でわると余りが $-6$ である．$P(x)$ を $(x-1)(x+2)$ でわった余りを求めよ．
+
+\mon{26}{剰余の定理（Ⅲ）}
+整式 $P(x)$ を $(x-1)^2$ でわると余りが $2x+1$，$x+1$ でわると余りが3である．$P(x)$ を $(x-1)^2(x+1)$ でわった余りを求めよ．
+
+\mon{27}{因数定理}
+次の式を因数分解せよ．
+\[\text{(1)}\ \ x^3-4x^2+x+6\qquad\qquad\text{(2)}\ \ 2x^3-3x^2-11x+6\]
+
+\mon{28}{虚数 $\omega$}
+$x^3=1$ の虚数解の1つを $\omega$ とするとき，次の値を求めよ．
+\[\text{(1)}\ \omega^2+\omega+1\qquad\text{(2)}\ \omega^{10}+\omega^5+1\qquad\text{(3)}\ (1+\omega)^6\]
+
+\mon{29}{共通解}
+2つの2次方程式 $x^2+ax+2=0$，$x^2+2x+a=0$ が共通な実数解をもつように，定数 $a$ の値を定め，そのときの共通解を求めよ．
+
+\mon{30}{高次方程式}
+\begin{enumerate}
+\item 方程式 $x^3=8$ を解け．\qquad (2)\ 方程式 $x^4+x^2-12=0$ を解け．
+\item[(3)] 実数 $a,\ b$ に対して，3次方程式 $x^3+ax^2+bx+10=0$ が $1+2i$ を解にもつとき，$a,\ b$ の値と他の解を求めよ．
+\end{enumerate}
+
+\shou{第3章}{図形と式}
+\mon{31}{分点の座標}
+3点 $\mathrm A(1,\ 2)$，$\mathrm B(7,\ -4)$，$\mathrm C(4,\ 5)$ がある．
+\begin{enumerate}
+\item 線分 AB を $2:1$ に内分する点，外分する点の座標を求めよ．
+\item $\triangle\mathrm{ABC}$ の重心の座標を求めよ．
+\end{enumerate}
+
+\mon{32}{直線の方程式}
+次の直線の方程式を求めよ．
+\begin{enumerate}
+\item 点 $(2,\ -1)$ を通り，傾きが3の直線
+\item 2点 $(1,\ 3)$，$(4,\ -3)$ を通る直線
+\item $x$ 切片が3，$y$ 切片が $-2$ の直線
+\end{enumerate}
+
+\mon{33}{2点間の距離}
+2点 $\mathrm A(-1,\ 2)$，$\mathrm B(3,\ 5)$ について，
+\begin{enumerate}
+\item 線分 AB の長さを求めよ．
+\item $x$ 軸上にあって，A，B から等距離にある点 P の座標を求めよ．
+\end{enumerate}
+
+\mon{34}{点と直線の距離}
+\begin{enumerate}
+\item 点 $(2,\ 3)$ と直線 $3x+4y-8=0$ の距離を求めよ．
+\item 3点 $\mathrm A(1,\ 1)$，$\mathrm B(4,\ 5)$，$\mathrm C(6,\ 2)$ を頂点とする $\triangle\mathrm{ABC}$ の面積を，AB の長さと，点 C と直線 AB の距離を用いて求めよ．
+\end{enumerate}
+
+\mon{35}{線対称}
+直線 $\ell:\ y=2x$ と2点 $\mathrm A(3,\ 1)$，$\mathrm C(6,\ 2)$ がある．
+\begin{enumerate}
+\item $\ell$ に関して A と対称な点 B の座標を求めよ．
+\item 点 P が $\ell$ 上を動くとき，$\mathrm{AP}+\mathrm{PC}$ の最小値と，そのときの P の座標を求めよ．
+\end{enumerate}
+
+\mon{36}{平行条件・垂直条件}
+\begin{enumerate}
+\item 点 $(1,\ 2)$ を通り，直線 $2x-3y+1=0$ に平行な直線，垂直な直線の方程式をそれぞれ求めよ．
+\item 2直線 $ax+2y=1$，$x+(a+1)y=3$ が平行になる $a$ の値，垂直になる $a$ の値を求めよ．
+\end{enumerate}
+
+\mon{37}{定点を通る直線}
+直線 $(2k+1)x+(k-1)y-(4k-1)=0$ は，定数 $k$ の値にかかわらず定点を通る．その定点の座標を求めよ．
+
+\mon{38}{交点を通る直線}
+2直線 $2x+y-4=0$，$x-y+1=0$ の交点と，点 $(3,\ 0)$ を通る直線の方程式を求めよ．
+
+\mon{39}{円の方程式}
+\begin{enumerate}
+\item 中心が $(2,\ -1)$ で，点 $(5,\ 3)$ を通る円の方程式を求めよ．
+\item 3点 $(0,\ 0)$，$(4,\ 0)$，$(0,\ 2)$ を通る円の方程式を求め，中心と半径を答えよ．
+\item 方程式 $x^2+y^2-6x+4y+k=0$ が円を表すような定数 $k$ の値の範囲を求めよ．
+\end{enumerate}
+
+\mon{40}{円と直線の位置関係}
+円 $x^2+y^2=5$ と直線 $y=2x+k$ について，
+\begin{enumerate}
+\item 共有点の個数を，定数 $k$ の値によって分類せよ．
+\item $k=\sqrt5$ のとき，円が直線から切り取る線分（弦）の長さを求めよ．
+\end{enumerate}
+
+\mon{41}{円と接線}
+\begin{enumerate}
+\item 円 $x^2+y^2=5$ 上の点 $(1,\ 2)$ における接線の方程式を求めよ．
+\item 点 $(5,\ 0)$ から円 $x^2+y^2=5$ にひいた接線の方程式と，接点の座標を求めよ．
+\end{enumerate}
+
+\mon{42}{2円の交点を通る円}
+2つの円 $x^2+y^2=9$，$x^2+y^2-4x-2y-1=0$ について，
+\begin{enumerate}
+\item 2つの円の交点を通る直線の方程式を求めよ．
+\item 2つの円の交点と原点を通る円の方程式を求めよ．
+\end{enumerate}
+
+\mon{43}{軌跡（Ⅰ）}
+2点 $\mathrm A(0,\ 0)$，$\mathrm B(3,\ 0)$ からの距離の比が $\mathrm{AP}:\mathrm{BP}=2:1$ である点 P の軌跡を求めよ．
+
+\mon{44}{軌跡（Ⅱ）}
+点 Q が円 $x^2+y^2=4$ 上を動くとき，点 $\mathrm A(4,\ 0)$ と Q を結ぶ線分 AQ の中点 M の軌跡を求めよ．
+
+\mon{45}{軌跡（Ⅲ）}
+$t$ が実数全体を動くとき，放物線 $y=x^2-2tx+3t$ の頂点の軌跡を求めよ．
+
+\mon{46}{軌跡（Ⅳ）}
+$m$ が実数全体を動くとき，2直線 $y=mx$，$x+my=2$ の交点の軌跡を求めよ．
+
+\mon{47}{軌跡（Ⅴ）}
+点 $(3,\ 0)$ を通る傾き $m$ の直線が，放物線 $y=x^2$ と異なる2点で交わるとき，その2点を結ぶ線分の中点の軌跡を求めよ．
+
+\mon{48}{一般の曲線の移動}
+曲線 $C:\ y=x^2-2x$ について，次の曲線の方程式を求めよ．
+\begin{enumerate}
+\item $C$ を $x$ 軸方向に3，$y$ 軸方向に $-1$ だけ平行移動した曲線
+\item $C$ を点 $(1,\ 1)$ に関して対称移動した曲線
+\end{enumerate}
+
+\mon{49}{不等式の表す領域（Ⅰ）}
+連立不等式 $\begin{cases}y\geqq x^2-2\\ y\leqq x\end{cases}$ の表す領域を図示せよ．
+
+\mon{50}{不等式の表す領域（Ⅱ）}
+不等式 $(x-y)(x+y-2)>0$ の表す領域を図示せよ．
+
+\mon{51}{領域内の点に対する最大・最小}
+$x,\ y$ が4つの不等式 $x\geqq0$，$y\geqq0$，$x+2y\leqq8$，$3x+y\leqq9$ をみたすとき，
+\begin{enumerate}
+\item $x+y$ の最大値と，そのときの $x,\ y$ の値を求めよ．
+\item $x^2+y^2$ の最大値と最小値を求めよ．
+\end{enumerate}
+
+\shou{第4章}{三角関数}
+\mon{52}{一般角}
+次の角の動径は第何象限にあるか．また，それぞれ $\alpha+360^\circ\times n$（$0^\circ\leqq\alpha<360^\circ$，$n$ は整数）の形で表せ．
+\[\text{(1)}\ 400^\circ\qquad\text{(2)}\ -300^\circ\qquad\text{(3)}\ 1000^\circ\]
+
+\mon{53}{弧度法}
+\begin{enumerate}
+\item $150^\circ$，$225^\circ$ を弧度法で，$\dfrac{5}{6}\pi$，$\dfrac{7}{4}\pi$ を度数法で表せ．
+\item 半径6，中心角 $\dfrac23\pi$ の扇形の弧の長さと面積を求めよ．
+\end{enumerate}
+
+\mon{54}{三角関数の加法定理}
+\begin{enumerate}
+\item $\sin75^\circ$，$\tan105^\circ$ の値を求めよ．
+\item $\alpha$，$\beta$ は鋭角で，$\sin\alpha=\dfrac35$，$\cos\beta=\dfrac5{13}$ のとき，$\cos(\alpha+\beta)$ の値を求めよ．
+\end{enumerate}
+
+\mon{55}{2倍角・半角の公式}
+$\dfrac\pi2<\theta<\pi$，$\sin\theta=\dfrac35$ のとき，次の値を求めよ．
+\[\text{(1)}\ \sin2\theta\qquad\text{(2)}\ \cos2\theta\qquad\text{(3)}\ \cos\frac\theta2\]
+
+\mon{56}{3倍角の公式}
+\begin{enumerate}
+\item 加法定理と2倍角の公式を用いて，$\sin3\theta=3\sin\theta-4\sin^3\theta$ を示せ．
+\item $\sin\theta=\dfrac13$ のとき，$\sin3\theta$ の値を求めよ．
+\end{enumerate}
+
+\mon{57}{和積・積和の公式}
+次の値を求めよ．
+\[\text{(1)}\ \ \sin75^\circ\cos15^\circ\qquad\qquad\text{(2)}\ \ \cos75^\circ+\cos15^\circ\]
+
+\mon{58}{直線の傾きと tangent}
+\begin{enumerate}
+\item 2直線 $y=3x$，$y=\dfrac12x$ のなす鋭角 $\theta$ を求めよ．
+\item 原点を通り，直線 $y=2x$ と $45^\circ$ の角をなす直線の方程式を求めよ．
+\end{enumerate}
+
+\mon{59}{三角関数の合成（Ⅰ）}
+次の式を $r\sin(\theta+\alpha)$（$r>0$，$-\pi<\alpha\leqq\pi$）の形に表せ．
+\[\text{(1)}\ \ \sqrt3\sin\theta+\cos\theta\qquad\qquad\text{(2)}\ \ \sin\theta-\cos\theta\]
+
+\mon{60}{三角関数の合成（Ⅱ）}
+$0\leqq\theta\leqq\pi$ のとき，$y=\sin\theta+\sqrt3\cos\theta$ の最大値と最小値，およびそのときの $\theta$ の値を求めよ．
+
+\mon{61}{三角関数の合成（Ⅲ）}
+$y=\sin^2\theta+2\sin\theta\cos\theta+3\cos^2\theta\ \left(0\leqq\theta\leqq\dfrac\pi2\right)$ について，
+\begin{enumerate}
+\item $y$ を $\sin2\theta$，$\cos2\theta$ で表せ．
+\item $y$ の最大値と最小値，およびそのときの $\theta$ の値を求めよ．
+\end{enumerate}
+
+\mon{62}{三角関数のグラフ}
+関数 $y=2\sin\left(2\theta-\dfrac\pi3\right)$ について，
+\begin{enumerate}
+\item 周期と，最大値・最小値を求めよ．
+\item このグラフは，$y=2\sin2\theta$ のグラフをどのように平行移動したものか．
+\item $0\leqq\theta<\pi$ において，$y=0$ となる $\theta$ の値を求めよ．
+\end{enumerate}
+
+\mon{63}{三角方程式}
+$0\leqq\theta<2\pi$ のとき，次の方程式・不等式を解け．
+\[\text{(1)}\ \ 2\cos^2\theta+3\sin\theta-3=0\qquad\qquad\text{(2)}\ \ \sin\theta>\cos\theta\]
+
+\shou{第5章}{指数関数と対数関数}
+\mon{64}{指数の計算}
+\begin{enumerate}
+\item 次の値を求めよ．\quad (i)\ $8^{\frac23}$\qquad (ii)\ $27^{-\frac13}$\qquad (iii)\ $\sqrt[3]{4}\times\sqrt[3]{16}$
+\item $a>0$ のとき，$\sqrt a\times\sqrt[4]{a^3}\div\sqrt[4]a$ を簡単にせよ．
+\item $x^{\frac12}+x^{-\frac12}=3$ のとき，$x+x^{-1}$，$x^{\frac32}+x^{-\frac32}$ の値を求めよ．
+\end{enumerate}
+
+\mon{65}{指数関数のグラフ}
+\begin{enumerate}
+\item $y=2^{x-1}+3$ のグラフは，$y=2^x$ のグラフをどのように移動したものか．また，その漸近線を答えよ．
+\item 3つの数 $\sqrt[3]2,\ \sqrt[4]4,\ \sqrt[5]8$ を小さい順に並べよ．
+\end{enumerate}
+
+\mon{66}{指数方程式（Ⅰ）}
+次の方程式を解け．
+\[\text{(1)}\ \ 2^{x+1}=8^{x-1}\qquad\qquad\text{(2)}\ \ 9^x=\frac{1}{27}\]
+
+\mon{67}{指数方程式（Ⅱ）}
+次の方程式を解け．
+\[\text{(1)}\ \ 4^x-3\cdot2^x-4=0\qquad\qquad\text{(2)}\ \ 9^x+3^{x+1}-18=0\]
+
+\mon{68}{指数不等式}
+次の不等式を解け．
+\[\text{(1)}\ \ \left(\frac12\right)^x>8\qquad\qquad\text{(2)}\ \ 4^x-6\cdot2^x+8<0\]
+
+\mon{69}{対数の計算（Ⅰ）}
+次の式を計算せよ．
+\[\text{(1)}\ \log_248-\log_23\qquad\text{(2)}\ \log_3\sqrt{27}\qquad\text{(3)}\ 2\log_{10}5+\log_{10}4\]
+
+\mon{70}{対数の計算（Ⅱ）}
+次の式を計算せよ．
+\[\text{(1)}\ \ \log_48\qquad\qquad\text{(2)}\ \ \log_29\cdot\log_38\qquad\qquad\text{(3)}\ \ 3^{\log_35}\]
+
+\mon{71}{対数関数のグラフ}
+\begin{enumerate}
+\item $y=\log_2(x-1)+2$ のグラフは，$y=\log_2x$ のグラフをどのように移動したものか．
+\item 3つの数 $2,\ \log_25,\ \log_430$ を小さい順に並べよ．
+\end{enumerate}
+
+\mon{72}{対数方程式（Ⅰ）}
+方程式 $\log_2(x+1)+\log_2(x-1)=3$ を解け．
+
+\mon{73}{対数方程式（Ⅱ）}
+方程式 $(\log_2x)^2-\log_2x^3+2=0$ を解け．
+
+\mon{74}{対数不等式}
+次の不等式を解け．
+\[\text{(1)}\ \ \log_{\frac12}(x-1)>-2\qquad\qquad\text{(2)}\ \ \log_2x+\log_2(x-2)\leqq3\]
+
+\mon{75}{対数の応用（Ⅰ）}
+$\log_{10}2=0.3010$，$\log_{10}3=0.4771$ とする．
+\begin{enumerate}
+\item $2^{50}$ は何桁の整数か．
+\item $2^{50}$ の最高位の数字を求めよ．
+\end{enumerate}
+
+\mon{76}{対数の応用（Ⅱ）}
+$\log_{10}3=0.4771$ とする．$\left(\dfrac13\right)^n<10^{-10}$ をみたす最小の自然数 $n$ を求めよ．
+
+\mon{77}{指数・対数関数の最大・最小}
+\begin{enumerate}
+\item $0\leqq x\leqq2$ のとき，$y=4^x-2^{x+2}+5$ の最大値と最小値を求めよ．
+\item $1\leqq x\leqq8$ のとき，$y=(\log_2x)^2-\log_2x^2$ の最大値と最小値を求めよ．
+\end{enumerate}
+
+\mon{78}{大小比較（Ⅰ）}
+3つの数 $\sqrt2,\ \sqrt[3]3,\ \sqrt[6]6$ を小さい順に並べよ．
+
+\mon{79}{大小比較（Ⅱ）}
+3つの数 $\log_23,\ \log_34,\ \dfrac32$ を小さい順に並べよ．
+
+\mon{80}{常用対数の値の評価}
+$2^{10}=1024$，$2^3=8$ であることを用いて，$0.3<\log_{10}2<\dfrac13$ を示せ．
+
+\shou{第6章}{微分法と積分法}
+\mon{81}{極限（Ⅰ）}
+次の極限値を求めよ．
+\[\text{(1)}\ \ \lim_{x\to2}\frac{x^2-4}{x-2}\qquad\qquad\text{(2)}\ \ \lim_{x\to1}\frac{x^3-1}{x^2-1}\]
+
+\mon{82}{極限（Ⅱ）}
+$\displaystyle\lim_{x\to1}\frac{x^2+ax+b}{x-1}=3$ が成りたつように，定数 $a,\ b$ の値を定めよ．
+
+\mon{83}{導関数}
+\begin{enumerate}
+\item 導関数の定義にしたがって，$f(x)=x^3$ の導関数を求めよ．
+\item $y=(2x-1)(x^2+3)$ を微分せよ．
+\end{enumerate}
+
+\mon{84}{微分係数}
+$f(x)=x^3-2x$ について，$x=2$ における微分係数 $f'(2)$ を，定義にしたがって求めよ．
+
+\mon{85}{平均変化率と微分係数}
+$f(x)=x^2+x$ について，
+\begin{enumerate}
+\item $x$ が1から $1+h$ まで変化するときの平均変化率を求めよ．また，それを用いて $f'(1)$ を求めよ．
+\item $x$ が0から2まで変化するときの平均変化率と，$f'(c)$ が等しくなるような $c$ の値を求めよ．
+\end{enumerate}
+
+\mon{86}{接線（Ⅰ）}
+曲線 $y=x^3-3x$ 上の点 $(2,\ 2)$ における接線と法線の方程式を求めよ．
+
+\mon{87}{接線（Ⅱ）}
+点 $(1,\ -3)$ から放物線 $y=x^2$ にひいた接線の方程式を求めよ．
+
+\mon{88}{関数決定（Ⅰ）}
+2次関数 $f(x)=ax^2+bx+c$ が，$f(1)=2$，$f'(1)=1$，$f'(0)=-3$ をみたすとき，$f(x)$ を求めよ．
+
+\mon{89}{3次関数のグラフ}
+関数 $y=x^3-3x^2-9x+5$ の増減を調べ，極値を求めよ．また，グラフの概形をかけ．
+
+\mon{90}{共通接線}
+2つの放物線 $y=x^2$，$y=-x^2+4x-4$ の両方に接する直線の方程式を求めよ．
+
+\mon{91}{関数決定（Ⅱ）}
+3次関数 $f(x)=x^3+ax^2+bx+c$ が，$x=-1$ で極大値5をとり，$x=1$ で極小値をとる．$a,\ b,\ c$ の値と極小値を求めよ．
+
+\mon{92}{極値をもつための条件}
+関数 $f(x)=x^3+ax^2+3x$ が極値をもつような定数 $a$ の値の範囲を求めよ．
+
+\mon{93}{最大・最小}
+$0\leqq x\leqq4$ のとき，関数 $f(x)=x^3-6x^2+9x$ の最大値と最小値を求めよ．
+
+\mon{94}{最大値・最小値の図形への応用}
+1辺12\,cm の正方形の厚紙の四隅から，1辺 $x$\,cm の正方形を切り取り，残りを折り曲げてふたのない箱をつくる．箱の容積 $V$ の最大値と，そのときの $x$ の値を求めよ．
+
+\mon{95}{微分法の方程式への応用}
+3次方程式 $x^3-3x-a=0$ の異なる実数解の個数を，定数 $a$ の値によって調べよ．
+
+\mon{96}{接線の本数}
+点 $(2,\ b)$ から曲線 $y=x^3-3x$ に3本の接線がひけるような定数 $b$ の値の範囲を求めよ．
+
+\mon{97}{微分法の不等式への応用（Ⅰ）}
+$x\geqq0$ のとき，不等式 $x^3+4\geqq3x^2$ が成りたつことを示せ．
+
+\mon{98}{微分法の不等式への応用（Ⅱ）}
+$x\geqq0$ をみたすすべての $x$ について $x^3-3x+a\geqq0$ が成りたつような定数 $a$ の値の範囲を求めよ．
+
+\mon{99}{不定積分（Ⅰ）}
+次の不定積分を求めよ．
+\[\text{(1)}\ \ \int(3x^2-4x+1)\,dx\qquad\qquad\text{(2)}\ \ \int(2x+1)(x-3)\,dx\]
+
+\mon{100}{不定積分（Ⅱ）}
+\begin{enumerate}
+\item $F'(x)=6x^2-2x$，$F(1)=3$ をみたす関数 $F(x)$ を求めよ．
+\item 不定積分 $\displaystyle\int(2x+3)^3\,dx$ を求めよ．
+\end{enumerate}
+
+\mon{101}{定積分}
+次の定積分を求めよ．
+\[\text{(1)}\ \ \int_0^3(x^2-2x+3)\,dx\qquad\qquad\text{(2)}\ \ \int_{-2}^{2}(x^3+3x^2-x+1)\,dx\]
+
+\mon{102}{絶対値記号のついた関数の定積分}
+次の定積分を求めよ．
+\[\text{(1)}\ \ \int_0^3|x-1|\,dx\qquad\qquad\text{(2)}\ \ \int_0^3|x^2-x-2|\,dx\]
+
+\mon{103}{定積分で表された関数（Ⅰ）}
+等式 $f(x)=x^2+2\displaystyle\int_0^1f(t)\,dt$ をみたす関数 $f(x)$ を求めよ．
+
+\mon{104}{定積分で表された関数（Ⅱ）}
+等式 $\displaystyle\int_a^xf(t)\,dt=x^2-3x+2$ をみたす関数 $f(x)$ と定数 $a$ の値を求めよ．
+
+\mon{105}{面積（Ⅰ）}
+放物線 $y=x^2-2x$ と $x$ 軸で囲まれた部分の面積を求めよ．
+
+\mon{106}{面積（Ⅱ）}
+放物線 $y=x^2$ と直線 $y=x+2$ で囲まれた部分の面積を求めよ．
+
+\mon{107}{面積（Ⅲ）}
+2つの放物線 $y=x^2$，$y=-x^2+4x$ で囲まれた部分の面積を求めよ．
+
+\mon{108}{面積（Ⅳ）}
+放物線 $y=x^2$ 上の点 $(-1,\ 1)$，$(2,\ 4)$ における接線をそれぞれ $\ell_1$，$\ell_2$ とする．放物線と $\ell_1$，$\ell_2$ で囲まれた部分の面積を求めよ．
+
+\mon{109}{面積（Ⅴ）}
+曲線 $y=x^3-3x$ 上の点 $(1,\ -2)$ における接線と，この曲線で囲まれた部分の面積を求めよ．
+
+\mon{110}{面積（Ⅵ）}
+放物線 $y=2x-x^2$ と $x$ 軸で囲まれた部分の面積を，原点を通る直線 $y=mx$ が2等分するとき，定数 $m$ の値を求めよ．
+
+\shou{第7章}{数列}
+\mon{111}{等差数列（Ⅰ）}
+第5項が11，第12項が32である等差数列 $\{a_n\}$ の初項，公差，一般項を求めよ．
+
+\mon{112}{等差数列（Ⅱ）}
+\begin{enumerate}
+\item 初項2，公差3の等差数列の初項から第20項までの和を求めよ．
+\item 3桁の自然数のうち，7の倍数の個数とその総和を求めよ．
+\end{enumerate}
+
+\mon{113}{等差数列（Ⅲ）}
+初項47，公差 $-3$ の等差数列 $\{a_n\}$ について，
+\begin{enumerate}
+\item 初めて負になるのは第何項か．
+\item 初項から第 $n$ 項までの和 $S_n$ が最大となる $n$ と，そのときの $S_n$ を求めよ．
+\end{enumerate}
+
+\mon{114}{等差数列（Ⅳ）}
+等差数列をなす3つの数があり，その和は15，積は80である．この3つの数を求めよ．
+
+\mon{115}{等比数列（Ⅰ）}
+第2項が6，第5項が162である等比数列 $\{a_n\}$ の一般項を求めよ．ただし，公比は実数とする．
+
+\mon{116}{等比数列（Ⅱ）}
+初項3，公比2の等比数列について，
+\begin{enumerate}
+\item 初項から第10項までの和を求めよ．
+\item 初項から第 $n$ 項までの和が初めて1000を超えるのは，$n$ がいくつのときか．
+\end{enumerate}
+
+\mon{117}{等差中項・等比中項}
+3つの数 $a,\ 4,\ b$ はこの順に等差数列をなし，3つの数 $4,\ b,\ a$ はこの順に等比数列をなす．$a,\ b$ の値を求めよ．
+
+\mon{118}{$\Sigma$ 記号を用いた和の計算（Ⅰ）}
+次の和を求めよ．
+\[\text{(1)}\ \ \sum_{k=1}^n(2k-1)\qquad\qquad\text{(2)}\ \ \sum_{k=1}^nk(k+1)\]
+
+\mon{119}{$\Sigma$ 記号を用いた和の計算（Ⅱ）}
+次の和を求めよ．
+\[\text{(1)}\ \ \sum_{k=1}^n3^k\qquad\qquad\text{(2)}\ \ \sum_{k=1}^n(k^2+2^k)\]
+
+\mon{120}{$\Sigma$ 記号を用いた和の計算（Ⅲ）}
+次の和を求めよ．
+\[\text{(1)}\ \ \sum_{k=1}^n\frac1{k(k+1)}\qquad\qquad\text{(2)}\ \ \sum_{k=1}^n\frac1{(2k-1)(2k+1)}\]
+
+\mon{121}{$\Sigma$ 記号を用いた和の計算（Ⅳ）}
+$S_n=1\cdot2+2\cdot2^2+3\cdot2^3+\cdots+n\cdot2^n$ を求めよ．
+
+\mon{122}{階差数列}
+数列 $1,\ 2,\ 5,\ 10,\ 17,\ 26,\ \cdots$ の一般項 $a_n$ を求めよ．
+
+\mon{123}{2項間の漸化式（Ⅰ）}
+$a_1=3$，$a_{n+1}=a_n+4n$ で定められる数列 $\{a_n\}$ の一般項を求めよ．
+
+\mon{124}{2項間の漸化式（Ⅱ）}
+$a_1=1$，$a_{n+1}=3a_n+2$ で定められる数列 $\{a_n\}$ の一般項を求めよ．
+
+\mon{125}{2項間の漸化式（Ⅲ）}
+$a_1=1$，$a_{n+1}=2a_n+3^n$ で定められる数列 $\{a_n\}$ について，$b_n=\dfrac{a_n}{3^n}$ とおくことにより，一般項 $a_n$ を求めよ．
+
+\mon{126}{2項間の漸化式（Ⅳ）}
+$a_1=1$，$a_{n+1}=\dfrac{a_n}{2a_n+1}$ で定められる数列 $\{a_n\}$ の一般項を求めよ．
+
+\mon{127}{2項間の漸化式（Ⅴ）}
+$a_1=1$，$a_{n+1}=2a_n+n$ で定められる数列 $\{a_n\}$ について，
+\begin{enumerate}
+\item $a_{n+1}+\alpha(n+1)+\beta=2(a_n+\alpha n+\beta)$ をみたす定数 $\alpha,\ \beta$ を求めよ．
+\item 一般項 $a_n$ を求めよ．
+\end{enumerate}
+
+\mon{128}{和と一般項}
+初項から第 $n$ 項までの和 $S_n$ が $S_n=n^2+2n+1$ で表される数列 $\{a_n\}$ の一般項を求めよ．
+
+\mon{129}{3項間の漸化式}
+$a_1=1$，$a_2=3$，$a_{n+2}=4a_{n+1}-3a_n$ で定められる数列 $\{a_n\}$ の一般項を求めよ．
+
+\mon{130}{連立型漸化式}
+$a_1=1$，$b_1=2$，$a_{n+1}=a_n+2b_n$，$b_{n+1}=2a_n+b_n$ で定められる数列 $\{a_n\}$，$\{b_n\}$ の一般項を求めよ．
+
+\mon{131}{群数列（Ⅰ）}
+自然数を次のように群に分ける．
+\[1\ |\ 2,\ 3\ |\ 4,\ 5,\ 6\ |\ 7,\ 8,\ 9,\ 10\ |\ 11,\ \cdots\]
+\begin{enumerate}
+\item 第 $n$ 群の最初の数を $n$ で表せ．
+\item 100 は第何群の何番目の数か．
+\end{enumerate}
+
+\mon{132}{群数列（Ⅱ）}
+数列 $\dfrac11,\ \dfrac12,\ \dfrac22,\ \dfrac13,\ \dfrac23,\ \dfrac33,\ \dfrac14,\ \cdots$ について，
+\begin{enumerate}
+\item 第50項を求めよ．\qquad (2)\ 初項から第50項までの和を求めよ．
+\end{enumerate}
+
+\mon{133}{格子点の個数}
+$n$ を自然数とする．連立不等式 $x\geqq0$，$y\geqq0$，$x+2y\leqq2n$ の表す領域に含まれる格子点（$x$ 座標，$y$ 座標がともに整数である点）の個数を求めよ．
+
+\mon{134}{漸化式の応用}
+平面上に $n$ 本の直線があり，どの2本も平行でなく，どの3本も1点で交わらない．これらの直線によって平面が $a_n$ 個の部分に分けられるとき，
+\begin{enumerate}
+\item $a_{n+1}$ を $a_n$ を用いて表せ．\qquad (2)\ $a_n$ を求めよ．
+\end{enumerate}
+
+\mon{135}{場合の数と漸化式}
+縦1，横 $n$ の長方形のすきまを，縦1横1のタイルと縦1横2のタイルで埋める方法の数を $a_n$ とする．
+\begin{enumerate}
+\item $a_1,\ a_2$ を求め，$a_{n+2}$ を $a_{n+1},\ a_n$ で表せ．
+\item $a_8$ を求めよ．
+\end{enumerate}
+
+\mon{136}{確率と漸化式}
+1個のサイコロを $n$ 回投げるとき，1の目が出る回数が偶数回（0回を含む）である確率を $p_n$ とする．
+\begin{enumerate}
+\item $p_{n+1}$ を $p_n$ で表せ．\qquad (2)\ $p_n$ を求めよ．
+\end{enumerate}
+
+\mon{137}{数学的帰納法（Ⅰ）}
+すべての自然数 $n$ について，次の等式が成りたつことを数学的帰納法で示せ．
+\[1\cdot2+2\cdot3+3\cdot4+\cdots+n(n+1)=\frac{n(n+1)(n+2)}3\]
+
+\mon{138}{数学的帰納法（Ⅱ）}
+$n\geqq5$ をみたすすべての自然数 $n$ について，$2^n>n^2$ が成りたつことを数学的帰納法で示せ．
+
+\shou{第8章}{ベクトル}
+\mon{139}{$m\vec a+n\vec b$}
+$\vec a=(2,\ 1)$，$\vec b=(-1,\ 3)$ のとき，$\vec c=(7,\ 0)$ を $m\vec a+n\vec b$ の形で表せ．
+
+\mon{140}{分点の位置ベクトル}
+2点 A，B の位置ベクトルを $\vec a$，$\vec b$ とする．線分 AB を $2:3$ に内分する点 P，外分する点 Q の位置ベクトルを $\vec a,\ \vec b$ で表せ．
+
+\mon{141}{3点が一直線上にある条件}
+3点 $\mathrm A(1,\ 2)$，$\mathrm B(3,\ 5)$，$\mathrm C(x,\ 11)$ が一直線上にあるように，$x$ の値を定めよ．
+
+\mon{142}{三角形の重心の位置ベクトル}
+$\triangle\mathrm{ABC}$ の重心を G とする．A，B，C，G の位置ベクトルを $\vec a,\ \vec b,\ \vec c,\ \vec g$ とするとき，$\vec g=\dfrac{\vec a+\vec b+\vec c}3$ であることを用いて，$\overrightarrow{\mathrm{GA}}+\overrightarrow{\mathrm{GB}}+\overrightarrow{\mathrm{GC}}=\vec0$ を示せ．
+
+\mon{143}{ベクトルの成分}
+$\vec a=(3,\ -4)$，$\vec b=(1,\ 2)$ のとき，
+\begin{enumerate}
+\item $|\vec a|$ と，$\vec a$ と同じ向きの単位ベクトルを求めよ．
+\item $2\vec a-3\vec b$ の成分を求めよ．
+\end{enumerate}
+
+\mon{144}{平行条件}
+$\vec a=(2,\ x)$，$\vec b=(x+1,\ 3)$ が平行になるように，$x$ の値を定めよ．
+
+\mon{145}{ベクトルの大きさ（Ⅰ）}
+$|\vec a|=2$，$|\vec b|=3$，$\vec a\cdot\vec b=-2$ のとき，$|\vec a+2\vec b|$ を求めよ．
+
+\mon{146}{ベクトルの大きさ（Ⅱ）}
+$\vec a=(3,\ 1)$，$\vec b=(1,\ 1)$ とする．実数 $t$ が変化するとき，$|\vec a+t\vec b|$ の最小値と，そのときの $t$ の値を求めよ．
+
+\mon{147}{角の2等分ベクトルの扱い（Ⅰ）}
+$\triangle\mathrm{OAB}$ において，$\overrightarrow{\mathrm{OA}}=\vec a$，$\overrightarrow{\mathrm{OB}}=\vec b$，$|\vec a|=2$，$|\vec b|=3$ とする．$\angle\mathrm{AOB}$ の2等分線と辺 AB の交点を D とするとき，$\overrightarrow{\mathrm{OD}}$ を $\vec a,\ \vec b$ で表せ．
+
+\mon{148}{角の2等分ベクトルの扱い（Ⅱ）}
+$\angle\mathrm{AOB}=90^\circ$，$\mathrm{OA}=3$，$\mathrm{OB}=4$ の直角三角形 OAB の内心を I とする．$\overrightarrow{\mathrm{OA}}=\vec a$，$\overrightarrow{\mathrm{OB}}=\vec b$ とするとき，$\overrightarrow{\mathrm{OI}}$ を $\vec a,\ \vec b$ で表せ．
+
+\mon{149}{$l\overrightarrow{\mathrm{PA}}+m\overrightarrow{\mathrm{PB}}+n\overrightarrow{\mathrm{PC}}=\vec0$}
+$\triangle\mathrm{ABC}$ と点 P が $2\overrightarrow{\mathrm{PA}}+3\overrightarrow{\mathrm{PB}}+4\overrightarrow{\mathrm{PC}}=\vec0$ をみたしている．
+\begin{enumerate}
+\item $\overrightarrow{\mathrm{AP}}$ を $\overrightarrow{\mathrm{AB}},\ \overrightarrow{\mathrm{AC}}$ で表し，点 P の位置を説明せよ．
+\item $\triangle\mathrm{PBC}:\triangle\mathrm{PCA}:\triangle\mathrm{PAB}$ を求めよ．
+\end{enumerate}
+
+\mon{150}{内積（Ⅰ）}
+\begin{enumerate}
+\item $|\vec a|=2$，$|\vec b|=3$ で，$\vec a$ と $\vec b$ のなす角が $60^\circ$ のとき，内積 $\vec a\cdot\vec b$ を求めよ．
+\item $\vec a=(1,\ \sqrt3)$，$\vec b=(\sqrt3,\ 1)$ のなす角 $\theta$ を求めよ．
+\end{enumerate}
+
+\mon{151}{内積（Ⅱ）}
+\begin{enumerate}
+\item $\vec a=(2,\ 3)$，$\vec b=(x,\ -4)$ が垂直になるように，$x$ の値を定めよ．
+\item $\vec c=(3,\ 4)$ に垂直な単位ベクトルを求めよ．
+\end{enumerate}
+
+\mon{152}{内積（Ⅲ）}
+$\overrightarrow{\mathrm{OA}}=(3,\ 1)$，$\overrightarrow{\mathrm{OB}}=(1,\ 2)$ のとき，$\triangle\mathrm{OAB}$ の面積を，内積を用いた公式 $S=\dfrac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}$ で求めよ．
+
+\mon{153}{内積（Ⅳ）}
+$|\vec a|=1$，$|\vec b|=2$，$|\vec a-\vec b|=\sqrt3$ のとき，$\vec a\cdot\vec b$ と，$\vec a,\ \vec b$ のなす角を求めよ．
+
+\mon{154}{正射影ベクトル}
+$\vec a=(4,\ 2)$ の $\vec b=(3,\ 1)$ 上への正射影ベクトル（$\vec a$ の終点から $\vec b$ を含む直線に下ろした垂線の足を終点とするベクトル）を求めよ．
+
+\mon{155}{ベクトル方程式（Ⅰ）}
+\begin{enumerate}
+\item 点 $\mathrm A(1,\ 2)$ を通り，$\vec u=(3,\ -1)$ に平行な直線を媒介変数 $t$ で表し，$t$ を消去した方程式を求めよ．
+\item 点 $(2,\ -1)$ を通り，$\vec n=(2,\ 3)$ に垂直な直線の方程式を求めよ．
+\end{enumerate}
+
+\mon{156}{ベクトル方程式（Ⅱ）}
+2点 $\mathrm A(1,\ 0)$，$\mathrm B(3,\ 4)$ に対し，$(\vec p-\vec a)\cdot(\vec p-\vec b)=0$ をみたす点 $\mathrm P(\vec p)$ の全体はどのような図形か．中心と半径を答えよ．
+
+\mon{157}{軌跡（Ⅰ）}
+$\triangle\mathrm{OAB}$ において，$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$ とする．$s,\ t$ が次の条件をみたして動くとき，点 P の存在範囲を答えよ．
+\[\text{(1)}\ \ s+t=1,\ s\geqq0,\ t\geqq0\qquad\qquad\text{(2)}\ \ s+t=2,\ s\geqq0,\ t\geqq0\]
+
+\mon{158}{軌跡（Ⅱ）}
+面積が3の $\triangle\mathrm{OAB}$ において，$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$，$s\geqq0$，$t\geqq0$，$1\leqq s+t\leqq2$ のとき，点 P の存在範囲の面積を求めよ．
+
+\mon{159}{ベクトルと図形}
+平行四辺形 OACB において，$\overrightarrow{\mathrm{OA}}=\vec a$，$\overrightarrow{\mathrm{OB}}=\vec b$ とする．対角線 OC と AB が垂直であるための必要十分条件は $|\vec a|=|\vec b|$ であることを示せ．
+
+\mon{160}{空間座標}
+2点 $\mathrm A(1,\ 2,\ 3)$，$\mathrm B(4,\ -2,\ 3)$ について，
+\begin{enumerate}
+\item 線分 AB の長さと中点の座標を求めよ．
+\item $y$ 軸上にあって，A，B から等距離にある点の座標を求めよ．
+\end{enumerate}
+
+\mon{161}{空間ベクトル}
+$\vec a=(1,\ 2,\ -2)$，$\vec b=(2,\ 0,\ 1)$ について，
+\begin{enumerate}
+\item $|\vec a|$ と $\vec a\cdot\vec b$ を求めよ．
+\item $\vec a$，$\vec b$ の両方に垂直で，大きさが3のベクトルを求めよ．
+\end{enumerate}
+
+\mon{162}{三角形の面積}
+3点 $\mathrm A(1,\ 0,\ 0)$，$\mathrm B(0,\ 2,\ 0)$，$\mathrm C(0,\ 0,\ 2)$ を頂点とする $\triangle\mathrm{ABC}$ の面積を求めよ．
+
+\mon{163}{直方体}
+直方体 ABCD-EFGH において，$\mathrm{AB}=2$，$\mathrm{AD}=1$，$\mathrm{AE}=1$ とする．A を原点，$\overrightarrow{\mathrm{AB}}$，$\overrightarrow{\mathrm{AD}}$，$\overrightarrow{\mathrm{AE}}$ の向きをそれぞれ $x$ 軸，$y$ 軸，$z$ 軸の正の向きとして座標を定める．対角線 AG と BH のなす角を $\theta$ とするとき，$\cos\theta$ を求めよ．
+
+\mon{164}{四面体（Ⅰ）}
+四面体 OABC において，$\overrightarrow{\mathrm{OA}}=\vec a$，$\overrightarrow{\mathrm{OB}}=\vec b$，$\overrightarrow{\mathrm{OC}}=\vec c$ とする．$\triangle\mathrm{ABC}$ の重心を G，$\triangle\mathrm{OBC}$ の重心を Q とし，線分 OG を $3:1$ に内分する点を P とする．
+\begin{enumerate}
+\item $\overrightarrow{\mathrm{OP}}$ を $\vec a,\ \vec b,\ \vec c$ で表せ．
+\item 3点 A，P，Q は一直線上にあることを示し，$\mathrm{AP}:\mathrm{PQ}$ を求めよ．
+\end{enumerate}
+
+\mon{165}{四面体（Ⅱ）}
+四面体 OABC において，$\overrightarrow{\mathrm{OA}}=\vec a$，$\overrightarrow{\mathrm{OB}}=\vec b$，$\overrightarrow{\mathrm{OC}}=\vec c$ とし，$\overrightarrow{\mathrm{OD}}=\dfrac12\vec a+\dfrac13\vec b+\vec c$ で定まる点 D をとる．直線 OD と平面 ABC の交点を X とするとき，$\overrightarrow{\mathrm{OX}}$ を $\vec a,\ \vec b,\ \vec c$ で表せ．
+
+\mon{166}{垂線の足のベクトル}
+3点 $\mathrm A(2,\ 0,\ 0)$，$\mathrm B(0,\ 2,\ 0)$，$\mathrm C(0,\ 0,\ 1)$ を通る平面を $\alpha$ とする．原点 O から $\alpha$ に下ろした垂線の足 H の座標と，OH の長さを求めよ．
+
+\mon{167}{空間ベクトルにおける幾何の活用}
+正四面体 OABC において，$\overrightarrow{\mathrm{OA}}=\vec a$，$\overrightarrow{\mathrm{OB}}=\vec b$，$\overrightarrow{\mathrm{OC}}=\vec c$ とする．内積を用いて，$\mathrm{OA}\perp\mathrm{BC}$ であることを示せ．
+
+\mon{168}{球と直線}
+球面 $S:\ (x-1)^2+(y+2)^2+(z-2)^2=9$ について，
+\begin{enumerate}
+\item $S$ が $xy$ 平面と交わってできる円の中心と半径を求めよ．
+\item $S$ と $x$ 軸の交点の座標を求めよ．
+\end{enumerate}
+
+\shou{第9章}{統計的な推測}
+{\small 第9章の必要な箇所では，標準正規分布 $Z$ について次の値を用いてよい．\\
+$P(0\leqq Z\leqq1)=0.3413$，\ $P(0\leqq Z\leqq1.5)=0.4332$，\ $P(0\leqq Z\leqq1.96)=0.4750$，\ $P(0\leqq Z\leqq2)=0.4772$\par}
+
+\mon{169}{確率変数と確率分布}
+1，2，3，3 の数字が書かれた4枚のカードから同時に2枚を取り出し，その数字の和を $X$ とする．$X$ の確率分布を求めよ．
+
+\mon{170}{確率変数の期待値}
+類題169の確率変数 $X$ の期待値 $E(X)$ を求めよ．
+
+\mon{171}{確率変数の変換後の期待値}
+類題169の $X$ に対して $Y=2X-3$ とする．$E(Y)$ を求めよ．
+
+\mon{172}{確率変数の分散・標準偏差}
+類題169の $X$ の分散 $V(X)$ と標準偏差 $\sigma(X)$ を求めよ．
+
+\mon{173}{確率変数の変換後の分散・標準偏差}
+類題169の $X$ に対して $Y=2X-3$ とする．$V(Y)$ と $\sigma(Y)$ を求めよ．
+
+\mon{174}{2つの確率変数が独立であるときの積の期待値}
+1個のサイコロと1枚の硬貨を同時に投げる．サイコロの目を $X$，硬貨が表なら $Y=1$，裏なら $Y=0$ とする．$E(X+Y)$ と $E(XY)$ を求めよ．
+
+\mon{175}{2つの確率変数が独立であるときの分散}
+類題174の $X,\ Y$ について，$V(X)$，$V(Y)$，$V(X+Y)$ を求めよ．
+
+\mon{176}{二項分布の期待値・分散・標準偏差}
+1個のサイコロを180回投げるとき，1の目が出る回数を $X$ とする．$X$ の期待値，分散，標準偏差を求めよ．
+
+\mon{177}{確率密度関数}
+確率変数 $X$ のとる値の範囲が $0\leqq X\leqq2$ で，確率密度関数が $f(x)=ax$ であるとする．
+\begin{enumerate}
+\item 定数 $a$ の値を求めよ．\qquad (2)\ $P(1\leqq X\leqq2)$ を求めよ．\qquad (3)\ $E(X)$ を求めよ．
+\end{enumerate}
+
+\mon{178}{正規分布}
+確率変数 $X$ が正規分布 $N(50,\ 10^2)$ にしたがうとき，次の確率を求めよ．
+\[\text{(1)}\ \ P(X\geqq65)\qquad\qquad\text{(2)}\ \ P(40\leqq X\leqq70)\]
+
+\mon{179}{二項分布の正規近似}
+1枚の硬貨を400回投げるとき，表が220回以上出る確率を，正規分布で近似して求めよ．
+
+\mon{180}{標本平均と正規分布}
+母平均60，母標準偏差12の母集団から大きさ36の無作為標本を抽出する．標本平均 $\overline X$ について，
+\begin{enumerate}
+\item $\overline X$ の期待値と標準偏差を求めよ．
+\item $P(\overline X\geqq63)$ を正規分布で近似して求めよ．
+\end{enumerate}
+
+\mon{181}{母平均の推定}
+ある工場で作る製品から100個を無作為に抽出して重さを測ったところ，平均値が 52.0\,g であった．母標準偏差を 10\,g として，製品の重さの母平均に対する信頼度95\,\% の信頼区間を求めよ．
+
+\mon{182}{母比率の推定}
+ある地域の有権者から400人を無作為に抽出して調査したところ，240人がある政策に賛成であった．この地域の賛成者の母比率 $p$ に対する信頼度95\,\% の信頼区間を求めよ．ただし，$\sqrt6=2.449$ とし，小数第3位まで求めよ．
+
+\mon{183}{仮説検定}
+1枚の硬貨を400回投げたところ，表が220回出た．この硬貨は表と裏の出やすさが等しいといえるか．有意水準5\,\% で両側検定せよ．
+
+\clearpage
+{\sffamily\bfseries\Huge 解答\par}\vspace{4pt}\hrule height 1.5pt
+\shouans{第1章}{式と証明}
+\ans{1}{3次式の展開}
+\begin{kai}
+(1)\ $8x^3-12x^2y+6xy^2-y^3$\qquad
+(2)\ \point{$(a+b)(a^2-ab+b^2)=a^3+b^3$}\quad $a^3+8$\\[2pt]
+(3)\ $(x-1)(x^2+x+1)=x^3-1$ より $(x^3-1)(x^3+1)=x^6-1$
+\end{kai}
+
+\ans{2}{3次式の因数分解}
+\begin{kai}
+(1)\ $(3x)^3-2^3=(3x-2)(9x^2+6x+4)$\qquad
+(2)\ $(x+2y)^3$\\[2pt]
+(3)\ $(x^3-8)(x^3+8)=(x-2)(x^2+2x+4)(x+2)(x^2-2x+4)$
+\end{kai}
+
+\ans{3}{パスカルの三角形}
+\begin{kai}
+各段は 1 / 1\ 1 / 1\ 2\ 1 / 1\ 3\ 3\ 1 / 1\ 4\ 6\ 4\ 1 / 1\ 5\ 10\ 10\ 5\ 1\quad（両端は1，それ以外は左上と右上の和）\\
+$(a+b)^5=a^5+5a^4b+10a^3b^2+10a^2b^3+5ab^4+b^5$
+\end{kai}
+
+\ans{4}{2項定理・多項定理}
+\begin{kai}
+(1)\ 一般項 ${}_6\mathrm C_r(2x)^{6-r}(-1)^r$．$6-r=4$ より $r=2$．\quad ${}_6\mathrm C_2\cdot2^4\cdot(-1)^2=240$\\[2pt]
+(2)\ 一般項 ${}_6\mathrm C_r(x^2)^{6-r}\left(-\dfrac2x\right)^r={}_6\mathrm C_r(-2)^rx^{12-3r}$．$r=4$ のとき定数項．\quad ${}_6\mathrm C_4\cdot16=240$\\[2pt]
+(3)\ \point{$\dfrac{n!}{p!\,q!\,r!}a^pb^qc^r$}\quad $\dfrac{5!}{2!\,1!\,2!}\cdot1\cdot1\cdot2^2=30\cdot4=120$
+\end{kai}
+
+\ans{5}{整式のわり算}
+\begin{kai}
+(1)\ 商 $2x-1$，余り $-x-3$\quad（$(x^2-x+2)(2x-1)+(-x-3)$ で検算）\\[2pt]
+(2)\ \point{$A=(\text{わる式})\times(\text{商})+(\text{余り})$}\quad $A=(x+2)(x^2-3)+5=x^3+2x^2-3x-1$
+\end{kai}
+
+\ans{6}{分数式の計算}
+\begin{kai}
+(1)\ \point{前から順に通分する}\quad $\dfrac1{x-1}-\dfrac1{x+1}=\dfrac{2}{x^2-1}$，\quad $\dfrac2{x^2-1}-\dfrac2{x^2+1}=\dfrac{4}{x^4-1}$\\[2pt]
+(2)\ $\dfrac{(x-3)(x+2)}{(x+2)(x-2)}\times\dfrac{(x+1)(x+2)}{(x+3)(x-3)}=\dfrac{(x+1)(x+2)}{(x-2)(x+3)}$
+\end{kai}
+
+\ans{7}{繁分数式の計算}
+\begin{kai}
+(1)\ \point{内側から計算する}\quad $1-\dfrac1x=\dfrac{x-1}x$，\quad $\dfrac1{1-\frac1x}=\dfrac{x}{x-1}$，\quad $1-\dfrac x{x-1}=\dfrac{-1}{x-1}$．\quad 与式 $=-(x-1)=1-x$\\[2pt]
+(2)\ 分母・分子に $x^2y^2$ をかけて\quad $\dfrac{xy^2-x^2y}{y^2-x^2}=\dfrac{xy(y-x)}{(y-x)(y+x)}=\dfrac{xy}{x+y}$
+\end{kai}
+
+\ans{8}{式の値}
+\begin{kai}
+(1)\ $\left(x+\dfrac1x\right)^2-2=14$\qquad
+(2)\ $\left(x+\dfrac1x\right)^3-3\left(x+\dfrac1x\right)=64-12=52$\qquad
+(3)\ $\left(x+\dfrac1x\right)^2-4=12$
+\end{kai}
+
+\ans{9}{比例式（Ⅰ）}
+\begin{kai}
+\point{比例式は $=k$ とおく}\quad $x=2k$，$y=3k$，$z=4k$（$k\neq0$）．\\
+(1)\ $\dfrac{9k}{3k}=3$\qquad (2)\ $\dfrac{(6+12+8)k^2}{(4+9+16)k^2}=\dfrac{26}{29}$
+\end{kai}
+
+\ans{10}{比例式（Ⅱ）}
+\begin{kai}
+$b+c=ak$，$c+a=bk$，$a+b=ck$．辺々加えて $2(a+b+c)=k(a+b+c)$．\\
+\point{$a+b+c$ でわれるかどうかで場合分け}\\
+$a+b+c\neq0$ のとき $k=2$．\quad $a+b+c=0$ のとき $b+c=-a$ より $k=\dfrac{-a}{a}=-1$．\quad よって\quad $k=2,\ -1$
+\end{kai}
+
+\ans{11}{恒等式}
+\begin{kai}
+(1)\ 左辺を展開すると $ax^2+(2a+b)x+(a+b+c)$．係数を比較して $a=2$，$2a+b=-1$，$a+b+c=3$．\\
+\hspace*{1.5em}$a=2$，$b=-5$，$c=6$\\[2pt]
+(2)\ 右辺を通分した分子は $a(x+3)+b(x+1)$ で，これが1と恒等的に等しい．\\
+\hspace*{1.5em}$a+b=0$，$3a+b=1$ より\quad $a=\dfrac12$，$b=-\dfrac12$
+\end{kai}
+
+\ans{12}{等式の証明}
+\begin{kai}
+(1)\ \point{1文字を消去する}\quad $c=-(a+b)$ を代入すると\\
+\hspace*{1.5em}左辺 $=a^3+b^3-(a+b)^3=-3a^2b-3ab^2=-3ab(a+b)$，\quad 右辺 $=3ab\cdot\{-(a+b)\}=-3ab(a+b)$．よって成りたつ．\\[2pt]
+(2)\ $\dfrac ab=\dfrac cd=k$ とおくと $a=bk$，$c=dk$．\\
+\hspace*{1.5em}$\dfrac{a+c}{b+d}=\dfrac{k(b+d)}{b+d}=k$，\quad $\dfrac{a-2c}{b-2d}=\dfrac{k(b-2d)}{b-2d}=k$．よって成りたつ．
+\end{kai}
+
+\ans{13}{不等式の証明}
+\begin{kai}
+(1)\ \point{(左辺)$-$(右辺) を平方の和にする}\quad $x^2+y^2-2x-2y+2=(x-1)^2+(y-1)^2\geqq0$．\\
+\hspace*{1.5em}等号は $x=1$ かつ $y=1$ のとき．\\[2pt]
+(2)\ \point{相加平均と相乗平均の関係}\quad $x>0$，$\dfrac9x>0$ より $x+\dfrac9x\geqq2\sqrt{x\cdot\dfrac9x}=6$．\\
+\hspace*{1.5em}等号は $x=\dfrac9x$，すなわち $x=3$ のとき．\\[2pt]
+(3)\ \point{両辺が正なので2乗して比べる}\quad $(\sqrt a+\sqrt b)^2-(\sqrt{a+b})^2=2\sqrt{ab}>0$．\\
+\hspace*{1.5em}$\sqrt a+\sqrt b>0$，$\sqrt{a+b}>0$ だから\quad $\sqrt a+\sqrt b>\sqrt{a+b}$
+\end{kai}
+
+\shouans{第2章}{複素数と方程式}
+\ans{14}{2次方程式の解}
+\begin{kai}
+(1)\ $x^2=-4$ より\quad $x=\pm2i$\qquad
+(2)\ $x=\dfrac{1\pm\sqrt{1-3}}{3}=\dfrac{1\pm\sqrt2\,i}{3}$
+\end{kai}
+
+\ans{15}{複素数の計算（Ⅰ）}
+\begin{kai}
+\point{$i^2=-1$ として文字式と同様に計算}\\
+(1)\ $2-4i+3i-6i^2=8-i$\qquad (2)\ $9-6i+i^2=8-6i$\\[2pt]
+(3)\ \point{分母の共役複素数をかける}\quad $\dfrac{(1+i)^2}{(1-i)(1+i)}=\dfrac{2i}{2}=i$
+\end{kai}
+
+\ans{16}{複素数の計算（Ⅱ）}
+\begin{kai}
+(1)\ $(1+i)^2=2i$ より $(1+i)^8=(2i)^4=16$\\[2pt]
+(2)\ $x+yi=\dfrac{5+5i}{2-i}=\dfrac{(5+5i)(2+i)}{5}=(1+i)(2+i)=1+3i$．\quad $x=1$，$y=3$
+\end{kai}
+
+\ans{17}{解の判別（Ⅰ）}
+\begin{kai}
+$D=(k-1)^2-4(k+2)=k^2-6k-7=(k+1)(k-7)$\\
+$k<-1,\ 7<k$ のとき異なる2つの実数解，\quad $k=-1,\ 7$ のとき重解，\quad $-1<k<7$ のとき異なる2つの虚数解
+\end{kai}
+
+\ans{18}{解の判別（Ⅱ）}
+\begin{kai}
+①が虚数解をもつ：$\dfrac{D_1}4=a^2-4<0$ より $-2<a<2$．\quad ②が虚数解をもつ：$\dfrac{D_2}4=1-a<0$ より $a>1$．\\
+(1)\ \point{少なくとも一方 → 和集合}\quad $-2<a$\\[2pt]
+(2)\ \point{一方だけ → 和集合から共通部分 $1<a<2$ を除く}\quad $-2<a\leqq1,\ 2\leqq a$
+\end{kai}
+
+\ans{19}{$i$ を含んだ方程式（Ⅰ）}
+\begin{kai}
+左辺を整理して $(2x+y)+(x-3y)i=5-i$．$2x+y,\ x-3y$ は実数だから\\
+\point{複素数の相等：実部と虚部をそれぞれ比較}\quad $2x+y=5$，$x-3y=-1$．\quad $x=2$，$y=1$
+\end{kai}
+
+\ans{20}{$i$ を含んだ方程式（Ⅱ）}
+\begin{kai}
+実数解を $x$ とすると $(x^2-2x+1)+(a-x)i=0$．$x,\ a$ は実数だから $x^2-2x+1=0$，$a-x=0$．\\
+$(x-1)^2=0$ より $x=1$，$a=1$．\quad $a=1$，実数解は $x=1$
+\end{kai}
+
+\ans{21}{解と係数の関係（Ⅰ）}
+\begin{kai}
+$\alpha+\beta=3$，$\alpha\beta=5$\\
+(1)\ $(\alpha+\beta)^2-2\alpha\beta=9-10=-1$\qquad
+(2)\ $(\alpha+\beta)^3-3\alpha\beta(\alpha+\beta)=27-45=-18$\\[2pt]
+(3)\ $\dfrac{\alpha+\beta}{\alpha\beta}=\dfrac35$\qquad
+(4)\ $\alpha\beta-(\alpha+\beta)+1=5-3+1=3$
+\end{kai}
+
+\ans{22}{解と係数の関係（Ⅱ）}
+\begin{kai}
+\point{2数 $p,\ q$ を解とする2次方程式は $x^2-(p+q)x+pq=0$}\\
+(1)\ 和 $(\alpha+\beta)+2=5$，積 $\alpha\beta+(\alpha+\beta)+1=9$．\quad $x^2-5x+9=0$\\[2pt]
+(2)\ 和 $\alpha^2+\beta^2=-1$，積 $(\alpha\beta)^2=25$．\quad $x^2+x+25=0$
+\end{kai}
+
+\ans{23}{虚数解}
+\begin{kai}
+\point{実数係数の方程式では，共役な複素数も解になる}\quad 他の解は $2-3i$．\\
+解と係数の関係より $-a=(2+3i)+(2-3i)=4$，$b=(2+3i)(2-3i)=13$．\quad $a=-4$，$b=13$，他の解 $2-3i$
+\end{kai}
+
+\ans{24}{剰余の定理（Ⅰ）}
+\begin{kai}
+\point{$P(x)$ を $x-a$ でわった余りは $P(a)$}\quad $P(2)=8-8+2a+3=5$ より\quad $a=1$
+\end{kai}
+
+\ans{25}{剰余の定理（Ⅱ）}
+\begin{kai}
+2次式でわった余りは1次以下なので，$P(x)=(x-1)(x+2)Q(x)+ax+b$ とおける．\\
+$P(1)=a+b=3$，$P(-2)=-2a+b=-6$ より $a=3$，$b=0$．\quad 余りは\quad $3x$
+\end{kai}
+
+\ans{26}{剰余の定理（Ⅲ）}
+\begin{kai}
+\point{$(x-1)^2$ でわった余りを利用して余りの形を決める}\\
+$P(x)=(x-1)^2(x+1)Q(x)+c(x-1)^2+2x+1$ とおける．$P(-1)=4c-1=3$ より $c=1$．\\
+余りは\quad $(x-1)^2+2x+1=x^2+2$
+\end{kai}
+
+\ans{27}{因数定理}
+\begin{kai}
+(1)\ $P(-1)=-1-4-1+6=0$ より $x+1$ を因数にもつ．\quad $(x+1)(x^2-5x+6)=(x+1)(x-2)(x-3)$\\[2pt]
+(2)\ $P(3)=54-27-33+6=0$ より $x-3$ を因数にもつ．\quad $(x-3)(2x^2+3x-2)=(x-3)(x+2)(2x-1)$
+\end{kai}
+
+\ans{28}{虚数 $\omega$}
+\begin{kai}
+$x^3-1=(x-1)(x^2+x+1)=0$ で，$\omega$ は $x^2+x+1=0$ の解．\\
+(1)\ $\omega^2+\omega+1=0$\\[2pt]
+(2)\ \point{$\omega^3=1$ で次数を下げる}\quad $\omega^{10}=\omega$，$\omega^5=\omega^2$ より $\omega+\omega^2+1=0$\\[2pt]
+(3)\ $1+\omega=-\omega^2$ より $(1+\omega)^6=\omega^{12}=1$
+\end{kai}
+
+\ans{29}{共通解}
+\begin{kai}
+共通解を $x=\alpha$ とすると $\alpha^2+a\alpha+2=0$，$\alpha^2+2\alpha+a=0$．\\
+\point{2式の差をとって2次の項を消す}\quad $(a-2)\alpha-(a-2)=0$，$(a-2)(\alpha-1)=0$．\\
+$a=2$ のとき，2式はともに $x^2+2x+2=0$ となり，実数解をもたないので不適．\\
+$\alpha=1$ のとき，$1+a+2=0$ より $a=-3$．\quad $a=-3$，共通解 $x=1$
+\end{kai}
+
+\ans{30}{高次方程式}
+\begin{kai}
+(1)\ $(x-2)(x^2+2x+4)=0$ より\quad $x=2,\ -1\pm\sqrt3\,i$\\[2pt]
+(2)\ $(x^2-3)(x^2+4)=0$ より\quad $x=\pm\sqrt3,\ \pm2i$\\[2pt]
+(3)\ 実数係数だから $1-2i$ も解．残りの解を $r$（実数）とすると，解と係数の関係より\\
+\hspace*{1.5em}積：$(1+2i)(1-2i)r=5r=-10$ より $r=-2$．\\
+\hspace*{1.5em}和：$2+r=-a$ より $a=0$．\quad 2つずつの積の和：$5+2r=b$ より $b=1$．\\
+\hspace*{1.5em}$a=0$，$b=1$，他の解は $1-2i,\ -2$\quad（$x^3+x+10=(x+2)(x^2-2x+5)$ で確認できる）
+\end{kai}
+
+\shouans{第3章}{図形と式}
+\ans{31}{分点の座標}
+\begin{kai}
+(1)\ 内分点 $\left(\dfrac{1\cdot1+2\cdot7}{3},\ \dfrac{1\cdot2+2\cdot(-4)}{3}\right)=(5,\ -2)$\\[2pt]
+\hspace*{1.5em}外分点 $\left(\dfrac{-1\cdot1+2\cdot7}{2-1},\ \dfrac{-1\cdot2+2\cdot(-4)}{2-1}\right)=(13,\ -10)$\\[2pt]
+(2)\ $\left(\dfrac{1+7+4}3,\ \dfrac{2-4+5}3\right)=(4,\ 1)$
+\end{kai}
+
+\ans{32}{直線の方程式}
+\begin{kai}
+(1)\ $y+1=3(x-2)$ より $y=3x-7$\qquad
+(2)\ 傾き $\dfrac{-3-3}{4-1}=-2$，$y-3=-2(x-1)$ より $y=-2x+5$\\[2pt]
+(3)\ $\dfrac x3+\dfrac y{-2}=1$，すなわち $2x-3y=6$
+\end{kai}
+
+\ans{33}{2点間の距離}
+\begin{kai}
+(1)\ $\sqrt{4^2+3^2}=5$\\[2pt]
+(2)\ $\mathrm P(x,\ 0)$ とすると $\mathrm{AP}^2=\mathrm{BP}^2$ より $(x+1)^2+4=(x-3)^2+25$，$8x=29$．\quad $\mathrm P\left(\dfrac{29}{8},\ 0\right)$
+\end{kai}
+
+\ans{34}{点と直線の距離}
+\begin{kai}
+(1)\ $\dfrac{|3\cdot2+4\cdot3-8|}{\sqrt{3^2+4^2}}=\dfrac{10}5=2$\\[2pt]
+(2)\ $\mathrm{AB}=5$．直線 AB は $y-1=\dfrac43(x-1)$，すなわち $4x-3y-1=0$．\\
+\hspace*{1.5em}C との距離は $\dfrac{|24-6-1|}{5}=\dfrac{17}5$．\quad 面積は\quad $\dfrac12\cdot5\cdot\dfrac{17}5=\dfrac{17}2$
+\end{kai}
+
+\ans{35}{線対称}
+\begin{kai}
+(1)\ $\mathrm B(p,\ q)$ とする．\point{AB の中点が $\ell$ 上，AB $\perp\ell$}\\
+\hspace*{1.5em}$\dfrac{q+1}2=2\cdot\dfrac{p+3}2$，\quad $\dfrac{q-1}{p-3}\cdot2=-1$．これを解いて $p=-1$，$q=3$．\quad $\mathrm B(-1,\ 3)$\\[2pt]
+(2)\ A，C は $\ell$ に関して同じ側にある．$\mathrm{AP}=\mathrm{BP}$ だから $\mathrm{AP}+\mathrm{PC}=\mathrm{BP}+\mathrm{PC}\geqq\mathrm{BC}=\sqrt{49+1}=5\sqrt2$．\\
+\hspace*{1.5em}等号は P が直線 BC 上にあるとき．BC：$y=-\dfrac17x+\dfrac{20}7$ と $y=2x$ の交点は $\left(\dfrac43,\ \dfrac83\right)$．\\
+\hspace*{1.5em}最小値 $5\sqrt2$，\quad $\mathrm P\left(\dfrac43,\ \dfrac83\right)$
+\end{kai}
+
+\ans{36}{平行条件・垂直条件}
+\begin{kai}
+(1)\ 平行：$2(x-1)-3(y-2)=0$ より $2x-3y+4=0$．\quad 垂直：$3(x-1)+2(y-2)=0$ より $3x+2y-7=0$\\[2pt]
+(2)\ \point{$a_1x+b_1y=c_1$，$a_2x+b_2y=c_2$ が平行 $\iff a_1b_2-a_2b_1=0$，垂直 $\iff a_1a_2+b_1b_2=0$}\\
+\hspace*{1.5em}平行：$a(a+1)-2=0$ より $a=1,\ -2$（どちらも2直線は一致しない）．\quad 垂直：$a+2(a+1)=0$ より $a=-\dfrac23$
+\end{kai}
+
+\ans{37}{定点を通る直線}
+\begin{kai}
+\point{$k$ について整理する}\quad $k(2x+y-4)+(x-y+1)=0$．\\
+これがすべての $k$ で成りたつ条件は $2x+y-4=0$ かつ $x-y+1=0$．\quad 定点 $(1,\ 2)$
+\end{kai}
+
+\ans{38}{交点を通る直線}
+\begin{kai}
+求める直線は $(2x+y-4)+k(x-y+1)=0$ ……① とおける（$x-y+1=0$ 自身は $(3,\ 0)$ を通らない）．\\
+$(3,\ 0)$ を通るので $2+4k=0$，$k=-\dfrac12$．①に代入して整理すると\quad $x+y-3=0$
+\end{kai}
+
+\ans{39}{円の方程式}
+\begin{kai}
+(1)\ 半径は $\sqrt{3^2+4^2}=5$．\quad $(x-2)^2+(y+1)^2=25$\\[2pt]
+(2)\ $x^2+y^2+lx+my+n=0$ に代入して $n=0$，$16+4l=0$，$4+2m=0$．\quad $x^2+y^2-4x-2y=0$\\
+\hspace*{1.5em}$(x-2)^2+(y-1)^2=5$ より\quad 中心 $(2,\ 1)$，半径 $\sqrt5$\\[2pt]
+(3)\ $(x-3)^2+(y+2)^2=13-k$．\quad $13-k>0$ より\quad $k<13$
+\end{kai}
+
+\ans{40}{円と直線の位置関係}
+\begin{kai}
+(1)\ \point{中心と直線の距離 $d$ と半径を比べる}\quad $d=\dfrac{|k|}{\sqrt5}$，半径 $\sqrt5$．\\
+\hspace*{1.5em}$|k|<5$ のとき2個，$|k|=5$ のとき1個，$|k|>5$ のとき0個\\[2pt]
+(2)\ $d=1$．弦の長さは\quad $2\sqrt{5-1}=4$
+\end{kai}
+
+\ans{41}{円と接線}
+\begin{kai}
+(1)\ \point{円 $x^2+y^2=r^2$ 上の点 $(x_1,\ y_1)$ における接線は $x_1x+y_1y=r^2$}\quad $x+2y=5$\\[2pt]
+(2)\ 接点を $(x_1,\ y_1)$ とすると接線は $x_1x+y_1y=5$．これが $(5,\ 0)$ を通るので $x_1=1$．\\
+\hspace*{1.5em}$x_1^2+y_1^2=5$ より $y_1=\pm2$．\quad 接線 $x+2y=5$（接点 $(1,\ 2)$），\ $x-2y=5$（接点 $(1,\ -2)$）
+\end{kai}
+
+\ans{42}{2円の交点を通る円}
+\begin{kai}
+（2円の中心間の距離は $\sqrt5$，半径は3と $\sqrt6$ で，$3-\sqrt6<\sqrt5<3+\sqrt6$ だから2点で交わる．）\\
+(1)\ 2式の差をとって $4x+2y-8=0$，すなわち\quad $2x+y-4=0$\\[2pt]
+(2)\ $(x^2+y^2-9)+k(x^2+y^2-4x-2y-1)=0$ が原点を通るので $-9-k=0$，$k=-9$．\\
+\hspace*{1.5em}整理して $8x^2+8y^2-36x-18y=0$，すなわち\quad $x^2+y^2-\dfrac92x-\dfrac94y=0$
+\end{kai}
+
+\ans{43}{軌跡（Ⅰ）}
+\begin{kai}
+$\mathrm P(x,\ y)$ とする．$\mathrm{AP}=2\mathrm{BP}$ より $x^2+y^2=4\{(x-3)^2+y^2\}$．\\
+整理して $x^2+y^2-8x+12=0$，$(x-4)^2+y^2=4$．\quad 中心 $(4,\ 0)$，半径2の円\quad（アポロニウスの円）
+\end{kai}
+
+\ans{44}{軌跡（Ⅱ）}
+\begin{kai}
+$\mathrm Q(s,\ t)$，$\mathrm M(x,\ y)$ とすると $x=\dfrac{s+4}2$，$y=\dfrac t2$ より $s=2x-4$，$t=2y$．\\
+\point{動く点の座標を $x,\ y$ で表して条件式に代入}\quad $s^2+t^2=4$ に代入して $(2x-4)^2+4y^2=4$．\\
+中心 $(2,\ 0)$，半径1の円\quad $(x-2)^2+y^2=1$
+\end{kai}
+
+\ans{45}{軌跡（Ⅲ）}
+\begin{kai}
+$y=(x-t)^2-t^2+3t$ より頂点は $(t,\ -t^2+3t)$．$x=t$，$y=-t^2+3t$ から $t$ を消去して\\
+放物線\quad $y=-x^2+3x$
+\end{kai}
+
+\ans{46}{軌跡（Ⅳ）}
+\begin{kai}
+交点を $(x,\ y)$ とする．$x=0$ とすると $y=0$ となり，$x+my=2$ をみたさないので $x\neq0$．\\
+よって $m=\dfrac yx$．これを $x+my=2$ に代入して $x^2+y^2=2x$．\\
+\point{除外点に注意}\quad 円 $(x-1)^2+y^2=1$ から原点 $(0,\ 0)$ を除いた部分
+\end{kai}
+
+\ans{47}{軌跡（Ⅴ）}
+\begin{kai}
+直線 $y=m(x-3)$ と $y=x^2$ から $x^2-mx+3m=0$ ……①．異なる2点で交わる条件は $m^2-12m>0$，$m<0,\ 12<m$．\\
+①の2解を $\alpha,\ \beta$ とすると中点の $x$ 座標は $X=\dfrac{\alpha+\beta}2=\dfrac m2$，$y$ 座標は $Y=m(X-3)$．\\
+$m=2X$ を代入して $Y=2X^2-6X$．$m$ の範囲から $X<0,\ 6<X$．\\
+放物線 $y=2x^2-6x$ の $x<0,\ 6<x$ の部分
+\end{kai}
+
+\ans{48}{一般の曲線の移動}
+\begin{kai}
+(1)\ \point{$x$ を $x-3$，$y$ を $y+1$ におきかえる}\quad $y+1=(x-3)^2-2(x-3)$ より\quad $y=x^2-8x+14$\\[2pt]
+(2)\ 点 $(x,\ y)$ の点 $(1,\ 1)$ に関する対称点は $(2-x,\ 2-y)$．\\
+\hspace*{1.5em}$2-y=(2-x)^2-2(2-x)$ より\quad $y=-x^2+2x+2$
+\end{kai}
+
+\ans{49}{不等式の表す領域（Ⅰ）}
+\begin{kai}
+\begin{minipage}[t]{0.55\linewidth}
+放物線 $y=x^2-2$ の上側と，直線 $y=x$ の下側の共通部分．\\
+交点は $x^2-2=x$ より $x=-1,\ 2$，すなわち $(-1,\ -1)$，$(2,\ 2)$．\\
+右図の斜線部分．境界線を含む．
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\linewidth}
+\vspace{-6pt}
+\begin{tikzpicture}[scale=0.55]
+\fill[gray!35] plot[domain=-1:2,samples=40] (\x,{\x*\x-2}) -- (2,2) -- (-1,-1) -- cycle;
+\ax{-2.4}{2.8}{-2.5}{3}
+\draw[thick,domain=-2:2.2,samples=40] plot (\x,{\x*\x-2});
+\draw[thick] (-2,-2)--(2.6,2.6);
+\node[right] at (2,2){\scriptsize $(2,2)$}; \node[left] at (-1,-1){\scriptsize $(-1,-1)$};
+\end{tikzpicture}
+\end{minipage}
+\end{kai}
+
+\ans{50}{不等式の表す領域（Ⅱ）}
+\begin{kai}
+\begin{minipage}[t]{0.55\linewidth}
+\point{積が正 $\iff$ 2因数が同符号}\\
+「$y<x$ かつ $y>-x+2$」または「$y>x$ かつ $y<-x+2$」．\\
+2直線 $y=x$，$y=-x+2$ は点 $(1,\ 1)$ で交わる．\\
+右図の斜線部分．境界線を含まない．
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\linewidth}
+\vspace{-6pt}
+\begin{tikzpicture}[scale=0.5]
+\fill[gray!35] (1,1)--(3.5,3.5)--(3.5,-1.5)--cycle;
+\fill[gray!35] (1,1)--(-1.5,-1.5)--(-1.5,3.5)--cycle;
+\ax{-1.8}{3.8}{-1.8}{3.8}
+\draw[thick,dashed] (-1.5,-1.5)--(3.5,3.5); \draw[thick,dashed] (-1.5,3.5)--(3.5,-1.5);
+\node[above] at (1,1.15){\scriptsize $(1,1)$};
+\end{tikzpicture}
+\end{minipage}
+\end{kai}
+
+\ans{51}{領域内の点に対する最大・最小}
+\begin{kai}
+領域は4点 $(0,0)$，$(3,0)$，$(2,3)$，$(0,4)$ を頂点とする四角形の周および内部（$(2,3)$ は2直線の交点）．\\
+(1)\ $x+y=k$ とおくと，傾き $-1$ の直線が領域と共有点をもつ範囲で $k$ が最大になるのは $(2,\ 3)$ を通るとき．\\
+\hspace*{1.5em}最大値 $5$（$x=2$，$y=3$）\\[2pt]
+(2)\ $x^2+y^2$ は原点からの距離の2乗．頂点で比べると $(3,0)$：9，$(2,3)$：13，$(0,4)$：16．\\
+\hspace*{1.5em}最大値 $16$（$x=0$，$y=4$），\quad 最小値 $0$（$x=0$，$y=0$）
+\end{kai}
+
+\shouans{第4章}{三角関数}
+\ans{52}{一般角}
+\begin{kai}
+(1)\ $40^\circ+360^\circ\times1$，第1象限\qquad
+(2)\ $60^\circ+360^\circ\times(-1)$，第1象限\qquad
+(3)\ $280^\circ+360^\circ\times2$，第4象限
+\end{kai}
+
+\ans{53}{弧度法}
+\begin{kai}
+(1)\ \point{$180^\circ=\pi$}\quad $150^\circ=\dfrac56\pi$，$225^\circ=\dfrac54\pi$，\quad $\dfrac56\pi=150^\circ$，$\dfrac74\pi=315^\circ$\\[2pt]
+(2)\ \point{$\ell=r\theta$，$S=\dfrac12r^2\theta$}\quad 弧の長さ $6\cdot\dfrac23\pi=4\pi$，\quad 面積 $\dfrac12\cdot36\cdot\dfrac23\pi=12\pi$
+\end{kai}
+
+\ans{54}{三角関数の加法定理}
+\begin{kai}
+(1)\ $\sin75^\circ=\sin(45^\circ+30^\circ)=\dfrac{\sqrt2}2\cdot\dfrac{\sqrt3}2+\dfrac{\sqrt2}2\cdot\dfrac12=\dfrac{\sqrt6+\sqrt2}{4}$\\[2pt]
+\hspace*{1.5em}$\tan105^\circ=\tan(60^\circ+45^\circ)=\dfrac{\sqrt3+1}{1-\sqrt3}=-\dfrac{(\sqrt3+1)^2}{2}=-2-\sqrt3$\\[2pt]
+(2)\ $\cos\alpha=\dfrac45$，$\sin\beta=\dfrac{12}{13}$．\quad $\cos(\alpha+\beta)=\dfrac45\cdot\dfrac5{13}-\dfrac35\cdot\dfrac{12}{13}=-\dfrac{16}{65}$
+\end{kai}
+
+\ans{55}{2倍角・半角の公式}
+\begin{kai}
+$\theta$ は第2象限の角だから $\cos\theta=-\dfrac45$．\\
+(1)\ $2\sin\theta\cos\theta=-\dfrac{24}{25}$\qquad (2)\ $1-2\sin^2\theta=\dfrac7{25}$\\[2pt]
+(3)\ $\cos^2\dfrac\theta2=\dfrac{1+\cos\theta}2=\dfrac1{10}$．$\dfrac\pi4<\dfrac\theta2<\dfrac\pi2$ より $\cos\dfrac\theta2>0$．\quad $\cos\dfrac\theta2=\dfrac1{\sqrt{10}}=\dfrac{\sqrt{10}}{10}$
+\end{kai}
+
+\ans{56}{3倍角の公式}
+\begin{kai}
+(1)\ $\sin3\theta=\sin(2\theta+\theta)=\sin2\theta\cos\theta+\cos2\theta\sin\theta=2\sin\theta\cos^2\theta+(1-2\sin^2\theta)\sin\theta$\\
+\hspace*{1.5em}$=2\sin\theta(1-\sin^2\theta)+\sin\theta-2\sin^3\theta=3\sin\theta-4\sin^3\theta$\\[2pt]
+(2)\ $3\cdot\dfrac13-4\cdot\dfrac1{27}=\dfrac{23}{27}$
+\end{kai}
+
+\ans{57}{和積・積和の公式}
+\begin{kai}
+(1)\ $\sin\alpha\cos\beta=\dfrac12\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\}$ より\quad $\dfrac12(\sin90^\circ+\sin60^\circ)=\dfrac{2+\sqrt3}{4}$\\[2pt]
+(2)\ $\cos A+\cos B=2\cos\dfrac{A+B}2\cos\dfrac{A-B}2$ より\quad $2\cos45^\circ\cos30^\circ=\dfrac{\sqrt6}{2}$
+\end{kai}
+
+\ans{58}{直線の傾きと tangent}
+\begin{kai}
+(1)\ 2直線と $x$ 軸の正の向きのなす角を $\alpha,\ \beta$ とすると $\tan\alpha=3$，$\tan\beta=\dfrac12$．\\
+\hspace*{1.5em}$\tan(\alpha-\beta)=\dfrac{3-\frac12}{1+\frac32}=1$．\quad $\theta=45^\circ$\quad $\left(\dfrac\pi4\right)$\\[2pt]
+(2)\ 求める直線の傾きを $m$ とすると $\left|\dfrac{m-2}{1+2m}\right|=\tan45^\circ=1$．\\
+\hspace*{1.5em}$m-2=\pm(1+2m)$ より $m=-3,\ \dfrac13$．\quad $y=-3x$，\ $y=\dfrac13x$
+\end{kai}
+
+\ans{59}{三角関数の合成（Ⅰ）}
+\begin{kai}
+\point{$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\alpha)$，点 $(a,\ b)$ の偏角が $\alpha$}\\
+(1)\ $r=2$，点 $(\sqrt3,\ 1)$ の偏角は $\dfrac\pi6$．\quad $2\sin\left(\theta+\dfrac\pi6\right)$\\[2pt]
+(2)\ $r=\sqrt2$，点 $(1,\ -1)$ の偏角は $-\dfrac\pi4$．\quad $\sqrt2\sin\left(\theta-\dfrac\pi4\right)$
+\end{kai}
+
+\ans{60}{三角関数の合成（Ⅱ）}
+\begin{kai}
+$y=2\sin\left(\theta+\dfrac\pi3\right)$．$\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac43\pi$ だから $-\dfrac{\sqrt3}2\leqq\sin\left(\theta+\dfrac\pi3\right)\leqq1$．\\
+最大値 $2$（$\theta=\dfrac\pi6$），\quad 最小値 $-\sqrt3$（$\theta=\pi$）
+\end{kai}
+
+\ans{61}{三角関数の合成（Ⅲ）}
+\begin{kai}
+(1)\ \point{半角の公式で次数を下げる}\quad $y=\dfrac{1-\cos2\theta}2+\sin2\theta+\dfrac{3(1+\cos2\theta)}2=\sin2\theta+\cos2\theta+2$\\[2pt]
+(2)\ $y=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)+2$．$\dfrac\pi4\leqq2\theta+\dfrac\pi4\leqq\dfrac54\pi$ より $-\dfrac{\sqrt2}2\leqq\sin\left(2\theta+\dfrac\pi4\right)\leqq1$．\\
+\hspace*{1.5em}最大値 $2+\sqrt2$（$\theta=\dfrac\pi8$），\quad 最小値 $1$（$\theta=\dfrac\pi2$）
+\end{kai}
+
+\ans{62}{三角関数のグラフ}
+\begin{kai}
+(1)\ 周期 $\dfrac{2\pi}2=\pi$，\quad 最大値 $2$，最小値 $-2$\\[2pt]
+(2)\ $y=2\sin2\left(\theta-\dfrac\pi6\right)$ だから，$\theta$ 軸方向に $\dfrac\pi6$ だけ平行移動したもの\\[2pt]
+(3)\ $-\dfrac\pi3\leqq2\theta-\dfrac\pi3<\dfrac53\pi$ で $\sin\left(2\theta-\dfrac\pi3\right)=0$ より $2\theta-\dfrac\pi3=0,\ \pi$．\quad $\theta=\dfrac\pi6,\ \dfrac23\pi$
+\end{kai}
+
+\ans{63}{三角方程式}
+\begin{kai}
+(1)\ $2(1-\sin^2\theta)+3\sin\theta-3=0$ より $2\sin^2\theta-3\sin\theta+1=0$，$(2\sin\theta-1)(\sin\theta-1)=0$．\\
+\hspace*{1.5em}$\sin\theta=\dfrac12,\ 1$．\quad $\theta=\dfrac\pi6,\ \dfrac\pi2,\ \dfrac56\pi$\\[2pt]
+(2)\ $\sin\theta-\cos\theta>0$ より $\sqrt2\sin\left(\theta-\dfrac\pi4\right)>0$．$-\dfrac\pi4\leqq\theta-\dfrac\pi4<\dfrac74\pi$ だから $0<\theta-\dfrac\pi4<\pi$．\\
+\hspace*{1.5em}$\dfrac\pi4<\theta<\dfrac54\pi$
+\end{kai}
+
+\shouans{第5章}{指数関数と対数関数}
+\ans{64}{指数の計算}
+\begin{kai}
+(1)\ (i)\ $(2^3)^{\frac23}=4$\qquad (ii)\ $(3^3)^{-\frac13}=\dfrac13$\qquad (iii)\ $\sqrt[3]{64}=4$\\[2pt]
+(2)\ $a^{\frac12+\frac34-\frac14}=a^1=a$\\[2pt]
+(3)\ \point{2乗・3乗して整理}\quad $x+x^{-1}=\left(x^{\frac12}+x^{-\frac12}\right)^2-2=7$\\
+\hspace*{1.5em}$x^{\frac32}+x^{-\frac32}=\left(x^{\frac12}+x^{-\frac12}\right)^3-3\left(x^{\frac12}+x^{-\frac12}\right)=27-9=18$
+\end{kai}
+
+\ans{65}{指数関数のグラフ}
+\begin{kai}
+(1)\ $x$ 軸方向に1，$y$ 軸方向に3だけ平行移動したもの．漸近線は直線 $y=3$\\[2pt]
+(2)\ \point{底を2にそろえる}\quad $2^{\frac13}$，$2^{\frac24}=2^{\frac12}$，$2^{\frac35}$．底 $2>1$ だから指数の大小と一致．\\
+\hspace*{1.5em}$\dfrac13<\dfrac12<\dfrac35$ より\quad $\sqrt[3]2<\sqrt[4]4<\sqrt[5]8$
+\end{kai}
+
+\ans{66}{指数方程式（Ⅰ）}
+\begin{kai}
+(1)\ $2^{x+1}=2^{3x-3}$ より $x+1=3x-3$．\quad $x=2$\qquad
+(2)\ $3^{2x}=3^{-3}$ より\quad $x=-\dfrac32$
+\end{kai}
+
+\ans{67}{指数方程式（Ⅱ）}
+\begin{kai}
+\point{$2^x=t$ などとおく．$t>0$ に注意}\\
+(1)\ $t=2^x$ とすると $t^2-3t-4=0$，$(t-4)(t+1)=0$．$t>0$ より $t=4$．\quad $x=2$\\[2pt]
+(2)\ $t=3^x$ とすると $t^2+3t-18=0$，$(t+6)(t-3)=0$．$t>0$ より $t=3$．\quad $x=1$
+\end{kai}
+
+\ans{68}{指数不等式}
+\begin{kai}
+(1)\ $2^{-x}>2^3$．底 $2>1$ だから $-x>3$．\quad $x<-3$\\[2pt]
+(2)\ $t=2^x$ とすると $(t-2)(t-4)<0$，$2<t<4$．\quad $2^1<2^x<2^2$ より\quad $1<x<2$
+\end{kai}
+
+\ans{69}{対数の計算（Ⅰ）}
+\begin{kai}
+(1)\ $\log_2\dfrac{48}3=\log_216=4$\qquad (2)\ $\log_33^{\frac32}=\dfrac32$\qquad (3)\ $\log_{10}(25\times4)=2$
+\end{kai}
+
+\ans{70}{対数の計算（Ⅱ）}
+\begin{kai}
+(1)\ \point{底の変換公式}\quad $\dfrac{\log_28}{\log_24}=\dfrac32$\qquad
+(2)\ $2\log_23\cdot3\log_32=6\cdot\log_23\cdot\dfrac1{\log_23}=6$\qquad
+(3)\ $a^{\log_aM}=M$ より\quad $5$
+\end{kai}
+
+\ans{71}{対数関数のグラフ}
+\begin{kai}
+(1)\ $x$ 軸方向に1，$y$ 軸方向に2だけ平行移動したもの（漸近線は直線 $x=1$）\\[2pt]
+(2)\ $2=\log_24$，$\log_430=\dfrac{\log_230}{2}=\log_2\sqrt{30}$．\quad $4<5<\sqrt{30}$ で底 $2>1$ だから\\
+\hspace*{1.5em}$2<\log_25<\log_430$
+\end{kai}
+
+\ans{72}{対数方程式（Ⅰ）}
+\begin{kai}
+\point{まず真数条件}\quad $x+1>0$，$x-1>0$ より $x>1$．\\
+$\log_2(x+1)(x-1)=\log_28$ より $x^2-1=8$，$x=\pm3$．$x>1$ より\quad $x=3$
+\end{kai}
+
+\ans{73}{対数方程式（Ⅱ）}
+\begin{kai}
+真数条件 $x>0$．$t=\log_2x$ とすると $t^2-3t+2=0$，$t=1,\ 2$．\quad $x=2,\ 4$
+\end{kai}
+
+\ans{74}{対数不等式}
+\begin{kai}
+(1)\ 真数条件 $x>1$．$-2=\log_{\frac12}4$ だから $\log_{\frac12}(x-1)>\log_{\frac12}4$．\\
+\hspace*{1.5em}\point{底が1より小さいと不等号の向きが逆}\quad $x-1<4$．\quad $1<x<5$\\[2pt]
+(2)\ 真数条件 $x>2$．$\log_2x(x-2)\leqq\log_28$ より $x^2-2x-8\leqq0$，$-2\leqq x\leqq4$．\quad $2<x\leqq4$
+\end{kai}
+
+\ans{75}{対数の応用（Ⅰ）}
+\begin{kai}
+(1)\ $\log_{10}2^{50}=50\times0.3010=15.05$．$15<\log_{10}2^{50}<16$ より $10^{15}<2^{50}<10^{16}$．\quad 16桁\\[2pt]
+(2)\ $2^{50}=10^{15.05}=10^{15}\times10^{0.05}$．$\log_{10}1=0<0.05<0.3010=\log_{10}2$ より $1<10^{0.05}<2$．\\
+\hspace*{1.5em}最高位の数字は\quad 1
+\end{kai}
+
+\ans{76}{対数の応用（Ⅱ）}
+\begin{kai}
+両辺の常用対数をとって $-n\log_{10}3<-10$，$n>\dfrac{10}{0.4771}=20.9\cdots$．\quad $n=21$
+\end{kai}
+
+\ans{77}{指数・対数関数の最大・最小}
+\begin{kai}
+(1)\ $t=2^x$ とすると $1\leqq t\leqq4$，$y=t^2-4t+5=(t-2)^2+1$．\\
+\hspace*{1.5em}最大値 $5$（$t=4$，$x=2$），\quad 最小値 $1$（$t=2$，$x=1$）\\[2pt]
+(2)\ $t=\log_2x$ とすると $0\leqq t\leqq3$，$y=t^2-2t=(t-1)^2-1$．\\
+\hspace*{1.5em}最大値 $3$（$t=3$，$x=8$），\quad 最小値 $-1$（$t=1$，$x=2$）
+\end{kai}
+
+\ans{78}{大小比較（Ⅰ）}
+\begin{kai}
+\point{6乗して比べる}\quad $(\sqrt2)^6=8$，$(\sqrt[3]3)^6=9$，$(\sqrt[6]6)^6=6$．\\
+3数はすべて正だから\quad $\sqrt[6]6<\sqrt2<\sqrt[3]3$
+\end{kai}
+
+\ans{79}{大小比較（Ⅱ）}
+\begin{kai}
+$\log_23-\dfrac32=\dfrac12(\log_29-\log_28)>0$ より $\log_23>\dfrac32$．\\
+$\log_34-\dfrac32=\dfrac12(\log_316-\log_327)<0$ より $\log_34<\dfrac32$．\quad よって\quad $\log_34<\dfrac32<\log_23$
+\end{kai}
+
+\ans{80}{常用対数の値の評価}
+\begin{kai}
+$2^{10}=1024>10^3$ の常用対数をとって $10\log_{10}2>3$，$\log_{10}2>0.3$．\\
+$2^3=8<10$ の常用対数をとって $3\log_{10}2<1$，$\log_{10}2<\dfrac13$．\quad よって $0.3<\log_{10}2<\dfrac13$
+\end{kai}
+
+\shouans{第6章}{微分法と積分法}
+\ans{81}{極限（Ⅰ）}
+\begin{kai}
+\point{$\dfrac00$ 型は約分してから代入}\\
+(1)\ $\displaystyle\lim_{x\to2}(x+2)=4$\qquad
+(2)\ $\displaystyle\lim_{x\to1}\frac{(x-1)(x^2+x+1)}{(x-1)(x+1)}=\frac32$
+\end{kai}
+
+\ans{82}{極限（Ⅱ）}
+\begin{kai}
+\point{分母 $\to0$ で極限値が存在するなら，分子 $\to0$}\quad $1+a+b=0$ より $b=-a-1$．\\
+このとき分子は $x^2+ax-a-1=(x-1)(x+a+1)$ で，極限値は $2+a=3$．\quad $a=1$，$b=-2$
+\end{kai}
+
+\ans{83}{導関数}
+\begin{kai}
+(1)\ $f'(x)=\displaystyle\lim_{h\to0}\frac{(x+h)^3-x^3}{h}=\lim_{h\to0}(3x^2+3xh+h^2)=3x^2$\\[2pt]
+(2)\ 展開して $y=2x^3-x^2+6x-3$．\quad $y'=6x^2-2x+6$
+\end{kai}
+
+\ans{84}{微分係数}
+\begin{kai}
+$f(2+h)-f(2)=(2+h)^3-2(2+h)-4=10h+6h^2+h^3$．\\
+$f'(2)=\displaystyle\lim_{h\to0}(10+6h+h^2)=10$\quad（$f'(x)=3x^2-2$ に代入しても $10$）
+\end{kai}
+
+\ans{85}{平均変化率と微分係数}
+\begin{kai}
+(1)\ $\dfrac{f(1+h)-f(1)}{h}=\dfrac{(1+h)^2+(1+h)-2}{h}=3+h$．\quad $f'(1)=\displaystyle\lim_{h\to0}(3+h)=3$\\[2pt]
+(2)\ 平均変化率は $\dfrac{6-0}{2}=3$．$f'(c)=2c+1=3$ より\quad $c=1$
+\end{kai}
+
+\ans{86}{接線（Ⅰ）}
+\begin{kai}
+$y'=3x^2-3$ より $x=2$ で傾き9．\\
+接線：$y-2=9(x-2)$ より $y=9x-16$\qquad
+法線：傾き $-\dfrac19$，$y-2=-\dfrac19(x-2)$ より $y=-\dfrac19x+\dfrac{20}9$
+\end{kai}
+
+\ans{87}{接線（Ⅱ）}
+\begin{kai}
+\point{接点を $(t,\ t^2)$ とおく}\quad 接線は $y=2tx-t^2$．これが $(1,\ -3)$ を通るので $-3=2t-t^2$，$t^2-2t-3=0$，$t=3,\ -1$．\\
+$y=6x-9$，\ $y=-2x-1$
+\end{kai}
+
+\ans{88}{関数決定（Ⅰ）}
+\begin{kai}
+$f'(x)=2ax+b$．$f'(0)=b=-3$，$f'(1)=2a+b=1$ より $a=2$．$f(1)=a+b+c=2$ より $c=3$．\\
+$f(x)=2x^2-3x+3$
+\end{kai}
+
+\ans{89}{3次関数のグラフ}
+\begin{kai}
+\begin{minipage}[t]{0.58\linewidth}
+$y'=3x^2-6x-9=3(x+1)(x-3)$\\[2pt]
+\renewcommand{\arraystretch}{1.1}
+$\begin{array}{c|ccccc}
+x&\cdots&-1&\cdots&3&\cdots\\ \hline
+y'&+&0&-&0&+\\ \hline
+y&\nearrow&10&\searrow&-22&\nearrow
+\end{array}$\\[4pt]
+極大値 $10$（$x=-1$），\quad 極小値 $-22$（$x=3$）\\
+$y$ 切片は5．グラフは右図．
+\end{minipage}\hfill
+\begin{minipage}[t]{0.38\linewidth}
+\vspace{-6pt}
+\begin{tikzpicture}[x=5mm,y=0.9mm]
+\draw[->] (-3,0)--(5.5,0) node[right]{\scriptsize $x$};
+\draw[->] (0,-26)--(0,16) node[above]{\scriptsize $y$};
+\draw[thick,domain=-2.6:5.1,samples=80] plot (\x,{\x*\x*\x-3*\x*\x-9*\x+5});
+\draw[dashed] (-1,0)--(-1,10) (3,0)--(3,-22);
+\node[above] at (-1,10){\scriptsize 10}; \node[below] at (3,-22){\scriptsize $-22$};
+\node[below] at (-1.2,0){\scriptsize $-1$}; \node[above] at (3,0){\scriptsize 3};
+\end{tikzpicture}
+\end{minipage}
+\end{kai}
+
+\ans{90}{共通接線}
+\begin{kai}
+求める直線を $y=mx+n$ とする．\point{連立した2次方程式がともに重解をもつ}\\
+$y=x^2$ と：$x^2-mx-n=0$ の判別式 $m^2+4n=0$．\\
+$y=-x^2+4x-4$ と：$x^2+(m-4)x+n+4=0$ の判別式 $(m-4)^2-4(n+4)=0$．\\
+$4n=-m^2$ を代入して $(m-4)^2+m^2-16=0$，$2m^2-8m=0$，$m=0,\ 4$．\\
+$y=0$，\ $y=4x-4$
+\end{kai}
+
+\ans{91}{関数決定（Ⅱ）}
+\begin{kai}
+$f'(x)=3x^2+2ax+b$．$x=\pm1$ で極値をとるので $f'(-1)=f'(1)=0$ より $a=0$，$b=-3$．\\
+$f(-1)=-1+3+c=5$ より $c=3$．\\
+\point{逆の確認}\quad このとき $f'(x)=3(x+1)(x-1)$ で，$x=-1$ で極大，$x=1$ で極小となり条件をみたす．\\
+$a=0$，$b=-3$，$c=3$，極小値 $f(1)=1$
+\end{kai}
+
+\ans{92}{極値をもつための条件}
+\begin{kai}
+\point{$f'(x)=0$ が異なる2つの実数解をもつ（符号が変わる）}\quad $f'(x)=3x^2+2ax+3$，$\dfrac D4=a^2-9>0$．\\
+$a<-3,\ 3<a$
+\end{kai}
+
+\ans{93}{最大・最小}
+\begin{kai}
+$f'(x)=3(x-1)(x-3)$．$f(0)=0$，$f(1)=4$，$f(3)=0$，$f(4)=4$．\point{極値と端点の値を比べる}\\
+最大値 $4$（$x=1,\ 4$），\quad 最小値 $0$（$x=0,\ 3$）
+\end{kai}
+
+\ans{94}{最大値・最小値の図形への応用}
+\begin{kai}
+$V=x(12-2x)^2$，\point{変数の範囲}\quad $0<x<6$．\\
+$V'=(12-2x)^2-4x(12-2x)=(12-2x)(12-6x)$．$0<x<6$ で $V'=0$ となるのは $x=2$ で，ここで増加から減少に変わる．\\
+最大値 $V=2\cdot8^2=128$（cm$^3$），\quad $x=2$
+\end{kai}
+
+\ans{95}{微分法の方程式への応用}
+\begin{kai}
+\point{$x^3-3x=a$ として，$y=x^3-3x$ と $y=a$ の共有点の個数を調べる}\\
+$y'=3(x+1)(x-1)$ より，$x=-1$ で極大値2，$x=1$ で極小値 $-2$．\\
+$a<-2,\ 2<a$ のとき1個，\quad $a=\pm2$ のとき2個，\quad $-2<a<2$ のとき3個
+\end{kai}
+
+\ans{96}{接線の本数}
+\begin{kai}
+接点を $(t,\ t^3-3t)$ とすると接線は $y=(3t^2-3)(x-t)+t^3-3t$．$(2,\ b)$ を通るので\\
+$b=-2t^3+6t^2-6$．\point{接点が異なれば接線も異なる（3次関数）→ $t$ の実数解の個数＝接線の本数}\\
+$g(t)=-2t^3+6t^2-6$ とすると $g'(t)=-6t(t-2)$ で，極小値 $g(0)=-6$，極大値 $g(2)=2$．\\
+$y=g(t)$ と $y=b$ が3点で交わる条件は\quad $-6<b<2$
+\end{kai}
+
+\ans{97}{微分法の不等式への応用（Ⅰ）}
+\begin{kai}
+$f(x)=x^3-3x^2+4$ とすると $f'(x)=3x(x-2)$．$x\geqq0$ では $x=2$ で最小値 $f(2)=0$．\\
+よって $x\geqq0$ で $f(x)\geqq0$，すなわち $x^3+4\geqq3x^2$（等号は $x=2$ のとき）．
+\end{kai}
+
+\ans{98}{微分法の不等式への応用（Ⅱ）}
+\begin{kai}
+$f(x)=x^3-3x+a$ とすると $f'(x)=3(x+1)(x-1)$．$x\geqq0$ での最小値は $f(1)=a-2$．\\
+\point{(最小値) $\geqq0$}\quad $a-2\geqq0$ より\quad $a\geqq2$
+\end{kai}
+
+\ans{99}{不定積分（Ⅰ）}
+\begin{kai}
+（$C$ は積分定数）\quad
+(1)\ $x^3-2x^2+x+C$\qquad
+(2)\ $\displaystyle\int(2x^2-5x-3)\,dx=\frac23x^3-\frac52x^2-3x+C$
+\end{kai}
+
+\ans{100}{不定積分（Ⅱ）}
+\begin{kai}
+(1)\ $F(x)=2x^3-x^2+C$．$F(1)=1+C=3$ より $C=2$．\quad $F(x)=2x^3-x^2+2$\\[2pt]
+(2)\ \point{$\displaystyle\int(ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$}\quad $\dfrac{(2x+3)^4}{8}+C$
+\end{kai}
+
+\ans{101}{定積分}
+\begin{kai}
+(1)\ $\left[\dfrac{x^3}3-x^2+3x\right]_0^3=9-9+9=9$\\[2pt]
+(2)\ \point{$\displaystyle\int_{-a}^a$ では奇数次の項は0，偶数次の項は $2\int_0^a$}\quad $2\displaystyle\int_0^2(3x^2+1)\,dx=2[x^3+x]_0^2=20$
+\end{kai}
+
+\ans{102}{絶対値記号のついた関数の定積分}
+\begin{kai}
+(1)\ $\displaystyle\int_0^1(1-x)\,dx+\int_1^3(x-1)\,dx=\frac12+2=\frac52$\\[2pt]
+(2)\ $x^2-x-2=(x+1)(x-2)$ は $0\leqq x\leqq2$ で0以下，$2\leqq x\leqq3$ で0以上．\\
+\hspace*{1.5em}$\displaystyle-\int_0^2(x^2-x-2)\,dx+\int_2^3(x^2-x-2)\,dx=\frac{10}3+\frac{11}6=\frac{31}6$
+\end{kai}
+
+\ans{103}{定積分で表された関数（Ⅰ）}
+\begin{kai}
+\point{定積分は定数なので $k$ とおく}\quad $\displaystyle k=\int_0^1f(t)\,dt$ とすると $f(x)=x^2+2k$．\\
+$k=\displaystyle\int_0^1(t^2+2k)\,dt=\frac13+2k$ より $k=-\dfrac13$．\quad $f(x)=x^2-\dfrac23$
+\end{kai}
+
+\ans{104}{定積分で表された関数（Ⅱ）}
+\begin{kai}
+\point{両辺を $x$ で微分}\quad $f(x)=2x-3$．\\
+\point{$x=a$ を代入すると左辺は0}\quad $a^2-3a+2=0$ より $a=1,\ 2$
+\end{kai}
+
+\ans{105}{面積（Ⅰ）}
+\begin{kai}
+$0\leqq x\leqq2$ で $x^2-2x\leqq0$．\quad $S=-\displaystyle\int_0^2(x^2-2x)\,dx=\frac43$
+\end{kai}
+
+\ans{106}{面積（Ⅱ）}
+\begin{kai}
+交点の $x$ 座標は $x^2=x+2$ より $-1,\ 2$．\\
+\point{$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac{(\beta-\alpha)^3}6$}\quad $S=\displaystyle\int_{-1}^2(x+2-x^2)\,dx=\frac{3^3}6=\frac92$
+\end{kai}
+
+\ans{107}{面積（Ⅲ）}
+\begin{kai}
+交点は $x^2=-x^2+4x$ より $x=0,\ 2$．\quad $S=\displaystyle\int_0^2(-2x^2+4x)\,dx=2\cdot\frac{2^3}6=\frac83$
+\end{kai}
+
+\ans{108}{面積（Ⅳ）}
+\begin{kai}
+$\ell_1:\ y=-2x-1$，\ $\ell_2:\ y=4x-4$．交点の $x$ 座標は $\dfrac12$．\\
+$S=\displaystyle\int_{-1}^{\frac12}(x+1)^2\,dx+\int_{\frac12}^2(x-2)^2\,dx=\frac{(3/2)^3}{3}+\frac{(3/2)^3}{3}=\frac94$
+\end{kai}
+
+\ans{109}{面積（Ⅴ）}
+\begin{kai}
+$y'=3x^2-3$ より $x=1$ での接線は $y=-2$．$x^3-3x+2=(x-1)^2(x+2)$ より他の交点は $x=-2$．\\
+$-2\leqq x\leqq1$ で曲線が上にあるので\quad $S=\displaystyle\int_{-2}^1(x^3-3x+2)\,dx=\frac{27}4$
+\end{kai}
+
+\ans{110}{面積（Ⅵ）}
+\begin{kai}
+放物線と $x$ 軸で囲まれた面積は $\dfrac{2^3}6=\dfrac43$．\\
+放物線と $y=mx$（$0<m<2$）の交点は $x=0,\ 2-m$ で，囲まれた面積は $\displaystyle\int_0^{2-m}\{(2-m)x-x^2\}\,dx=\frac{(2-m)^3}6$．\\
+$\dfrac{(2-m)^3}6=\dfrac23$ より $(2-m)^3=4$．\quad $m=2-\sqrt[3]4$
+\end{kai}
+
+\shouans{第7章}{数列}
+\ans{111}{等差数列（Ⅰ）}
+\begin{kai}
+初項 $a$，公差 $d$ とすると $a+4d=11$，$a+11d=32$．$d=3$，$a=-1$．\quad $a_n=-1+3(n-1)=3n-4$
+\end{kai}
+
+\ans{112}{等差数列（Ⅱ）}
+\begin{kai}
+(1)\ $\dfrac{20\{2\cdot2+19\cdot3\}}{2}=610$\\[2pt]
+(2)\ 最小は $105=7\cdot15$，最大は $994=7\cdot142$．個数は $142-15+1=128$．\\
+\hspace*{1.5em}和は $\dfrac{128(105+994)}{2}=70336$
+\end{kai}
+
+\ans{113}{等差数列（Ⅲ）}
+\begin{kai}
+(1)\ $a_n=47-3(n-1)=50-3n<0$ より $n>\dfrac{50}3$．\quad 第17項\\[2pt]
+(2)\ \point{正の項をすべて加えたところで最大}\quad $a_{16}=2>0$，$a_{17}=-1<0$ だから $n=16$．\\
+\hspace*{1.5em}$S_{16}=\dfrac{16(47+2)}2=392$
+\end{kai}
+
+\ans{114}{等差数列（Ⅳ）}
+\begin{kai}
+\point{3数を $a-d,\ a,\ a+d$ とおく}\quad 和 $3a=15$ より $a=5$．積 $5(25-d^2)=80$ より $d^2=9$，$d=\pm3$．\\
+3つの数は\quad $2,\ 5,\ 8$
+\end{kai}
+
+\ans{115}{等比数列（Ⅰ）}
+\begin{kai}
+初項 $a$，公比 $r$ とすると $ar=6$，$ar^4=162$．$r^3=27$，$r$ は実数だから $r=3$，$a=2$．\quad $a_n=2\cdot3^{n-1}$
+\end{kai}
+
+\ans{116}{等比数列（Ⅱ）}
+\begin{kai}
+(1)\ $\dfrac{3(2^{10}-1)}{2-1}=3069$\\[2pt]
+(2)\ $3(2^n-1)>1000$ より $2^n>334.3\cdots$．$2^8=256$，$2^9=512$ だから\quad $n=9$
+\end{kai}
+
+\ans{117}{等差中項・等比中項}
+\begin{kai}
+\point{$a,\ b,\ c$ が等差数列 $\iff2b=a+c$，等比数列 $\iff b^2=ac$}\\
+$8=a+b$，$b^2=4a$．$a=8-b$ を代入して $b^2+4b-32=0$，$b=4,\ -8$．\\
+$(a,\ b)=(4,\ 4),\ (16,\ -8)$
+\end{kai}
+
+\ans{118}{$\Sigma$ 記号を用いた和の計算（Ⅰ）}
+\begin{kai}
+(1)\ $2\cdot\dfrac{n(n+1)}2-n=n^2$\\[2pt]
+(2)\ $\displaystyle\sum k^2+\sum k=\frac{n(n+1)(2n+1)}6+\frac{n(n+1)}2=\frac{n(n+1)(n+2)}3$
+\end{kai}
+
+\ans{119}{$\Sigma$ 記号を用いた和の計算（Ⅱ）}
+\begin{kai}
+(1)\ 初項3，公比3，項数 $n$ の等比数列の和で\quad $\dfrac{3(3^n-1)}2$\\[2pt]
+(2)\ $\dfrac{n(n+1)(2n+1)}6+\dfrac{2(2^n-1)}{2-1}=\dfrac{n(n+1)(2n+1)}6+2^{n+1}-2$
+\end{kai}
+
+\ans{120}{$\Sigma$ 記号を用いた和の計算（Ⅲ）}
+\begin{kai}
+\point{部分分数に分けて，隣り合う項を打ち消す}\\
+(1)\ $\dfrac1{k(k+1)}=\dfrac1k-\dfrac1{k+1}$ より\quad $1-\dfrac1{n+1}=\dfrac n{n+1}$\\[2pt]
+(2)\ $\dfrac1{(2k-1)(2k+1)}=\dfrac12\left(\dfrac1{2k-1}-\dfrac1{2k+1}\right)$ より\quad $\dfrac12\left(1-\dfrac1{2n+1}\right)=\dfrac n{2n+1}$
+\end{kai}
+
+\ans{121}{$\Sigma$ 記号を用いた和の計算（Ⅳ）}
+\begin{kai}
+\point{(等差)×(等比) の和は $S-rS$ を計算する}\\
+$S_n-2S_n=2+2^2+\cdots+2^n-n\cdot2^{n+1}=2^{n+1}-2-n\cdot2^{n+1}$．\\
+$S_n=(n-1)2^{n+1}+2$
+\end{kai}
+
+\ans{122}{階差数列}
+\begin{kai}
+階差数列は $1,\ 3,\ 5,\ 7,\ \cdots$ で，第 $k$ 項は $2k-1$．$n\geqq2$ のとき\\
+$a_n=1+\displaystyle\sum_{k=1}^{n-1}(2k-1)=1+(n-1)^2=n^2-2n+2$．これは $n=1$ のときも成りたつ．\quad $a_n=n^2-2n+2$
+\end{kai}
+
+\ans{123}{2項間の漸化式（Ⅰ）}
+\begin{kai}
+階差数列が $4n$ だから，$n\geqq2$ のとき $a_n=3+\displaystyle\sum_{k=1}^{n-1}4k=3+2n(n-1)$．$n=1$ でも成りたつ．\\
+$a_n=2n^2-2n+3$
+\end{kai}
+
+\ans{124}{2項間の漸化式（Ⅱ）}
+\begin{kai}
+\point{$\alpha=3\alpha+2$ の解 $\alpha=-1$ を利用}\quad $a_{n+1}+1=3(a_n+1)$．\\
+数列 $\{a_n+1\}$ は初項2，公比3の等比数列．\quad $a_n=2\cdot3^{n-1}-1$
+\end{kai}
+
+\ans{125}{2項間の漸化式（Ⅲ）}
+\begin{kai}
+両辺を $3^{n+1}$ でわると $b_{n+1}=\dfrac23b_n+\dfrac13$．変形して $b_{n+1}-1=\dfrac23(b_n-1)$．\\
+$b_1-1=\dfrac13-1=-\dfrac23$ より $b_n-1=-\left(\dfrac23\right)^n$．\\
+$a_n=3^nb_n=3^n-2^n$
+\end{kai}
+
+\ans{126}{2項間の漸化式（Ⅳ）}
+\begin{kai}
+$a_1>0$ と漸化式からすべての $n$ で $a_n>0$．\point{逆数をとる}\quad $\dfrac1{a_{n+1}}=\dfrac1{a_n}+2$．\\
+$\left\{\dfrac1{a_n}\right\}$ は初項1，公差2の等差数列で $\dfrac1{a_n}=2n-1$．\quad $a_n=\dfrac1{2n-1}$
+\end{kai}
+
+\ans{127}{2項間の漸化式（Ⅴ）}
+\begin{kai}
+(1)\ 右辺を展開して整理すると $a_{n+1}=2a_n+\alpha n+\beta-\alpha$．漸化式と比べて $\alpha=1$，$\beta-\alpha=0$．\quad $\alpha=1$，$\beta=1$\\[2pt]
+(2)\ $\{a_n+n+1\}$ は初項3，公比2の等比数列．$a_n+n+1=3\cdot2^{n-1}$．\quad $a_n=3\cdot2^{n-1}-n-1$
+\end{kai}
+
+\ans{128}{和と一般項}
+\begin{kai}
+$a_1=S_1=4$．$n\geqq2$ のとき $a_n=S_n-S_{n-1}=2n+1$．\\
+\point{$n=1$ のとき $2n+1=3\neq a_1$}\quad $a_1=4$，\ $a_n=2n+1\ (n\geqq2)$
+\end{kai}
+
+\ans{129}{3項間の漸化式}
+\begin{kai}
+特性方程式 $t^2=4t-3$ の解は $t=1,\ 3$．\quad $a_{n+2}-a_{n+1}=3(a_{n+1}-a_n)$．\\
+$a_{n+1}-a_n=(3-1)\cdot3^{n-1}=2\cdot3^{n-1}$．$n\geqq2$ のとき $a_n=1+\displaystyle\sum_{k=1}^{n-1}2\cdot3^{k-1}=3^{n-1}$（$n=1$ でも成りたつ）．\\
+$a_n=3^{n-1}$
+\end{kai}
+
+\ans{130}{連立型漸化式}
+\begin{kai}
+\point{和と差をつくる}\quad $a_{n+1}+b_{n+1}=3(a_n+b_n)$，\quad $a_{n+1}-b_{n+1}=-(a_n-b_n)$．\\
+$a_n+b_n=3\cdot3^{n-1}=3^n$，\quad $a_n-b_n=(-1)\cdot(-1)^{n-1}=(-1)^n$．\\
+$a_n=\dfrac{3^n+(-1)^n}2$，\quad $b_n=\dfrac{3^n-(-1)^n}2$
+\end{kai}
+
+\ans{131}{群数列（Ⅰ）}
+\begin{kai}
+(1)\ 第 $k$ 群には $k$ 個の数がある．第 $(n-1)$ 群の末項は $\dfrac{n(n-1)}2$ だから，第 $n$ 群の初項は\quad $\dfrac{n(n-1)}2+1$\\[2pt]
+(2)\ 第13群の末項は91，第14群の末項は105．$100-91=9$ より\quad 第14群の9番目
+\end{kai}
+
+\ans{132}{群数列（Ⅱ）}
+\begin{kai}
+分母が $k$ の項を第 $k$ 群とすると，第 $k$ 群は $k$ 項．第9群までで $\dfrac{9\cdot10}2=45$ 項．\\
+(1)\ 第50項は第10群の5番目で\quad $\dfrac5{10}=\dfrac12$\\[2pt]
+(2)\ 第 $k$ 群の和は $\dfrac{1+2+\cdots+k}{k}=\dfrac{k+1}2$．\\
+\hspace*{1.5em}$\displaystyle\sum_{k=1}^9\frac{k+1}2+\frac{1+2+3+4+5}{10}=27+\frac32=\frac{57}2$
+\end{kai}
+
+\ans{133}{格子点の個数}
+\begin{kai}
+\point{直線 $y=k$ 上の格子点を数えて加える}\quad $y=k$（$k=0,\ 1,\ \cdots,\ n$）上では $0\leqq x\leqq2n-2k$ で，$2n-2k+1$ 個．\\
+$\displaystyle\sum_{k=0}^n(2n-2k+1)=(2n+1)(n+1)-2\cdot\frac{n(n+1)}2=(n+1)^2$（個）
+\end{kai}
+
+\ans{134}{漸化式の応用}
+\begin{kai}
+(1)\ $(n+1)$ 本目の直線は他の $n$ 本と $n$ 個の点で交わり，$n+1$ 個の部分に分けられる．その各部分が平面の領域を1つずつ増やすので\quad $a_{n+1}=a_n+n+1$\\[2pt]
+(2)\ $a_1=2$．$n\geqq2$ のとき $a_n=2+\displaystyle\sum_{k=1}^{n-1}(k+1)=\frac{n^2+n+2}2$（$n=1$ でも成りたつ）
+\end{kai}
+
+\ans{135}{場合の数と漸化式}
+\begin{kai}
+(1)\ $a_1=1$，$a_2=2$．\point{右端のタイルで場合分け}\quad 右端が横1のタイルなら残りは $a_{n+1}$ 通り，横2のタイルなら $a_n$ 通り．\\
+\hspace*{1.5em}$a_{n+2}=a_{n+1}+a_n$\\[2pt]
+(2)\ $1,\ 2,\ 3,\ 5,\ 8,\ 13,\ 21,\ 34$ より\quad $a_8=34$
+\end{kai}
+
+\ans{136}{確率と漸化式}
+\begin{kai}
+(1)\ \point{$n$ 回目までの状態と $(n+1)$ 回目の結果で分ける}\\
+\hspace*{1.5em}$n$ 回目までに偶数回で次に1以外：$\dfrac56p_n$，\ 奇数回で次に1：$\dfrac16(1-p_n)$．\quad $p_{n+1}=\dfrac23p_n+\dfrac16$\\[2pt]
+(2)\ $p_{n+1}-\dfrac12=\dfrac23\left(p_n-\dfrac12\right)$，$p_1=\dfrac56$．\quad $p_n=\dfrac12+\dfrac12\left(\dfrac23\right)^n$
+\end{kai}
+
+\ans{137}{数学的帰納法（Ⅰ）}
+\begin{kai}
+{[1]}\ $n=1$ のとき，左辺 $=2$，右辺 $=\dfrac{1\cdot2\cdot3}3=2$ で成りたつ．\\
+{[2]}\ $n=k$ のとき成りたつと仮定すると，$n=k+1$ のとき\\
+\hspace*{1.5em}左辺 $=\dfrac{k(k+1)(k+2)}3+(k+1)(k+2)=\dfrac{(k+1)(k+2)(k+3)}3$ となり，$n=k+1$ でも成りたつ．\\
+{[1]}，[2]より，すべての自然数 $n$ について成りたつ．
+\end{kai}
+
+\ans{138}{数学的帰納法（Ⅱ）}
+\begin{kai}
+{[1]}\ $n=5$ のとき $2^5=32>25$ で成りたつ．\\
+{[2]}\ $k\geqq5$ として $2^k>k^2$ を仮定すると $2^{k+1}>2k^2$．\\
+\hspace*{1.5em}$2k^2-(k+1)^2=k^2-2k-1=(k-1)^2-2>0$（$k\geqq5$）だから $2^{k+1}>(k+1)^2$．\\
+{[1]}，[2]より，$n\geqq5$ のすべての自然数 $n$ で成りたつ．
+\end{kai}
+
+\shouans{第8章}{ベクトル}
+\ans{139}{$m\vec a+n\vec b$}
+\begin{kai}
+$(7,\ 0)=m(2,\ 1)+n(-1,\ 3)$ より $2m-n=7$，$m+3n=0$．$m=3$，$n=-1$．\quad $\vec c=3\vec a-\vec b$
+\end{kai}
+
+\ans{140}{分点の位置ベクトル}
+\begin{kai}
+$\vec p=\dfrac{3\vec a+2\vec b}{5}$，\qquad $\vec q=\dfrac{-3\vec a+2\vec b}{2-3}=3\vec a-2\vec b$
+\end{kai}
+
+\ans{141}{3点が一直線上にある条件}
+\begin{kai}
+\point{$\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ となる実数 $k$ がある}\quad $(x-1,\ 9)=k(2,\ 3)$ より $k=3$，$x-1=6$．\quad $x=7$
+\end{kai}
+
+\ans{142}{三角形の重心の位置ベクトル}
+\begin{kai}
+$\overrightarrow{\mathrm{GA}}+\overrightarrow{\mathrm{GB}}+\overrightarrow{\mathrm{GC}}=(\vec a-\vec g)+(\vec b-\vec g)+(\vec c-\vec g)=(\vec a+\vec b+\vec c)-3\vec g=\vec0$
+\end{kai}
+
+\ans{143}{ベクトルの成分}
+\begin{kai}
+(1)\ $|\vec a|=\sqrt{9+16}=5$．単位ベクトルは $\dfrac{\vec a}{|\vec a|}=\left(\dfrac35,\ -\dfrac45\right)$\qquad
+(2)\ $(6-3,\ -8-6)=(3,\ -14)$
+\end{kai}
+
+\ans{144}{平行条件}
+\begin{kai}
+\point{$(a_1,\ a_2)\,/\!/\,(b_1,\ b_2)\iff a_1b_2-a_2b_1=0$}\quad $2\cdot3-x(x+1)=0$，$x^2+x-6=0$．\quad $x=2,\ -3$
+\end{kai}
+
+\ans{145}{ベクトルの大きさ（Ⅰ）}
+\begin{kai}
+\point{大きさは2乗して内積で展開}\quad $|\vec a+2\vec b|^2=|\vec a|^2+4\vec a\cdot\vec b+4|\vec b|^2=4-8+36=32$．\quad $|\vec a+2\vec b|=4\sqrt2$
+\end{kai}
+
+\ans{146}{ベクトルの大きさ（Ⅱ）}
+\begin{kai}
+$\vec a+t\vec b=(3+t,\ 1+t)$．$|\vec a+t\vec b|^2=(3+t)^2+(1+t)^2=2t^2+8t+10=2(t+2)^2+2$．\\
+最小値 $\sqrt2$（$t=-2$）
+\end{kai}
+
+\ans{147}{角の2等分ベクトルの扱い（Ⅰ）}
+\begin{kai}
+\point{角の2等分線の性質 $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}$}\quad $\mathrm{AD}:\mathrm{DB}=2:3$．\quad $\overrightarrow{\mathrm{OD}}=\dfrac{3\vec a+2\vec b}{5}$
+\end{kai}
+
+\ans{148}{角の2等分ベクトルの扱い（Ⅱ）}
+\begin{kai}
+$\mathrm{AB}=5$．$\angle\mathrm O$ の2等分線と AB の交点を D とすると $\mathrm{AD}:\mathrm{DB}=3:4$，$\overrightarrow{\mathrm{OD}}=\dfrac{4\vec a+3\vec b}7$，$\mathrm{AD}=\dfrac{15}7$．\\
+$\triangle\mathrm{OAD}$ で AI は $\angle\mathrm A$ の2等分線だから $\mathrm{OI}:\mathrm{ID}=\mathrm{AO}:\mathrm{AD}=3:\dfrac{15}7=7:5$．\\
+$\overrightarrow{\mathrm{OI}}=\dfrac7{12}\overrightarrow{\mathrm{OD}}=\dfrac{4\vec a+3\vec b}{12}=\dfrac13\vec a+\dfrac14\vec b$
+\end{kai}
+
+\ans{149}{$l\overrightarrow{\mathrm{PA}}+m\overrightarrow{\mathrm{PB}}+n\overrightarrow{\mathrm{PC}}=\vec0$}
+\begin{kai}
+(1)\ \point{始点を A にそろえる}\quad $-2\overrightarrow{\mathrm{AP}}+3(\overrightarrow{\mathrm{AB}}-\overrightarrow{\mathrm{AP}})+4(\overrightarrow{\mathrm{AC}}-\overrightarrow{\mathrm{AP}})=\vec0$ より\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{9}=\dfrac79\cdot\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{7}$．\\
+\hspace*{1.5em}辺 BC を $4:3$ に内分する点を D とすると，P は線分 AD を $7:2$ に内分する点．\\[2pt]
+(2)\ $\triangle\mathrm{ABC}=S$ とすると $\triangle\mathrm{PBC}=\dfrac29S$，$\triangle\mathrm{PAB}=\dfrac79\cdot\dfrac47S=\dfrac49S$，$\triangle\mathrm{PCA}=\dfrac79\cdot\dfrac37S=\dfrac39S$．\\
+\hspace*{1.5em}$\triangle\mathrm{PBC}:\triangle\mathrm{PCA}:\triangle\mathrm{PAB}=2:3:4$
+\end{kai}
+
+\ans{150}{内積（Ⅰ）}
+\begin{kai}
+(1)\ $2\cdot3\cos60^\circ=3$\qquad
+(2)\ $\cos\theta=\dfrac{\sqrt3+\sqrt3}{2\cdot2}=\dfrac{\sqrt3}2$．\quad $\theta=30^\circ$
+\end{kai}
+
+\ans{151}{内積（Ⅱ）}
+\begin{kai}
+(1)\ \point{垂直 $\iff$ 内積が0}\quad $2x-12=0$．\quad $x=6$\\[2pt]
+(2)\ $(x,\ y)$ とすると $3x+4y=0$，$x^2+y^2=1$．\quad $\left(\dfrac45,\ -\dfrac35\right)$，$\left(-\dfrac45,\ \dfrac35\right)$
+\end{kai}
+
+\ans{152}{内積（Ⅲ）}
+\begin{kai}
+$|\vec a|^2=10$，$|\vec b|^2=5$，$\vec a\cdot\vec b=5$．\quad $S=\dfrac12\sqrt{50-25}=\dfrac52$\\
+（成分では $S=\dfrac12|a_1b_2-a_2b_1|=\dfrac12|6-1|$ でも同じ）
+\end{kai}
+
+\ans{153}{内積（Ⅳ）}
+\begin{kai}
+$|\vec a-\vec b|^2=|\vec a|^2-2\vec a\cdot\vec b+|\vec b|^2$ より $3=1-2\vec a\cdot\vec b+4$．\quad $\vec a\cdot\vec b=1$\\
+$\cos\theta=\dfrac{1}{1\cdot2}=\dfrac12$．\quad なす角は $60^\circ$
+\end{kai}
+
+\ans{154}{正射影ベクトル}
+\begin{kai}
+\point{$\dfrac{\vec a\cdot\vec b}{|\vec b|^2}\vec b$}\quad $\vec a\cdot\vec b=14$，$|\vec b|^2=10$．\quad $\dfrac{14}{10}(3,\ 1)=\left(\dfrac{21}5,\ \dfrac75\right)$
+\end{kai}
+
+\ans{155}{ベクトル方程式（Ⅰ）}
+\begin{kai}
+(1)\ $(x,\ y)=(1,\ 2)+t(3,\ -1)$，すなわち $x=1+3t$，$y=2-t$．$t$ を消去して\quad $x+3y-7=0$\\[2pt]
+(2)\ \point{法線ベクトル $(a,\ b)$ の直線は $a(x-x_0)+b(y-y_0)=0$}\quad $2(x-2)+3(y+1)=0$，すなわち $2x+3y-1=0$
+\end{kai}
+
+\ans{156}{ベクトル方程式（Ⅱ）}
+\begin{kai}
+$\overrightarrow{\mathrm{AP}}\perp\overrightarrow{\mathrm{BP}}$ または P が A，B に一致するので，AB を直径とする円．\\
+中心は AB の中点 $(2,\ 2)$，半径は $\dfrac12\mathrm{AB}=\dfrac12\sqrt{4+16}=\sqrt5$
+\end{kai}
+
+\ans{157}{軌跡（Ⅰ）}
+\begin{kai}
+(1)\ 線分 AB\\[2pt]
+(2)\ $\dfrac s2+\dfrac t2=1$ と変形し，$\overrightarrow{\mathrm{OA'}}=2\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB'}}=2\overrightarrow{\mathrm{OB}}$ とすると $\overrightarrow{\mathrm{OP}}=\dfrac s2\overrightarrow{\mathrm{OA'}}+\dfrac t2\overrightarrow{\mathrm{OB'}}$．\quad 線分 A$'$B$'$
+\end{kai}
+
+\ans{158}{軌跡（Ⅱ）}
+\begin{kai}
+$s+t=k$ のとき P は，$\overrightarrow{\mathrm{OA}_k}=k\overrightarrow{\mathrm{OA}}$，$\overrightarrow{\mathrm{OB}_k}=k\overrightarrow{\mathrm{OB}}$ となる線分 $\mathrm A_k\mathrm B_k$ 上を動く．\\
+$1\leqq k\leqq2$ だから，存在範囲は台形 $\mathrm{ABB_2A_2}$（周を含む）．面積は\quad $3\times2^2-3=9$
+\end{kai}
+
+\ans{159}{ベクトルと図形}
+\begin{kai}
+$\overrightarrow{\mathrm{OC}}=\vec a+\vec b$，$\overrightarrow{\mathrm{AB}}=\vec b-\vec a$．\\
+$\overrightarrow{\mathrm{OC}}\cdot\overrightarrow{\mathrm{AB}}=(\vec b+\vec a)\cdot(\vec b-\vec a)=|\vec b|^2-|\vec a|^2$．\\
+よって $\mathrm{OC}\perp\mathrm{AB}\iff|\vec b|^2-|\vec a|^2=0\iff|\vec a|=|\vec b|$（ひし形になる）．
+\end{kai}
+
+\ans{160}{空間座標}
+\begin{kai}
+(1)\ $\mathrm{AB}=\sqrt{9+16+0}=5$，\quad 中点 $\left(\dfrac52,\ 0,\ 3\right)$\\[2pt]
+(2)\ $(0,\ y,\ 0)$ とすると $1+(y-2)^2+9=16+(y+2)^2+9$，$-8y=15$．\quad $\left(0,\ -\dfrac{15}8,\ 0\right)$
+\end{kai}
+
+\ans{161}{空間ベクトル}
+\begin{kai}
+(1)\ $|\vec a|=\sqrt{1+4+4}=3$，\quad $\vec a\cdot\vec b=2+0-2=0$\\[2pt]
+(2)\ $\vec n=(x,\ y,\ z)$ とすると $x+2y-2z=0$，$2x+z=0$．$z=-2x$，$y=-\dfrac52x$ より $\vec n=\dfrac x2(2,\ -5,\ -4)$．\\
+\hspace*{1.5em}$|(2,\ -5,\ -4)|=3\sqrt5$ だから\quad $\pm\dfrac{1}{\sqrt5}(2,\ -5,\ -4)$
+\end{kai}
+
+\ans{162}{三角形の面積}
+\begin{kai}
+$\overrightarrow{\mathrm{AB}}=(-1,\ 2,\ 0)$，$\overrightarrow{\mathrm{AC}}=(-1,\ 0,\ 2)$．$|\overrightarrow{\mathrm{AB}}|^2=5$，$|\overrightarrow{\mathrm{AC}}|^2=5$，$\overrightarrow{\mathrm{AB}}\cdot\overrightarrow{\mathrm{AC}}=1$．\\
+$S=\dfrac12\sqrt{25-1}=\sqrt6$
+\end{kai}
+
+\ans{163}{直方体}
+\begin{kai}
+$\mathrm G(2,\ 1,\ 1)$，$\mathrm B(2,\ 0,\ 0)$，$\mathrm H(0,\ 1,\ 1)$．$\overrightarrow{\mathrm{AG}}=(2,\ 1,\ 1)$，$\overrightarrow{\mathrm{BH}}=(-2,\ 1,\ 1)$．\\
+$\cos\theta=\dfrac{-4+1+1}{\sqrt6\cdot\sqrt6}=-\dfrac13$
+\end{kai}
+
+\ans{164}{四面体（Ⅰ）}
+\begin{kai}
+(1)\ $\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}3$ より\quad $\overrightarrow{\mathrm{OP}}=\dfrac34\overrightarrow{\mathrm{OG}}=\dfrac{\vec a+\vec b+\vec c}4$\\[2pt]
+(2)\ $\overrightarrow{\mathrm{OQ}}=\dfrac{\vec b+\vec c}3$．$\overrightarrow{\mathrm{AP}}=\dfrac{-3\vec a+\vec b+\vec c}4$，$\overrightarrow{\mathrm{AQ}}=\dfrac{-3\vec a+\vec b+\vec c}3$．\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac34\overrightarrow{\mathrm{AQ}}$ だから A，P，Q は一直線上にあり\quad $\mathrm{AP}:\mathrm{PQ}=3:1$
+\end{kai}
+
+\ans{165}{四面体（Ⅱ）}
+\begin{kai}
+X は直線 OD 上にあるので $\overrightarrow{\mathrm{OX}}=k\overrightarrow{\mathrm{OD}}=\dfrac k2\vec a+\dfrac k3\vec b+k\vec c$．\\
+\point{平面 ABC 上 $\iff$ 係数の和が1}\quad $\dfrac k2+\dfrac k3+k=1$ より $k=\dfrac6{11}$．\\
+$\overrightarrow{\mathrm{OX}}=\dfrac3{11}\vec a+\dfrac2{11}\vec b+\dfrac6{11}\vec c$
+\end{kai}
+
+\ans{166}{垂線の足のベクトル}
+\begin{kai}
+$\overrightarrow{\mathrm{AB}}=(-2,\ 2,\ 0)$，$\overrightarrow{\mathrm{AC}}=(-2,\ 0,\ 1)$．H は $\alpha$ 上にあるので\\
+$\overrightarrow{\mathrm{OH}}=\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}=(2-2s-2t,\ 2s,\ t)$．\\
+\point{$\overrightarrow{\mathrm{OH}}\perp\overrightarrow{\mathrm{AB}}$，$\overrightarrow{\mathrm{OH}}\perp\overrightarrow{\mathrm{AC}}$}\quad $-4+8s+4t=0$，$-4+4s+5t=0$．\quad $s=\dfrac16$，$t=\dfrac23$．\\
+$\mathrm H\left(\dfrac13,\ \dfrac13,\ \dfrac23\right)$，\quad $\mathrm{OH}=\sqrt{\dfrac19+\dfrac19+\dfrac49}=\dfrac{\sqrt6}3$
+\end{kai}
+
+\ans{167}{空間ベクトルにおける幾何の活用}
+\begin{kai}
+1辺を1とすると $|\vec a|=|\vec b|=|\vec c|=1$，各面は正三角形なので $\vec a\cdot\vec b=\vec a\cdot\vec c=1\cdot1\cdot\cos60^\circ=\dfrac12$．\\
+$\overrightarrow{\mathrm{OA}}\cdot\overrightarrow{\mathrm{BC}}=\vec a\cdot(\vec c-\vec b)=\dfrac12-\dfrac12=0$．よって $\mathrm{OA}\perp\mathrm{BC}$
+\end{kai}
+
+\ans{168}{球と直線}
+\begin{kai}
+(1)\ $z=0$ とおくと $(x-1)^2+(y+2)^2=9-4=5$．\quad 中心 $(1,\ -2,\ 0)$，半径 $\sqrt5$\\[2pt]
+(2)\ $y=z=0$ とおくと $(x-1)^2+4+4=9$，$x=0,\ 2$．\quad $(0,\ 0,\ 0)$，$(2,\ 0,\ 0)$
+\end{kai}
+
+\shouans{第9章}{統計的な推測}
+\ans{169}{確率変数と確率分布}
+\begin{kai}
+取り出し方は ${}_4\mathrm C_2=6$ 通り（2枚の3は区別する）．和は $(1,2)$：3，$(1,3)$：4 が2通り，$(2,3)$：5 が2通り，$(3,3)$：6．\\[2pt]
+$\begin{array}{c|cccc|c}X&3&4&5&6&\text{計}\\ \hline P&\frac16&\frac26&\frac26&\frac16&1\end{array}$
+\end{kai}
+
+\ans{170}{確率変数の期待値}
+\begin{kai}
+$E(X)=3\cdot\dfrac16+4\cdot\dfrac26+5\cdot\dfrac26+6\cdot\dfrac16=\dfrac{27}6=\dfrac92$
+\end{kai}
+
+\ans{171}{確率変数の変換後の期待値}
+\begin{kai}
+\point{$E(aX+b)=aE(X)+b$}\quad $E(Y)=2\cdot\dfrac92-3=6$
+\end{kai}
+
+\ans{172}{確率変数の分散・標準偏差}
+\begin{kai}
+$E(X^2)=\dfrac{9+32+50+36}{6}=\dfrac{127}6$．\point{$V(X)=E(X^2)-\{E(X)\}^2$}\\
+$V(X)=\dfrac{127}6-\dfrac{81}4=\dfrac{11}{12}$，\quad $\sigma(X)=\sqrt{\dfrac{11}{12}}=\dfrac{\sqrt{33}}6$
+\end{kai}
+
+\ans{173}{確率変数の変換後の分散・標準偏差}
+\begin{kai}
+\point{$V(aX+b)=a^2V(X)$，$\sigma(aX+b)=|a|\sigma(X)$}\quad $V(Y)=4\cdot\dfrac{11}{12}=\dfrac{11}3$，\quad $\sigma(Y)=2\cdot\dfrac{\sqrt{33}}6=\dfrac{\sqrt{33}}3$
+\end{kai}
+
+\ans{174}{2つの確率変数が独立であるときの積の期待値}
+\begin{kai}
+$E(X)=\dfrac72$，$E(Y)=\dfrac12$．$E(X+Y)=E(X)+E(Y)=4$．\\
+$X,\ Y$ は独立だから\quad $E(XY)=E(X)E(Y)=\dfrac74$
+\end{kai}
+
+\ans{175}{2つの確率変数が独立であるときの分散}
+\begin{kai}
+$V(X)=\dfrac{91}6-\left(\dfrac72\right)^2=\dfrac{35}{12}$，\quad $V(Y)=\dfrac12-\dfrac14=\dfrac14$．\\
+独立だから\quad $V(X+Y)=V(X)+V(Y)=\dfrac{35}{12}+\dfrac3{12}=\dfrac{19}6$
+\end{kai}
+
+\ans{176}{二項分布の期待値・分散・標準偏差}
+\begin{kai}
+$X$ は二項分布 $B\left(180,\ \dfrac16\right)$ にしたがう．\point{$E=np$，$V=np(1-p)$}\\
+$E(X)=30$，\quad $V(X)=180\cdot\dfrac16\cdot\dfrac56=25$，\quad $\sigma(X)=5$
+\end{kai}
+
+\ans{177}{確率密度関数}
+\begin{kai}
+(1)\ $\displaystyle\int_0^2ax\,dx=2a=1$ より\quad $a=\dfrac12$\\[2pt]
+(2)\ $\displaystyle\int_1^2\frac x2\,dx=\frac34$\qquad
+(3)\ $\displaystyle E(X)=\int_0^2x\cdot\frac x2\,dx=\frac43$
+\end{kai}
+
+\ans{178}{正規分布}
+\begin{kai}
+\point{$Z=\dfrac{X-50}{10}$ で標準化}\\
+(1)\ $P(Z\geqq1.5)=0.5-0.4332=0.0668$\\[2pt]
+(2)\ $P(-1\leqq Z\leqq2)=0.3413+0.4772=0.8185$
+\end{kai}
+
+\ans{179}{二項分布の正規近似}
+\begin{kai}
+表の回数 $X$ は $B\left(400,\ \dfrac12\right)$ にしたがい，$E(X)=200$，$\sigma(X)=\sqrt{100}=10$．\\
+近似的に $N(200,\ 10^2)$ にしたがうので\quad $P(X\geqq220)=P(Z\geqq2)=0.5-0.4772=0.0228$
+\end{kai}
+
+\ans{180}{標本平均と正規分布}
+\begin{kai}
+(1)\ $E(\overline X)=60$，\quad \point{$\sigma(\overline X)=\dfrac{\sigma}{\sqrt n}$}\quad $\sigma(\overline X)=\dfrac{12}{6}=2$\\[2pt]
+(2)\ $P(\overline X\geqq63)=P\left(Z\geqq\dfrac{63-60}2\right)=P(Z\geqq1.5)=0.0668$
+\end{kai}
+
+\ans{181}{母平均の推定}
+\begin{kai}
+\point{$\left[\overline X-1.96\dfrac{\sigma}{\sqrt n},\ \overline X+1.96\dfrac{\sigma}{\sqrt n}\right]$}\quad $1.96\cdot\dfrac{10}{10}=1.96$．\\
+$[50.04,\ 53.96]$（単位 g）
+\end{kai}
+
+\ans{182}{母比率の推定}
+\begin{kai}
+標本比率 $R=\dfrac{240}{400}=0.6$．$\sqrt{\dfrac{R(1-R)}n}=\sqrt{\dfrac{0.24}{400}}=\dfrac{\sqrt{0.24}}{20}=\dfrac{2\sqrt6}{200}=0.02449$．\\
+$1.96\times0.02449\fallingdotseq0.048$．\quad $[0.552,\ 0.648]$
+\end{kai}
+
+\ans{183}{仮説検定}
+\begin{kai}
+帰無仮説「表の出る確率は $\dfrac12$」のもとで，表の回数 $X$ は近似的に $N(200,\ 10^2)$ にしたがう．\\
+$Z=\dfrac{220-200}{10}=2$．有意水準5\,\% の両側検定の棄却域は $|Z|\geqq1.96$．\\
+$Z=2$ は棄却域に入るので，帰無仮説は棄却される．\quad 表と裏の出やすさは等しいとはいえない．
+\end{kai}
+
+\end{document}

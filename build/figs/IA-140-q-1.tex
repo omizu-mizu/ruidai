@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=0.65mm,y=0.65mm]
+\draw[->] (30,30)--(100,30) node[right]{\scriptsize 数学};
+\draw[->] (30,30)--(30,100) node[above]{\scriptsize 英語};
+\foreach \t in {40,50,...,90} {\draw[gray!40] (\t,30)--(\t,95); \draw[gray!40] (30,\t)--(95,\t);
+  \node[below] at (\t,30){\tiny \t}; \node[left] at (30,\t){\tiny \t};}
+\draw[dashed] (30,30)--(95,95);
+\foreach \p in {(40,55),(50,45),(55,60),(60,65),(65,55),(70,75),(75,70),(80,85),(85,75),(90,80)} \fill \p circle (1.2pt);
+\end{tikzpicture}

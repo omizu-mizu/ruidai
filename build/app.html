@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3a5f">
+<title>類題カード</title>
+<style>/*KATEX_CSS*/</style>
+<style>
+:root{
+  --bg:#f4f5f7; --card:#fff; --ink:#1d2330; --sub:#667085; --line:#d9dde3; --acc:#1f3a5f;
+  --r1:#1a7f4b; --r2:#2f6fb5; --r3:#c77700; --r4:#c0392b; --r0:#c9ced6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;
+  -webkit-text-size-adjust:100%;}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:760px;margin:0 auto;padding:12px 12px 170px}
+header.top{position:sticky;top:0;z-index:5;background:var(--acc);color:#fff;
+  padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));display:flex;align-items:center;gap:10px}
+header.top h1{font-size:17px;margin:0;flex:1;font-weight:700;letter-spacing:.05em}
+header.top button{background:rgba(255,255,255,.15);border:0;border-radius:8px;padding:6px 10px;color:#fff;font-size:14px}
+.panel{background:var(--card);border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.panel h2{font-size:15px;margin:0 0 10px;color:var(--acc)}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:14px}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.book{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
+.book:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.bookhead{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.bookhead b{flex:1;font-size:15px}
+.mini{border:1px solid var(--line);background:#fff;border-radius:6px;padding:3px 8px;font-size:12px;color:var(--sub)}
+.ch{display:flex;align-items:center;gap:10px;padding:7px 4px;border-radius:8px}
+.ch input{width:20px;height:20px;accent-color:var(--acc);flex:none}
+.ch .nm{flex:1;font-size:14px}
+.ch .ct{font-size:12px;color:var(--sub);width:3.2em;text-align:right}
+.bar{display:flex;height:6px;border-radius:3px;overflow:hidden;background:var(--r0);width:64px;flex:none}
+.bar i{display:block;height:100%}
+.range{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--sub);margin-top:6px}
+.range input{width:4.5em;padding:5px;border:1px solid var(--line);border-radius:6px;font-size:14px}
+.start{display:block;width:100%;background:var(--acc);color:#fff;border:0;border-radius:12px;padding:15px;font-size:17px;font-weight:700}
+.start:disabled{opacity:.4}
+.ghost{display:block;width:100%;background:#fff;border:1.5px solid var(--acc);color:var(--acc);border-radius:12px;padding:12px;font-size:15px;font-weight:700;margin-top:10px}
+.note{font-size:12px;color:var(--sub);line-height:1.6}
+/* 学習画面 */
+.prog{height:4px;background:var(--line)}
+.prog i{display:block;height:100%;background:#7fb2e5;transition:width .2s}
+.meta{font-size:12px;color:var(--sub);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.qtitle{font-size:16px;font-weight:700;margin:4px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.badge{display:inline-block;border-radius:6px;padding:1px 7px;font-size:11px;color:#fff;font-weight:700}
+.body{line-height:1.85;font-size:15.5px;word-break:break-word;overflow-wrap:anywhere}
+.body .dm{margin:6px 0;overflow-x:auto;overflow-y:hidden;padding:2px 0}
+.body .m{white-space:nowrap}
+.body .m.long{white-space:normal}
+.body .katex{font-size:1.08em}
+.body .hs{display:inline-block}
+.body .pt{font-weight:700;color:#8a4b00;font-size:.92em}
+.body .blank{display:inline-block;width:2.2em;height:1.3em;border:1px solid #333;vertical-align:middle}
+.body .box{display:inline-block;border:1px solid #333;padding:0 .35em;line-height:1.3}
+.body .enum .it{display:flex;gap:.5em;margin:3px 0}
+.body .enum .lab{flex:none;min-width:2.1em}
+.body .enum .itb{flex:1;min-width:0}
+.body .mc2{display:grid;grid-template-columns:1fr 1fr;column-gap:1em}
+.body .mc2 .enum{display:contents}
+.body .center{text-align:center}
+.body .mp{display:inline-block;vertical-align:top;width:calc(var(--w) - 1%)}
+.body .mpfig{text-align:center}
+.body br.par{display:block;content:"";margin-top:.5em}
+.body .tblwrap{overflow-x:auto;margin:6px 0}
+.body table.tb{border-collapse:collapse;margin:0 auto;font-size:14px}
+.body table.tb td{padding:3px 10px;white-space:nowrap}
+.body table.tb td.br{border-right:1px solid #333}
+.body table.tb tr.bb td{border-bottom:1px solid #333}
+.body table.tb td.al{text-align:left}.body table.tb td.ar{text-align:right}.body table.tb td.ac{text-align:center}
+.body img.fig{max-width:100%;height:auto;vertical-align:middle;margin:4px 0}
+@media (max-width:560px){
+  .body .mp{display:block;width:100%}
+  .body .mc2{grid-template-columns:1fr}
+}
+.reveal{display:block;width:100%;margin-top:14px;border:2px dashed #9fb3c8;background:#f7fafd;color:var(--acc);
+  border-radius:12px;padding:22px 10px;font-size:15px;font-weight:700}
+.ansbox{margin-top:16px;border-left:3px solid var(--acc);padding:2px 0 2px 12px}
+.anslabel{font-size:12px;font-weight:700;color:var(--acc);margin-bottom:4px;letter-spacing:.1em}
+.rate{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);
+  padding:10px 10px max(10px,env(safe-area-inset-bottom));z-index:6;box-shadow:0 -2px 8px rgba(0,0,0,.06)}
+.rate .q{font-size:12px;color:var(--sub);text-align:center;margin-bottom:6px}
+.rate .grid{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rbtn{border:0;border-radius:10px;padding:10px 8px;color:#fff;text-align:left;display:flex;gap:8px;align-items:center;min-height:52px}
+.rbtn .s{font-size:20px;font-weight:700;width:1.2em;text-align:center;flex:none}
+.rbtn .t{font-size:12.5px;line-height:1.35;font-weight:600}
+.r1{background:var(--r1)}.r2{background:var(--r2)}.r3{background:var(--r3)}.r4{background:var(--r4)}
+.nav{display:flex;justify-content:space-between;margin-top:12px}
+.nav button{border:0;background:none;color:var(--sub);font-size:14px;padding:8px}
+/* 結果・記録 */
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+.stat div{border-radius:10px;padding:10px 4px;color:#fff}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:11px}
+.grid-nums{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0 4px}
+.num{width:38px;height:32px;border-radius:6px;border:0;font-size:13px;color:#fff;background:var(--r0);font-weight:600}
+.num.u{color:#555}
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--sub)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:3px}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<header class="top"><h1 id="hd">類題カード</h1><span id="hdbtns"></span></header>
+<div id="progwrap" class="prog hidden"><i id="prog"></i></div>
+<main class="wrap" id="main"></main>
+<div class="rate hidden" id="rate"></div>
+
+<script>/*KATEX_JS*/</script>
+<script>
+const BOOKS = /*DATA*/;
+const FIGS = /*FIGS*/;
+const LEVELS = [
+  null,
+  {s:'◎', t:'解法が浮かび、正解した'},
+  {s:'○', t:'解法はわかったが計算ミス'},
+  {s:'△', t:'解答を見て理解できた'},
+  {s:'×', t:'解答を見てもわからない'},
+];
+const KEY = 'ruidai-cards-v1';
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// ---------- 保存 ----------
+let S = load();
+function load(){
+  try{ const o = JSON.parse(localStorage.getItem(KEY)); if(o && o.rec) return o; }catch(e){}
+  return {rec:{}, sel:null, session:null};
+}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+
+const ALL = [];
+const BYID = {};
+BOOKS.forEach(b => b.problems.forEach(p => { ALL.push(p); BYID[p.id] = p; }));
+const chOf = p => BOOKS.find(b => b.id===p.book).chapters[p.ch-1];
+const bookOf = p => BOOKS.find(b => b.id===p.book);
+const lv = id => (S.rec[id] && S.rec[id].r) || 0;
+
+// ---------- 選択状態 ----------
+function defaultSel(){
+  return {
+    ch: {},              // "IA-3": true
+    range: {},           // "IA": [from, to]
+    levels: [0,1,2,3,4], // 対象とする理解度 (0=未学習)
+    order: 'seq',        // seq | rand | weak
+    count: 0,            // 0 = 全部
+  };
+}
+if(!S.sel) S.sel = defaultSel();
+const sel = S.sel;
+
+function pool(){
+  return ALL.filter(p => {
+    if(!sel.ch[p.book+'-'+p.ch]) return false;
+    const r = sel.range[p.book];
+    if(r){ if(r[0] && p.no < r[0]) return false; if(r[1] && p.no > r[1]) return false; }
+    return sel.levels.includes(lv(p.id));
+  });
+}
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function ordered(list){
+  list = list.slice();
+  if(sel.order==='rand') shuffle(list);
+  else if(sel.order==='weak'){
+    const w = {4:0, 3:1, 2:2, 0:3, 1:4};
+    shuffle(list);
+    list.sort((a,b) => w[lv(a.id)] - w[lv(b.id)]);
+  }
+  if(sel.count) list = list.slice(0, sel.count);
+  return list;
+}
+
+// ---------- 描画ユーティリティ ----------
+const MACROS = {'\\rpt':'0.\\dot{#1}'};
+function renderBody(el){
+  el.querySelectorAll('.m,.dm').forEach(n => {
+    const tex = n.textContent;
+    try{ katex.render(tex, n, {displayMode:n.classList.contains('dm'), macros:{...MACROS}, throwOnError:false, strict:'ignore'}); }
+    catch(e){ n.textContent = tex; }
+  });
+  // 行幅を超える長いインライン数式だけ折り返しを許す
+  el.querySelectorAll('.m').forEach(n => {
+    const box = n.closest('.itb,.mp,.body,td') || n.parentElement;
+    if(n.getBoundingClientRect().width > box.clientWidth) n.classList.add('long');
+  });
+  el.querySelectorAll('.fig').forEach(n => {
+    const f = FIGS[n.dataset.fig]; if(!f) return;
+    const img = new Image(); img.className='fig'; img.alt='図';
+    img.src = f.src; img.style.width = Math.round(f.w*1.45)+'px';
+    n.replaceWith(img);
+  });
+}
+function bar(ids){
+  const c=[0,0,0,0,0]; ids.forEach(id => c[lv(id)]++);
+  const n = ids.length || 1;
+  return '<span class="bar">' + [1,2,3,4].map(k => c[k] ? `<i style="width:${c[k]/n*100}%;background:var(--r${k})"></i>` : '').join('') + '</span>';
+}
+function header(title, btns){
+  $('#hd').textContent = title;
+  const h = $('#hdbtns'); h.innerHTML='';
+  (btns||[]).forEach(([label, fn]) => { const b=document.createElement('button'); b.textContent=label; b.onclick=fn; h.appendChild(b); });
+}
+function chrome(study){
+  $('#progwrap').classList.toggle('hidden', !study);
+  $('#rate').classList.add('hidden');
+  window.scrollTo(0,0);
+}
+
+// ---------- ホーム ----------
+function home(){
+  chrome(false);
+  header('類題カード', [['記録', records]]);
+  const m = $('#main');
+  const ses = S.session;
+  let h = '';
+  if(ses && ses.i < ses.q.length){
+    h += `<div class="panel"><h2>前回の続き</h2><div class="note">${ses.i} / ${ses.q.length} 問まで進んでいます。</div>
+      <button class="ghost" id="resume">続きから始める</button></div>`;
+  }
+  h += `<div class="panel"><h2>出題範囲</h2>`;
+  BOOKS.forEach(b => {
+    const r = sel.range[b.id] || ['',''];
+    h += `<div class="book"><div class="bookhead"><b>${esc(b.label)}</b>
+      <button class="mini" data-all="${b.id}">全選択</button><button class="mini" data-none="${b.id}">解除</button></div>`;
+    b.chapters.forEach(c => {
+      const ids = b.problems.filter(p => p.ch===c.no).map(p => p.id);
+      const k = b.id+'-'+c.no;
+      h += `<label class="ch"><input type="checkbox" data-ch="${k}" ${sel.ch[k]?'checked':''}>
+        <span class="nm">${esc(c.name)} ${esc(c.title)}</span>${bar(ids)}<span class="ct">${ids.length}問</span></label>`;
+    });
+    h += `<div class="range">類題番号 <input type="number" inputmode="numeric" min="1" data-rf="${b.id}" value="${r[0]||''}" placeholder="最初">〜
+      <input type="number" inputmode="numeric" min="1" data-rt="${b.id}" value="${r[1]||''}" placeholder="最後"> に絞る（空欄なら絞らない）</div></div>`;
+  });
+  h += `</div>`;
+  h += `<div class="panel"><h2>対象にする問題</h2><div class="row">` +
+    [[0,'未学習'],[1,'◎'],[2,'○'],[3,'△'],[4,'×']].map(([k,t]) =>
+      `<button class="chip ${sel.levels.includes(k)?'on':''}" data-lv="${k}">${t}</button>`).join('') +
+    `</div><div class="note" style="margin-top:8px">◎ 解法が浮かび正解／○ 計算ミス／△ 解答を見て理解／× 解答を見てもわからない<br>（前回つけた理解度で絞り込みます）</div></div>`;
+  h += `<div class="panel"><h2>順番</h2><div class="row">` +
+    [['seq','番号順'],['rand','ランダム'],['weak','苦手な問題から']].map(([k,t]) =>
+      `<button class="chip ${sel.order===k?'on':''}" data-ord="${k}">${t}</button>`).join('') +
+    `</div><h2 style="margin-top:14px">問題数</h2><div class="row">` +
+    [[0,'全部'],[5,'5問'],[10,'10問'],[20,'20問'],[30,'30問']].map(([k,t]) =>
+      `<button class="chip ${sel.count===k?'on':''}" data-cnt="${k}">${t}</button>`).join('') +
+    `</div></div>`;
+  h += `<button class="start" id="go"></button>`;
+  m.innerHTML = h;
+
+  const upd = () => {
+    const n = pool().length, k = sel.count ? Math.min(sel.count, n) : n;
+    const g = $('#go'); g.disabled = !k; g.textContent = k ? `${k}問 はじめる` : '該当する問題がありません';
+    save();
+  };
+  m.querySelectorAll('[data-ch]').forEach(e => e.onchange = () => { sel.ch[e.dataset.ch] = e.checked; upd(); });
+  m.querySelectorAll('[data-all],[data-none]').forEach(e => e.onclick = () => {
+    const id = e.dataset.all || e.dataset.none, on = !!e.dataset.all;
+    BOOKS.find(b => b.id===id).chapters.forEach(c => sel.ch[id+'-'+c.no] = on);
+    home();
+  });
+  const rng = (e, i) => e.oninput = () => {
+    const id = e.dataset.rf || e.dataset.rt;
+    const r = sel.range[id] || ['',''];
+    r[i] = e.value ? parseInt(e.value,10) : '';
+    sel.range[id] = r; upd();
+  };
+  m.querySelectorAll('[data-rf]').forEach(e => rng(e,0));
+  m.querySelectorAll('[data-rt]').forEach(e => rng(e,1));
+  m.querySelectorAll('[data-lv]').forEach(e => e.onclick = () => {
+    const k = +e.dataset.lv, i = sel.levels.indexOf(k);
+    if(i>=0) sel.levels.splice(i,1); else sel.levels.push(k);
+    e.classList.toggle('on'); upd();
+  });
+  const pick = (attr, key, conv) => m.querySelectorAll(`[data-${attr}]`).forEach(e => e.onclick = () => {
+    sel[key] = conv(e.dataset[attr]);
+    m.querySelectorAll(`[data-${attr}]`).forEach(x => x.classList.toggle('on', x===e)); upd();
+  });
+  pick('ord','order',String); pick('cnt','count',Number);
+  $('#go').onclick = () => startSession(ordered(pool()).map(p => p.id));
+  if($('#resume')) $('#resume').onclick = () => study();
+  upd();
+}
+
+// ---------- 学習 ----------
+function startSession(ids){
+  S.session = {q:ids, i:0, res:{}};
+  save(); study();
+}
+let shown = false;
+function study(){
+  const ses = S.session;
+  if(!ses || ses.i >= ses.q.length) return result();
+  chrome(true); shown = false;
+  header(`${ses.i+1} / ${ses.q.length}`, [['終了', () => { save(); home(); }]]);
+  $('#prog').style.width = (ses.i/ses.q.length*100)+'%';
+  const p = BYID[ses.q[ses.i]], b = bookOf(p), c = chOf(p), r = lv(p.id);
+  const badge = r ? `<span class="badge r${r}">前回 ${LEVELS[r].s}</span>` : '<span class="badge" style="background:#98a2b3">未学習</span>';
+  $('#main').innerHTML = `<div class="panel" id="card">
+    <div class="meta"><span>${esc(b.label)}　${esc(c.name)} ${esc(c.title)}</span>${badge}</div>
+    <div class="qtitle body">類題 ${p.no}　${p.title}</div>
+    <div class="body" id="q">${p.q}</div>
+    <button class="reveal" id="rv">タップして解答を見る</button>
+    <div id="ans"></div>
+  </div>
+  <div class="nav"><button id="prev" ${ses.i?'':'disabled style="visibility:hidden"'}>← 前の問題</button><button id="skip">とばす →</button></div>`;
+  renderBody($('#card'));
+  $('#rv').onclick = reveal;
+  $('#prev').onclick = () => { ses.i = Math.max(0, ses.i-1); save(); study(); };
+  $('#skip').onclick = () => { ses.i++; save(); study(); };
+}
+function reveal(){
+  if(shown) return; shown = true;
+  const ses = S.session, p = BYID[ses.q[ses.i]];
+  $('#rv').remove();
+  const a = $('#ans');
+  a.innerHTML = `<div class="ansbox"><div class="anslabel">解答</div><div class="body">${p.a}</div></div>`;
+  renderBody(a);
+  const rt = $('#rate');
+  rt.innerHTML = `<div class="q">どのくらいできた？</div><div class="grid">` +
+    [1,2,3,4].map(k => `<button class="rbtn r${k}" data-r="${k}"><span class="s">${LEVELS[k].s}</span><span class="t">${LEVELS[k].t}</span></button>`).join('') + `</div>`;
+  rt.classList.remove('hidden');
+  rt.querySelectorAll('[data-r]').forEach(e => e.onclick = () => rate(+e.dataset.r));
+  a.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function rate(k){
+  const ses = S.session, id = ses.q[ses.i];
+  const rec = S.rec[id] || {n:0, h:[]};
+  rec.r = k; rec.n++; rec.t = Date.now();
+  rec.h = (rec.h||[]).concat(k).slice(-10);
+  S.rec[id] = rec; ses.res[id] = k; ses.i++;
+  save(); study();
+}
+document.addEventListener('keydown', e => {
+  if(!S.session || $('#progwrap').classList.contains('hidden')) return;
+  if(e.target.tagName==='INPUT') return;
+  if(e.key===' ' || e.key==='Enter'){ if(!shown && $('#rv')){ e.preventDefault(); reveal(); } }
+  else if(shown && '1234'.includes(e.key)) rate(+e.key);
+});
+
+// ---------- 結果 ----------
+function result(){
+  chrome(false);
+  header('おつかれさま');
+  const ses = S.session || {q:[], res:{}};
+  const c = [0,0,0,0,0]; Object.values(ses.res).forEach(k => c[k]++);
+  const again = ses.q.filter(id => ses.res[id] >= 3);
+  let h = `<div class="panel"><h2>今回の結果（${Object.keys(ses.res).length}問）</h2><div class="stat">` +
+    [1,2,3,4].map(k => `<div class="r${k}"><b>${c[k]}</b><span>${LEVELS[k].s} ${LEVELS[k].t}</span></div>`).join('') + `</div></div>`;
+  if(again.length) h += `<button class="start" id="again">△と×の ${again.length}問をもう一度</button>`;
+  h += `<button class="ghost" id="tohome">ホームへ</button>`;
+  $('#main').innerHTML = h;
+  if(again.length) $('#again').onclick = () => startSession(again);
+  $('#tohome').onclick = () => { S.session = null; save(); home(); };
+}
+
+// ---------- 記録 ----------
+function records(){
+  chrome(false);
+  header('記録', [['戻る', home]]);
+  let h = `<div class="panel"><div class="legend">` +
+    [1,2,3,4].map(k => `<span><i style="background:var(--r${k})"></i>${LEVELS[k].s} ${LEVELS[k].t}</span>`).join('') +
+    `<span><i style="background:var(--r0)"></i>未学習</span></div>
+    <div class="note" style="margin-top:6px">番号をタップすると、その1問だけ解けます。</div></div>`;
+  BOOKS.forEach(b => {
+    h += `<div class="panel"><h2>${esc(b.label)}</h2>`;
+    b.chapters.forEach(c => {
+      const ps = b.problems.filter(p => p.ch===c.no);
+      h += `<div style="margin-top:8px;font-size:13px;font-weight:600">${esc(c.name)} ${esc(c.title)}</div><div class="grid-nums">` +
+        ps.map(p => { const r = lv(p.id); return `<button class="num ${r?'':'u'}" style="${r?`background:var(--r${r})`:''}" data-id="${p.id}" title="${esc(p.title.replace(/<[^>]+>/g,''))}">${p.no}</button>`; }).join('') + `</div>`;
+    });
+    h += `</div>`;
+  });
+  h += `<button class="ghost" id="reset" style="border-color:var(--r4);color:var(--r4)">記録をすべて消す</button>`;
+  $('#main').innerHTML = h;
+  $('#main').querySelectorAll('[data-id]').forEach(e => e.onclick = () => startSession([e.dataset.id]));
+  $('#reset').onclick = () => {
+    if(confirm('理解度の記録をすべて消します。よろしいですか？')){ S.rec = {}; S.session = null; save(); records(); }
+  };
+}
+
+home();
+</script>
+</body>
+</html>
