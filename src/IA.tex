@@ -2722,6 +2722,14 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{67}{有名角の三角比}
 \begin{kai}
 \textbf{方針}\quad $30^\circ,\ 45^\circ,\ 60^\circ$ の三角比は，\point{$1:1:\sqrt2$ と $1:\sqrt3:2$ の直角三角形}から求める．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[thick] (0.000,0.000)--(2.000,0.000)--(2.000,2.000)--cycle;\node[below] at (1.000,0.000){\scriptsize 1};\node[right] at (2.000,1.000){\scriptsize 1};\node[above left] at (1.000,1.000){\scriptsize $\sqrt2$};\node at (0.5,0.18){\tiny $45^\circ$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=0.7]
+\draw[thick] (0.000,0.000)--(3.464,0.000)--(3.464,2.000)--cycle;\node[below] at (1.732,0.000){\scriptsize $\sqrt3$};\node[right] at (3.464,1.000){\scriptsize 1};\node[above left] at (1.732,1.000){\scriptsize 2};\node at (0.75,0.2){\tiny $30^\circ$}; \node at (3.1,1.45){\tiny $60^\circ$};
+\end{tikzpicture}
+\end{center}
 $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\sqrt3}2$，\quad $\sin45^\circ=\cos45^\circ=\dfrac1{\sqrt2}$，\quad $\tan30^\circ=\dfrac1{\sqrt3}$\\[4pt]
 (1)\ $\sin^260^\circ=(\sin60^\circ)^2=\left(\dfrac{\sqrt3}2\right)^2=\dfrac34$\\
 \hspace*{1.5em}\point{$\sin^2\theta$ は $(\sin\theta)^2$ のこと．$\sin(\theta^2)$ ではない}\\[2pt]
@@ -2733,6 +2741,18 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \ans{68}{鈍角の三角比}
 \begin{kai}
 \textbf{方針}\quad \point{半径 $r$ の半円上で，$x$ 軸の正の向きから角 $\theta$ の点を $\mathrm P(x,\ y)$ とすると，$\sin\theta=\dfrac yr$，$\cos\theta=\dfrac xr$，$\tan\theta=\dfrac yx$}．半径は，座標がきれいになるように選ぶ．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(-0.866,0.500);\fill (-0.866,0.500) circle (1.4pt);\node[above left] at (-0.866,0.500){\scriptsize $(-\frac{\sqrt3}2,\frac12)$};\draw[->,blue!60!black] (0.3,0) arc (0:150:0.3);\node[below] at (current bounding box.south){\scriptsize (1) $150^\circ$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(-0.707,0.707);\fill (-0.707,0.707) circle (1.4pt);\node[above left] at (-0.707,0.707){\scriptsize $(-\frac1{\sqrt2},\frac1{\sqrt2})$};\draw[->,blue!60!black] (0.3,0) arc (0:135:0.3);\node[below] at (current bounding box.south){\scriptsize (2) $135^\circ$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(-0.500,0.866);\fill (-0.500,0.866) circle (1.4pt);\node[above left] at (-0.500,0.866){\scriptsize $(-\frac12,\frac{\sqrt3}2)$};\draw[->,blue!60!black] (0.3,0) arc (0:120:0.3);\node[below] at (current bounding box.south){\scriptsize (3) $120^\circ$};
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}（半径1の半円で描いた．半径を $r$ にすると座標は $r$ 倍になるが，三角比の値は同じ．）\\
 (1)\ $150^\circ$ は $x$ 軸の負の向きと $30^\circ$ をなす．$1:\sqrt3:2$ の三角形が使えるので半径2の半円をとると\\
 \hspace*{1.5em}点は $\mathrm P(-\sqrt3,\ 1)$．\quad $\cos150^\circ=\dfrac{-\sqrt3}{2}=-\dfrac{\sqrt3}2$\\[2pt]
 (2)\ $135^\circ$ は $x$ 軸の負の向きと $45^\circ$ をなす．$1:1:\sqrt2$ の三角形が使えるので半径 $\sqrt2$ の半円をとると\\
@@ -2745,6 +2765,11 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \ans{69}{補角・余角の三角比}
 \begin{kai}
 \textbf{方針}\quad \point{$\sin(180^\circ-\theta)=\sin\theta$，\ $\cos(180^\circ-\theta)=-\cos\theta$，\ $\tan(180^\circ-\theta)=-\tan\theta$} を使って鋭角の三角比に直す．（半円上で $\theta$ と $180^\circ-\theta$ の点は $y$ 軸に関して対称．）\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(0.866,0.500);\fill (0.866,0.500) circle (1.4pt);\node[right] at (0.866,0.500){\scriptsize $\theta$};\draw[] (0.000,0.000)--(-0.866,0.500);\fill (-0.866,0.500) circle (1.4pt);\node[left] at (-0.866,0.500){\scriptsize $180^\circ-\theta$};\draw[dashed] (0.866,0.500)--(-0.866,0.500); \draw[dashed] (0.866,0.500)--(0.866,0); \draw[dashed] (-0.866,0.500)--(-0.866,0);\node[below] at (current bounding box.south){\scriptsize $y$ 座標は同じ，$x$ 座標は符号だけ逆};
+\end{tikzpicture}
+\end{center}
 (1)\ $\sin150^\circ=\sin(180^\circ-30^\circ)=\sin30^\circ=\dfrac12$\\[2pt]
 (2)\ $\cos120^\circ=\cos(180^\circ-60^\circ)=-\cos60^\circ=-\dfrac12$\\[2pt]
 (3)\ $\tan135^\circ=\tan(180^\circ-45^\circ)=-\tan45^\circ=-1$
@@ -2760,6 +2785,11 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \hspace*{1.5em}$\sin\theta=\tan\theta\cos\theta=(-2)\cdot\left(-\dfrac1{\sqrt5}\right)=\dfrac2{\sqrt5}=\dfrac{2\sqrt5}5$\\[2pt]
 (3)\ $\cos^2\theta=1-\sin^2\theta=1-\dfrac{25}{169}=\dfrac{144}{169}$．\\
 \hspace*{1.5em}\point{$\sin\theta>0$ だけでは，$\theta$ は鋭角とも鈍角ともありうる}ので，両方の場合を答える．\\
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(0.923,0.384);\fill (0.923,0.384) circle (1.4pt);\node[right] at (0.923,0.384){\scriptsize 鋭角};\draw[] (0.000,0.000)--(-0.923,0.384);\fill (-0.923,0.384) circle (1.4pt);\node[left] at (-0.923,0.384){\scriptsize 鈍角};\draw[dashed,red!70!black] (-1.3,0.385)--(1.3,0.385); \node[red!70!black,above] at (0.45,0.4){\tiny $y=\frac5{13}$};\node[below] at (current bounding box.south){\scriptsize $\sin\theta=\frac5{13}$ となる点は2つ};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\theta$ が鋭角のとき\quad $\cos\theta=\dfrac{12}{13}$，\quad $\tan\theta=\dfrac{5}{12}$\\
 \hspace*{1.5em}$\theta$ が鈍角のとき\quad $\cos\theta=-\dfrac{12}{13}$，\quad $\tan\theta=-\dfrac{5}{12}$
 \end{kai}
@@ -2794,6 +2824,17 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \hspace*{1.5em}(ii)\ $\sin\theta=\dfrac1{\sqrt2}$．$y$ 座標が $\dfrac1{\sqrt2}$ の点は2つあり\quad $\theta=45^\circ,\ 135^\circ$\\
 \hspace*{1.5em}\point{$\sin\theta=k\ (0<k<1)$ の解は $\theta$ と $180^\circ-\theta$ の2つ}\\[2pt]
 \hspace*{1.5em}(iii)\ $\tan\theta=-\sqrt3$．$\tan\theta<0$ なので鈍角で，$\tan(180^\circ-\theta)=\sqrt3$ より $180^\circ-\theta=60^\circ$．\quad $\theta=120^\circ$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(0.500,0.866);\fill (0.500,0.866) circle (1.4pt);\node[above right] at (0.500,0.866){\scriptsize $60^\circ$};\draw[dashed,red!70!black] (0.5,0)--(0.5,1.2);\node[below] at (current bounding box.south){\scriptsize (i) $x=\frac12$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(0.707,0.707);\fill (0.707,0.707) circle (1.4pt);\draw[] (0.000,0.000)--(-0.707,0.707);\fill (-0.707,0.707) circle (1.4pt);\draw[dashed,red!70!black] (-1.3,0.707)--(1.3,0.707);\node[below] at (current bounding box.south){\scriptsize (ii) $y=\frac1{\sqrt2}$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(-0.500,0.866);\fill (-0.500,0.866) circle (1.4pt);\node[above left] at (-0.500,0.866){\scriptsize $120^\circ$};\draw[dashed,red!70!black] (0,0)--(-0.65,1.126);\node[below] at (current bounding box.south){\scriptsize (iii) 傾き $-\sqrt3$};
+\end{tikzpicture}
+\end{center}
 (2)\ \point{$0^\circ\leqq\theta\leqq90^\circ$ より $0^\circ\leqq2\theta\leqq180^\circ$．この範囲で $2\theta$ を求めてから2で割る}\\
 \hspace*{1.5em}(i)\ $\cos2\theta=-\dfrac12$ より $2\theta=120^\circ$．\quad $\theta=60^\circ$\\[2pt]
 \hspace*{1.5em}(ii)\ $\sin2\theta=\dfrac{\sqrt3}2$ より $2\theta=60^\circ,\ 120^\circ$．\quad $\theta=30^\circ,\ 60^\circ$\\[2pt]
@@ -2809,6 +2850,17 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \hspace*{3em}$y$ 座標が $\dfrac{\sqrt3}2$ より小さい部分（両端側）を読んで\quad $0^\circ\leqq\theta<60^\circ,\ 120^\circ<\theta\leqq180^\circ$\\[2pt]
 \hspace*{1.5em}(iii)\ $\tan\theta\geqq1$．$\tan\theta=1$ となるのは $\theta=45^\circ$．$\tan\theta$ は $0^\circ\leqq\theta<90^\circ$ で増加し，鈍角では負．\\
 \hspace*{3em}よって\quad $45^\circ\leqq\theta<90^\circ$\quad（$\tan90^\circ$ は定義されない）\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[line width=2.5pt,blue!50] (1,0) arc (0:60:1); \draw[dashed,red!70!black] (0.5,0)--(0.5,1.2);\node[below] at (current bounding box.south){\scriptsize (i) $0^\circ\leqq\theta\leqq60^\circ$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[line width=2.5pt,blue!50] (1,0) arc (0:60:1); \draw[line width=2.5pt,blue!50] (-0.5,0.866) arc (120:180:1); \draw[dashed,red!70!black] (-1.3,0.866)--(1.3,0.866);\node[below] at (current bounding box.south){\scriptsize (ii) 両端の部分};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[line width=2.5pt,blue!50] (0.707,0.707) arc (45:90:1); \draw[dashed,red!70!black] (0,0)--(1,1);\node[below] at (current bounding box.south){\scriptsize (iii) $45^\circ\leqq\theta<90^\circ$};
+\end{tikzpicture}
+\end{center}
 (2)\ $0^\circ\leqq2\theta\leqq180^\circ$ で考える．\\
 \hspace*{1.5em}(i)\ $\cos2\theta>\dfrac12$ より $0^\circ\leqq2\theta<60^\circ$．\quad $0^\circ\leqq\theta<30^\circ$\\[2pt]
 \hspace*{1.5em}(ii)\ $\sin2\theta\geqq\dfrac{\sqrt3}2$ より $60^\circ\leqq2\theta\leqq120^\circ$．\quad $30^\circ\leqq\theta\leqq60^\circ$\\[2pt]
@@ -2824,6 +2876,11 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \hspace*{1.5em}$2t^2+3t-2=0$，\quad $(2t-1)(t+2)=0$ より $t=\dfrac12,\ -2$．\\
 \hspace*{1.5em}$0\leqq t\leqq1$ より $t=\dfrac12$．\quad よって\quad $\sin x=\dfrac12$\\[2pt]
 (2)\ $\sin x=\dfrac12$ となるのは，$0^\circ\leqq x\leqq180^\circ$ で\quad $x=30^\circ,\ 150^\circ$
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(0.866,0.500);\fill (0.866,0.500) circle (1.4pt);\node[right] at (0.866,0.500){\scriptsize $30^\circ$};\draw[] (0.000,0.000)--(-0.866,0.500);\fill (-0.866,0.500) circle (1.4pt);\node[left] at (-0.866,0.500){\scriptsize $150^\circ$};\draw[dashed,red!70!black] (-1.3,0.5)--(1.3,0.5);
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{76}{三角不等式（Ⅱ）}
@@ -2834,6 +2891,11 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \hspace*{1.5em}$2t^2-t<0$，\quad $t(2t-1)<0$ より $0<t<\dfrac12$．これは $-1\leqq t\leqq1$ をみたす．\\
 \hspace*{1.5em}よって\quad $0<\cos x<\dfrac12$\\[2pt]
 (2)\ $\cos x=0$ となるのは $x=90^\circ$，$\cos x=\dfrac12$ となるのは $x=60^\circ$．\\
+\begin{center}
+\begin{tikzpicture}[scale=1,x=13mm,y=13mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-0.1)--(0,1.35) node[above]{\tiny $y$}; \draw[gray] (1,0) arc (0:180:1); \node[below left] at (0,0){\tiny O};\node[below] at (1,0){\tiny 1}; \node[below] at (-1,0){\tiny $-1$};\draw[] (0.000,0.000)--(0.500,0.866);\fill (0.500,0.866) circle (1.4pt);\node[above right] at (0.500,0.866){\scriptsize $60^\circ$};\draw[] (0.000,0.000)--(0.000,1.000);\fill (0.000,1.000) circle (1.4pt);\node[above left] at (0.000,1.000){\scriptsize $90^\circ$};\fill[blue!15] (0,0)--(0.5,0.866) arc (60:90:1)--cycle; \draw[dashed,red!70!black] (0.5,0)--(0.5,1.2);\node[below] at (current bounding box.south){\scriptsize $0<x$ 座標$<\frac12$ の部分};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\cos x$ は $0^\circ\leqq x\leqq180^\circ$ で減少するので，$x$ 座標が $0$ と $\dfrac12$ の間にある部分を読んで\quad $60^\circ<x<90^\circ$
 \end{kai}
 
@@ -2844,6 +2906,22 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 (2)\ $0^\circ\leqq x\leqq180^\circ$ では $0\leqq\sin x\leqq1$ だから\quad $0\leqq t\leqq1$\\[2pt]
 (3)\ $y=-(t^2-t)+1=-\left(t-\dfrac12\right)^2+\dfrac14+1=-\left(t-\dfrac12\right)^2+\dfrac54$\\
 \hspace*{1.5em}上に凸で軸は $t=\dfrac12$（範囲の中央）．\\
+\begin{center}
+\begin{tikzpicture}[x=22mm,y=16mm]
+\fill[blue!10] (0,-0.2) rectangle (1,1.5);
+\ax{-0.4}{1.4}{-0.2}{1.5}
+\draw[thick,domain=0:1,samples=80] plot (\x,{-(\x-0.5)^2+1.25});
+\draw (0.5,0.12)--(0.5,-0.12); \node[below] at (0.5,0){\tiny $\frac12$};
+\draw (1,0.12)--(1,-0.12); \node[below] at (1,0){\tiny $1$};
+\fill (0.5,1.25) circle (1.6pt);
+\node[above] at (0.5,1.25){\scriptsize 最大 $\frac54$};
+\fill (0,1) circle (1.6pt);
+\node[left] at (0,1){\scriptsize 1};
+\fill (1,1) circle (1.6pt);
+\node[right] at (1,1){\scriptsize 1};
+\node[below] at (current bounding box.south){\scriptsize $y=-t^2+t+1$（$0\leqq t\leqq1$）};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}最大値：$t=\dfrac12$ のとき $\dfrac54$．$\sin x=\dfrac12$ より $x=30^\circ,\ 150^\circ$\\
 \hspace*{1.5em}最小値：$t=0,\ 1$ のとき，ともに $y=1$．\\
 \hspace*{3em}$\sin x=0$ より $x=0^\circ,\ 180^\circ$，\quad $\sin x=1$ より $x=90^\circ$\\[2pt]
@@ -2853,6 +2931,11 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \ans{78}{正弦定理}
 \begin{kai}
 \textbf{方針}\quad \point{1辺とその対角がわかっていれば正弦定理} $\dfrac a{\sin A}=\dfrac b{\sin B}=\dfrac c{\sin C}=2R$．まず残りの角を求める．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\draw[thick] (2.598,2.598)--(0.000,0.000)--(4.098,0.000)--cycle;\node[above] at (2.598,2.598){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (4.098,0.000){\scriptsize C};\node[right] at (3.348,1.299){\scriptsize 3};\node at (0.6,0.22){\tiny $45^\circ$}; \node at (3.75,0.3){\tiny $60^\circ$}; \node at (2.6,2.05){\tiny $75^\circ$};\node[above left] at (1.299,1.299){\scriptsize ?};
+\end{tikzpicture}
+\end{center}
 (1)\ 内角の和より\quad $\angle\mathrm B=180^\circ-(75^\circ+60^\circ)=45^\circ$\\
 \hspace*{1.5em}CA は $\angle\mathrm B$ の対辺，AB は $\angle\mathrm C$ の対辺．正弦定理より\quad $\dfrac{\mathrm{AB}}{\sin60^\circ}=\dfrac{3}{\sin45^\circ}$\\[2pt]
 \hspace*{1.5em}$\mathrm{AB}=\dfrac{3\sin60^\circ}{\sin45^\circ}=3\cdot\dfrac{\sqrt3}2\div\dfrac1{\sqrt2}=\dfrac{3\sqrt3\cdot\sqrt2}2=\dfrac{3\sqrt6}2$\\[2pt]
@@ -2862,6 +2945,11 @@ $\sin30^\circ=\cos60^\circ=\dfrac12$，\quad $\sin60^\circ=\cos30^\circ=\dfrac{\
 \ans{79}{余弦定理}
 \begin{kai}
 \textbf{方針}\quad \point{2辺とその間の角がわかっていれば余弦定理} $c^2=a^2+b^2-2ab\cos C$．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[thick] (1.500,2.598)--(2.000,0.000)--(0.000,0.000)--cycle;\node[above] at (1.500,2.598){\scriptsize A};\node[below right] at (2.000,0.000){\scriptsize B};\node[below left] at (0.000,0.000){\scriptsize C};\node[below] at (1.000,0.000){\scriptsize 2};\node[left] at (0.750,1.299){\scriptsize 3};\node at (0.32,0.25){\tiny $60^\circ$};\node[right] at (1.750,1.299){\scriptsize ?};
+\end{tikzpicture}
+\end{center}
 AB は $\angle\mathrm C$ の対辺だから，余弦定理より\\
 \hspace*{1.5em}$\mathrm{AB}^2=\mathrm{BC}^2+\mathrm{CA}^2-2\cdot\mathrm{BC}\cdot\mathrm{CA}\cos60^\circ=2^2+3^2-2\cdot2\cdot3\cdot\dfrac12=4+9-6=7$\\
 $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
@@ -2870,6 +2958,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{80}{正弦定理・余弦定理の使い分け}
 \begin{kai}
 \textbf{方針}\quad わかっているものと求めるものから定理を選ぶ．\point{2辺と，その間でない角 → 余弦定理で方程式}．辺と対角の組がそろえば正弦定理．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+\draw[thick] (2.500,4.330)--(0.000,0.000)--(8.000,0.000)--cycle;\node[above] at (2.500,4.330){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (8.000,0.000){\scriptsize C};\node[above left] at (1.250,2.165){\scriptsize 5};\node[above right] at (5.250,2.165){\scriptsize 7};\node[below] at (4.000,0.000){\scriptsize $x$};\node at (0.75,0.45){\tiny $60^\circ$};
+\end{tikzpicture}
+\end{center}
 (1)\ $\angle\mathrm B$ をはさむ辺は AB と BC．$\mathrm{BC}=x$ とおき，$\angle\mathrm B$ の対辺 CA について余弦定理を用いると\\
 \hspace*{1.5em}$7^2=5^2+x^2-2\cdot5\cdot x\cos60^\circ$，\quad $49=25+x^2-5x$\\
 \hspace*{1.5em}$x^2-5x-24=0$，\quad $(x-8)(x+3)=0$．$x>0$ より\quad $\mathrm{BC}=8$\\[2pt]
@@ -2881,6 +2974,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{81}{中線定理}
 \begin{kai}
 \textbf{方針}\quad \point{$\angle\mathrm C$ は $\triangle\mathrm{ABC}$ と $\triangle\mathrm{AMC}$ の共通の内角}．$\triangle\mathrm{ABC}$ で $\cos C$ を求め，それを $\triangle\mathrm{AMC}$ の余弦定理に使う．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[thick] (1.200,2.600)--(0.000,0.000)--(4.000,0.000)--cycle;\node[above] at (1.200,2.600){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (4.000,0.000){\scriptsize C};\draw[blue!60!black] (1.200,2.600)--(2.000,0.000);\fill (2.000,0.000) circle (1.4pt);\node[below] at (2.000,0.000){\scriptsize M};\node[left] at (0.600,1.300){\scriptsize $c$};\node[above right] at (2.600,1.300){\scriptsize $b$};\node[below] at (1.000,0.000){\scriptsize $a$};\node[below] at (3.000,0.000){\scriptsize $a$};\node at (3.6,0.22){\tiny $C$};
+\end{tikzpicture}
+\end{center}
 (1)\ $\triangle\mathrm{ABC}$ に余弦定理を用いて（$\angle\mathrm C$ をはさむ辺は $\mathrm{BC}=2a$，$\mathrm{CA}=b$，対辺は $\mathrm{AB}=c$）\\
 \hspace*{1.5em}$\cos C=\dfrac{(2a)^2+b^2-c^2}{2\cdot2a\cdot b}=\dfrac{4a^2+b^2-c^2}{4ab}$\\[2pt]
 (2)\ \point{$\angle\mathrm C$ を $\triangle\mathrm{AMC}$ の内角として2度使う}．$\mathrm{MC}=a$，$\mathrm{CA}=b$ だから\\
@@ -2893,6 +2991,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{82}{三角形の重心}
 \begin{kai}
 \textbf{方針}\quad 中線の長さは\point{中線定理}．重心は\point{中線を頂点の側から $2:1$ に内分する}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.45]
+\draw[thick] (5.500,4.330)--(0.000,0.000)--(8.000,0.000)--cycle;\node[above] at (5.500,4.330){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (8.000,0.000){\scriptsize C};\draw[blue!60!black] (5.500,4.330)--(4.000,0.000);\fill (4.000,0.000) circle (1.4pt);\fill (4.500,1.443) circle (1.4pt);\node[below] at (4.000,0.000){\scriptsize M};\node[left] at (4.500,1.443){\scriptsize G};\node[above left] at (2.750,2.165){\scriptsize 7};\node[right] at (6.750,2.165){\scriptsize 5};\node[below] at (2.000,0.000){\scriptsize 4};\node[below] at (6.000,0.000){\scriptsize 4};
+\end{tikzpicture}
+\end{center}
 (1)\ M は BC の中点だから $\mathrm{BM}=4$．中線定理より\\
 \hspace*{1.5em}$\mathrm{AB}^2+\mathrm{AC}^2=2(\mathrm{AM}^2+\mathrm{BM}^2)$，\quad $49+25=2(\mathrm{AM}^2+16)$\\
 \hspace*{1.5em}$74=2\mathrm{AM}^2+32$，\quad $\mathrm{AM}^2=21$．$\mathrm{AM}>0$ より\quad $\mathrm{AM}=\sqrt{21}$\\[2pt]
@@ -2929,6 +3032,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{85}{三角形の面積}
 \begin{kai}
 \textbf{方針}\quad \point{2辺とその間の角がわかれば $S=\dfrac12ab\sin C$}．\point{3辺がわかればヘロンの公式}（または余弦定理で $\cos$ → $\sin$ を求めて上の公式）．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\draw[thick] (-2.000,3.464)--(0.000,0.000)--(5.000,0.000)--cycle;\node[above] at (-2.000,3.464){\scriptsize A};\node[below] at (0.000,0.000){\scriptsize B};\node[below right] at (5.000,0.000){\scriptsize C};\node[left] at (-1.000,1.732){\scriptsize 4};\node[below] at (2.500,0.000){\scriptsize 5};\node at (0.15,0.45){\tiny $120^\circ$};
+\end{tikzpicture}
+\end{center}
 (1)\ $\angle\mathrm B$ をはさむ2辺は AB と BC だから\\
 \hspace*{1.5em}$S=\dfrac12\cdot\mathrm{AB}\cdot\mathrm{BC}\sin120^\circ=\dfrac12\cdot4\cdot5\cdot\dfrac{\sqrt3}2=5\sqrt3$\\[2pt]
 (2)\ ヘロンの公式 $S=\sqrt{s(s-a)(s-b)(s-c)}$\quad （$s=\dfrac{a+b+c}2$）を使う．\\
@@ -2940,6 +3048,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{86}{角の2等分線の長さ}
 \begin{kai}
 \textbf{方針}\quad (1)は角の二等分線の性質．(2)は\point{面積を「分けた三角形の和」と「全体」の2通りに表して}方程式をつくる．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+\draw[thick] (0.000,0.000)--(0.000,3.000)--(6.000,0.000)--cycle;\node[below left] at (0.000,0.000){\scriptsize A};\node[above] at (0.000,3.000){\scriptsize B};\node[below right] at (6.000,0.000){\scriptsize C};\draw[blue!60!black] (0.000,0.000)--(2.000,2.000);\fill (2.000,2.000) circle (1.4pt);\node[above right] at (2.000,2.000){\scriptsize D};\node[left] at (0.000,1.500){\scriptsize 3};\node[below] at (3.000,0.000){\scriptsize 6};\node at (0.65,0.3){\tiny $45^\circ$}; \node at (0.3,0.7){\tiny $45^\circ$};
+\end{tikzpicture}
+\end{center}
 (1)\ 三平方の定理より\quad $\mathrm{BC}=\sqrt{3^2+6^2}=\sqrt{45}=3\sqrt5$\\
 \hspace*{1.5em}AD は $\angle\mathrm A$ の二等分線だから\quad $\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}=3:6=1:2$\\
 \hspace*{1.5em}よって\quad $\mathrm{BD}=\dfrac13\mathrm{BC}=\sqrt5$\\[2pt]
@@ -2952,6 +3065,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{87}{内接円の半径（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad 3辺から面積はヘロンの公式．内接円の半径は\point{内心と3頂点を結んで3つの三角形に分け，$S=\dfrac12(a+b+c)r$}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+\draw[thick] (2.000,6.708)--(0.000,0.000)--(8.000,0.000)--cycle;\node[above] at (2.000,6.708){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (8.000,0.000){\scriptsize C};\draw[gray] (3.000,2.236) circle (2.236);\fill (3.000,2.236) circle (1.4pt);\node[above] at (3.000,2.236){\scriptsize I};\draw[dashed] (3.000,2.236)--(3.000,0.000);\node[] at (3.300,1.100){\scriptsize $r$};\node[left] at (1.000,3.354){\scriptsize 7};\node[right] at (5.000,3.354){\scriptsize 9};\node[below] at (6.000,0.000){\scriptsize 8};\draw[dotted] (3.000,2.236)--(2.000,6.708);\draw[dotted] (3.000,2.236)--(0.000,0.000);\draw[dotted] (3.000,2.236)--(8.000,0.000);
+\end{tikzpicture}
+\end{center}
 (1)\ $s=\dfrac{7+8+9}2=12$．ヘロンの公式より\\
 \hspace*{1.5em}$S=\sqrt{12(12-7)(12-8)(12-9)}=\sqrt{12\cdot5\cdot4\cdot3}=\sqrt{720}=12\sqrt5$\\[2pt]
 (2)\ 内心を I とすると，$\triangle\mathrm{ABC}=\triangle\mathrm{IBC}+\triangle\mathrm{ICA}+\triangle\mathrm{IAB}$ で，3つの三角形の高さはすべて $r$．\\
@@ -2964,6 +3082,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 (1)\ $c=\sqrt{5^2+12^2}=\sqrt{169}=13$．面積は $\dfrac12\cdot5\cdot12=30$．\\
 \hspace*{1.5em}$S=\dfrac12r(a+b+c)$ より $30=\dfrac12r(5+12+13)=15r$．\quad $r=2$\\[2pt]
 (2)\ 内接円と BC，CA，AB の接点を D，E，F，内心を I とする．\\
+\begin{center}
+\begin{tikzpicture}[scale=0.32]
+\draw[thick] (0.000,12.000)--(5.000,0.000)--(0.000,0.000)--cycle;\node[above] at (0.000,12.000){\scriptsize A};\node[below right] at (5.000,0.000){\scriptsize B};\node[below left] at (0.000,0.000){\scriptsize C};\draw[gray] (2,2) circle (2);\draw (2,0)--(2,2)--(0,2);\fill (2.000,0.000) circle (1.4pt);\fill (0.000,2.000) circle (1.4pt);\fill (3.846,2.769) circle (1.4pt);\fill (2.000,2.000) circle (1.4pt);\node[below] at (2.000,0.000){\scriptsize D};\node[left] at (0.000,2.000){\scriptsize E};\node[above right] at (3.846,2.769){\scriptsize F};\node[above right] at (2.000,2.000){\scriptsize I};\node[below] at (1.000,0.000){\scriptsize $r$};\node[below] at (4.000,0.000){\scriptsize $a-r$};\node[left] at (0.000,1.000){\scriptsize $r$};\node[left] at (0.000,7.000){\scriptsize $b-r$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\mathrm{ID}\perp\mathrm{BC}$，$\mathrm{IE}\perp\mathrm{CA}$，$\angle\mathrm C=90^\circ$，$\mathrm{ID}=\mathrm{IE}=r$ だから，四角形 IDCE は1辺 $r$ の正方形．\\
 \hspace*{1.5em}よって\quad $\mathrm{CD}=\mathrm{CE}=r$\\
 \hspace*{1.5em}接線の長さは等しいから\quad $\mathrm{BF}=\mathrm{BD}=a-r$，\quad $\mathrm{AF}=\mathrm{AE}=b-r$\\
@@ -2974,6 +3097,11 @@ $\mathrm{AB}>0$ より\quad $\mathrm{AB}=\sqrt7$
 \ans{89}{円に内接する四角形}
 \begin{kai}
 \textbf{方針}\quad 対角線 AC で2つの三角形に分ける．\point{円に内接する四角形の対角の和は $180^\circ$}．外接円は四角形と $\triangle\mathrm{ABC}$ で共通．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+\draw (0,0) circle (4.041);\draw[thick] (-3.500,-2.021)--(-2.787,2.926)--(3.500,-2.021)--(-0.000,-4.041)--cycle;\draw[blue!60!black] (-3.500,-2.021)--(3.500,-2.021);\node[left] at (-3.500,-2.021){\scriptsize A};\node[above left] at (-2.787,2.926){\scriptsize B};\node[right] at (3.500,-2.021){\scriptsize C};\node[below] at (-0.000,-4.041){\scriptsize D};\node[left] at (-3.143,0.453){\scriptsize 5};\node[above right] at (0.356,0.453){\scriptsize 8};\node[below right] at (1.750,-3.031){\scriptsize $x$};\node[below left] at (-1.750,-3.031){\scriptsize $x$};\node[above] at (-0.000,-2.021){\scriptsize 7};\node at (-2.313,2.085){\tiny $60^\circ$}; \node at (-0.000,-3.435){\tiny $120^\circ$};
+\end{tikzpicture}
+\end{center}
 (1)\ $\triangle\mathrm{ABC}$ に余弦定理を用いて\\
 \hspace*{1.5em}$\mathrm{AC}^2=5^2+8^2-2\cdot5\cdot8\cos60^\circ=25+64-40=49$．\quad $\mathrm{AC}=7$\\[2pt]
 (2)\ 四角形 ABCD は円に内接するから\quad $\angle\mathrm{ADC}=180^\circ-\angle\mathrm{ABC}=120^\circ$\\
