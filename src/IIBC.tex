@@ -1586,189 +1586,318 @@ $0\leqq\theta\leqq\pi$ より\quad $\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac4
 
 \ans{61}{三角関数の合成（Ⅲ）}
 \begin{kai}
-(1)\ \point{半角の公式で次数を下げる}\quad $y=\dfrac{1-\cos2\theta}2+\sin2\theta+\dfrac{3(1+\cos2\theta)}2=\sin2\theta+\cos2\theta+2$\\[2pt]
-(2)\ $y=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)+2$．$\dfrac\pi4\leqq2\theta+\dfrac\pi4\leqq\dfrac54\pi$ より $-\dfrac{\sqrt2}2\leqq\sin\left(2\theta+\dfrac\pi4\right)\leqq1$．\\
-\hspace*{1.5em}最大値 $2+\sqrt2$（$\theta=\dfrac\pi8$），\quad 最小値 $1$（$\theta=\dfrac\pi2$）
+\textbf{方針}\quad $\sin^2\theta$，$\sin\theta\cos\theta$，$\cos^2\theta$ の2次式は，\point{2倍角・半角の公式で $2\theta$ の1次式に直してから合成}する．\\[2pt]
+(1)\ \point{半角の公式で次数を下げる}\\
+\hspace*{1.5em}$\sin^2\theta=\dfrac{1-\cos2\theta}2$，\quad $2\sin\theta\cos\theta=\sin2\theta$，\quad $\cos^2\theta=\dfrac{1+\cos2\theta}2$ を代入して\\
+\hspace*{1.5em}$y=\dfrac{1-\cos2\theta}2+\sin2\theta+\dfrac{3(1+\cos2\theta)}2=\sin2\theta+\dfrac{-1+3}2\cos2\theta+\dfrac{1+3}2$\\
+\hspace*{1.5em}$=\sin2\theta+\cos2\theta+2$\\[2pt]
+(2)\ $\sin2\theta+\cos2\theta=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)$ と合成して\quad $y=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)+2$\\
+\hspace*{1.5em}$0\leqq\theta\leqq\dfrac\pi2$ より $\dfrac\pi4\leqq2\theta+\dfrac\pi4\leqq\dfrac54\pi$．この範囲で\quad $-\dfrac{\sqrt2}2\leqq\sin\left(2\theta+\dfrac\pi4\right)\leqq1$\\[2pt]
+\hspace*{1.5em}最大値：$2\theta+\dfrac\pi4=\dfrac\pi2$，すなわち $\theta=\dfrac\pi8$ のとき\quad $\sqrt2+2$\\
+\hspace*{1.5em}最小値：$2\theta+\dfrac\pi4=\dfrac54\pi$，すなわち $\theta=\dfrac\pi2$ のとき\quad $\sqrt2\cdot\left(-\dfrac{\sqrt2}2\right)+2=1$
 \end{kai}
 
 \ans{62}{三角関数のグラフ}
 \begin{kai}
-(1)\ 周期 $\dfrac{2\pi}2=\pi$，\quad 最大値 $2$，最小値 $-2$\\[2pt]
-(2)\ $y=2\sin2\left(\theta-\dfrac\pi6\right)$ だから，$\theta$ 軸方向に $\dfrac\pi6$ だけ平行移動したもの\\[2pt]
-(3)\ $-\dfrac\pi3\leqq2\theta-\dfrac\pi3<\dfrac53\pi$ で $\sin\left(2\theta-\dfrac\pi3\right)=0$ より $2\theta-\dfrac\pi3=0,\ \pi$．\quad $\theta=\dfrac\pi6,\ \dfrac23\pi$
+\textbf{方針}\quad $y=a\sin(k\theta-b)$ は，\point{$y=a\sin k(\theta-\tfrac bk)$ と $k$ でくくる}と平行移動の量がわかる．周期は $\dfrac{2\pi}{k}$．\\[2pt]
+(1)\ $y=2\sin2\left(\theta-\dfrac\pi6\right)$．$\sin$ の周期は $2\pi$ なので，$2\theta$ の係数2で割って周期は\quad $\dfrac{2\pi}2=\pi$\\
+\hspace*{1.5em}$-1\leqq\sin\left(2\theta-\dfrac\pi3\right)\leqq1$ より\quad 最大値 $2$，\quad 最小値 $-2$\\[2pt]
+(2)\ \point{$2\theta-\dfrac\pi3=2\left(\theta-\dfrac\pi6\right)$ と $\theta$ の係数でくくる}\\
+\hspace*{1.5em}$y=2\sin2\left(\theta-\dfrac\pi6\right)$ は，$y=2\sin2\theta$ の $\theta$ を $\theta-\dfrac\pi6$ におきかえたもの．\\
+\hspace*{1.5em}よって，$\theta$ 軸方向に $\dfrac\pi6$ だけ平行移動したもの\\
+\hspace*{1.5em}\point{$\dfrac\pi3$ だけ移動ではない}\\[2pt]
+(3)\ $0\leqq\theta<\pi$ より\quad $-\dfrac\pi3\leqq2\theta-\dfrac\pi3<\dfrac53\pi$\\
+\hspace*{1.5em}この範囲で $\sin\left(2\theta-\dfrac\pi3\right)=0$ となるのは\quad $2\theta-\dfrac\pi3=0,\ \pi$\\
+\hspace*{1.5em}よって\quad $\theta=\dfrac\pi6,\ \dfrac23\pi$
 \end{kai}
 
 \ans{63}{三角方程式}
 \begin{kai}
-(1)\ $2(1-\sin^2\theta)+3\sin\theta-3=0$ より $2\sin^2\theta-3\sin\theta+1=0$，$(2\sin\theta-1)(\sin\theta-1)=0$．\\
-\hspace*{1.5em}$\sin\theta=\dfrac12,\ 1$．\quad $\theta=\dfrac\pi6,\ \dfrac\pi2,\ \dfrac56\pi$\\[2pt]
-(2)\ $\sin\theta-\cos\theta>0$ より $\sqrt2\sin\left(\theta-\dfrac\pi4\right)>0$．$-\dfrac\pi4\leqq\theta-\dfrac\pi4<\dfrac74\pi$ だから $0<\theta-\dfrac\pi4<\pi$．\\
-\hspace*{1.5em}$\dfrac\pi4<\theta<\dfrac54\pi$
+\textbf{方針}\quad (1)は $\cos^2\theta=1-\sin^2\theta$ で\point{$\sin\theta$ に統一}．(2)は\point{移項して合成}し，$\theta-\dfrac\pi4$ の範囲で考える．\\[2pt]
+(1)\ $2(1-\sin^2\theta)+3\sin\theta-3=0$，\quad $-2\sin^2\theta+3\sin\theta-1=0$\\
+\hspace*{1.5em}$2\sin^2\theta-3\sin\theta+1=0$，\quad $(2\sin\theta-1)(\sin\theta-1)=0$\\
+\hspace*{1.5em}$\sin\theta=\dfrac12$ のとき\quad $\theta=\dfrac\pi6,\ \dfrac56\pi$\\
+\hspace*{1.5em}$\sin\theta=1$ のとき\quad $\theta=\dfrac\pi2$\\
+\hspace*{1.5em}よって\quad $\theta=\dfrac\pi6,\ \dfrac\pi2,\ \dfrac56\pi$\\[2pt]
+(2)\ $\sin\theta-\cos\theta>0$．合成して\quad $\sqrt2\sin\left(\theta-\dfrac\pi4\right)>0$\\
+\hspace*{1.5em}$0\leqq\theta<2\pi$ より $-\dfrac\pi4\leqq\theta-\dfrac\pi4<\dfrac74\pi$．この範囲で $\sin>0$ となるのは\quad $0<\theta-\dfrac\pi4<\pi$\\
+\hspace*{1.5em}よって\quad $\dfrac\pi4<\theta<\dfrac54\pi$\\
+\hspace*{1.5em}（単位円で，直線 $y=x$ より上側にある部分と考えてもよい．）
 \end{kai}
 
 \shouans{第5章}{指数関数と対数関数}
 \ans{64}{指数の計算}
 \begin{kai}
-(1)\ (i)\ $(2^3)^{\frac23}=4$\qquad (ii)\ $(3^3)^{-\frac13}=\dfrac13$\qquad (iii)\ $\sqrt[3]{64}=4$\\[2pt]
-(2)\ $a^{\frac12+\frac34-\frac14}=a^1=a$\\[2pt]
-(3)\ \point{2乗・3乗して整理}\quad $x+x^{-1}=\left(x^{\frac12}+x^{-\frac12}\right)^2-2=7$\\
+\textbf{方針}\quad 累乗根は\point{分数の指数に直し}，底を素数にそろえて指数法則 $a^pa^q=a^{p+q}$，$(a^p)^q=a^{pq}$ を使う．(3)は対称式と同じ変形．\\[2pt]
+(1)\ (i)\ $8^{\frac23}=(2^3)^{\frac23}=2^2=4$\\
+\hspace*{1.5em}(ii)\ $27^{-\frac13}=(3^3)^{-\frac13}=3^{-1}=\dfrac13$\\
+\hspace*{1.5em}(iii)\ $\sqrt[3]4\times\sqrt[3]{16}=\sqrt[3]{64}=\sqrt[3]{4^3}=4$\\[2pt]
+(2)\ $\sqrt a=a^{\frac12}$，$\sqrt[4]{a^3}=a^{\frac34}$，$\sqrt[4]a=a^{\frac14}$ だから\\
+\hspace*{1.5em}$a^{\frac12}\times a^{\frac34}\div a^{\frac14}=a^{\frac12+\frac34-\frac14}=a^1=a$\\[2pt]
+(3)\ \point{2乗・3乗して整理}．$x^{\frac12}\cdot x^{-\frac12}=1$ に注意する．\\
+\hspace*{1.5em}$\left(x^{\frac12}+x^{-\frac12}\right)^2=x+2+x^{-1}$ より\quad $x+x^{-1}=3^2-2=7$\\[2pt]
+\hspace*{1.5em}$\left(x^{\frac12}+x^{-\frac12}\right)^3=x^{\frac32}+3x^{\frac12}+3x^{-\frac12}+x^{-\frac32}$ より\\
 \hspace*{1.5em}$x^{\frac32}+x^{-\frac32}=\left(x^{\frac12}+x^{-\frac12}\right)^3-3\left(x^{\frac12}+x^{-\frac12}\right)=27-9=18$
 \end{kai}
 
 \ans{65}{指数関数のグラフ}
 \begin{kai}
-(1)\ $x$ 軸方向に1，$y$ 軸方向に3だけ平行移動したもの．漸近線は直線 $y=3$\\[2pt]
-(2)\ \point{底を2にそろえる}\quad $2^{\frac13}$，$2^{\frac24}=2^{\frac12}$，$2^{\frac35}$．底 $2>1$ だから指数の大小と一致．\\
-\hspace*{1.5em}$\dfrac13<\dfrac12<\dfrac35$ より\quad $\sqrt[3]2<\sqrt[4]4<\sqrt[5]8$
+\textbf{方針}\quad (1)は\point{$x$ を $x-p$，$y$ を $y-q$ におきかえると平行移動}．(2)は\point{底を2にそろえて指数を比べる}（底 $>1$ なら指数が大きいほど大きい）．\\[2pt]
+(1)\ $y-3=2^{x-1}$ と変形すると，$y=2^x$ の $x$ を $x-1$，$y$ を $y-3$ におきかえた形．\\
+\hspace*{1.5em}よって\quad $x$ 軸方向に1，$y$ 軸方向に3だけ平行移動したもの\\
+\hspace*{1.5em}$y=2^x$ の漸近線は $x$ 軸（$y=0$）なので，移動後の漸近線は\quad 直線 $y=3$\\[2pt]
+(2)\ \point{底を2にそろえる}\\
+\hspace*{1.5em}$\sqrt[3]2=2^{\frac13}$，\quad $\sqrt[4]4=4^{\frac14}=2^{\frac24}=2^{\frac12}$，\quad $\sqrt[5]8=8^{\frac15}=2^{\frac35}$\\
+\hspace*{1.5em}指数を通分して比べると\quad $\dfrac13=\dfrac{10}{30}$，$\dfrac12=\dfrac{15}{30}$，$\dfrac35=\dfrac{18}{30}$\\
+\hspace*{1.5em}底 $2>1$ だから，指数の大小と数の大小が一致する．\quad $\sqrt[3]2<\sqrt[4]4<\sqrt[5]8$
 \end{kai}
 
 \ans{66}{指数方程式（Ⅰ）}
 \begin{kai}
-(1)\ $2^{x+1}=2^{3x-3}$ より $x+1=3x-3$．\quad $x=2$\qquad
-(2)\ $3^{2x}=3^{-3}$ より\quad $x=-\dfrac32$
+\textbf{方針}\quad \point{両辺の底をそろえて，指数を比較する}（$a^p=a^q\iff p=q$）．\\[2pt]
+(1)\ $8=2^3$ だから $8^{x-1}=(2^3)^{x-1}=2^{3x-3}$．\\
+\hspace*{1.5em}$2^{x+1}=2^{3x-3}$ より $x+1=3x-3$，\quad $2x=4$，\quad $x=2$\\[2pt]
+(2)\ $9=3^2$，$\dfrac1{27}=3^{-3}$ だから\quad $3^{2x}=3^{-3}$\\
+\hspace*{1.5em}$2x=-3$ より\quad $x=-\dfrac32$
 \end{kai}
 
 \ans{67}{指数方程式（Ⅱ）}
 \begin{kai}
-\point{$2^x=t$ などとおく．$t>0$ に注意}\\
-(1)\ $t=2^x$ とすると $t^2-3t-4=0$，$(t-4)(t+1)=0$．$t>0$ より $t=4$．\quad $x=2$\\[2pt]
-(2)\ $t=3^x$ とすると $t^2+3t-18=0$，$(t+6)(t-3)=0$．$t>0$ より $t=3$．\quad $x=1$
+\textbf{方針}\quad $4^x=(2^x)^2$ に注目して\point{$2^x=t$ とおき，$t$ の2次方程式にする}．\point{$t>0$} なので負の解は除く．\\[2pt]
+(1)\ $4^x=(2^2)^x=(2^x)^2$．$t=2^x$（$t>0$）とおくと\\
+\hspace*{1.5em}$t^2-3t-4=0$，\quad $(t-4)(t+1)=0$．$t>0$ より $t=4$．\\
+\hspace*{1.5em}$2^x=4=2^2$ より\quad $x=2$\\[2pt]
+(2)\ $9^x=(3^x)^2$，$3^{x+1}=3\cdot3^x$．$t=3^x$（$t>0$）とおくと\\
+\hspace*{1.5em}$t^2+3t-18=0$，\quad $(t+6)(t-3)=0$．$t>0$ より $t=3$．\\
+\hspace*{1.5em}$3^x=3$ より\quad $x=1$
 \end{kai}
 
 \ans{68}{指数不等式}
 \begin{kai}
-(1)\ $2^{-x}>2^3$．底 $2>1$ だから $-x>3$．\quad $x<-3$\\[2pt]
-(2)\ $t=2^x$ とすると $(t-2)(t-4)<0$，$2<t<4$．\quad $2^1<2^x<2^2$ より\quad $1<x<2$
+\textbf{方針}\quad 底をそろえて指数を比べる．\point{底 $>1$ なら不等号の向きはそのまま，$0<$ 底 $<1$ なら逆}．(2)は $2^x=t$ とおく．\\[2pt]
+(1)\ $\left(\dfrac12\right)^x=2^{-x}$，$8=2^3$ だから\quad $2^{-x}>2^3$\\
+\hspace*{1.5em}底 $2>1$ だから $-x>3$，\quad $x<-3$\\
+\hspace*{1.5em}（底を $\dfrac12$ にそろえると $\left(\dfrac12\right)^x>\left(\dfrac12\right)^{-3}$，底 $<1$ なので $x<-3$ となり同じ．）\\[2pt]
+(2)\ $t=2^x$（$t>0$）とおくと\quad $t^2-6t+8<0$，\quad $(t-2)(t-4)<0$，\quad $2<t<4$\\
+\hspace*{1.5em}（これは $t>0$ をみたす．）\quad $2^1<2^x<2^2$．底 $2>1$ だから\quad $1<x<2$
 \end{kai}
 
 \ans{69}{対数の計算（Ⅰ）}
 \begin{kai}
-(1)\ $\log_2\dfrac{48}3=\log_216=4$\qquad (2)\ $\log_33^{\frac32}=\dfrac32$\qquad (3)\ $\log_{10}(25\times4)=2$
+\textbf{方針}\quad 対数の性質 \point{$\log_aM+\log_aN=\log_aMN$，$\log_aM-\log_aN=\log_a\dfrac MN$，$k\log_aM=\log_aM^k$} で1つの対数にまとめる．\\[2pt]
+(1)\ $\log_248-\log_23=\log_2\dfrac{48}3=\log_216=\log_22^4=4$\\[2pt]
+(2)\ $\sqrt{27}=(3^3)^{\frac12}=3^{\frac32}$ だから\quad $\log_3\sqrt{27}=\log_33^{\frac32}=\dfrac32$\\[2pt]
+(3)\ $2\log_{10}5=\log_{10}5^2=\log_{10}25$ だから\\
+\hspace*{1.5em}$2\log_{10}5+\log_{10}4=\log_{10}(25\times4)=\log_{10}100=2$
 \end{kai}
 
 \ans{70}{対数の計算（Ⅱ）}
 \begin{kai}
-(1)\ \point{底の変換公式}\quad $\dfrac{\log_28}{\log_24}=\dfrac32$\qquad
-(2)\ $2\log_23\cdot3\log_32=6\cdot\log_23\cdot\dfrac1{\log_23}=6$\qquad
-(3)\ $a^{\log_aM}=M$ より\quad $5$
+\textbf{方針}\quad 底がそろっていないときは\point{底の変換公式 $\log_ab=\dfrac{\log_cb}{\log_ca}$} で底をそろえる．\point{$a^{\log_aM}=M$}．\\[2pt]
+(1)\ 底を2にそろえて\quad $\log_48=\dfrac{\log_28}{\log_24}=\dfrac{3}{2}$\\
+\hspace*{1.5em}（確認：$4^{\frac32}=(2^2)^{\frac32}=2^3=8$）\\[2pt]
+(2)\ $\log_29=\log_23^2=2\log_23$，\quad $\log_38=3\log_32=3\cdot\dfrac{\log_22}{\log_23}=\dfrac3{\log_23}$\\
+\hspace*{1.5em}よって\quad $\log_29\cdot\log_38=2\log_23\cdot\dfrac3{\log_23}=6$\\[2pt]
+(3)\ $\log_35=p$ とおくと，対数の定義より $3^p=5$．よって\quad $3^{\log_35}=5$
 \end{kai}
 
 \ans{71}{対数関数のグラフ}
 \begin{kai}
-(1)\ $x$ 軸方向に1，$y$ 軸方向に2だけ平行移動したもの（漸近線は直線 $x=1$）\\[2pt]
-(2)\ $2=\log_24$，$\log_430=\dfrac{\log_230}{2}=\log_2\sqrt{30}$．\quad $4<5<\sqrt{30}$ で底 $2>1$ だから\\
+\textbf{方針}\quad (1)は $x\to x-p$，$y\to y-q$ で平行移動．(2)は\point{底を2にそろえて真数を比べる}（底 $>1$ なら真数が大きいほど大きい）．\\[2pt]
+(1)\ $y-2=\log_2(x-1)$ と変形すると，$y=\log_2x$ の $x$ を $x-1$，$y$ を $y-2$ におきかえた形．\\
+\hspace*{1.5em}$x$ 軸方向に1，$y$ 軸方向に2だけ平行移動したもの\\
+\hspace*{1.5em}（$y=\log_2x$ の漸近線は $y$ 軸なので，移動後の漸近線は直線 $x=1$）\\[2pt]
+(2)\ 底を2にそろえる．\\
+\hspace*{1.5em}$2=2\log_22=\log_24$，\quad $\log_430=\dfrac{\log_230}{\log_24}=\dfrac{\log_230}{2}=\log_230^{\frac12}=\log_2\sqrt{30}$\\
+\hspace*{1.5em}真数を比べると $4<5<\sqrt{30}$（$\sqrt{25}<\sqrt{30}$）．底 $2>1$ だから\\
 \hspace*{1.5em}$2<\log_25<\log_430$
 \end{kai}
 
 \ans{72}{対数方程式（Ⅰ）}
 \begin{kai}
-\point{まず真数条件}\quad $x+1>0$，$x-1>0$ より $x>1$．\\
-$\log_2(x+1)(x-1)=\log_28$ より $x^2-1=8$，$x=\pm3$．$x>1$ より\quad $x=3$
+\textbf{方針}\quad \point{まず真数条件（真数 $>0$）}を確認する．対数を1つにまとめ，$\log_aM=\log_aN\iff M=N$ を使う．\\[2pt]
+真数条件：$x+1>0$ かつ $x-1>0$ より\quad $x>1$\\[2pt]
+左辺をまとめて $\log_2(x+1)(x-1)=3$．$3=\log_28$ だから\\
+\hspace*{1.5em}$\log_2(x^2-1)=\log_28$，\quad $x^2-1=8$，\quad $x^2=9$，\quad $x=\pm3$\\
+$x>1$ より\quad $x=3$\\
+\point{$x=-3$ は $x^2-1=8$ をみたすが，もとの式の真数が負になるので不適}
 \end{kai}
 
 \ans{73}{対数方程式（Ⅱ）}
 \begin{kai}
-真数条件 $x>0$．$t=\log_2x$ とすると $t^2-3t+2=0$，$t=1,\ 2$．\quad $x=2,\ 4$
+\textbf{方針}\quad $\log_2x^3=3\log_2x$ と変形し，\point{$\log_2x=t$ とおいて $t$ の2次方程式}にする．$t$ はすべての実数をとる．\\[2pt]
+真数条件：$x>0$（$x^3>0$ も同じ条件）\\
+$\log_2x^3=3\log_2x$ だから，$t=\log_2x$ とおくと\\
+\hspace*{1.5em}$t^2-3t+2=0$，\quad $(t-1)(t-2)=0$，\quad $t=1,\ 2$\\
+$\log_2x=1$ より $x=2$，\quad $\log_2x=2$ より $x=4$．どちらも $x>0$ をみたす．\\[2pt]
+よって\quad $x=2,\ 4$\\
+\point{$(\log_2x)^2$ と $\log_2x^2$ は別物．$(\log_2x)^2\neq2\log_2x$}
 \end{kai}
 
 \ans{74}{対数不等式}
 \begin{kai}
-(1)\ 真数条件 $x>1$．$-2=\log_{\frac12}4$ だから $\log_{\frac12}(x-1)>\log_{\frac12}4$．\\
-\hspace*{1.5em}\point{底が1より小さいと不等号の向きが逆}\quad $x-1<4$．\quad $1<x<5$\\[2pt]
-(2)\ 真数条件 $x>2$．$\log_2x(x-2)\leqq\log_28$ より $x^2-2x-8\leqq0$，$-2\leqq x\leqq4$．\quad $2<x\leqq4$
+\textbf{方針}\quad 真数条件を確認し，右辺も同じ底の対数にして真数を比べる．\point{底が1より小さいと不等号の向きが逆}．最後に真数条件との共通部分をとる．\\[2pt]
+(1)\ 真数条件：$x-1>0$ より $x>1$．\\
+\hspace*{1.5em}$-2=-2\log_{\frac12}\dfrac12=\log_{\frac12}\left(\dfrac12\right)^{-2}=\log_{\frac12}4$ だから\quad $\log_{\frac12}(x-1)>\log_{\frac12}4$\\
+\hspace*{1.5em}底 $\dfrac12<1$ だから，真数の大小は逆になり\quad $x-1<4$，\quad $x<5$\\
+\hspace*{1.5em}真数条件と合わせて\quad $1<x<5$\\[2pt]
+(2)\ 真数条件：$x>0$ かつ $x-2>0$ より $x>2$．\\
+\hspace*{1.5em}$\log_2x(x-2)\leqq\log_28$．底 $2>1$ だから\quad $x(x-2)\leqq8$\\
+\hspace*{1.5em}$x^2-2x-8\leqq0$，\quad $(x+2)(x-4)\leqq0$，\quad $-2\leqq x\leqq4$\\
+\hspace*{1.5em}真数条件と合わせて\quad $2<x\leqq4$
 \end{kai}
 
 \ans{75}{対数の応用（Ⅰ）}
 \begin{kai}
-(1)\ $\log_{10}2^{50}=50\times0.3010=15.05$．$15<\log_{10}2^{50}<16$ より $10^{15}<2^{50}<10^{16}$．\quad 16桁\\[2pt]
-(2)\ $2^{50}=10^{15.05}=10^{15}\times10^{0.05}$．$\log_{10}1=0<0.05<0.3010=\log_{10}2$ より $1<10^{0.05}<2$．\\
-\hspace*{1.5em}最高位の数字は\quad 1
+\textbf{方針}\quad \point{$N$ の常用対数が $n\leqq\log_{10}N<n+1$ なら $N$ は $n+1$ 桁}．最高位の数字は，\point{小数部分 $\log_{10}N-n$ が $\log_{10}k$ と $\log_{10}(k+1)$ の間にあれば $k$}．\\[2pt]
+(1)\ $\log_{10}2^{50}=50\log_{10}2=50\times0.3010=15.05$\\
+\hspace*{1.5em}$15<15.05<16$ より $10^{15}<2^{50}<10^{16}$．\\
+\hspace*{1.5em}$10^{15}$ は16桁の最小の数なので，$2^{50}$ は\quad 16桁\\[2pt]
+(2)\ $2^{50}=10^{15.05}=10^{0.05}\times10^{15}$．最高位の数字は $10^{0.05}$ の整数部分．\\
+\hspace*{1.5em}$\log_{10}1=0<0.05<0.3010=\log_{10}2$ より\quad $1<10^{0.05}<2$\\
+\hspace*{1.5em}よって $2^{50}=1.\cdots\times10^{15}$ となり，最高位の数字は\quad 1
 \end{kai}
 
 \ans{76}{対数の応用（Ⅱ）}
 \begin{kai}
-両辺の常用対数をとって $-n\log_{10}3<-10$，$n>\dfrac{10}{0.4771}=20.9\cdots$．\quad $n=21$
+\textbf{方針}\quad \point{両辺の常用対数をとる}（底 $10>1$ なので不等号の向きは変わらない）．$\log_{10}\dfrac13=-\log_{10}3$．負の数で割ると向きが変わることに注意．\\[2pt]
+$\left(\dfrac13\right)^n<10^{-10}$ の両辺の常用対数をとって\\
+\hspace*{1.5em}$\log_{10}\left(\dfrac13\right)^n<\log_{10}10^{-10}$，\quad $-n\log_{10}3<-10$\\
+両辺を $-\log_{10}3\ (<0)$ で割ると向きが変わり\\
+\hspace*{1.5em}$n>\dfrac{10}{\log_{10}3}=\dfrac{10}{0.4771}=20.9\cdots$\\
+これをみたす最小の自然数は\quad $n=21$
 \end{kai}
 
 \ans{77}{指数・対数関数の最大・最小}
 \begin{kai}
-(1)\ $t=2^x$ とすると $1\leqq t\leqq4$，$y=t^2-4t+5=(t-2)^2+1$．\\
-\hspace*{1.5em}最大値 $5$（$t=4$，$x=2$），\quad 最小値 $1$（$t=2$，$x=1$）\\[2pt]
-(2)\ $t=\log_2x$ とすると $0\leqq t\leqq3$，$y=t^2-2t=(t-1)^2-1$．\\
-\hspace*{1.5em}最大値 $3$（$t=3$，$x=8$），\quad 最小値 $-1$（$t=1$，$x=2$）
+\textbf{方針}\quad \point{おきかえて2次関数にする}．(1)は $t=2^x$，(2)は $t=\log_2x$．\point{$x$ の範囲から $t$ の範囲を求める}ことを忘れない．\\[2pt]
+(1)\ $4^x=(2^x)^2$，$2^{x+2}=4\cdot2^x$．$t=2^x$ とおくと，$0\leqq x\leqq2$ より $2^0\leqq t\leqq2^2$，すなわち\quad $1\leqq t\leqq4$\\
+\hspace*{1.5em}$y=t^2-4t+5=(t-2)^2+1$\\
+\hspace*{1.5em}$1\leqq t\leqq4$ で，$t=2$ のとき最小，軸から遠い $t=4$ のとき最大（$t=1$ のとき $y=2$）．\\
+\hspace*{1.5em}最大値 $5$（$t=4$ より $x=2$），\quad 最小値 $1$（$t=2$ より $x=1$）\\[2pt]
+(2)\ $\log_2x^2=2\log_2x$．$t=\log_2x$ とおくと，$1\leqq x\leqq8$ より $\log_21\leqq t\leqq\log_28$，すなわち\quad $0\leqq t\leqq3$\\
+\hspace*{1.5em}$y=t^2-2t=(t-1)^2-1$\\
+\hspace*{1.5em}$0\leqq t\leqq3$ で，$t=1$ のとき最小，$t=3$ のとき最大（$t=0$ のとき $y=0$）．\\
+\hspace*{1.5em}最大値 $3$（$t=3$ より $x=8$），\quad 最小値 $-1$（$t=1$ より $x=2$）
 \end{kai}
 
 \ans{78}{大小比較（Ⅰ）}
 \begin{kai}
-\point{6乗して比べる}\quad $(\sqrt2)^6=8$，$(\sqrt[3]3)^6=9$，$(\sqrt[6]6)^6=6$．\\
-3数はすべて正だから\quad $\sqrt[6]6<\sqrt2<\sqrt[3]3$
+\textbf{方針}\quad 累乗根の指数 2，3，6 の\point{最小公倍数の6乗}をすると，すべて整数になって比べやすい．正の数どうしなら，6乗しても大小は変わらない．\\[2pt]
+\point{6乗して比べる}\\
+\hspace*{1.5em}$(\sqrt2)^6=(2^{\frac12})^6=2^3=8$\\
+\hspace*{1.5em}$(\sqrt[3]3)^6=(3^{\frac13})^6=3^2=9$\\
+\hspace*{1.5em}$(\sqrt[6]6)^6=6$\\
+$6<8<9$ で，3数はすべて正だから\quad $\sqrt[6]6<\sqrt2<\sqrt[3]3$
 \end{kai}
 
 \ans{79}{大小比較（Ⅱ）}
 \begin{kai}
-$\log_23-\dfrac32=\dfrac12(\log_29-\log_28)>0$ より $\log_23>\dfrac32$．\\
-$\log_34-\dfrac32=\dfrac12(\log_316-\log_327)<0$ より $\log_34<\dfrac32$．\quad よって\quad $\log_34<\dfrac32<\log_23$
+\textbf{方針}\quad 底の違う対数は直接比べにくいので，\point{間に $\dfrac32$ をはさんで，それぞれと $\dfrac32$ を比べる}．$\dfrac32$ を同じ底の対数で表す．\\[2pt]
+$\dfrac32=\dfrac12\log_28=\log_2\sqrt8$，\quad $\dfrac32=\dfrac12\log_327=\log_3\sqrt{27}$ と表せる．\\[2pt]
+$\log_23-\dfrac32=\log_23-\dfrac12\log_28=\dfrac12(2\log_23-\log_28)=\dfrac12(\log_29-\log_28)>0$\\
+\hspace*{1.5em}（底 $2>1$ で $9>8$）．よって\quad $\log_23>\dfrac32$\\[2pt]
+$\log_34-\dfrac32=\dfrac12(\log_316-\log_327)<0$\\
+\hspace*{1.5em}（底 $3>1$ で $16<27$）．よって\quad $\log_34<\dfrac32$\\[2pt]
+したがって\quad $\log_34<\dfrac32<\log_23$
 \end{kai}
 
 \ans{80}{常用対数の値の評価}
 \begin{kai}
-$2^{10}=1024>10^3$ の常用対数をとって $10\log_{10}2>3$，$\log_{10}2>0.3$．\\
-$2^3=8<10$ の常用対数をとって $3\log_{10}2<1$，$\log_{10}2<\dfrac13$．\quad よって $0.3<\log_{10}2<\dfrac13$
+\textbf{方針}\quad 与えられた大小関係（$2^{10}>10^3$，$2^3<10$）の\point{両辺の常用対数をとる}．底 $10>1$ なので不等号の向きは変わらない．\\[2pt]
+$2^{10}=1024>1000=10^3$ の両辺の常用対数をとって\\
+\hspace*{1.5em}$\log_{10}2^{10}>\log_{10}10^3$，\quad $10\log_{10}2>3$，\quad $\log_{10}2>0.3$\\[2pt]
+$2^3=8<10$ の両辺の常用対数をとって\\
+\hspace*{1.5em}$\log_{10}2^3<\log_{10}10$，\quad $3\log_{10}2<1$，\quad $\log_{10}2<\dfrac13$\\[2pt]
+よって\quad $0.3<\log_{10}2<\dfrac13$\\
+（実際の値 $\log_{10}2=0.3010\cdots$ はこの範囲にある．）
 \end{kai}
 
 \shouans{第6章}{微分法と積分法}
 \ans{81}{極限（Ⅰ）}
 \begin{kai}
-\point{$\dfrac00$ 型は約分してから代入}\\
-(1)\ $\displaystyle\lim_{x\to2}(x+2)=4$\qquad
-(2)\ $\displaystyle\lim_{x\to1}\frac{(x-1)(x^2+x+1)}{(x-1)(x+1)}=\frac32$
+\textbf{方針}\quad そのまま代入すると $\dfrac00$ になる．\point{分母・分子を因数分解して，0になる因数を約分してから代入}する．\\[2pt]
+(1)\ $x\neq2$ では $\dfrac{x^2-4}{x-2}=\dfrac{(x+2)(x-2)}{x-2}=x+2$ だから\\
+\hspace*{1.5em}$\displaystyle\lim_{x\to2}\frac{x^2-4}{x-2}=\lim_{x\to2}(x+2)=4$\\[2pt]
+(2)\ $x^3-1=(x-1)(x^2+x+1)$，$x^2-1=(x-1)(x+1)$ だから\\
+\hspace*{1.5em}$\displaystyle\lim_{x\to1}\frac{x^3-1}{x^2-1}=\lim_{x\to1}\frac{(x-1)(x^2+x+1)}{(x-1)(x+1)}=\lim_{x\to1}\frac{x^2+x+1}{x+1}=\frac32$\\
+\point{$x\to1$ では $x\neq1$ なので，$x-1$ で約分してよい}
 \end{kai}
 
 \ans{82}{極限（Ⅱ）}
 \begin{kai}
-\point{分母 $\to0$ で極限値が存在するなら，分子 $\to0$}\quad $1+a+b=0$ より $b=-a-1$．\\
-このとき分子は $x^2+ax-a-1=(x-1)(x+a+1)$ で，極限値は $2+a=3$．\quad $a=1$，$b=-2$
+\textbf{方針}\quad \point{分母 $\to0$ のとき極限値が存在するなら，分子 $\to0$}（必要条件）．これで $a,\ b$ の関係を出し，約分して極限値を計算する．\\[2pt]
+$\displaystyle\lim_{x\to1}(x-1)=0$ だから，極限値が存在するためには\quad $\displaystyle\lim_{x\to1}(x^2+ax+b)=1+a+b=0$\\
+\hspace*{1.5em}（もし分子 $\to c\neq0$ なら，$\dfrac{c}{0}$ の形で発散してしまう．）\\
+よって\quad $b=-a-1$\\[2pt]
+このとき分子は\quad $x^2+ax-a-1=(x^2-1)+a(x-1)=(x-1)(x+1+a)$\\
+\hspace*{1.5em}$\displaystyle\lim_{x\to1}\frac{(x-1)(x+a+1)}{x-1}=\lim_{x\to1}(x+a+1)=a+2$\\
+これが3に等しいので\quad $a+2=3$，\quad $a=1$，\quad $b=-2$\\
+（確認：$\dfrac{x^2+x-2}{x-1}=\dfrac{(x-1)(x+2)}{x-1}=x+2\to3$）
 \end{kai}
 
 \ans{83}{導関数}
 \begin{kai}
-(1)\ $f'(x)=\displaystyle\lim_{h\to0}\frac{(x+h)^3-x^3}{h}=\lim_{h\to0}(3x^2+3xh+h^2)=3x^2$\\[2pt]
-(2)\ 展開して $y=2x^3-x^2+6x-3$．\quad $y'=6x^2-2x+6$
+\textbf{方針}\quad 導関数の定義 \point{$f'(x)=\displaystyle\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$}．計算では $(x^n)'=nx^{n-1}$ を使い，積の形は\point{展開してから}微分する．\\[2pt]
+(1)\ $(x+h)^3-x^3=x^3+3x^2h+3xh^2+h^3-x^3=3x^2h+3xh^2+h^3$ だから\\
+\hspace*{1.5em}$f'(x)=\displaystyle\lim_{h\to0}\frac{3x^2h+3xh^2+h^3}{h}=\lim_{h\to0}(3x^2+3xh+h^2)=3x^2$\\[2pt]
+(2)\ 展開して\quad $y=2x^3+6x-x^2-3=2x^3-x^2+6x-3$\\
+\hspace*{1.5em}$y'=2\cdot3x^2-2x+6=6x^2-2x+6$
 \end{kai}
 
 \ans{84}{微分係数}
 \begin{kai}
-$f(2+h)-f(2)=(2+h)^3-2(2+h)-4=10h+6h^2+h^3$．\\
-$f'(2)=\displaystyle\lim_{h\to0}(10+6h+h^2)=10$\quad（$f'(x)=3x^2-2$ に代入しても $10$）
+\textbf{方針}\quad \point{$f'(a)=\displaystyle\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$}．分子を展開して $h$ でくくり，約分してから $h\to0$ とする．\\[2pt]
+$f(2)=8-4=4$\\
+$f(2+h)=(2+h)^3-2(2+h)=8+12h+6h^2+h^3-4-2h=4+10h+6h^2+h^3$\\
+よって\quad $f(2+h)-f(2)=10h+6h^2+h^3$\\[2pt]
+$f'(2)=\displaystyle\lim_{h\to0}\frac{10h+6h^2+h^3}{h}=\lim_{h\to0}(10+6h+h^2)=10$\\
+（検算：$f'(x)=3x^2-2$ より $f'(2)=12-2=10$）
 \end{kai}
 
 \ans{85}{平均変化率と微分係数}
 \begin{kai}
-(1)\ $\dfrac{f(1+h)-f(1)}{h}=\dfrac{(1+h)^2+(1+h)-2}{h}=3+h$．\quad $f'(1)=\displaystyle\lim_{h\to0}(3+h)=3$\\[2pt]
-(2)\ 平均変化率は $\dfrac{6-0}{2}=3$．$f'(c)=2c+1=3$ より\quad $c=1$
+\textbf{方針}\quad \point{平均変化率は $\dfrac{f(b)-f(a)}{b-a}$}（2点を結ぶ直線の傾き），その $h\to0$ の極限が微分係数（接線の傾き）．\\[2pt]
+(1)\ $f(1)=2$，\quad $f(1+h)=(1+h)^2+(1+h)=2+3h+h^2$\\
+\hspace*{1.5em}平均変化率は\quad $\dfrac{f(1+h)-f(1)}{(1+h)-1}=\dfrac{3h+h^2}{h}=3+h$\\
+\hspace*{1.5em}$f'(1)=\displaystyle\lim_{h\to0}(3+h)=3$\\[2pt]
+(2)\ $f(0)=0$，$f(2)=6$ だから，平均変化率は\quad $\dfrac{6-0}{2-0}=3$\\
+\hspace*{1.5em}$f'(x)=2x+1$ だから，$f'(c)=2c+1=3$ より\quad $c=1$\\
+\hspace*{1.5em}（2点 $(0,\ 0)$，$(2,\ 6)$ を結ぶ直線と平行な接線の接点が $x=1$．$0<c<2$ をみたす．）
 \end{kai}
 
 \ans{86}{接線（Ⅰ）}
 \begin{kai}
-$y'=3x^2-3$ より $x=2$ で傾き9．\\
-接線：$y-2=9(x-2)$ より $y=9x-16$\qquad
-法線：傾き $-\dfrac19$，$y-2=-\dfrac19(x-2)$ より $y=-\dfrac19x+\dfrac{20}9$
+\textbf{方針}\quad \point{曲線 $y=f(x)$ 上の点 $(a,\ f(a))$ における接線は $y-f(a)=f'(a)(x-a)$}．法線は接線に垂直なので傾きは $-\dfrac{1}{f'(a)}$．\\[2pt]
+$y'=3x^2-3$．$x=2$ のとき $y'=12-3=9$．\\[2pt]
+接線：傾き9で点 $(2,\ 2)$ を通るので\quad $y-2=9(x-2)$，\quad $y=9x-16$\\[2pt]
+法線：傾きは $-\dfrac19$（傾きの積が $-1$）．\quad $y-2=-\dfrac19(x-2)$，\quad $y=-\dfrac19x+\dfrac{20}9$
 \end{kai}
 
 \ans{87}{接線（Ⅱ）}
 \begin{kai}
-\point{接点を $(t,\ t^2)$ とおく}\quad 接線は $y=2tx-t^2$．これが $(1,\ -3)$ を通るので $-3=2t-t^2$，$t^2-2t-3=0$，$t=3,\ -1$．\\
-$y=6x-9$，\ $y=-2x-1$
+\textbf{方針}\quad 曲線外の点からの接線は，\point{接点を $(t,\ f(t))$ とおいて接線の式をつくり，それが与えられた点を通る条件}から $t$ を求める．\\[2pt]
+$y'=2x$．接点を $(t,\ t^2)$ とすると，接線は\\
+\hspace*{1.5em}$y-t^2=2t(x-t)$，\quad $y=2tx-t^2$ ……①\\
+①が点 $(1,\ -3)$ を通るので\quad $-3=2t-t^2$，\quad $t^2-2t-3=0$，\quad $(t-3)(t+1)=0$\\
+\hspace*{1.5em}$t=3$ のとき①は\quad $y=6x-9$\quad （接点 $(3,\ 9)$）\\
+\hspace*{1.5em}$t=-1$ のとき①は\quad $y=-2x-1$\quad （接点 $(-1,\ 1)$）\\
+\point{点 $(1,\ -3)$ は曲線上にないので，$y'$ に $x=1$ を代入して傾きとしてはいけない}
 \end{kai}
 
 \ans{88}{関数決定（Ⅰ）}
 \begin{kai}
-$f'(x)=2ax+b$．$f'(0)=b=-3$，$f'(1)=2a+b=1$ より $a=2$．$f(1)=a+b+c=2$ より $c=3$．\\
-$f(x)=2x^2-3x+3$
+\textbf{方針}\quad $f'(x)$ を求め，与えられた3つの条件を\point{$a,\ b,\ c$ の連立方程式}にする．\\[2pt]
+$f'(x)=2ax+b$\\
+$f'(0)=-3$ より\quad $b=-3$\\
+$f'(1)=1$ より\quad $2a+b=1$，\quad $2a=4$，\quad $a=2$\\
+$f(1)=2$ より\quad $a+b+c=2$，\quad $2-3+c=2$，\quad $c=3$\\[2pt]
+よって\quad $f(x)=2x^2-3x+3$
 \end{kai}
 
 \ans{89}{3次関数のグラフ}
 \begin{kai}
+\textbf{方針}\quad $y'$ を因数分解して $y'=0$ となる $x$ を求め，\point{増減表}をつくる．$y'$ の符号が $+$ から $-$ に変わる点で極大，$-$ から $+$ で極小．\\[2pt]
 \begin{minipage}[t]{0.58\linewidth}
 $y'=3x^2-6x-9=3(x+1)(x-3)$\\[2pt]
 \renewcommand{\arraystretch}{1.1}
@@ -1777,6 +1906,7 @@ x&\cdots&-1&\cdots&3&\cdots\\ \hline
 y'&+&0&-&0&+\\ \hline
 y&\nearrow&10&\searrow&-22&\nearrow
 \end{array}$\\[4pt]
+$y(-1)=-1-3+9+5=10$，\quad $y(3)=27-27-27+5=-22$\\
 極大値 $10$（$x=-1$），\quad 極小値 $-22$（$x=3$）\\
 $y$ 切片は5．グラフは右図．
 \end{minipage}\hfill
@@ -1795,31 +1925,48 @@ $y$ 切片は5．グラフは右図．
 
 \ans{90}{共通接線}
 \begin{kai}
-求める直線を $y=mx+n$ とする．\point{連立した2次方程式がともに重解をもつ}\\
-$y=x^2$ と：$x^2-mx-n=0$ の判別式 $m^2+4n=0$．\\
-$y=-x^2+4x-4$ と：$x^2+(m-4)x+n+4=0$ の判別式 $(m-4)^2-4(n+4)=0$．\\
-$4n=-m^2$ を代入して $(m-4)^2+m^2-16=0$，$2m^2-8m=0$，$m=0,\ 4$．\\
-$y=0$，\ $y=4x-4$
+\textbf{方針}\quad 求める直線を $y=mx+n$ とおき，\point{2つの放物線それぞれと連立した2次方程式がともに重解をもつ（判別式 $=0$）}条件を立てる．\\[2pt]
+$y=x^2$ と $y=mx+n$ から\quad $x^2-mx-n=0$\\
+\hspace*{1.5em}重解をもつ条件：$D_1=m^2+4n=0$ ……①\\
+$y=-x^2+4x-4$ と $y=mx+n$ から\quad $x^2+(m-4)x+n+4=0$\\
+\hspace*{1.5em}重解をもつ条件：$D_2=(m-4)^2-4(n+4)=0$ ……②\\[2pt]
+①より $4n=-m^2$．②に代入して\\
+\hspace*{1.5em}$(m-4)^2+m^2-16=0$，\quad $2m^2-8m=0$，\quad $2m(m-4)=0$，\quad $m=0,\ 4$\\
+\hspace*{1.5em}$m=0$ のとき $n=0$，\quad $m=4$ のとき $n=-4$\\[2pt]
+よって\quad $y=0$，\quad $y=4x-4$\\
+（$y=0$ は $y=x^2$ と原点で，$y=-x^2+4x-4=-(x-2)^2$ と点 $(2,\ 0)$ で接する．）
 \end{kai}
 
 \ans{91}{関数決定（Ⅱ）}
 \begin{kai}
-$f'(x)=3x^2+2ax+b$．$x=\pm1$ で極値をとるので $f'(-1)=f'(1)=0$ より $a=0$，$b=-3$．\\
-$f(-1)=-1+3+c=5$ より $c=3$．\\
-\point{逆の確認}\quad このとき $f'(x)=3(x+1)(x-1)$ で，$x=-1$ で極大，$x=1$ で極小となり条件をみたす．\\
-$a=0$，$b=-3$，$c=3$，極小値 $f(1)=1$
+\textbf{方針}\quad \point{$x=\alpha$ で極値をとるなら $f'(\alpha)=0$}（必要条件）．係数を求めたら，\point{本当にその点で極大・極小になるかを増減で確かめる}（十分性）．\\[2pt]
+$f'(x)=3x^2+2ax+b$\\
+$x=-1,\ 1$ で極値をとるので\quad $f'(-1)=3-2a+b=0$，\quad $f'(1)=3+2a+b=0$\\
+2式を引いて $4a=0$，$a=0$．よって $b=-3$．\\
+$f(-1)=5$ より\quad $-1+0+3+c=5$，\quad $c=3$\\[2pt]
+\point{逆の確認}：このとき $f(x)=x^3-3x+3$，$f'(x)=3(x+1)(x-1)$．\\
+\hspace*{1.5em}$f'(x)$ の符号は $x<-1$ で $+$，$-1<x<1$ で $-$，$x>1$ で $+$．\\
+\hspace*{1.5em}$x=-1$ で極大，$x=1$ で極小となり条件をみたす．\\[2pt]
+$a=0$，$b=-3$，$c=3$，\quad 極小値 $f(1)=1-3+3=1$
 \end{kai}
 
 \ans{92}{極値をもつための条件}
 \begin{kai}
-\point{$f'(x)=0$ が異なる2つの実数解をもつ（符号が変わる）}\quad $f'(x)=3x^2+2ax+3$，$\dfrac D4=a^2-9>0$．\\
-$a<-3,\ 3<a$
+\textbf{方針}\quad 3次関数が極値をもつ ⇔ \point{$f'(x)$ の符号が変わる点がある ⇔ $f'(x)=0$ が異なる2つの実数解をもつ}．重解のときは符号が変わらないので極値をもたない．\\[2pt]
+$f'(x)=3x^2+2ax+3$\\
+$f'(x)=0$ が異なる2つの実数解をもつ条件は\quad $\dfrac D4=a^2-3\cdot3=a^2-9>0$\\
+$(a+3)(a-3)>0$ より\quad $a<-3,\ 3<a$\\
+\point{$D\geqq0$ としない．$D=0$ のとき $f'(x)\geqq0$ で単調増加になり，極値をもたない}
 \end{kai}
 
 \ans{93}{最大・最小}
 \begin{kai}
-$f'(x)=3(x-1)(x-3)$．$f(0)=0$，$f(1)=4$，$f(3)=0$，$f(4)=4$．\point{極値と端点の値を比べる}\\
-最大値 $4$（$x=1,\ 4$），\quad 最小値 $0$（$x=0,\ 3$）
+\textbf{方針}\quad 増減を調べ，\point{極値と区間の端点の値をすべて比べる}．\\[2pt]
+$f'(x)=3x^2-12x+9=3(x^2-4x+3)=3(x-1)(x-3)$\\
+$0\leqq x\leqq4$ での増減：$0\leqq x<1$ で増加，$1<x<3$ で減少，$3<x\leqq4$ で増加．\\
+\hspace*{1.5em}$f(0)=0$，\quad $f(1)=1-6+9=4$（極大），\quad $f(3)=27-54+27=0$（極小），\quad $f(4)=64-96+36=4$\\[2pt]
+\point{極値と端点の値を比べる}\\
+最大値 $4$\quad（$x=1,\ 4$），\quad 最小値 $0$\quad（$x=0,\ 3$）
 \end{kai}
 
 \ans{94}{最大値・最小値の図形への応用}
@@ -1843,72 +1990,118 @@ $V(2)=2\cdot(12-4)^2=2\cdot64=128$\\
 
 \ans{95}{微分法の方程式への応用}
 \begin{kai}
-\point{$x^3-3x=a$ として，$y=x^3-3x$ と $y=a$ の共有点の個数を調べる}\\
-$y'=3(x+1)(x-1)$ より，$x=-1$ で極大値2，$x=1$ で極小値 $-2$．\\
-$a<-2,\ 2<a$ のとき1個，\quad $a=\pm2$ のとき2個，\quad $-2<a<2$ のとき3個
+\textbf{方針}\quad \point{定数 $a$ を分離して $x^3-3x=a$ とし，$y=x^3-3x$ のグラフと直線 $y=a$ の共有点の個数}を調べる．グラフは $a$ によらず固定なので考えやすい．\\[2pt]
+$f(x)=x^3-3x$ とすると\quad $f'(x)=3x^2-3=3(x+1)(x-1)$\\
+$x=-1$ で極大値 $f(-1)=-1+3=2$，\quad $x=1$ で極小値 $f(1)=1-3=-2$\\
+$x\to\pm\infty$ で $f(x)\to\pm\infty$．\\[2pt]
+直線 $y=a$（$x$ 軸に平行）を上下に動かして共有点の個数を数えると\\
+\hspace*{1.5em}$a<-2,\ 2<a$ のとき\quad 1個\\
+\hspace*{1.5em}$a=-2,\ 2$ のとき\quad 2個\quad （極値をとる点で接する）\\
+\hspace*{1.5em}$-2<a<2$ のとき\quad 3個
 \end{kai}
 
 \ans{96}{接線の本数}
 \begin{kai}
-接点を $(t,\ t^3-3t)$ とすると接線は $y=(3t^2-3)(x-t)+t^3-3t$．$(2,\ b)$ を通るので\\
-$b=-2t^3+6t^2-6$．\point{接点が異なれば接線も異なる（3次関数）→ $t$ の実数解の個数＝接線の本数}\\
-$g(t)=-2t^3+6t^2-6$ とすると $g'(t)=-6t(t-2)$ で，極小値 $g(0)=-6$，極大値 $g(2)=2$．\\
-$y=g(t)$ と $y=b$ が3点で交わる条件は\quad $-6<b<2$
+\textbf{方針}\quad 接点を $(t,\ f(t))$ とおいて接線が点 $(2,\ b)$ を通る条件を $t$ の方程式にする．\point{3次関数では接点が異なれば接線も異なるので，$t$ の実数解の個数＝接線の本数}．あとは類題95と同じく定数を分離する．\\[2pt]
+$y'=3x^2-3$．接点を $(t,\ t^3-3t)$ とすると接線は\\
+\hspace*{1.5em}$y=(3t^2-3)(x-t)+t^3-3t$\\
+これが点 $(2,\ b)$ を通るので\\
+\hspace*{1.5em}$b=(3t^2-3)(2-t)+t^3-3t=6t^2-3t^3-6+3t+t^3-3t=-2t^3+6t^2-6$\\[2pt]
+$g(t)=-2t^3+6t^2-6$ とすると\quad $g'(t)=-6t^2+12t=-6t(t-2)$\\
+\hspace*{1.5em}$t=0$ で極小値 $g(0)=-6$，\quad $t=2$ で極大値 $g(2)=-16+24-6=2$\\[2pt]
+$y=g(t)$ のグラフと直線 $y=b$ が異なる3点で交わる条件は\quad $-6<b<2$
 \end{kai}
 
 \ans{97}{微分法の不等式への応用（Ⅰ）}
 \begin{kai}
-$f(x)=x^3-3x^2+4$ とすると $f'(x)=3x(x-2)$．$x\geqq0$ では $x=2$ で最小値 $f(2)=0$．\\
-よって $x\geqq0$ で $f(x)\geqq0$，すなわち $x^3+4\geqq3x^2$（等号は $x=2$ のとき）．
+\textbf{方針}\quad \point{(左辺)$-$(右辺)$=f(x)$ とおき，$x\geqq0$ での $f(x)$ の最小値が0以上}であることを示す．\\[2pt]
+$f(x)=x^3+4-3x^2=x^3-3x^2+4$ とすると\quad $f'(x)=3x^2-6x=3x(x-2)$\\
+$x\geqq0$ での増減：$0<x<2$ で $f'(x)<0$（減少），$x>2$ で $f'(x)>0$（増加）．\\
+よって $x\geqq0$ では，$x=2$ で最小値 $f(2)=8-12+4=0$ をとる．\\[2pt]
+したがって $x\geqq0$ で $f(x)\geqq0$，すなわち\quad $x^3+4\geqq3x^2$\\
+等号は $x=2$ のとき成りたつ．\\
+（$f(x)=(x+1)(x-2)^2$ と因数分解できることからも確かめられる．）
 \end{kai}
 
 \ans{98}{微分法の不等式への応用（Ⅱ）}
 \begin{kai}
-$f(x)=x^3-3x+a$ とすると $f'(x)=3(x+1)(x-1)$．$x\geqq0$ での最小値は $f(1)=a-2$．\\
+\textbf{方針}\quad 「範囲内のすべての $x$ で $f(x)\geqq0$」 ⇔ \point{範囲内での $f(x)$ の最小値 $\geqq0$}．増減表から最小値を求める．\\[2pt]
+$f(x)=x^3-3x+a$ とすると\quad $f'(x)=3x^2-3=3(x+1)(x-1)$\\
+$x\geqq0$ での増減：$0<x<1$ で減少，$x>1$ で増加．\\
+よって $x\geqq0$ での最小値は\quad $f(1)=1-3+a=a-2$\\[2pt]
 \point{(最小値) $\geqq0$}\quad $a-2\geqq0$ より\quad $a\geqq2$
 \end{kai}
 
 \ans{99}{不定積分（Ⅰ）}
 \begin{kai}
-（$C$ は積分定数）\quad
-(1)\ $x^3-2x^2+x+C$\qquad
-(2)\ $\displaystyle\int(2x^2-5x-3)\,dx=\frac23x^3-\frac52x^2-3x+C$
+\textbf{方針}\quad \point{$\displaystyle\int x^n\,dx=\frac{x^{n+1}}{n+1}+C$}．積の形は\point{展開してから}積分する．\\[2pt]
+（$C$ は積分定数）\\
+(1)\ $\displaystyle\int(3x^2-4x+1)\,dx=3\cdot\frac{x^3}3-4\cdot\frac{x^2}2+x+C=x^3-2x^2+x+C$\\[2pt]
+(2)\ $(2x+1)(x-3)=2x^2-6x+x-3=2x^2-5x-3$ だから\\
+\hspace*{1.5em}$\displaystyle\int(2x^2-5x-3)\,dx=\frac23x^3-\frac52x^2-3x+C$\\
+\hspace*{1.5em}（微分してもとの式にもどることで検算できる．）
 \end{kai}
 
 \ans{100}{不定積分（Ⅱ）}
 \begin{kai}
-(1)\ $F(x)=2x^3-x^2+C$．$F(1)=1+C=3$ より $C=2$．\quad $F(x)=2x^3-x^2+2$\\[2pt]
-(2)\ \point{$\displaystyle\int(ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$}\quad $\dfrac{(2x+3)^4}{8}+C$
+\textbf{方針}\quad (1)は不定積分で $F(x)$ を求め，\point{条件 $F(1)=3$ で積分定数を決める}．(2)は\point{$(ax+b)^n$ の形のまま積分する公式}を使う（展開してもよい）．\\[2pt]
+(1)\ $F(x)=\displaystyle\int(6x^2-2x)\,dx=2x^3-x^2+C$\\
+\hspace*{1.5em}$F(1)=2-1+C=1+C=3$ より\quad $C=2$\\
+\hspace*{1.5em}$F(x)=2x^3-x^2+2$\\[2pt]
+(2)\ \point{$\displaystyle\int(ax+b)^n\,dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$}\\
+\hspace*{1.5em}$\displaystyle\int(2x+3)^3\,dx=\frac{(2x+3)^4}{2\cdot4}+C=\frac{(2x+3)^4}{8}+C$\\
+\hspace*{1.5em}（検算：$\left\{\dfrac{(2x+3)^4}{8}\right\}'=\dfrac{4(2x+3)^3\cdot2}{8}=(2x+3)^3$．$a=2$ で割るのを忘れない．）
 \end{kai}
 
 \ans{101}{定積分}
 \begin{kai}
-(1)\ $\left[\dfrac{x^3}3-x^2+3x\right]_0^3=9-9+9=9$\\[2pt]
-(2)\ \point{$\displaystyle\int_{-a}^a$ では奇数次の項は0，偶数次の項は $2\int_0^a$}\quad $2\displaystyle\int_0^2(3x^2+1)\,dx=2[x^3+x]_0^2=20$
+\textbf{方針}\quad 原始関数 $F(x)$ を求めて $\displaystyle\int_a^bf(x)\,dx=F(b)-F(a)$．区間が $-a$ から $a$ なら\point{奇数次の項は0，偶数次の項は $2\displaystyle\int_0^a$} で計算が楽になる．\\[2pt]
+(1)\ $\displaystyle\int_0^3(x^2-2x+3)\,dx=\left[\frac{x^3}3-x^2+3x\right]_0^3=(9-9+9)-0=9$\\[2pt]
+(2)\ $x^3$，$-x$ は奇関数（グラフが原点対称）なので，$-2$ から $2$ までの積分は0．\\
+\hspace*{1.5em}$3x^2$，$1$ は偶関数（グラフが $y$ 軸対称）なので，$0$ から $2$ までの積分の2倍．\\
+\hspace*{1.5em}$\displaystyle\int_{-2}^{2}(x^3+3x^2-x+1)\,dx=2\int_0^2(3x^2+1)\,dx=2\Bigl[x^3+x\Bigr]_0^2=2(8+2)=20$
 \end{kai}
 
 \ans{102}{絶対値記号のついた関数の定積分}
 \begin{kai}
-(1)\ $\displaystyle\int_0^1(1-x)\,dx+\int_1^3(x-1)\,dx=\frac12+2=\frac52$\\[2pt]
-(2)\ $x^2-x-2=(x+1)(x-2)$ は $0\leqq x\leqq2$ で0以下，$2\leqq x\leqq3$ で0以上．\\
-\hspace*{1.5em}$\displaystyle-\int_0^2(x^2-x-2)\,dx+\int_2^3(x^2-x-2)\,dx=\frac{10}3+\frac{11}6=\frac{31}6$
+\textbf{方針}\quad \point{絶対値の中身の符号が変わる点で積分区間を分け}，絶対値をはずしてから積分する．\\[2pt]
+(1)\ $|x-1|=\begin{cases}1-x & (0\leqq x\leqq1)\\ x-1 & (1\leqq x\leqq3)\end{cases}$\\[2pt]
+\hspace*{1.5em}$\displaystyle\int_0^3|x-1|\,dx=\int_0^1(1-x)\,dx+\int_1^3(x-1)\,dx=\left[x-\frac{x^2}2\right]_0^1+\left[\frac{x^2}2-x\right]_1^3=\frac12+2=\frac52$\\
+\hspace*{1.5em}（グラフで考えると，2つの直角二等辺三角形の面積 $\dfrac12+2$．）\\[2pt]
+(2)\ $x^2-x-2=(x+1)(x-2)$ は，$0\leqq x\leqq2$ で0以下，$2\leqq x\leqq3$ で0以上．\\
+\hspace*{1.5em}$\displaystyle\int_0^2(x^2-x-2)\,dx=\left[\frac{x^3}3-\frac{x^2}2-2x\right]_0^2=\frac83-2-4=-\frac{10}3$\\[2pt]
+\hspace*{1.5em}$\displaystyle\int_2^3(x^2-x-2)\,dx=\left(9-\frac92-6\right)-\left(\frac83-2-4\right)=-\frac32+\frac{10}3=\frac{11}6$\\[2pt]
+\hspace*{1.5em}$\displaystyle\int_0^3|x^2-x-2|\,dx=-\int_0^2(x^2-x-2)\,dx+\int_2^3(x^2-x-2)\,dx=\frac{10}3+\frac{11}6=\frac{31}6$
 \end{kai}
 
 \ans{103}{定積分で表された関数（Ⅰ）}
 \begin{kai}
-\point{定積分は定数なので $k$ とおく}\quad $\displaystyle k=\int_0^1f(t)\,dt$ とすると $f(x)=x^2+2k$．\\
-$k=\displaystyle\int_0^1(t^2+2k)\,dt=\frac13+2k$ より $k=-\dfrac13$．\quad $f(x)=x^2-\dfrac23$
+\textbf{方針}\quad \point{上端・下端が定数の定積分は定数なので $k$ とおく}．$f(x)$ を $k$ で表し，それを $k$ の定義式に代入して $k$ の方程式を解く．\\[2pt]
+$\displaystyle k=\int_0^1f(t)\,dt$ とおくと\quad $f(x)=x^2+2k$\\
+これを $k$ の式に代入して\\
+\hspace*{1.5em}$\displaystyle k=\int_0^1(t^2+2k)\,dt=\left[\frac{t^3}3+2kt\right]_0^1=\frac13+2k$\\
+よって $k=\dfrac13+2k$，\quad $k=-\dfrac13$\\[2pt]
+$f(x)=x^2-\dfrac23$\\
+（確認：$\displaystyle\int_0^1\left(t^2-\frac23\right)dt=\frac13-\frac23=-\frac13=k$）
 \end{kai}
 
 \ans{104}{定積分で表された関数（Ⅱ）}
 \begin{kai}
-\point{両辺を $x$ で微分}\quad $f(x)=2x-3$．\\
-\point{$x=a$ を代入すると左辺は0}\quad $a^2-3a+2=0$ より $a=1,\ 2$
+\textbf{方針}\quad \point{$\dfrac{d}{dx}\displaystyle\int_a^xf(t)\,dt=f(x)$} なので，両辺を $x$ で微分すると $f(x)$ が求まる．\point{$x=a$ を代入すると左辺は0}になり，$a$ が求まる．\\[2pt]
+両辺を $x$ で微分して\quad $f(x)=2x-3$\\[2pt]
+与式に $x=a$ を代入すると，左辺は $\displaystyle\int_a^af(t)\,dt=0$ だから\\
+\hspace*{1.5em}$0=a^2-3a+2=(a-1)(a-2)$\quad より\quad $a=1,\ 2$\\[2pt]
+よって\quad $f(x)=2x-3$，\quad $a=1,\ 2$\\
+（確認：$\displaystyle\int_1^x(2t-3)\,dt=\Bigl[t^2-3t\Bigr]_1^x=x^2-3x+2$．$a=2$ でも同じ式になる．）
 \end{kai}
 
 \ans{105}{面積（Ⅰ）}
 \begin{kai}
-$0\leqq x\leqq2$ で $x^2-2x\leqq0$．\quad $S=-\displaystyle\int_0^2(x^2-2x)\,dx=\frac43$
+\textbf{方針}\quad $x$ 軸との交点を求めて積分区間を決める．\point{曲線が $x$ 軸より下にある部分の面積は $-\displaystyle\int f(x)\,dx$}．\\[2pt]
+$x^2-2x=x(x-2)=0$ より，$x$ 軸との交点は $x=0,\ 2$．\\
+$0\leqq x\leqq2$ で $x^2-2x\leqq0$（グラフは $x$ 軸より下）だから\\[2pt]
+$S=-\displaystyle\int_0^2(x^2-2x)\,dx=-\left[\frac{x^3}3-x^2\right]_0^2=-\left(\frac83-4\right)=\frac43$\\[2pt]
+（公式 $\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac16(\beta-\alpha)^3$ を使うと $S=\dfrac16\cdot2^3=\dfrac43$．）
 \end{kai}
 
 \ans{106}{面積（Ⅱ）}
