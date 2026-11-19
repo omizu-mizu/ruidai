@@ -186,7 +186,7 @@ function renderBody(el){
   // 行幅を超える長いインライン数式だけ折り返しを許す
   el.querySelectorAll('.m').forEach(n => {
     const box = n.closest('.itb,.mp,.body,td') || n.parentElement;
-    if(n.getBoundingClientRect().width > box.clientWidth) n.classList.add('long');
+    if(n.getBoundingClientRect().width > box.clientWidth*0.5) n.classList.add('long');
   });
   el.querySelectorAll('.fig').forEach(n => {
     const f = FIGS[n.dataset.fig]; if(!f) return;
