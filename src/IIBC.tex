@@ -1770,6 +1770,17 @@ $x+2y=8$ と $3x+y=9$ の交点：第2式より $y=9-3x$，第1式に代入し�
 \ans{52}{一般角}
 \begin{kai}
 \textbf{方針}\quad \point{$360^\circ$ を何回分引けば（足せば）$0^\circ$〜$360^\circ$ に入るか}を考える．$\alpha$ の大きさで象限がわかる．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=12mm,y=12mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.766,0.643);\fill (0.766,0.643) circle (1.4pt);\draw[->,blue!60!black] (0:0.25) arc (0:400:0.25);\node at (0.55,0.15){\tiny $40^\circ$};\node[below] at (current bounding box.south){\scriptsize (1) $400^\circ$：1周＋$40^\circ$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=12mm,y=12mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.500,0.866);\fill (0.500,0.866) circle (1.4pt);\draw[->,blue!60!black] (0:0.25) arc (0:-300:0.25);\node at (0.5,0.55){\tiny $60^\circ$};\node[below] at (current bounding box.south){\scriptsize (2) $-300^\circ$};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[scale=1,x=12mm,y=12mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.174,-0.985);\fill (0.174,-0.985) circle (1.4pt);\draw[->,blue!60!black,thin] (0:0.12) arc (0:1000:0.12);\node at (0.45,-0.65){\tiny $280^\circ$};\node[below] at (current bounding box.south){\scriptsize (3) $1000^\circ$：2周＋$280^\circ$};
+\end{tikzpicture}
+\end{center}
 (1)\ $400^\circ=40^\circ+360^\circ$ より\quad $40^\circ+360^\circ\times1$．\quad $0^\circ<40^\circ<90^\circ$ だから\quad 第1象限\\[2pt]
 (2)\ $-300^\circ=60^\circ-360^\circ$ より\quad $60^\circ+360^\circ\times(-1)$．\quad 第1象限\\
 \hspace*{1.5em}（時計回りに $300^\circ$ 回ると，反時計回りに $60^\circ$ 回ったのと同じ位置）\\[2pt]
@@ -1783,6 +1794,11 @@ $x+2y=8$ と $3x+y=9$ の交点：第2式より $y=9-3x$，第1式に代入し�
 \hspace*{1.5em}$150^\circ=150\times\dfrac{\pi}{180}=\dfrac56\pi$，\quad $225^\circ=225\times\dfrac{\pi}{180}=\dfrac54\pi$\\
 \hspace*{1.5em}$\pi=180^\circ$ だから\quad $\dfrac56\pi=\dfrac56\times180^\circ=150^\circ$，\quad $\dfrac74\pi=\dfrac74\times180^\circ=315^\circ$\\[2pt]
 (2)\ 弧の長さ\quad $\ell=6\cdot\dfrac23\pi=4\pi$\\
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\fill[blue!10] (0,0)--(3,0) arc (0:120:3)--cycle; \draw (0,0)--(3,0) arc (0:120:3)--cycle; \draw (0.6,0) arc (0:120:0.6); \node at (0.75,0.7){\tiny $\frac23\pi$}; \node[below] at (1.5,0){\scriptsize 6}; \node at (2.4,2.4){\scriptsize 弧 $\ell$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}面積\quad $S=\dfrac12\cdot6^2\cdot\dfrac23\pi=12\pi$\quad （$S=\dfrac12r\ell=\dfrac12\cdot6\cdot4\pi$ でも同じ）
 \end{kai}
 
@@ -1802,6 +1818,11 @@ $x+2y=8$ と $3x+y=9$ の交点：第2式より $y=9-3x$，第1式に代入し�
 \begin{kai}
 \textbf{方針}\quad まず\point{$\theta$ の範囲から $\cos\theta$ の符号を決めて}値を求める．2倍角 $\sin2\theta=2\sin\theta\cos\theta$，$\cos2\theta=1-2\sin^2\theta$，半角 $\cos^2\dfrac\theta2=\dfrac{1+\cos\theta}2$．半角は $\dfrac\theta2$ の範囲で符号を決める．\\[2pt]
 $\dfrac\pi2<\theta<\pi$（第2象限）では $\cos\theta<0$ だから\quad $\cos\theta=-\sqrt{1-\dfrac9{25}}=-\dfrac45$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=15mm,y=15mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(-0.800,0.600);\fill (-0.800,0.600) circle (1.4pt);\node[above left] at (-0.800,0.600){\scriptsize $(-\frac45,\frac35)$};\draw[] (0.000,0.000)--(0.316,0.949);\fill (0.316,0.949) circle (1.4pt);\node[above right] at (0.316,0.949){\scriptsize $\frac\theta2$};\draw[->,blue!60!black] (0:0.25) arc (0:143.13:0.25);\draw[dashed] (-0.8,0)--(-0.8,0.6);\node[below] at (current bounding box.south){\scriptsize $\theta$ は第2象限，$\frac\theta2$ は第1象限};
+\end{tikzpicture}
+\end{center}
 (1)\ $\sin2\theta=2\sin\theta\cos\theta=2\cdot\dfrac35\cdot\left(-\dfrac45\right)=-\dfrac{24}{25}$\\[2pt]
 (2)\ $\cos2\theta=1-2\sin^2\theta=1-2\cdot\dfrac{9}{25}=\dfrac7{25}$\\[2pt]
 (3)\ $\cos^2\dfrac\theta2=\dfrac{1+\cos\theta}2=\dfrac{1-\frac45}{2}=\dfrac1{10}$\\
@@ -1834,6 +1855,14 @@ $\dfrac\pi2<\theta<\pi$（第2象限）では $\cos\theta<0$ だから\quad $\co
 \begin{kai}
 \textbf{方針}\quad \point{直線の傾きは，直線と $x$ 軸の正の向きのなす角 $\alpha$ の $\tan\alpha$}．2直線のなす角は，その角の差として tan の加法定理で求める．\\[2pt]
 (1)\ 2直線と $x$ 軸の正の向きのなす角を $\alpha,\ \beta$ とすると\quad $\tan\alpha=3$，$\tan\beta=\dfrac12$（$\alpha>\beta$）．\\
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+\ax{-0.5}{2.4}{-0.4}{3.5}
+\draw[thick,domain=0:1.15,samples=80] plot (\x,{3*\x});
+\draw[thick,domain=0:2.3,samples=80] plot (\x,{0.5*\x});
+\draw[->,blue!60!black] (0.6,0) arc (0:71.57:0.6); \draw[->,red!70!black] (0.95,0) arc (0:26.57:0.95); \node[blue!60!black] at (0.35,0.45){\tiny $\alpha$}; \node[red!70!black] at (1.15,0.25){\tiny $\beta$}; \node at (1.2,3.4){\tiny $y=3x$}; \node at (2.3,1.4){\tiny $y=\frac12x$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\tan(\alpha-\beta)=\dfrac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}=\dfrac{3-\frac12}{1+3\cdot\frac12}=\dfrac{\frac52}{\frac52}=1$\\
 \hspace*{1.5em}$0<\alpha-\beta<\dfrac\pi2$ だから\quad $\theta=\alpha-\beta=45^\circ$\quad $\left(\dfrac\pi4\right)$\\[2pt]
 (2)\ 求める直線の傾きを $m$ とする．$y=2x$ とのなす角が $45^\circ$ だから\\
@@ -1841,12 +1870,37 @@ $\dfrac\pi2<\theta<\pi$（第2象限）では $\cos\theta<0$ だから\quad $\co
 \hspace*{1.5em}$m-2=1+2m$ のとき $m=-3$．\quad $m-2=-(1+2m)$ のとき $3m=1$，$m=\dfrac13$．\\
 \hspace*{1.5em}よって\quad $y=-3x$，\quad $y=\dfrac13x$\\
 \hspace*{1.5em}（$y=2x$ を $\pm45^\circ$ 回転させた2本がある．）
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+\ax{-2}{2}{-2}{2.6}
+\draw[thick,domain=-0.9:1.25,samples=80] plot (\x,{2*\x});
+\draw[blue!60!black,domain=-0.65:0.65,samples=80] plot (\x,{-3*\x});
+\draw[blue!60!black,domain=-2:2,samples=80] plot (\x,{\x/3});
+\node at (1.4,2.5){\tiny $y=2x$}; \node[blue!60!black] at (-0.95,2.2){\tiny $y=-3x$}; \node[blue!60!black] at (2,0.95){\tiny $y=\frac13x$};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{59}{三角関数の合成（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad \point{$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\alpha)$}．$\alpha$ は\point{点 $(a,\ b)$ を座標平面にとったときの偏角}（$\cos\alpha=\dfrac a{\sqrt{a^2+b^2}}$，$\sin\alpha=\dfrac b{\sqrt{a^2+b^2}}$）．\\[2pt]
 (1)\ $a=\sqrt3$，$b=1$．$r=\sqrt{3+1}=2$．\\
+\begin{center}
+\begin{tikzpicture}[x=12mm,y=12mm]
+\ax{-0.5}{2.2}{-0.5}{1.5}
+\fill (1.732,1) circle (1.6pt);
+\node[above] at (1.732,1){\scriptsize $(\sqrt3,1)$};
+\draw (0,0)--(1.732,1); \draw[->,blue!60!black] (0.6,0) arc (0:30:0.6); \node[blue!60!black] at (0.8,0.2){\tiny $\frac\pi6$}; \node at (0.7,0.65){\tiny 2};
+\node[below] at (current bounding box.south){\scriptsize (1)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=12mm,y=12mm]
+\ax{-0.5}{1.6}{-1.5}{0.6}
+\fill (1,-1) circle (1.6pt);
+\node[right] at (1,-1){\scriptsize $(1,-1)$};
+\draw (0,0)--(1,-1); \draw[->,blue!60!black] (0.5,0) arc (0:-45:0.5); \node[blue!60!black] at (0.75,-0.2){\tiny $-\frac\pi4$}; \node at (0.35,-0.65){\tiny $\sqrt2$};
+\node[below] at (current bounding box.south){\scriptsize (2)};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$\cos\alpha=\dfrac{\sqrt3}2$，$\sin\alpha=\dfrac12$ より $\alpha=\dfrac\pi6$．\quad $\sqrt3\sin\theta+\cos\theta=2\sin\left(\theta+\dfrac\pi6\right)$\\[2pt]
 (2)\ $a=1$，$b=-1$．$r=\sqrt{1+1}=\sqrt2$．\\
 \hspace*{1.5em}$\cos\alpha=\dfrac1{\sqrt2}$，$\sin\alpha=-\dfrac1{\sqrt2}$ より $\alpha=-\dfrac\pi4$．\quad $\sin\theta-\cos\theta=\sqrt2\sin\left(\theta-\dfrac\pi4\right)$\\[2pt]
@@ -1859,6 +1913,11 @@ $\dfrac\pi2<\theta<\pi$（第2象限）では $\cos\theta<0$ だから\quad $\co
 $a=1$，$b=\sqrt3$ より $r=2$，$\alpha=\dfrac\pi3$．\quad $y=2\sin\left(\theta+\dfrac\pi3\right)$\\[2pt]
 $0\leqq\theta\leqq\pi$ より\quad $\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac43\pi$\\
 この範囲で $\sin\left(\theta+\dfrac\pi3\right)$ は，$\theta+\dfrac\pi3=\dfrac\pi2$ で最大値1，$\theta+\dfrac\pi3=\dfrac43\pi$ で最小値 $-\dfrac{\sqrt3}2$ をとる．\\
+\begin{center}
+\begin{tikzpicture}[scale=1,x=15mm,y=15mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.000,1.000);\fill (0.000,1.000) circle (1.4pt);\node[above right] at (0.000,1.000){\scriptsize 最大};\draw[] (0.000,0.000)--(-0.500,-0.866);\fill (-0.500,-0.866) circle (1.4pt);\node[below left] at (-0.500,-0.866){\scriptsize 最小};\draw[line width=2.5pt,blue!50] (60:1) arc (60:240:1); \fill (60:1) circle (1.4pt); \node[right] at (60:1){\tiny $\frac\pi3$}; \node[left] at (240:1.05){\tiny $\frac43\pi$};\node[below] at (current bounding box.south){\scriptsize $\theta+\frac\pi3$ の動く範囲（太線）};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}（左端 $\dfrac\pi3$ での値は $\dfrac{\sqrt3}2$ で，右端の方が小さい．）\\[2pt]
 最大値 $2\cdot1=2$\quad（$\theta+\dfrac\pi3=\dfrac\pi2$ より $\theta=\dfrac\pi6$）\\
 最小値 $2\cdot\left(-\dfrac{\sqrt3}2\right)=-\sqrt3$\quad（$\theta+\dfrac\pi3=\dfrac43\pi$ より $\theta=\pi$）
@@ -1873,6 +1932,11 @@ $0\leqq\theta\leqq\pi$ より\quad $\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac4
 \hspace*{1.5em}$=\sin2\theta+\cos2\theta+2$\\[2pt]
 (2)\ $\sin2\theta+\cos2\theta=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)$ と合成して\quad $y=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)+2$\\
 \hspace*{1.5em}$0\leqq\theta\leqq\dfrac\pi2$ より $\dfrac\pi4\leqq2\theta+\dfrac\pi4\leqq\dfrac54\pi$．この範囲で\quad $-\dfrac{\sqrt2}2\leqq\sin\left(2\theta+\dfrac\pi4\right)\leqq1$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=15mm,y=15mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.000,1.000);\fill (0.000,1.000) circle (1.4pt);\node[above right] at (0.000,1.000){\scriptsize 最大};\draw[] (0.000,0.000)--(-0.707,-0.707);\fill (-0.707,-0.707) circle (1.4pt);\node[below left] at (-0.707,-0.707){\scriptsize 最小};\draw[line width=2.5pt,blue!50] (45:1) arc (45:225:1); \node[right] at (45:1){\tiny $\frac\pi4$}; \node[left] at (225:1.05){\tiny $\frac54\pi$};\node[below] at (current bounding box.south){\scriptsize $2\theta+\frac\pi4$ の動く範囲（太線）};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}最大値：$2\theta+\dfrac\pi4=\dfrac\pi2$，すなわち $\theta=\dfrac\pi8$ のとき\quad $\sqrt2+2$\\
 \hspace*{1.5em}最小値：$2\theta+\dfrac\pi4=\dfrac54\pi$，すなわち $\theta=\dfrac\pi2$ のとき\quad $\sqrt2\cdot\left(-\dfrac{\sqrt2}2\right)+2=1$
 \end{kai}
@@ -1886,6 +1950,21 @@ $0\leqq\theta\leqq\pi$ より\quad $\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac4
 \hspace*{1.5em}$y=2\sin2\left(\theta-\dfrac\pi6\right)$ は，$y=2\sin2\theta$ の $\theta$ を $\theta-\dfrac\pi6$ におきかえたもの．\\
 \hspace*{1.5em}よって，$\theta$ 軸方向に $\dfrac\pi6$ だけ平行移動したもの\\
 \hspace*{1.5em}\point{$\dfrac\pi3$ だけ移動ではない}\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=7mm]
+\ax{-0.7}{3.6}{-2.6}{2.8}
+\draw[dashed,gray,domain=-0.5:3.3,samples=80] plot (\x,{2*sin(2*\x r)});
+\draw[thick,domain=-0.5:3.3,samples=80] plot (\x,{2*sin((2*\x-pi/3) r)});
+\draw (0.5236,0.12)--(0.5236,-0.12); \node[below] at (0.5236,0){\tiny $\frac\pi6$};
+\draw (1.5708,0.12)--(1.5708,-0.12); \node[below] at (1.5708,0){\tiny $\frac\pi2$};
+\draw (2.0944,0.12)--(2.0944,-0.12); \node[below] at (2.0944,0){\tiny $\frac23\pi$};
+\draw (3.1416,0.12)--(3.1416,-0.12); \node[below] at (3.1416,0){\tiny $\pi$};
+\node[left] at (0,2){\tiny $2$};
+\node[left] at (0,-2){\tiny $-2$};
+\draw[->,blue!60!black] (0.785,2.15)--(1.309,2.15); \node[blue!60!black] at (1.05,2.5){\tiny $\frac\pi6$};
+\node[below] at (current bounding box.south){\scriptsize 点線：$y=2\sin2\theta$，実線：$y=2\sin\left(2\theta-\frac\pi3\right)$};
+\end{tikzpicture}
+\end{center}
 (3)\ $0\leqq\theta<\pi$ より\quad $-\dfrac\pi3\leqq2\theta-\dfrac\pi3<\dfrac53\pi$\\
 \hspace*{1.5em}この範囲で $\sin\left(2\theta-\dfrac\pi3\right)=0$ となるのは\quad $2\theta-\dfrac\pi3=0,\ \pi$\\
 \hspace*{1.5em}よって\quad $\theta=\dfrac\pi6,\ \dfrac23\pi$
@@ -1899,10 +1978,20 @@ $0\leqq\theta\leqq\pi$ より\quad $\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac4
 \hspace*{1.5em}$\sin\theta=\dfrac12$ のとき\quad $\theta=\dfrac\pi6,\ \dfrac56\pi$\\
 \hspace*{1.5em}$\sin\theta=1$ のとき\quad $\theta=\dfrac\pi2$\\
 \hspace*{1.5em}よって\quad $\theta=\dfrac\pi6,\ \dfrac\pi2,\ \dfrac56\pi$\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=1,x=14mm,y=14mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.866,0.500);\fill (0.866,0.500) circle (1.4pt);\node[right] at (0.866,0.500){\scriptsize $\frac\pi6$};\draw[] (0.000,0.000)--(-0.866,0.500);\fill (-0.866,0.500) circle (1.4pt);\node[left] at (-0.866,0.500){\scriptsize $\frac56\pi$};\draw[] (0.000,0.000)--(0.000,1.000);\fill (0.000,1.000) circle (1.4pt);\node[above right] at (0.000,1.000){\scriptsize $\frac\pi2$};\draw[dashed,red!70!black] (-1.3,0.5)--(1.3,0.5);\node[below] at (current bounding box.south){\scriptsize $\sin\theta=\frac12,\ 1$};
+\end{tikzpicture}
+\end{center}
 (2)\ $\sin\theta-\cos\theta>0$．合成して\quad $\sqrt2\sin\left(\theta-\dfrac\pi4\right)>0$\\
 \hspace*{1.5em}$0\leqq\theta<2\pi$ より $-\dfrac\pi4\leqq\theta-\dfrac\pi4<\dfrac74\pi$．この範囲で $\sin>0$ となるのは\quad $0<\theta-\dfrac\pi4<\pi$\\
 \hspace*{1.5em}よって\quad $\dfrac\pi4<\theta<\dfrac54\pi$\\
 \hspace*{1.5em}（単位円で，直線 $y=x$ より上側にある部分と考えてもよい．）
+\begin{center}
+\begin{tikzpicture}[scale=1,x=14mm,y=14mm]
+\draw[->] (-1.35,0)--(1.4,0) node[right]{\tiny $x$}; \draw[->] (0,-1.35)--(0,1.4) node[above]{\tiny $y$}; \draw[gray] (0,0) circle (1); \node[below left] at (0,0){\tiny O};\draw[] (0.000,0.000)--(0.707,0.707);\fill (0.707,0.707) circle (1.4pt);\node[right] at (0.707,0.707){\scriptsize $\frac\pi4$};\draw[] (0.000,0.000)--(-0.707,-0.707);\fill (-0.707,-0.707) circle (1.4pt);\node[left] at (-0.707,-0.707){\scriptsize $\frac54\pi$};\draw[line width=2.5pt,blue!50] (45:1) arc (45:225:1); \draw[dashed,red!70!black] (-1.2,-1.2)--(1.2,1.2);\node[below] at (current bounding box.south){\scriptsize $\sin\theta>\cos\theta$ の部分（太線）};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \shouans{第5章}{指数関数と対数関数}

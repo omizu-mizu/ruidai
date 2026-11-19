@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=10mm,y=10mm]
+\ax{-0.5}{2.4}{-0.4}{3.5}
+\draw[thick,domain=0:1.15,samples=80] plot (\x,{3*\x});
+\draw[thick,domain=0:2.3,samples=80] plot (\x,{0.5*\x});
+\draw[->,blue!60!black] (0.6,0) arc (0:71.57:0.6); \draw[->,red!70!black] (0.95,0) arc (0:26.57:0.95); \node[blue!60!black] at (0.35,0.45){\tiny $\alpha$}; \node[red!70!black] at (1.15,0.25){\tiny $\beta$}; \node at (1.2,3.4){\tiny $y=3x$}; \node at (2.3,1.4){\tiny $y=\frac12x$};
+\end{tikzpicture}

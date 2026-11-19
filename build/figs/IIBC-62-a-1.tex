@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=10mm,y=7mm]
+\ax{-0.7}{3.6}{-2.6}{2.8}
+\draw[dashed,gray,domain=-0.5:3.3,samples=80] plot (\x,{2*sin(2*\x r)});
+\draw[thick,domain=-0.5:3.3,samples=80] plot (\x,{2*sin((2*\x-pi/3) r)});
+\draw (0.5236,0.12)--(0.5236,-0.12); \node[below] at (0.5236,0){\tiny $\frac\pi6$};
+\draw (1.5708,0.12)--(1.5708,-0.12); \node[below] at (1.5708,0){\tiny $\frac\pi2$};
+\draw (2.0944,0.12)--(2.0944,-0.12); \node[below] at (2.0944,0){\tiny $\frac23\pi$};
+\draw (3.1416,0.12)--(3.1416,-0.12); \node[below] at (3.1416,0){\tiny $\pi$};
+\node[left] at (0,2){\tiny $2$};
+\node[left] at (0,-2){\tiny $-2$};
+\draw[->,blue!60!black] (0.785,2.15)--(1.309,2.15); \node[blue!60!black] at (1.05,2.5){\tiny $\frac\pi6$};
+\node[below] at (current bounding box.south){\scriptsize 点線：$y=2\sin2\theta$，実線：$y=2\sin\left(2\theta-\frac\pi3\right)$};
+\end{tikzpicture}

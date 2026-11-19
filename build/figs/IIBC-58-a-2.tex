@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=10mm,y=10mm]
+\ax{-2}{2}{-2}{2.6}
+\draw[thick,domain=-0.9:1.25,samples=80] plot (\x,{2*\x});
+\draw[blue!60!black,domain=-0.65:0.65,samples=80] plot (\x,{-3*\x});
+\draw[blue!60!black,domain=-2:2,samples=80] plot (\x,{\x/3});
+\node at (1.4,2.5){\tiny $y=2x$}; \node[blue!60!black] at (-0.95,2.2){\tiny $y=-3x$}; \node[blue!60!black] at (2,0.95){\tiny $y=\frac13x$};
+\end{tikzpicture}
