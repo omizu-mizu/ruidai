@@ -1209,6 +1209,24 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \ans{31}{分点の座標}
 \begin{kai}
 \textbf{方針}\quad \point{$m:n$ に内分する点は $\left(\dfrac{nx_1+mx_2}{m+n},\ \dfrac{ny_1+my_2}{m+n}\right)$，外分は $n$ を $-n$ にする}．重心は3頂点の座標の平均．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=3.2mm,y=3.2mm]
+\ax{-1}{14}{-11}{6.5}
+\fill (1,2) circle (1.6pt);
+\node[left] at (1,2){\scriptsize A};
+\fill (7,-4) circle (1.6pt);
+\node[right] at (7,-4){\scriptsize B};
+\fill (4,5) circle (1.6pt);
+\node[above] at (4,5){\scriptsize C};
+\fill (5,-2) circle (1.6pt);
+\node[right] at (5,-2){\scriptsize 内分点};
+\fill (13,-10) circle (1.6pt);
+\node[left] at (13,-10){\scriptsize 外分点};
+\fill (4,1) circle (1.6pt);
+\node[right] at (4,1){\scriptsize G};
+\draw (1,2)--(13,-10); \draw[thin,gray] (1,2)--(7,-4)--(4,5)--cycle;
+\end{tikzpicture}
+\end{center}
 (1)\ 内分点：$m=2$，$n=1$ として\\
 \hspace*{1.5em}$\left(\dfrac{1\cdot1+2\cdot7}{2+1},\ \dfrac{1\cdot2+2\cdot(-4)}{2+1}\right)=\left(\dfrac{15}3,\ \dfrac{-6}3\right)=(5,\ -2)$\\[2pt]
 \hspace*{1.5em}外分点：$n$ を $-1$ にして\\
@@ -1231,6 +1249,18 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \ans{33}{2点間の距離}
 \begin{kai}
 \textbf{方針}\quad \point{2点間の距離は $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$}．等距離の条件は，\point{距離の2乗どうしを等しくおく}と根号が消える．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-2}{5}{-0.8}{6}
+\fill (-1,2) circle (1.6pt);
+\node[left] at (-1,2){\scriptsize A};
+\fill (3,5) circle (1.6pt);
+\node[left] at (3,5){\scriptsize B};
+\fill (3.625,0) circle (1.6pt);
+\node[below] at (3.625,0){\scriptsize P};
+\draw[dashed] (-1,2)--(3.625,0)--(3,5);
+\end{tikzpicture}
+\end{center}
 (1)\ $\mathrm{AB}=\sqrt{(3-(-1))^2+(5-2)^2}=\sqrt{16+9}=5$\\[2pt]
 (2)\ P は $x$ 軸上にあるので $\mathrm P(x,\ 0)$ とおく．$\mathrm{AP}=\mathrm{BP}$ より $\mathrm{AP}^2=\mathrm{BP}^2$．\\
 \hspace*{1.5em}$(x+1)^2+(0-2)^2=(x-3)^2+(0-5)^2$\\
@@ -1241,6 +1271,19 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \ans{34}{点と直線の距離}
 \begin{kai}
 \textbf{方針}\quad \point{点 $(x_1,\ y_1)$ と直線 $ax+by+c=0$ の距離は $\dfrac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}$}．直線の式は「$=0$」の形にしてから使う．(2)は AB を底辺，C からの距離を高さとみる．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-0.6}{7}{-0.6}{6}
+\fill (1,1) circle (1.6pt);
+\node[below] at (1,1){\scriptsize A};
+\fill (4,5) circle (1.6pt);
+\node[above] at (4,5){\scriptsize B};
+\fill (6,2) circle (1.6pt);
+\node[right] at (6,2){\scriptsize C};
+\fill (3.28,4.04) circle (1.6pt);
+\draw[thick] (1,1)--(4,5)--(6,2)--cycle; \draw[dashed,blue!60!black] (6,2)--(3.28,4.04); \node[blue!60!black] at (5.0,3.4){\tiny $\frac{17}5$};
+\end{tikzpicture}
+\end{center}
 (1)\ $\dfrac{|3\cdot2+4\cdot3-8|}{\sqrt{3^2+4^2}}=\dfrac{|10|}5=2$\\[2pt]
 (2)\ $\mathrm{AB}=\sqrt{(4-1)^2+(5-1)^2}=\sqrt{9+16}=5$\\
 \hspace*{1.5em}直線 AB の傾きは $\dfrac{5-1}{4-1}=\dfrac43$ だから\quad $y-1=\dfrac43(x-1)$\\
@@ -1252,6 +1295,21 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \ans{35}{線対称}
 \begin{kai}
 \textbf{方針}\quad (1)は\point{AB の中点が $\ell$ 上にあり，AB $\perp\ell$}．(2)は\point{対称な点 B をとって $\mathrm{AP}=\mathrm{BP}$ に置きかえ，折れ線を1本の線分にする}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-2}{7}{-0.6}{5}
+\draw[thick,domain=-0.3:2.4,samples=80] plot (\x,{2*\x});
+\fill (3,1) circle (1.6pt);
+\node[below] at (3,1){\scriptsize A};
+\fill (-1,3) circle (1.6pt);
+\node[left] at (-1,3){\scriptsize B};
+\fill (6,2) circle (1.6pt);
+\node[right] at (6,2){\scriptsize C};
+\fill (1.3333333333333333,2.6666666666666665) circle (1.6pt);
+\node[above left] at (1.3333333333333333,2.6666666666666665){\scriptsize P};
+\draw[dashed] (3,1)--(-1,3); \draw[blue!60!black] (-1,3)--(6,2); \draw (3,1)--(1.333,2.667); \node at (2.6,5){\tiny $\ell:y=2x$};
+\end{tikzpicture}
+\end{center}
 (1)\ $\mathrm B(p,\ q)$ とする．\\
 \hspace*{1.5em}AB の中点 $\left(\dfrac{p+3}2,\ \dfrac{q+1}2\right)$ が $\ell$ 上にあるので\quad $\dfrac{q+1}2=2\cdot\dfrac{p+3}2$，\quad $q=2p+5$ ……①\\
 \hspace*{1.5em}AB $\perp\ell$ だから，傾きの積が $-1$：\quad $\dfrac{q-1}{p-3}\cdot2=-1$，\quad $p+2q=5$ ……②\\
@@ -1268,6 +1326,17 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \ans{36}{平行条件・垂直条件}
 \begin{kai}
 \textbf{方針}\quad 直線 $ax+by+c=0$ に\point{平行な直線は $a(x-x_1)+b(y-y_1)=0$，垂直な直線は $b(x-x_1)-a(y-y_1)=0$}．一般形のままなら，\point{平行 $\iff a_1b_2-a_2b_1=0$，垂直 $\iff a_1a_2+b_1b_2=0$}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-2}{4}{-1}{4.5}
+\draw[thick,domain=-2:4,samples=80] plot (\x,{(2*\x+1)/3});
+\draw[blue!60!black,domain=-2:4,samples=80] plot (\x,{(2*\x+4)/3});
+\draw[red!70!black,domain=0.3:3,samples=80] plot (\x,{(7-3*\x)/2});
+\fill (1,2) circle (1.6pt);
+\node[above left] at (1,2){\scriptsize $(1,2)$};
+\node at (3.6,2.2){\tiny 元の直線}; \node[blue!60!black] at (3.3,4.1){\tiny 平行}; \node[red!70!black] at (2.9,-0.6){\tiny 垂直};
+\end{tikzpicture}
+\end{center}
 (1)\ 直線 $2x-3y+1=0$ の傾きは $\dfrac23$．\\
 \hspace*{1.5em}平行な直線（傾き $\dfrac23$）：$2(x-1)-3(y-2)=0$ より\quad $2x-3y+4=0$\\
 \hspace*{1.5em}垂直な直線（傾き $-\dfrac32$）：$3(x-1)+2(y-2)=0$ より\quad $3x+2y-7=0$\\[2pt]
@@ -1286,11 +1355,36 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 これがすべての $k$ で成りたつ条件は\quad $2x+y-4=0$ かつ $x-y+1=0$\\
 2式を加えて $3x-3=0$，$x=1$．よって $y=2$．\\[2pt]
 定点は\quad $(1,\ 2)$
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-1.5}{3.5}{-1}{5}
+\draw[thick,domain=-1.5:3.5,samples=80] plot (\x,{\x+1});
+\draw[thick,domain=0:2.5,samples=80] plot (\x,{4-2*\x});
+\draw[thick,domain=-1.5:3.5,samples=80] plot (\x,{(\x+5)/2});
+\draw[gray,domain=-1.5:3.5,samples=80] plot (\x,{-0.5*\x+2.5});
+\fill (1,2) circle (1.6pt);
+\node[below right] at (1,2){\scriptsize $(1,2)$};
+\draw (1,-1)--(1,5);
+\node[below] at (current bounding box.south){\scriptsize $k$ を変えても，すべて点 $(1,2)$ を通る};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{38}{交点を通る直線}
 \begin{kai}
 \textbf{方針}\quad 2直線 $f=0$，$g=0$ の交点を通る直線は\point{$f+kg=0$（$k$ は定数）}と表せる（ただし $g=0$ 自身は表せない）．交点を求めずに済む．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-1}{4}{-1.5}{4.5}
+\draw[gray,domain=-0.2:2.7,samples=80] plot (\x,{4-2*\x});
+\draw[gray,domain=-1:3.3,samples=80] plot (\x,{\x+1});
+\draw[thick,blue!60!black,domain=-1:4,samples=80] plot (\x,{3-\x});
+\fill (1,2) circle (1.6pt);
+\node[above right] at (1,2){\scriptsize 交点 $(1,2)$};
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize $(3,0)$};
+\end{tikzpicture}
+\end{center}
 求める直線は\quad $(2x+y-4)+k(x-y+1)=0$ ……① とおける．\\
 （$x-y+1=0$ 自身は $(3,\ 0)$ を通らないので，この形で表せないものを考えなくてよい．）\\[2pt]
 ①が点 $(3,\ 0)$ を通るので\quad $(6+0-4)+k(3-0+1)=0$，\quad $2+4k=0$，\quad $k=-\dfrac12$\\
@@ -1310,6 +1404,31 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \hspace*{1.5em}平方完成すると $(x-2)^2+(y-1)^2=5$ より\quad 中心 $(2,\ 1)$，半径 $\sqrt5$\\
 \hspace*{1.5em}（3点のうち $(4,\ 0)$ と $(0,\ 2)$ を結ぶ線分は，原点で直角をはさむので直径になっている．）\\[2pt]
 (3)\ 平方完成すると\quad $(x-3)^2-9+(y+2)^2-4+k=0$，\quad $(x-3)^2+(y+2)^2=13-k$\\
+\begin{center}
+\begin{tikzpicture}[x=3mm,y=3mm]
+\draw[dashed] (2,-1)--(5,3);
+\ax{-4}{8.5}{-6.5}{5}
+\fill (2,-1) circle (1.6pt);
+\node[below] at (2,-1){\scriptsize 中心};
+\fill (5,3) circle (1.6pt);
+\node[right] at (5,3){\scriptsize $(5,3)$};
+\draw[thick] (2,-1) circle (5);
+\node[below] at (current bounding box.south){\scriptsize (1)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\draw[dashed] (4,0)--(0,2);
+\ax{-1}{5}{-0.8}{4}
+\fill (0,0) circle (1.6pt);
+\fill (4,0) circle (1.6pt);
+\node[below right] at (4,0){\scriptsize 4};
+\fill (0,2) circle (1.6pt);
+\node[left] at (0,2){\scriptsize 2};
+\fill (2,1) circle (1.6pt);
+\node[right] at (2,1){\scriptsize 中心};
+\draw[thick] (2,1) circle (2.236);
+\node[below] at (current bounding box.south){\scriptsize (2) 直径の両端は $(4,0),(0,2)$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}円を表すのは右辺が正のときだから\quad $13-k>0$，\quad $k<13$\\
 \hspace*{1.5em}（$k=13$ なら点 $(3,\ -2)$ だけ，$k>13$ なら図形を表さない．）
 \end{kai}
@@ -1322,9 +1441,36 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \hspace*{1.5em}$d<\sqrt5$，すなわち $|k|<5$（$-5<k<5$）のとき\quad 共有点は2個\\
 \hspace*{1.5em}$d=\sqrt5$，すなわち $|k|=5$（$k=\pm5$）のとき\quad 共有点は1個\\
 \hspace*{1.5em}$d>\sqrt5$，すなわち $|k|>5$（$k<-5,\ 5<k$）のとき\quad 共有点は0個\\
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3}{3}{-3}{3.5}
+\draw[blue!60!black,domain=-2.6:0.75,samples=80] plot (\x,{2*\x+2});
+\draw[thick] (0,0) circle (2.236);
+\node[below] at (current bounding box.south){\scriptsize $|k|<5$：2個};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3}{3}{-3}{3.5}
+\draw[blue!60!black,domain=-4.1:-0.75,samples=80] plot (\x,{2*\x+5});
+\draw[thick] (0,0) circle (2.236);
+\fill (-2,1) circle (1.6pt); \node[left] at (-2,1){\tiny 接点};\node[below] at (current bounding box.south){\scriptsize $|k|=5$：1個};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3}{3}{-3}{3.5}
+\draw[blue!60!black,domain=-5.1:-1.75,samples=80] plot (\x,{2*\x+7});
+\draw[thick] (0,0) circle (2.236);
+\node[below] at (current bounding box.south){\scriptsize $|k|>5$：0個};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}（判別式でもよい：$x^2+(2x+k)^2=5$，$5x^2+4kx+k^2-5=0$ の $\dfrac D4=4k^2-5(k^2-5)=25-k^2$．）\\[2pt]
 (2)\ $k=\sqrt5$ のとき $d=\dfrac{\sqrt5}{\sqrt5}=1$．\\
 \hspace*{1.5em}中心から弦に下ろした垂線は弦を2等分する．弦の長さの半分を $l$ とすると，三平方の定理より\\
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-3}{3}{-3}{3}
+\draw[blue!60!black,domain=-2.5:0.4,samples=80] plot (\x,{2*\x+2.236});
+\draw[thick] (0,0) circle (2.236);\draw[dashed] (0,0)--(-0.894,0.447); \node at (-0.25,0.45){\tiny $d=1$}; \draw[thick,red!70!black] (-1.788,-1.342)--(0,2.236);
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}$l^2+d^2=r^2$，\quad $l=\sqrt{5-1}=2$．\quad 弦の長さは\quad $2l=4$
 \end{kai}
 
@@ -1338,6 +1484,20 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \hspace*{1.5em}$y_1=2$ のとき\quad 接線 $x+2y=5$，接点 $(1,\ 2)$\\
 \hspace*{1.5em}$y_1=-2$ のとき\quad 接線 $x-2y=5$，接点 $(1,\ -2)$\\
 \hspace*{1.5em}（別解：接線を $y=m(x-5)$ とおき，中心との距離 $=$ 半径 から $m=\pm\dfrac12$ を求めてもよい．）
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3}{6}{-3.5}{3.5}
+\draw[thick,domain=-1.5:6,samples=80] plot (\x,{(5-\x)/2});
+\draw[thick,domain=-1.5:6,samples=80] plot (\x,{(\x-5)/2});
+\fill (5,0) circle (1.6pt);
+\node[below] at (5,0){\scriptsize $(5,0)$};
+\fill (1,2) circle (1.6pt);
+\node[above] at (1,2){\scriptsize $(1,2)$};
+\fill (1,-2) circle (1.6pt);
+\node[below] at (1,-2){\scriptsize $(1,-2)$};
+\draw[thick] (0,0) circle (2.236);
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{42}{2円の交点を通る円}
@@ -1351,6 +1511,14 @@ $x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\ne
 \hspace*{1.5em}$-9+k\cdot(-1)=0$，\quad $k=-9$\\
 \hspace*{1.5em}①に代入して $(x^2+y^2-9)-9(x^2+y^2-4x-2y-1)=0$，\quad $-8x^2-8y^2+36x+18y=0$\\
 \hspace*{1.5em}両辺を $-8$ で割って\quad $x^2+y^2-\dfrac92x-\dfrac94y=0$
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3.5}{5}{-3.5}{4}
+\draw[red!70!black,domain=0.2:3.5,samples=80] plot (\x,{4-2*\x});
+\draw[gray] (0,0) circle (3);\draw[gray] (2,1) circle (2.449);\draw[thick,blue!60!black] (2.25,1.125) circle (2.516);
+\node[below] at (current bounding box.south){\scriptsize 灰色：もとの2円，赤：(1)の直線，青：(2)の円};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{43}{軌跡（Ⅰ）}
@@ -1363,6 +1531,20 @@ $\mathrm P(x,\ y)$ とする．$\mathrm{AP}:\mathrm{BP}=2:1$ より $\mathrm{AP}
 逆に，この円上の点はすべて条件をみたす．\\
 よって軌跡は\quad 中心 $(4,\ 0)$，半径2の円\quad（アポロニウスの円）\\
 （この円は AB を $2:1$ に内分する点 $(2,\ 0)$ と外分する点 $(6,\ 0)$ を直径の両端とする．）
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-1}{7}{-2.6}{2.8}
+\fill (0,0) circle (1.6pt);
+\node[above left] at (0,0){\scriptsize A};
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize B};
+\fill (2,0) circle (1.6pt);
+\fill (6,0) circle (1.6pt);
+\fill (4.684040286651338,1.8793852415718166) circle (1.6pt);
+\node[above] at (4.684040286651338,1.8793852415718166){\scriptsize P};
+\draw[thick,blue!60!black] (4,0) circle (2);\draw (0,0)--(4.684,1.879)--(3,0);
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{44}{軌跡（Ⅱ）}
@@ -1374,6 +1556,18 @@ M は AQ の中点だから\quad $x=\dfrac{s+4}2$，\quad $y=\dfrac{t+0}2$\\
 ①に代入して\quad $(2x-4)^2+(2y)^2=4$\\
 両辺を4で割って\quad $(x-2)^2+y^2=1$\\[2pt]
 軌跡は\quad 中心 $(2,\ 0)$，半径1の円\\
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-2.6}{4.6}{-2.4}{2.4}
+\fill (4,0) circle (1.6pt);
+\node[below] at (4,0){\scriptsize A};
+\fill (-0.9999999999999996,1.7320508075688774) circle (1.6pt);
+\node[left] at (-0.9999999999999996,1.7320508075688774){\scriptsize Q};
+\fill (1.5000000000000002,0.8660254037844387) circle (1.6pt);
+\node[above] at (1.5000000000000002,0.8660254037844387){\scriptsize M};
+\draw[gray] (0,0) circle (2);\draw[thick,blue!60!black] (2,0) circle (1);\draw (-1.000,1.732)--(4,0);
+\end{tikzpicture}
+\end{center}
 （もとの円を A を中心に $\dfrac12$ 倍に縮小した円になっている．）
 \end{kai}
 
@@ -1386,6 +1580,23 @@ $y=x^2-2tx+3t=(x-t)^2-t^2+3t$\\
 $t=x$ を代入して $t$ を消去すると\quad $y=-x^2+3x$\\
 $t$ は実数全体を動くので，$x$ も実数全体を動く（除く部分はない）．\\[2pt]
 軌跡は\quad 放物線\quad $y=-x^2+3x$
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-1.5}{4}{-1}{3}
+\draw[gray,domain=-1:1,samples=80] plot (\x,{(\x-0)^2-(0)^2+3*(0)});
+\draw[gray,domain=-0.25:1.75,samples=80] plot (\x,{(\x-0.75)^2-(0.75)^2+3*(0.75)});
+\draw[gray,domain=0.5:2.5,samples=80] plot (\x,{(\x-1.5)^2-(1.5)^2+3*(1.5)});
+\draw[gray,domain=1.25:3.25,samples=80] plot (\x,{(\x-2.25)^2-(2.25)^2+3*(2.25)});
+\draw[gray,domain=2:4,samples=80] plot (\x,{(\x-3)^2-(3)^2+3*(3)});
+\draw[thick,blue!60!black,domain=-0.3:3.3,samples=80] plot (\x,{-(\x)^2+3*\x});
+\fill (0,0) circle (1.6pt);
+\fill (0.75,1.6875) circle (1.6pt);
+\fill (1.5,2.25) circle (1.6pt);
+\fill (2.25,1.6875) circle (1.6pt);
+\fill (3,0) circle (1.6pt);
+\node[below] at (current bounding box.south){\scriptsize 灰色：$t$ を変えたときの放物線，青：頂点の軌跡};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{46}{軌跡（Ⅳ）}
@@ -1397,6 +1608,17 @@ $x=0$ とすると，①より $y=0$ となり，②は $0=2$ で成りたたな
 逆に，この円上の $x\neq0$ である点 $(x,\ y)$ に対して $m=\dfrac yx$ とおけば①②をみたす．\\
 円 $(x-1)^2+y^2=1$ 上で $x=0$ となる点は原点だけ．\\[2pt]
 \point{除外点に注意}．軌跡は\quad 円 $(x-1)^2+y^2=1$ から原点 $(0,\ 0)$ を除いた部分\\
+\begin{center}
+\begin{tikzpicture}[x=12mm,y=12mm]
+\ax{-0.8}{3}{-1.5}{1.5}
+\draw[gray,domain=-0.5:2.6,samples=80] plot (\x,{0.5*\x});
+\draw[gray,domain=1.3:2.6,samples=80] plot (\x,{(2-\x)/0.5});
+\fill (1.6,0.8) circle (1.6pt);
+\node[above] at (1.6,0.8){\scriptsize 交点};
+\draw[thick,blue!60!black] (1,0) circle (1);\draw[fill=white] (0,0) circle (2pt);
+\node[below] at (current bounding box.south){\scriptsize 白丸の原点は除く};
+\end{tikzpicture}
+\end{center}
 （原点は，直線 $x+my=2$ が原点を通らないことからも除かれる．）
 \end{kai}
 
@@ -1411,6 +1633,21 @@ $x=0$ とすると，①より $y=0$ となり，②は $0=2$ で成りたたな
 $m=2X$ を代入して\quad $Y=2X(X-3)=2X^2-6X$\\
 $m<0,\ 12<m$ より\quad $X<0,\ 6<X$\\[2pt]
 軌跡は\quad 放物線 $y=2x^2-6x$ の $x<0,\ 6<x$ の部分
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=3mm]
+\ax{-3}{4}{-1}{10}
+\draw[thick,domain=-3:3.1,samples=80] plot (\x,{(\x)^2});
+\draw[gray,domain=-2.8:3.6,samples=80] plot (\x,{-(\x-3)});
+\draw[thick,blue!60!black,dashed,domain=-1.3:0,samples=80] plot (\x,{2*(\x)^2-6*\x});
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize $(3,0)$};
+\fill (-2.303,5.303) circle (1.6pt);
+\fill (1.303,1.697) circle (1.6pt);
+\fill (-0.5,3.5) circle (1.6pt);
+\node[left] at (-0.5,3.5){\scriptsize 中点};
+\node[below] at (current bounding box.south){\scriptsize 青の点線：中点の軌跡（$x<0$ の部分．$x>6$ の部分は図の外）};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{48}{一般の曲線の移動}
@@ -1425,6 +1662,25 @@ $m<0,\ 12<m$ より\quad $X<0,\ 6<X$\\[2pt]
 \hspace*{1.5em}$\dfrac{x+X}2=1$，$\dfrac{y+Y}2=1$ より\quad $X=2-x$，$Y=2-y$\\
 \hspace*{1.5em}$(X,\ Y)$ が $C$ 上にあるので\quad $2-y=(2-x)^2-2(2-x)=x^2-2x$\\
 \hspace*{1.5em}よって\quad $y=-x^2+2x+2$
+\begin{center}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-1}{5.5}{-2.5}{3.5}
+\draw[gray,domain=-0.7:2.7,samples=80] plot (\x,{(\x)^2-2*\x});
+\draw[thick,domain=2.3:5.7,samples=80] plot (\x,{(\x)^2-8*\x+14});
+\fill (1,-1) circle (1.6pt);
+\fill (4,-2) circle (1.6pt);
+\draw[->] (1.1,-1.05)--(3.9,-1.95);
+\node[below] at (current bounding box.south){\scriptsize (1)};
+\end{tikzpicture}\hspace{1.2em}
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-1.5}{3.5}{-2}{4}
+\draw[gray,domain=-0.7:2.7,samples=80] plot (\x,{(\x)^2-2*\x});
+\draw[thick,domain=-0.7:2.7,samples=80] plot (\x,{-(\x)^2+2*\x+2});
+\fill (1,1) circle (1.6pt);
+\node[right] at (1,1){\scriptsize $(1,1)$};
+\node[below] at (current bounding box.south){\scriptsize (2) 点 $(1,1)$ に関して対称};
+\end{tikzpicture}
+\end{center}
 \end{kai}
 
 \ans{49}{不等式の表す領域（Ⅰ）}
@@ -1475,12 +1731,36 @@ $x-y>0\iff y<x$，\quad $x+y-2>0\iff y>-x+2$ だから\\
 $x+2y=8$ と $3x+y=9$ の交点：第2式より $y=9-3x$，第1式に代入して $x+18-6x=8$，$x=2$，$y=3$．\\
 領域は4点 $(0,0)$，$(3,0)$，$(2,3)$，$(0,4)$ を頂点とする四角形の周および内部．\\[2pt]
 (1)\ $x+y=k$ とおくと $y=-x+k$ で，傾き $-1$，$y$ 切片 $k$ の直線．\\
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\fill[blue!10] (0,0)--(3,0)--(2,3)--(0,4)--cycle;
+\ax{-1}{6.5}{-1}{6}
+\draw[blue!60!black,domain=0:5.5,samples=80] plot (\x,{5-\x});
+\fill (2,3) circle (1.6pt);
+\node[above right] at (2,3){\scriptsize $(2,3)$};
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize 3};
+\fill (0,4) circle (1.6pt);
+\node[left] at (0,4){\scriptsize 4};
+\draw (0,0)--(3,0)--(2,3)--(0,4)--cycle; \node[blue!60!black] at (5.6,0.7){\tiny $x+y=5$};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}この直線が領域と共有点をもつときの $k$ の最大値を考える．\\
 \hspace*{1.5em}境界の傾きは $x+2y=8$ が $-\dfrac12$，$3x+y=9$ が $-3$ で，$-3<-1<-\dfrac12$ だから，\\
 \hspace*{1.5em}$y$ 切片が最大になるのは直線が頂点 $(2,\ 3)$ を通るとき．\\
 \hspace*{1.5em}最大値 $2+3=5$\quad（$x=2$，$y=3$）\\
 \hspace*{1.5em}（各頂点での値 0，3，5，4 を比べても確かめられる．）\\[2pt]
 (2)\ $x^2+y^2=r^2$ とおくと，これは原点を中心とする半径 $r$ の円．$r$ は原点から点 $(x,\ y)$ までの距離．\\
+\begin{center}
+\begin{tikzpicture}[x=6mm,y=6mm]
+\fill[blue!10] (0,0)--(3,0)--(2,3)--(0,4)--cycle;
+\ax{-1}{5}{-1}{5}
+\fill (0,4) circle (1.6pt);
+\node[above right] at (0,4){\scriptsize $(0,4)$};
+\draw (0,0)--(3,0)--(2,3)--(0,4)--cycle; \draw[red!70!black] (4,0) arc (0:90:4);
+\node[below] at (current bounding box.south){\scriptsize 原点中心の円が領域と共有点をもつ範囲};
+\end{tikzpicture}
+\end{center}
 \hspace*{1.5em}最大：原点から最も遠い点は頂点のどれか．$(3,0)$：9，$(2,3)$：13，$(0,4)$：16．\\
 \hspace*{1.5em}\quad 最大値 $16$\quad（$x=0$，$y=4$）\\
 \hspace*{1.5em}最小：原点は領域に含まれるので\quad 最小値 $0$\quad（$x=0$，$y=0$）

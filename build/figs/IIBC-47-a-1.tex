@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=6mm,y=3mm]
+\ax{-3}{4}{-1}{10}
+\draw[thick,domain=-3:3.1,samples=80] plot (\x,{(\x)^2});
+\draw[gray,domain=-2.8:3.6,samples=80] plot (\x,{-(\x-3)});
+\draw[thick,blue!60!black,dashed,domain=-1.3:0,samples=80] plot (\x,{2*(\x)^2-6*\x});
+\fill (3,0) circle (1.6pt);
+\node[below] at (3,0){\scriptsize $(3,0)$};
+\fill (-2.303,5.303) circle (1.6pt);
+\fill (1.303,1.697) circle (1.6pt);
+\fill (-0.5,3.5) circle (1.6pt);
+\node[left] at (-0.5,3.5){\scriptsize 中点};
+\node[below] at (current bounding box.south){\scriptsize 青の点線：中点の軌跡（$x<0$ の部分．$x>6$ の部分は図の外）};
+\end{tikzpicture}

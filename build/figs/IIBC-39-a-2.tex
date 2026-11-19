@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=6mm,y=6mm]
+\draw[dashed] (4,0)--(0,2);
+\ax{-1}{5}{-0.8}{4}
+\fill (0,0) circle (1.6pt);
+\fill (4,0) circle (1.6pt);
+\node[below right] at (4,0){\scriptsize 4};
+\fill (0,2) circle (1.6pt);
+\node[left] at (0,2){\scriptsize 2};
+\fill (2,1) circle (1.6pt);
+\node[right] at (2,1){\scriptsize 中心};
+\draw[thick] (2,1) circle (2.236);
+\node[below] at (current bounding box.south){\scriptsize (2) 直径の両端は $(4,0),(0,2)$};
+\end{tikzpicture}

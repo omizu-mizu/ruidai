@@ -1,0 +1,5 @@
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-3}{3}{-3}{3}
+\draw[blue!60!black,domain=-2.5:0.4,samples=80] plot (\x,{2*\x+2.236});
+\draw[thick] (0,0) circle (2.236);\draw[dashed] (0,0)--(-0.894,0.447); \node at (-0.25,0.45){\tiny $d=1$}; \draw[thick,red!70!black] (-1.788,-1.342)--(0,2.236);
+\end{tikzpicture}

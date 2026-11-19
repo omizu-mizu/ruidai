@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=6mm,y=6mm]
+\ax{-2}{4}{-1}{4.5}
+\draw[thick,domain=-2:4,samples=80] plot (\x,{(2*\x+1)/3});
+\draw[blue!60!black,domain=-2:4,samples=80] plot (\x,{(2*\x+4)/3});
+\draw[red!70!black,domain=0.3:3,samples=80] plot (\x,{(7-3*\x)/2});
+\fill (1,2) circle (1.6pt);
+\node[above left] at (1,2){\scriptsize $(1,2)$};
+\node at (3.6,2.2){\tiny 元の直線}; \node[blue!60!black] at (3.3,4.1){\tiny 平行}; \node[red!70!black] at (2.9,-0.6){\tiny 垂直};
+\end{tikzpicture}

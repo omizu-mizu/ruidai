@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=6mm,y=6mm]
+\fill[blue!10] (0,0)--(3,0)--(2,3)--(0,4)--cycle;
+\ax{-1}{5}{-1}{5}
+\fill (0,4) circle (1.6pt);
+\node[above right] at (0,4){\scriptsize $(0,4)$};
+\draw (0,0)--(3,0)--(2,3)--(0,4)--cycle; \draw[red!70!black] (4,0) arc (0:90:4);
+\node[below] at (current bounding box.south){\scriptsize 原点中心の円が領域と共有点をもつ範囲};
+\end{tikzpicture}

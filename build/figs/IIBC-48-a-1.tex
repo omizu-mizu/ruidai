@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-1}{5.5}{-2.5}{3.5}
+\draw[gray,domain=-0.7:2.7,samples=80] plot (\x,{(\x)^2-2*\x});
+\draw[thick,domain=2.3:5.7,samples=80] plot (\x,{(\x)^2-8*\x+14});
+\fill (1,-1) circle (1.6pt);
+\fill (4,-2) circle (1.6pt);
+\draw[->] (1.1,-1.05)--(3.9,-1.95);
+\node[below] at (current bounding box.south){\scriptsize (1)};
+\end{tikzpicture}

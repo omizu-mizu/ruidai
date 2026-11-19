@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3.5}{5}{-3.5}{4}
+\draw[red!70!black,domain=0.2:3.5,samples=80] plot (\x,{4-2*\x});
+\draw[gray] (0,0) circle (3);\draw[gray] (2,1) circle (2.449);\draw[thick,blue!60!black] (2.25,1.125) circle (2.516);
+\node[below] at (current bounding box.south){\scriptsize 灰色：もとの2円，赤：(1)の直線，青：(2)の円};
+\end{tikzpicture}

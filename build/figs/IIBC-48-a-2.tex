@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-1.5}{3.5}{-2}{4}
+\draw[gray,domain=-0.7:2.7,samples=80] plot (\x,{(\x)^2-2*\x});
+\draw[thick,domain=-0.7:2.7,samples=80] plot (\x,{-(\x)^2+2*\x+2});
+\fill (1,1) circle (1.6pt);
+\node[right] at (1,1){\scriptsize $(1,1)$};
+\node[below] at (current bounding box.south){\scriptsize (2) 点 $(1,1)$ に関して対称};
+\end{tikzpicture}

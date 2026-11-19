@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=5mm,y=5mm]
+\ax{-3}{3}{-3}{3.5}
+\draw[blue!60!black,domain=-5.1:-1.75,samples=80] plot (\x,{2*\x+7});
+\draw[thick] (0,0) circle (2.236);
+\node[below] at (current bounding box.south){\scriptsize $|k|>5$：0個};
+\end{tikzpicture}
