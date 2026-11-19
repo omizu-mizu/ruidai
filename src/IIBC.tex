@@ -2393,140 +2393,247 @@ $\{a_n-b_n\}$ は初項 $a_1-b_1=-1$，公比 $-1$ の等比数列で\quad $a_n-
 
 \ans{131}{群数列（Ⅰ）}
 \begin{kai}
-(1)\ 第 $k$ 群には $k$ 個の数がある．第 $(n-1)$ 群の末項は $\dfrac{n(n-1)}2$ だから，第 $n$ 群の初項は\quad $\dfrac{n(n-1)}2+1$\\[2pt]
-(2)\ 第13群の末項は91，第14群の末項は105．$100-91=9$ より\quad 第14群の9番目
+\textbf{方針}\quad 群数列は\point{第 $k$ 群の項数を調べ，第 $n-1$ 群までの項数の合計を求める}．第 $n$ 群の最初の数は「それまでの個数 $+1$」番目．\\[2pt]
+(1)\ 第 $k$ 群には $k$ 個の数がある．第1群から第 $(n-1)$ 群までの数の個数は\\
+\hspace*{1.5em}$1+2+\cdots+(n-1)=\dfrac{(n-1)n}2$\\
+\hspace*{1.5em}自然数が順に並んでいるので，第 $(n-1)$ 群の末項は $\dfrac{n(n-1)}2$．よって第 $n$ 群の最初の数は\\
+\hspace*{1.5em}$\dfrac{n(n-1)}2+1$\quad （$n\geqq2$．$n=1$ のときも1で成りたつ）\\[2pt]
+(2)\ 第 $m$ 群の末項は $\dfrac{m(m+1)}2$．$\dfrac{m(m+1)}2\geqq100$ となる最小の $m$ を探す．\\
+\hspace*{1.5em}$m=13$ のとき $\dfrac{13\cdot14}2=91$，\quad $m=14$ のとき $\dfrac{14\cdot15}2=105$\\
+\hspace*{1.5em}$91<100\leqq105$ だから，100は第14群にある．$100-91=9$ より\quad 第14群の9番目
 \end{kai}
 
 \ans{132}{群数列（Ⅱ）}
 \begin{kai}
-分母が $k$ の項を第 $k$ 群とすると，第 $k$ 群は $k$ 項．第9群までで $\dfrac{9\cdot10}2=45$ 項．\\
-(1)\ 第50項は第10群の5番目で\quad $\dfrac5{10}=\dfrac12$\\[2pt]
-(2)\ 第 $k$ 群の和は $\dfrac{1+2+\cdots+k}{k}=\dfrac{k+1}2$．\\
-\hspace*{1.5em}$\displaystyle\sum_{k=1}^9\frac{k+1}2+\frac{1+2+3+4+5}{10}=27+\frac32=\frac{57}2$
+\textbf{方針}\quad \point{分母が同じものを1つの群にまとめる}．第 $k$ 群は $\dfrac1k,\ \dfrac2k,\ \cdots,\ \dfrac kk$ の $k$ 項．何番目の項が第何群の何番目かを調べる．\\[2pt]
+分母が $k$ の項を第 $k$ 群とすると，第 $k$ 群は $k$ 項．\\
+第 $m$ 群までの項数は $\dfrac{m(m+1)}2$ で，$m=9$ のとき45，$m=10$ のとき55．\\[2pt]
+(1)\ $45<50\leqq55$ だから，第50項は第10群の $50-45=5$ 番目．\quad $\dfrac5{10}=\dfrac12$\\[2pt]
+(2)\ 第 $k$ 群の和は\quad $\dfrac{1+2+\cdots+k}{k}=\dfrac{1}{k}\cdot\dfrac{k(k+1)}2=\dfrac{k+1}2$\\
+\hspace*{1.5em}第1群から第9群までの和：$\displaystyle\sum_{k=1}^9\frac{k+1}2=\frac12\left(\frac{9\cdot10}2+9\right)=\frac{54}2=27$\\
+\hspace*{1.5em}第10群の1番目から5番目までの和：$\dfrac{1+2+3+4+5}{10}=\dfrac{15}{10}=\dfrac32$\\
+\hspace*{1.5em}合計\quad $27+\dfrac32=\dfrac{57}2$
 \end{kai}
 
 \ans{133}{格子点の個数}
 \begin{kai}
-\point{直線 $y=k$ 上の格子点を数えて加える}\quad $y=k$（$k=0,\ 1,\ \cdots,\ n$）上では $0\leqq x\leqq2n-2k$ で，$2n-2k+1$ 個．\\
-$\displaystyle\sum_{k=0}^n(2n-2k+1)=(2n+1)(n+1)-2\cdot\frac{n(n+1)}2=(n+1)^2$（個）
+\textbf{方針}\quad \point{直線 $y=k$（$k$ は整数）上の格子点を数えて，$k$ について加える}．$x$ の範囲が $y$ によって変わるので，$y$ を固定する方が数えやすい．\\[2pt]
+$y\geqq0$，$x\geqq0$ と $x+2y\leqq2n$ から，$y$ のとりうる整数値は $0\leqq y\leqq n$．\\
+直線 $y=k$（$k=0,\ 1,\ \cdots,\ n$）上では $0\leqq x\leqq2n-2k$ だから，格子点は\quad $2n-2k+1$ 個\\[2pt]
+総数は\\
+\hspace*{1.5em}$\displaystyle\sum_{k=0}^n(2n-2k+1)=(2n+1)(n+1)-2\sum_{k=0}^nk=(2n+1)(n+1)-n(n+1)$\\
+\hspace*{1.5em}$=(n+1)(2n+1-n)=(n+1)^2$（個）\\
+\point{$k=0$ から始まるので項数は $n+1$ 個}\\
+（確認：$n=1$ のとき $(0,0),(1,0),(2,0),(0,1)$ の4個 $=2^2$）
 \end{kai}
 
 \ans{134}{漸化式の応用}
 \begin{kai}
-(1)\ $(n+1)$ 本目の直線は他の $n$ 本と $n$ 個の点で交わり，$n+1$ 個の部分に分けられる．その各部分が平面の領域を1つずつ増やすので\quad $a_{n+1}=a_n+n+1$\\[2pt]
-(2)\ $a_1=2$．$n\geqq2$ のとき $a_n=2+\displaystyle\sum_{k=1}^{n-1}(k+1)=\frac{n^2+n+2}2$（$n=1$ でも成りたつ）
+\textbf{方針}\quad \point{$n$ 本の状態に1本加えたとき，部分がいくつ増えるか}を考えて漸化式をつくる．新しい直線は，他の直線との交点で区切られた各部分ごとに，領域を1つずつ2つに分ける．\\[2pt]
+(1)\ $(n+1)$ 本目の直線は，他の $n$ 本とそれぞれ1点で交わり，交点はすべて異なる（どの3本も1点で交わらない）．\\
+\hspace*{1.5em}よって $(n+1)$ 本目の直線は $n$ 個の交点で $n+1$ 個の部分（線分と半直線）に分けられる．\\
+\hspace*{1.5em}その各部分が，それが通る領域を2つに分けるので，領域は $n+1$ 個増える．\\
+\hspace*{1.5em}$a_{n+1}=a_n+n+1$\\[2pt]
+(2)\ 1本の直線は平面を2つに分けるので $a_1=2$．階差数列が $n+1$ だから，$n\geqq2$ のとき\\
+\hspace*{1.5em}$a_n=2+\displaystyle\sum_{k=1}^{n-1}(k+1)=2+\frac{(n-1)n}2+(n-1)=\frac{n^2+n+2}2$\\
+\hspace*{1.5em}$n=1$ のとき $\dfrac{1+1+2}2=2$ で成りたつ．\quad よって\quad $a_n=\dfrac{n^2+n+2}2$\\
+\hspace*{1.5em}（確認：$a_2=4$，$a_3=7$）
 \end{kai}
 
 \ans{135}{場合の数と漸化式}
 \begin{kai}
-(1)\ $a_1=1$，$a_2=2$．\point{右端のタイルで場合分け}\quad 右端が横1のタイルなら残りは $a_{n+1}$ 通り，横2のタイルなら $a_n$ 通り．\\
-\hspace*{1.5em}$a_{n+2}=a_{n+1}+a_n$\\[2pt]
-(2)\ $1,\ 2,\ 3,\ 5,\ 8,\ 13,\ 21,\ 34$ より\quad $a_8=34$
+\textbf{方針}\quad \point{最後（右端）に置くタイルで場合分け}すると，残りの部分は長さの短い同じ問題になり，漸化式ができる．\\[2pt]
+(1)\ $n=1$：横1のタイル1枚だけ．\quad $a_1=1$\\
+\hspace*{1.5em}$n=2$：横1を2枚，または横2を1枚．\quad $a_2=2$\\[2pt]
+\hspace*{1.5em}横 $n+2$ の長方形について，右端に置くタイルで場合分けする．\\
+\hspace*{1.5em}右端が横1のタイルのとき，残りは横 $n+1$ の長方形で\quad $a_{n+1}$ 通り\\
+\hspace*{1.5em}右端が横2のタイルのとき，残りは横 $n$ の長方形で\quad $a_n$ 通り\\
+\hspace*{1.5em}この2つは重複しないので\quad $a_{n+2}=a_{n+1}+a_n$\\[2pt]
+(2)\ 漸化式を順に使って\\
+\hspace*{1.5em}$a_3=2+1=3$，$a_4=3+2=5$，$a_5=5+3=8$，$a_6=8+5=13$，$a_7=13+8=21$，$a_8=21+13=34$\\
+\hspace*{1.5em}よって\quad $a_8=34$\quad （フィボナッチ数列になっている）
 \end{kai}
 
 \ans{136}{確率と漸化式}
 \begin{kai}
-(1)\ \point{$n$ 回目までの状態と $(n+1)$ 回目の結果で分ける}\\
-\hspace*{1.5em}$n$ 回目までに偶数回で次に1以外：$\dfrac56p_n$，\ 奇数回で次に1：$\dfrac16(1-p_n)$．\quad $p_{n+1}=\dfrac23p_n+\dfrac16$\\[2pt]
-(2)\ $p_{n+1}-\dfrac12=\dfrac23\left(p_n-\dfrac12\right)$，$p_1=\dfrac56$．\quad $p_n=\dfrac12+\dfrac12\left(\dfrac23\right)^n$
+\textbf{方針}\quad \point{$n$ 回目までの状態（偶数回か奇数回か）と $(n+1)$ 回目の結果で場合分け}して漸化式をつくる．$p_{n+1}=ap_n+b$ 型を解く．\\[2pt]
+(1)\ $(n+1)$ 回投げて1の目が偶数回になるのは，次の2つの場合（互いに排反）．\\
+\hspace*{1.5em}(i)\ $n$ 回目までに偶数回で，$(n+1)$ 回目に1以外が出る：確率\quad $p_n\times\dfrac56$\\
+\hspace*{1.5em}(ii)\ $n$ 回目までに奇数回で，$(n+1)$ 回目に1が出る：確率\quad $(1-p_n)\times\dfrac16$\\
+\hspace*{1.5em}よって\quad $p_{n+1}=\dfrac56p_n+\dfrac16(1-p_n)=\dfrac23p_n+\dfrac16$\\[2pt]
+(2)\ $\alpha=\dfrac23\alpha+\dfrac16$ より $\alpha=\dfrac12$．\quad $p_{n+1}-\dfrac12=\dfrac23\left(p_n-\dfrac12\right)$\\
+\hspace*{1.5em}$p_1$ は1回投げて1が0回（1以外が出る）確率で $p_1=\dfrac56$．$p_1-\dfrac12=\dfrac13$．\\
+\hspace*{1.5em}$p_n-\dfrac12=\dfrac13\left(\dfrac23\right)^{n-1}=\dfrac12\left(\dfrac23\right)^n$\\
+\hspace*{1.5em}よって\quad $p_n=\dfrac12+\dfrac12\left(\dfrac23\right)^n$\\
+\hspace*{1.5em}（$n$ が大きくなると $p_n$ は $\dfrac12$ に近づく．）
 \end{kai}
 
 \ans{137}{数学的帰納法（Ⅰ）}
 \begin{kai}
-{[1]}\ $n=1$ のとき，左辺 $=2$，右辺 $=\dfrac{1\cdot2\cdot3}3=2$ で成りたつ．\\
-{[2]}\ $n=k$ のとき成りたつと仮定すると，$n=k+1$ のとき\\
-\hspace*{1.5em}左辺 $=\dfrac{k(k+1)(k+2)}3+(k+1)(k+2)=\dfrac{(k+1)(k+2)(k+3)}3$ となり，$n=k+1$ でも成りたつ．\\
-{[1]}，[2]より，すべての自然数 $n$ について成りたつ．
+\textbf{方針}\quad 数学的帰納法：\point{[1] $n=1$ で成りたつ，[2] $n=k$ で成りたつと仮定して $n=k+1$ で成りたつ}，の2つを示す．[2]では仮定の式を必ず使う．\\[2pt]
+{[1]}\ $n=1$ のとき，左辺 $=1\cdot2=2$，右辺 $=\dfrac{1\cdot2\cdot3}3=2$ で成りたつ．\\[2pt]
+{[2]}\ $n=k$ のとき成りたつと仮定すると\quad $1\cdot2+2\cdot3+\cdots+k(k+1)=\dfrac{k(k+1)(k+2)}3$\\
+\hspace*{1.5em}$n=k+1$ のときの左辺は，これに $(k+1)(k+2)$ を加えたものだから\\
+\hspace*{1.5em}左辺 $=\dfrac{k(k+1)(k+2)}3+(k+1)(k+2)=\dfrac{(k+1)(k+2)(k+3)}3$\\
+\hspace*{1.5em}（$(k+1)(k+2)$ でくくると $\dfrac{k}{3}+1=\dfrac{k+3}3$）\\
+\hspace*{1.5em}これは $n=k+1$ のときの右辺 $\dfrac{(k+1)\{(k+1)+1\}\{(k+1)+2\}}3$ に等しい．よって $n=k+1$ でも成りたつ．\\[2pt]
+{[1]}，[2]より，すべての自然数 $n$ について等式は成りたつ．
 \end{kai}
 
 \ans{138}{数学的帰納法（Ⅱ）}
 \begin{kai}
-{[1]}\ $n=5$ のとき $2^5=32>25$ で成りたつ．\\
-{[2]}\ $k\geqq5$ として $2^k>k^2$ を仮定すると $2^{k+1}>2k^2$．\\
-\hspace*{1.5em}$2k^2-(k+1)^2=k^2-2k-1=(k-1)^2-2>0$（$k\geqq5$）だから $2^{k+1}>(k+1)^2$．\\
-{[1]}，[2]より，$n\geqq5$ のすべての自然数 $n$ で成りたつ．
+\textbf{方針}\quad 出発点が $n=5$ の数学的帰納法．[2]では，仮定 $2^k>k^2$ から $2^{k+1}>2k^2$ を導き，\point{$2k^2\geqq(k+1)^2$（$k\geqq5$）を示してつなぐ}．\\[2pt]
+{[1]}\ $n=5$ のとき，$2^5=32$，$5^2=25$ で $32>25$．成りたつ．\\[2pt]
+{[2]}\ $k\geqq5$ として，$n=k$ のとき成りたつ，すなわち $2^k>k^2$ と仮定する．\\
+\hspace*{1.5em}両辺を2倍して\quad $2^{k+1}>2k^2$ ……①\\
+\hspace*{1.5em}ここで\quad $2k^2-(k+1)^2=k^2-2k-1=(k-1)^2-2$\\
+\hspace*{1.5em}$k\geqq5$ より $(k-1)^2\geqq16$ だから $(k-1)^2-2>0$，すなわち $2k^2>(k+1)^2$ ……②\\
+\hspace*{1.5em}①，②より\quad $2^{k+1}>(k+1)^2$．よって $n=k+1$ でも成りたつ．\\[2pt]
+{[1]}，[2]より，$n\geqq5$ をみたすすべての自然数 $n$ について $2^n>n^2$ は成りたつ．\\
+（$n=2,\ 3,\ 4$ では成りたたない：$4=4$，$8<9$，$16=16$．）
 \end{kai}
 
 \shouans{第8章}{ベクトル}
 \ans{139}{$m\vec a+n\vec b$}
 \begin{kai}
-$(7,\ 0)=m(2,\ 1)+n(-1,\ 3)$ より $2m-n=7$，$m+3n=0$．$m=3$，$n=-1$．\quad $\vec c=3\vec a-\vec b$
+\textbf{方針}\quad 成分で $m\vec a+n\vec b$ を計算し，\point{$x$ 成分，$y$ 成分をそれぞれ比較}して $m,\ n$ の連立方程式を解く．\\[2pt]
+$m\vec a+n\vec b=m(2,\ 1)+n(-1,\ 3)=(2m-n,\ m+3n)$\\
+これが $(7,\ 0)$ に等しいので\quad $2m-n=7$ ……①，\quad $m+3n=0$ ……②\\
+②より $m=-3n$．①に代入して $-6n-n=7$，$n=-1$．よって $m=3$．\\[2pt]
+$\vec c=3\vec a-\vec b$\\
+（確認：$3(2,\ 1)-(-1,\ 3)=(6+1,\ 3-3)=(7,\ 0)$）
 \end{kai}
 
 \ans{140}{分点の位置ベクトル}
 \begin{kai}
-$\vec p=\dfrac{3\vec a+2\vec b}{5}$，\qquad $\vec q=\dfrac{-3\vec a+2\vec b}{2-3}=3\vec a-2\vec b$
+\textbf{方針}\quad \point{$m:n$ に内分する点は $\dfrac{n\vec a+m\vec b}{m+n}$，外分は $n$ を $-n$ にする}．係数は「遠い方の比」を掛けることに注意．\\[2pt]
+P は AB を $2:3$ に内分するので\quad $\vec p=\dfrac{3\vec a+2\vec b}{2+3}=\dfrac{3\vec a+2\vec b}{5}$\\[2pt]
+Q は AB を $2:3$ に外分するので，$3$ を $-3$ にして\\
+\hspace*{1.5em}$\vec q=\dfrac{-3\vec a+2\vec b}{2-3}=\dfrac{-3\vec a+2\vec b}{-1}=3\vec a-2\vec b$\\
+（$2<3$ なので Q は A の側の延長上にある．係数の和が1になっていることで検算できる．）
 \end{kai}
 
 \ans{141}{3点が一直線上にある条件}
 \begin{kai}
-\point{$\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ となる実数 $k$ がある}\quad $(x-1,\ 9)=k(2,\ 3)$ より $k=3$，$x-1=6$．\quad $x=7$
+\textbf{方針}\quad \point{3点 A，B，C が一直線上 $\iff\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ となる実数 $k$ がある}．成分で比較する．\\[2pt]
+$\overrightarrow{\mathrm{AB}}=(3-1,\ 5-2)=(2,\ 3)$，\quad $\overrightarrow{\mathrm{AC}}=(x-1,\ 11-2)=(x-1,\ 9)$\\
+$\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ より\quad $(x-1,\ 9)=(2k,\ 3k)$\\
+$y$ 成分から $3k=9$，$k=3$．$x$ 成分から $x-1=6$．\\[2pt]
+よって\quad $x=7$\\
+（直線 AB の式 $y=\dfrac32x+\dfrac12$ に $y=11$ を代入しても $x=7$．）
 \end{kai}
 
 \ans{142}{三角形の重心の位置ベクトル}
 \begin{kai}
-$\overrightarrow{\mathrm{GA}}+\overrightarrow{\mathrm{GB}}+\overrightarrow{\mathrm{GC}}=(\vec a-\vec g)+(\vec b-\vec g)+(\vec c-\vec g)=(\vec a+\vec b+\vec c)-3\vec g=\vec0$
+\textbf{方針}\quad \point{$\overrightarrow{\mathrm{PQ}}=\vec q-\vec p$（終点 $-$ 始点）}で位置ベクトルに直し，$\vec g$ の式を代入する．\\[2pt]
+$\overrightarrow{\mathrm{GA}}=\vec a-\vec g$，\quad $\overrightarrow{\mathrm{GB}}=\vec b-\vec g$，\quad $\overrightarrow{\mathrm{GC}}=\vec c-\vec g$ だから\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{GA}}+\overrightarrow{\mathrm{GB}}+\overrightarrow{\mathrm{GC}}=(\vec a+\vec b+\vec c)-3\vec g$\\
+$\vec g=\dfrac{\vec a+\vec b+\vec c}3$ より $3\vec g=\vec a+\vec b+\vec c$ だから\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{GA}}+\overrightarrow{\mathrm{GB}}+\overrightarrow{\mathrm{GC}}=(\vec a+\vec b+\vec c)-(\vec a+\vec b+\vec c)=\vec0$
 \end{kai}
 
 \ans{143}{ベクトルの成分}
 \begin{kai}
-(1)\ $|\vec a|=\sqrt{9+16}=5$．単位ベクトルは $\dfrac{\vec a}{|\vec a|}=\left(\dfrac35,\ -\dfrac45\right)$\qquad
-(2)\ $(6-3,\ -8-6)=(3,\ -14)$
+\textbf{方針}\quad \point{$\vec a=(a_1,\ a_2)$ の大きさは $\sqrt{a_1^2+a_2^2}$}．同じ向きの単位ベクトルは $\dfrac{\vec a}{|\vec a|}$．実数倍・和は成分ごとに計算する．\\[2pt]
+(1)\ $|\vec a|=\sqrt{3^2+(-4)^2}=\sqrt{25}=5$\\
+\hspace*{1.5em}$\vec a$ と同じ向きの単位ベクトルは\quad $\dfrac{\vec a}{|\vec a|}=\dfrac15(3,\ -4)=\left(\dfrac35,\ -\dfrac45\right)$\\[2pt]
+(2)\ $2\vec a-3\vec b=2(3,\ -4)-3(1,\ 2)=(6,\ -8)-(3,\ 6)=(3,\ -14)$
 \end{kai}
 
 \ans{144}{平行条件}
 \begin{kai}
-\point{$(a_1,\ a_2)\,/\!/\,(b_1,\ b_2)\iff a_1b_2-a_2b_1=0$}\quad $2\cdot3-x(x+1)=0$，$x^2+x-6=0$．\quad $x=2,\ -3$
+\textbf{方針}\quad \point{$\vec a\,/\!/\,\vec b\iff\vec b=k\vec a$ となる実数 $k$ がある $\iff a_1b_2-a_2b_1=0$}（ともに $\vec0$ でないとき）．\\[2pt]
+$\vec a=(2,\ x)$，$\vec b=(x+1,\ 3)$ が平行である条件は\\
+\hspace*{1.5em}$2\cdot3-x(x+1)=0$，\quad $x^2+x-6=0$，\quad $(x+3)(x-2)=0$\\
+よって\quad $x=2,\ -3$\\[2pt]
+（確認：$x=2$ のとき $\vec a=(2,\ 2)$，$\vec b=(3,\ 3)$．$x=-3$ のとき $\vec a=(2,\ -3)$，$\vec b=(-2,\ 3)=-\vec a$．）
 \end{kai}
 
 \ans{145}{ベクトルの大きさ（Ⅰ）}
 \begin{kai}
-\point{大きさは2乗して内積で展開}\quad $|\vec a+2\vec b|^2=|\vec a|^2+4\vec a\cdot\vec b+4|\vec b|^2=4-8+36=32$．\quad $|\vec a+2\vec b|=4\sqrt2$
+\textbf{方針}\quad ベクトルの大きさは\point{2乗して内積で展開}する．$|\vec a+2\vec b|^2=(\vec a+2\vec b)\cdot(\vec a+2\vec b)$．\\[2pt]
+$|\vec a+2\vec b|^2=(\vec a+2\vec b)\cdot(\vec a+2\vec b)=|\vec a|^2+4\vec a\cdot\vec b+4|\vec b|^2$\\
+\hspace*{1.5em}$=2^2+4\cdot(-2)+4\cdot3^2=4-8+36=32$\\
+$|\vec a+2\vec b|\geqq0$ だから\quad $|\vec a+2\vec b|=\sqrt{32}=4\sqrt2$\\
+\point{$|\vec a+2\vec b|=|\vec a|+2|\vec b|$ としてはいけない}
 \end{kai}
 
 \ans{146}{ベクトルの大きさ（Ⅱ）}
 \begin{kai}
-$\vec a+t\vec b=(3+t,\ 1+t)$．$|\vec a+t\vec b|^2=(3+t)^2+(1+t)^2=2t^2+8t+10=2(t+2)^2+2$．\\
-最小値 $\sqrt2$（$t=-2$）
+\textbf{方針}\quad \point{$|\vec a+t\vec b|^2$ を $t$ の2次関数として平方完成}する．大きさは0以上なので，2乗が最小のとき大きさも最小．\\[2pt]
+$\vec a+t\vec b=(3,\ 1)+t(1,\ 1)=(3+t,\ 1+t)$\\
+$|\vec a+t\vec b|^2=(3+t)^2+(1+t)^2=2t^2+8t+10=2(t+2)^2+2$\\
+$t=-2$ のとき最小値2をとる．$|\vec a+t\vec b|\geqq0$ だから\\[2pt]
+最小値\quad $\sqrt2$\quad（$t=-2$）\\
+（このとき $\vec a+t\vec b=(1,\ -1)$ は $\vec b$ と垂直になっている．）
 \end{kai}
 
 \ans{147}{角の2等分ベクトルの扱い（Ⅰ）}
 \begin{kai}
-\point{角の2等分線の性質 $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}$}\quad $\mathrm{AD}:\mathrm{DB}=2:3$．\quad $\overrightarrow{\mathrm{OD}}=\dfrac{3\vec a+2\vec b}{5}$
+\textbf{方針}\quad \point{角の二等分線の性質 $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}$} で D の分点の比を求め，内分点の公式を使う．\\[2pt]
+OD は $\angle\mathrm{AOB}$ の二等分線だから\quad $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}=|\vec a|:|\vec b|=2:3$\\
+D は AB を $2:3$ に内分するので\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OD}}=\dfrac{3\vec a+2\vec b}{2+3}=\dfrac{3\vec a+2\vec b}{5}$\\
+\point{比 $2:3$ に対し，$\vec a$ に掛かるのは3，$\vec b$ に掛かるのは2（遠い方の比）}
 \end{kai}
 
 \ans{148}{角の2等分ベクトルの扱い（Ⅱ）}
 \begin{kai}
-$\mathrm{AB}=5$．$\angle\mathrm O$ の2等分線と AB の交点を D とすると $\mathrm{AD}:\mathrm{DB}=3:4$，$\overrightarrow{\mathrm{OD}}=\dfrac{4\vec a+3\vec b}7$，$\mathrm{AD}=\dfrac{15}7$．\\
-$\triangle\mathrm{OAD}$ で AI は $\angle\mathrm A$ の2等分線だから $\mathrm{OI}:\mathrm{ID}=\mathrm{AO}:\mathrm{AD}=3:\dfrac{15}7=7:5$．\\
-$\overrightarrow{\mathrm{OI}}=\dfrac7{12}\overrightarrow{\mathrm{OD}}=\dfrac{4\vec a+3\vec b}{12}=\dfrac13\vec a+\dfrac14\vec b$
+\textbf{方針}\quad 内心は角の二等分線の交点．\point{$\angle\mathrm O$ の二等分線と AB の交点 D を求め，さらに $\triangle\mathrm{OAD}$ で $\angle\mathrm A$ の二等分線が OD を分ける比}を求める．\\[2pt]
+三平方の定理より\quad $\mathrm{AB}=\sqrt{3^2+4^2}=5$\\[2pt]
+$\angle\mathrm O$ の二等分線と AB の交点を D とすると\quad $\mathrm{AD}:\mathrm{DB}=\mathrm{OA}:\mathrm{OB}=3:4$\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{OD}}=\dfrac{4\vec a+3\vec b}7$，\quad $\mathrm{AD}=5\times\dfrac37=\dfrac{15}7$\\[2pt]
+I は OD 上にあり，$\triangle\mathrm{OAD}$ で AI は $\angle\mathrm{OAD}$ の二等分線だから\\
+\hspace*{1.5em}$\mathrm{OI}:\mathrm{ID}=\mathrm{AO}:\mathrm{AD}=3:\dfrac{15}7=21:15=7:5$\\[2pt]
+$\overrightarrow{\mathrm{OI}}=\dfrac7{12}\overrightarrow{\mathrm{OD}}=\dfrac7{12}\cdot\dfrac{4\vec a+3\vec b}7=\dfrac{4\vec a+3\vec b}{12}=\dfrac13\vec a+\dfrac14\vec b$\\
+（確認：O を原点，A$(3,\ 0)$，B$(0,\ 4)$ とすると I$(1,\ 1)$ で，内接円の半径 $\dfrac{3+4-5}2=1$ と一致．）
 \end{kai}
 
 \ans{149}{$l\overrightarrow{\mathrm{PA}}+m\overrightarrow{\mathrm{PB}}+n\overrightarrow{\mathrm{PC}}=\vec0$}
 \begin{kai}
-(1)\ \point{始点を A にそろえる}\quad $-2\overrightarrow{\mathrm{AP}}+3(\overrightarrow{\mathrm{AB}}-\overrightarrow{\mathrm{AP}})+4(\overrightarrow{\mathrm{AC}}-\overrightarrow{\mathrm{AP}})=\vec0$ より\\
-\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{9}=\dfrac79\cdot\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{7}$．\\
-\hspace*{1.5em}辺 BC を $4:3$ に内分する点を D とすると，P は線分 AD を $7:2$ に内分する点．\\[2pt]
-(2)\ $\triangle\mathrm{ABC}=S$ とすると $\triangle\mathrm{PBC}=\dfrac29S$，$\triangle\mathrm{PAB}=\dfrac79\cdot\dfrac47S=\dfrac49S$，$\triangle\mathrm{PCA}=\dfrac79\cdot\dfrac37S=\dfrac39S$．\\
-\hspace*{1.5em}$\triangle\mathrm{PBC}:\triangle\mathrm{PCA}:\triangle\mathrm{PAB}=2:3:4$
+\textbf{方針}\quad \point{始点を A にそろえる}（$\overrightarrow{\mathrm{PB}}=\overrightarrow{\mathrm{AB}}-\overrightarrow{\mathrm{AP}}$ など）．$\overrightarrow{\mathrm{AP}}$ を「辺 BC の分点への比」×「分点の位置ベクトル」の形に変形する．\\[2pt]
+(1)\ $\overrightarrow{\mathrm{PA}}=-\overrightarrow{\mathrm{AP}}$，$\overrightarrow{\mathrm{PB}}=\overrightarrow{\mathrm{AB}}-\overrightarrow{\mathrm{AP}}$，$\overrightarrow{\mathrm{PC}}=\overrightarrow{\mathrm{AC}}-\overrightarrow{\mathrm{AP}}$ を代入して\\
+\hspace*{1.5em}$-2\overrightarrow{\mathrm{AP}}+3(\overrightarrow{\mathrm{AB}}-\overrightarrow{\mathrm{AP}})+4(\overrightarrow{\mathrm{AC}}-\overrightarrow{\mathrm{AP}})=\vec0$，\quad $9\overrightarrow{\mathrm{AP}}=3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}$\\[2pt]
+\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{9}=\dfrac79\cdot\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{7}$\\
+\hspace*{1.5em}\point{分子の係数の和 $3+4=7$ で割った形をつくる}\\
+\hspace*{1.5em}$\dfrac{3\overrightarrow{\mathrm{AB}}+4\overrightarrow{\mathrm{AC}}}{7}$ は，辺 BC を $4:3$ に内分する点 D の位置ベクトル．\\
+\hspace*{1.5em}$\overrightarrow{\mathrm{AP}}=\dfrac79\overrightarrow{\mathrm{AD}}$ だから，P は線分 AD を $7:2$ に内分する点．\\[2pt]
+(2)\ $\triangle\mathrm{ABC}=S$ とする．\\
+\hspace*{1.5em}$\triangle\mathrm{PBC}$：底辺 BC 共通で，高さの比は $\mathrm{PD}:\mathrm{AD}=2:9$ だから\quad $\dfrac29S$\\
+\hspace*{1.5em}$\triangle\mathrm{PAB}=\dfrac{\mathrm{AP}}{\mathrm{AD}}\triangle\mathrm{ABD}=\dfrac79\cdot\dfrac{\mathrm{BD}}{\mathrm{BC}}S=\dfrac79\cdot\dfrac47S=\dfrac49S$\\
+\hspace*{1.5em}$\triangle\mathrm{PCA}=\dfrac{\mathrm{AP}}{\mathrm{AD}}\triangle\mathrm{ADC}=\dfrac79\cdot\dfrac37S=\dfrac39S$\\
+\hspace*{1.5em}$\triangle\mathrm{PBC}:\triangle\mathrm{PCA}:\triangle\mathrm{PAB}=2:3:4$\\
+\hspace*{1.5em}\point{面積比はもとの式の係数 $2:3:4$ と同じ並びになる}
 \end{kai}
 
 \ans{150}{内積（Ⅰ）}
 \begin{kai}
-(1)\ $2\cdot3\cos60^\circ=3$\qquad
-(2)\ $\cos\theta=\dfrac{\sqrt3+\sqrt3}{2\cdot2}=\dfrac{\sqrt3}2$．\quad $\theta=30^\circ$
+\textbf{方針}\quad \point{内積の定義 $\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta$}，\point{成分では $\vec a\cdot\vec b=a_1b_1+a_2b_2$}．なす角は $\cos\theta=\dfrac{\vec a\cdot\vec b}{|\vec a||\vec b|}$ から求める（$0^\circ\leqq\theta\leqq180^\circ$）．\\[2pt]
+(1)\ $\vec a\cdot\vec b=|\vec a||\vec b|\cos60^\circ=2\cdot3\cdot\dfrac12=3$\\[2pt]
+(2)\ $\vec a\cdot\vec b=1\cdot\sqrt3+\sqrt3\cdot1=2\sqrt3$，\quad $|\vec a|=\sqrt{1+3}=2$，\quad $|\vec b|=\sqrt{3+1}=2$\\
+\hspace*{1.5em}$\cos\theta=\dfrac{2\sqrt3}{2\cdot2}=\dfrac{\sqrt3}2$．$0^\circ\leqq\theta\leqq180^\circ$ より\quad $\theta=30^\circ$\\
+\hspace*{1.5em}（$\vec a$ は $x$ 軸と $60^\circ$，$\vec b$ は $30^\circ$ をなすので，差の $30^\circ$ と一致．）
 \end{kai}
 
 \ans{151}{内積（Ⅱ）}
 \begin{kai}
-(1)\ \point{垂直 $\iff$ 内積が0}\quad $2x-12=0$．\quad $x=6$\\[2pt]
-(2)\ $(x,\ y)$ とすると $3x+4y=0$，$x^2+y^2=1$．\quad $\left(\dfrac45,\ -\dfrac35\right)$，$\left(-\dfrac45,\ \dfrac35\right)$
+\textbf{方針}\quad \point{垂直 $\iff$ 内積が0}（ともに $\vec0$ でないとき）．単位ベクトルは大きさ1の条件も加えて連立する．\\[2pt]
+(1)\ $\vec a\cdot\vec b=2x+3\cdot(-4)=2x-12=0$ より\quad $x=6$\\[2pt]
+(2)\ 求める単位ベクトルを $(x,\ y)$ とすると\\
+\hspace*{1.5em}垂直：$3x+4y=0$ ……①，\quad 単位ベクトル：$x^2+y^2=1$ ……②\\
+\hspace*{1.5em}①より $y=-\dfrac34x$．②に代入して $x^2+\dfrac9{16}x^2=1$，$\dfrac{25}{16}x^2=1$，$x=\pm\dfrac45$\\
+\hspace*{1.5em}$x=\dfrac45$ のとき $y=-\dfrac35$，\quad $x=-\dfrac45$ のとき $y=\dfrac35$\\
+\hspace*{1.5em}よって\quad $\left(\dfrac45,\ -\dfrac35\right)$，\quad $\left(-\dfrac45,\ \dfrac35\right)$\\
+\hspace*{1.5em}\point{垂直な単位ベクトルは向きが逆の2つある}
 \end{kai}
 
 \ans{152}{内積（Ⅲ）}
 \begin{kai}
-$|\vec a|^2=10$，$|\vec b|^2=5$，$\vec a\cdot\vec b=5$．\quad $S=\dfrac12\sqrt{50-25}=\dfrac52$\\
-（成分では $S=\dfrac12|a_1b_2-a_2b_1|=\dfrac12|6-1|$ でも同じ）
+\textbf{方針}\quad 公式に代入するため，$|\vec a|^2$，$|\vec b|^2$，$\vec a\cdot\vec b$ を成分で計算する．（この公式は $S=\dfrac12|\vec a||\vec b|\sin\theta$ と $\sin^2\theta=1-\cos^2\theta$ から導かれる．）\\[2pt]
+$\vec a=\overrightarrow{\mathrm{OA}}=(3,\ 1)$，$\vec b=\overrightarrow{\mathrm{OB}}=(1,\ 2)$ とする．\\
+\hspace*{1.5em}$|\vec a|^2=9+1=10$，\quad $|\vec b|^2=1+4=5$，\quad $\vec a\cdot\vec b=3\cdot1+1\cdot2=5$\\[2pt]
+$S=\dfrac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}=\dfrac12\sqrt{10\cdot5-5^2}=\dfrac12\sqrt{25}=\dfrac52$\\[2pt]
+（成分では $S=\dfrac12|a_1b_2-a_2b_1|=\dfrac12|3\cdot2-1\cdot1|=\dfrac52$ でも同じ）
 \end{kai}
 
 \ans{153}{内積（Ⅳ）}
