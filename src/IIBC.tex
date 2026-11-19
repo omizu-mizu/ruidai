@@ -852,341 +852,584 @@ $P(0\leqq Z\leqq1)=0.3413$，\ $P(0\leqq Z\leqq1.5)=0.4332$，\ $P(0\leqq Z\leqq
 \shouans{第1章}{式と証明}
 \ans{1}{3次式の展開}
 \begin{kai}
-(1)\ $8x^3-12x^2y+6xy^2-y^3$\qquad
-(2)\ \point{$(a+b)(a^2-ab+b^2)=a^3+b^3$}\quad $a^3+8$\\[2pt]
-(3)\ $(x-1)(x^2+x+1)=x^3-1$ より $(x^3-1)(x^3+1)=x^6-1$
+\textbf{方針}\quad 3次の展開公式 \point{$(a\pm b)^3=a^3\pm3a^2b+3ab^2\pm b^3$，\ $(a\pm b)(a^2\mp ab+b^2)=a^3\pm b^3$} を使う．組み合わせの順序を工夫する．\\[2pt]
+(1)\ $a=2x$，$b=y$ として $(a-b)^3$ の公式を使う．\\
+\hspace*{1.5em}$(2x-y)^3=(2x)^3-3(2x)^2y+3(2x)y^2-y^3=8x^3-12x^2y+6xy^2-y^3$\\[2pt]
+(2)\ \point{$(a+b)(a^2-ab+b^2)=a^3+b^3$}．$a^2-2a+4=a^2-a\cdot2+2^2$ だから\\
+\hspace*{1.5em}$(a+2)(a^2-2a+4)=a^3+2^3=a^3+8$\\[2pt]
+(3)\ 前の2つを先に掛ける．$(x-1)(x^2+x+1)=x^3-1$ だから\\
+\hspace*{1.5em}$(x-1)(x^2+x+1)(x^3+1)=(x^3-1)(x^3+1)=(x^3)^2-1=x^6-1$
 \end{kai}
 
 \ans{2}{3次式の因数分解}
 \begin{kai}
-(1)\ $(3x)^3-2^3=(3x-2)(9x^2+6x+4)$\qquad
-(2)\ $(x+2y)^3$\\[2pt]
-(3)\ $(x^3-8)(x^3+8)=(x-2)(x^2+2x+4)(x+2)(x^2-2x+4)$
+\textbf{方針}\quad \point{$a^3\pm b^3=(a\pm b)(a^2\mp ab+b^2)$，\ $a^3\pm3a^2b+3ab^2\pm b^3=(a\pm b)^3$}．6乗は $(\ )^2$ と $(\ )^3$ のどちらとも見られる．\\[2pt]
+(1)\ $27x^3=(3x)^3$，$8=2^3$ だから\\
+\hspace*{1.5em}$27x^3-8=(3x)^3-2^3=(3x-2)\{(3x)^2+3x\cdot2+2^2\}=(3x-2)(9x^2+6x+4)$\\[2pt]
+(2)\ $x^3+3x^2(2y)+3x(2y)^2+(2y)^3$ の形なので\quad $(x+2y)^3$\\[2pt]
+(3)\ \point{まず2乗の差と見る}．$x^6-64=(x^3)^2-8^2=(x^3-8)(x^3+8)$\\
+\hspace*{1.5em}$=(x-2)(x^2+2x+4)(x+2)(x^2-2x+4)$\\
+\hspace*{1.5em}\point{先に3乗の差 $(x^2)^3-4^3$ と見ると，$x^4+4x^2+16$ の因数分解が残り面倒になる}
 \end{kai}
 
 \ans{3}{パスカルの三角形}
 \begin{kai}
-各段は 1 / 1\ 1 / 1\ 2\ 1 / 1\ 3\ 3\ 1 / 1\ 4\ 6\ 4\ 1 / 1\ 5\ 10\ 10\ 5\ 1\quad（両端は1，それ以外は左上と右上の和）\\
-$(a+b)^5=a^5+5a^4b+10a^3b^2+10a^2b^3+5ab^4+b^5$
+\textbf{方針}\quad パスカルの三角形は\point{両端が1，それ以外は左上と右上の数の和}．$n$ 段目の数が $(a+b)^n$ の係数（${}_n\mathrm C_0,\ {}_n\mathrm C_1,\ \cdots,\ {}_n\mathrm C_n$）になる．\\[2pt]
+\hspace*{1.5em}1段目：1\quad 1\\
+\hspace*{1.5em}2段目：1\quad 2\quad 1\\
+\hspace*{1.5em}3段目：1\quad 3\quad 3\quad 1\\
+\hspace*{1.5em}4段目：1\quad 4\quad 6\quad 4\quad 1\\
+\hspace*{1.5em}5段目：1\quad 5\quad 10\quad 10\quad 5\quad 1\quad （例：$10=4+6$，$5=1+4$）\\[2pt]
+5段目の数を係数として，$a$ の次数を5から1ずつ下げ，$b$ の次数を0から1ずつ上げて並べると\\
+\hspace*{1.5em}$(a+b)^5=a^5+5a^4b+10a^3b^2+10a^2b^3+5ab^4+b^5$
 \end{kai}
 
 \ans{4}{2項定理・多項定理}
 \begin{kai}
-(1)\ 一般項 ${}_6\mathrm C_r(2x)^{6-r}(-1)^r$．$6-r=4$ より $r=2$．\quad ${}_6\mathrm C_2\cdot2^4\cdot(-1)^2=240$\\[2pt]
-(2)\ 一般項 ${}_6\mathrm C_r(x^2)^{6-r}\left(-\dfrac2x\right)^r={}_6\mathrm C_r(-2)^rx^{12-3r}$．$r=4$ のとき定数項．\quad ${}_6\mathrm C_4\cdot16=240$\\[2pt]
-(3)\ \point{$\dfrac{n!}{p!\,q!\,r!}a^pb^qc^r$}\quad $\dfrac{5!}{2!\,1!\,2!}\cdot1\cdot1\cdot2^2=30\cdot4=120$
+\textbf{方針}\quad \point{一般項を書いて，$x$ の指数から $r$ を決める}．2項定理の一般項は ${}_n\mathrm C_ra^{n-r}b^r$．3項なら多項定理 $\dfrac{n!}{p!\,q!\,r!}a^pb^qc^r$．\\[2pt]
+(1)\ 一般項は\quad ${}_6\mathrm C_r(2x)^{6-r}(-1)^r={}_6\mathrm C_r\cdot2^{6-r}\cdot(-1)^r\cdot x^{6-r}$\\
+\hspace*{1.5em}$x^4$ の項は $6-r=4$ より $r=2$．係数は\quad ${}_6\mathrm C_2\cdot2^4\cdot(-1)^2=15\cdot16=240$\\[2pt]
+(2)\ 一般項は\quad ${}_6\mathrm C_r(x^2)^{6-r}\left(-\dfrac2x\right)^r={}_6\mathrm C_r(-2)^r\cdot\dfrac{x^{12-2r}}{x^r}={}_6\mathrm C_r(-2)^rx^{12-3r}$\\
+\hspace*{1.5em}定数項は $12-3r=0$ より $r=4$．\quad ${}_6\mathrm C_4(-2)^4=15\cdot16=240$\\[2pt]
+(3)\ $(x+y+2z)^5$ の一般項は\quad $\dfrac{5!}{p!\,q!\,r!}x^py^q(2z)^r$\quad （$p+q+r=5$）\\
+\hspace*{1.5em}$x^2yz^2$ の項は $p=2$，$q=1$，$r=2$．係数は\quad $\dfrac{5!}{2!\,1!\,2!}\cdot2^2=30\cdot4=120$\\
+\hspace*{1.5em}\point{$(2z)^2$ の $2^2$ を掛け忘れない}
 \end{kai}
 
 \ans{5}{整式のわり算}
 \begin{kai}
-(1)\ 商 $2x-1$，余り $-x-3$\quad（$(x^2-x+2)(2x-1)+(-x-3)$ で検算）\\[2pt]
-(2)\ \point{$A=(\text{わる式})\times(\text{商})+(\text{余り})$}\quad $A=(x+2)(x^2-3)+5=x^3+2x^2-3x-1$
+\textbf{方針}\quad 整式の割り算は\point{次数の高い項から順に消していく}筆算で行う．\point{$A=(\text{わる式})\times(\text{商})+(\text{余り})$，余りの次数 $<$ わる式の次数}．\\[2pt]
+(1)\ 筆算の手順：\\
+\hspace*{1.5em}$2x^3\div x^2=2x$．\quad $2x(x^2-x+2)=2x^3-2x^2+4x$ を引くと\quad $-x^2+0x-5$\\
+\hspace*{1.5em}$-x^2\div x^2=-1$．\quad $-1\cdot(x^2-x+2)=-x^2+x-2$ を引くと\quad $-x-3$\\
+\hspace*{1.5em}$-x-3$ は1次で，わる式（2次）より次数が低いので終わり．\\
+\hspace*{1.5em}商 $2x-1$，\quad 余り $-x-3$\\
+\hspace*{1.5em}（検算：$(x^2-x+2)(2x-1)+(-x-3)=2x^3-3x^2+5x-2-x-3=2x^3-3x^2+4x-5$）\\[2pt]
+(2)\ \point{$A=(\text{わる式})\times(\text{商})+(\text{余り})$}\\
+\hspace*{1.5em}$A=(x+2)(x^2-3)+5=x^3+2x^2-3x-6+5=x^3+2x^2-3x-1$
 \end{kai}
 
 \ans{6}{分数式の計算}
 \begin{kai}
-(1)\ \point{前から順に通分する}\quad $\dfrac1{x-1}-\dfrac1{x+1}=\dfrac{2}{x^2-1}$，\quad $\dfrac2{x^2-1}-\dfrac2{x^2+1}=\dfrac{4}{x^4-1}$\\[2pt]
-(2)\ $\dfrac{(x-3)(x+2)}{(x+2)(x-2)}\times\dfrac{(x+1)(x+2)}{(x+3)(x-3)}=\dfrac{(x+1)(x+2)}{(x-2)(x+3)}$
+\textbf{方針}\quad 分数式の加減は\point{前から順に通分する}と，和と差の積で分母がまとまりやすい．乗除は\point{先に因数分解して約分}する．\\[2pt]
+(1)\ $\dfrac1{x-1}-\dfrac1{x+1}=\dfrac{(x+1)-(x-1)}{(x-1)(x+1)}=\dfrac{2}{x^2-1}$\\[2pt]
+\hspace*{1.5em}$\dfrac2{x^2-1}-\dfrac2{x^2+1}=\dfrac{2(x^2+1)-2(x^2-1)}{(x^2-1)(x^2+1)}=\dfrac{4}{x^4-1}$\\[2pt]
+\hspace*{1.5em}\point{3つまとめて通分すると分子の計算が大変．和と差の積がつくれる組から通分する}\\[2pt]
+(2)\ それぞれ因数分解すると\\
+\hspace*{1.5em}$x^2-x-6=(x-3)(x+2)$，\ $x^2-4=(x+2)(x-2)$，\ $x^2+3x+2=(x+1)(x+2)$，\ $x^2-9=(x+3)(x-3)$\\[2pt]
+\hspace*{1.5em}与式 $=\dfrac{(x-3)(x+2)}{(x+2)(x-2)}\times\dfrac{(x+1)(x+2)}{(x+3)(x-3)}=\dfrac{(x+1)(x+2)}{(x-2)(x+3)}$\\
+\hspace*{1.5em}（$x-3$ と1つの $x+2$ が約分される）
 \end{kai}
 
 \ans{7}{繁分数式の計算}
 \begin{kai}
-(1)\ \point{内側から計算する}\quad $1-\dfrac1x=\dfrac{x-1}x$，\quad $\dfrac1{1-\frac1x}=\dfrac{x}{x-1}$，\quad $1-\dfrac x{x-1}=\dfrac{-1}{x-1}$．\quad 与式 $=-(x-1)=1-x$\\[2pt]
-(2)\ 分母・分子に $x^2y^2$ をかけて\quad $\dfrac{xy^2-x^2y}{y^2-x^2}=\dfrac{xy(y-x)}{(y-x)(y+x)}=\dfrac{xy}{x+y}$
+\textbf{方針}\quad 繁分数式は，(1)のように\point{内側から順に計算する}か，(2)のように\point{分母・分子に同じ式を掛けて分母を払う}．\\[2pt]
+(1)\ \point{内側から計算する}\\
+\hspace*{1.5em}$1-\dfrac1x=\dfrac{x-1}x$\quad より\quad $\dfrac1{1-\frac1x}=\dfrac{x}{x-1}$\\[2pt]
+\hspace*{1.5em}$1-\dfrac x{x-1}=\dfrac{(x-1)-x}{x-1}=\dfrac{-1}{x-1}$\\[2pt]
+\hspace*{1.5em}与式 $=\dfrac1{\frac{-1}{x-1}}=-(x-1)=1-x$\\[2pt]
+(2)\ 分母・分子に $x^2y^2$ を掛けて\\
+\hspace*{1.5em}与式 $=\dfrac{xy^2-x^2y}{y^2-x^2}=\dfrac{xy(y-x)}{(y-x)(y+x)}=\dfrac{xy}{x+y}$
 \end{kai}
 
 \ans{8}{式の値}
 \begin{kai}
-(1)\ $\left(x+\dfrac1x\right)^2-2=14$\qquad
-(2)\ $\left(x+\dfrac1x\right)^3-3\left(x+\dfrac1x\right)=64-12=52$\qquad
-(3)\ $\left(x+\dfrac1x\right)^2-4=12$
+\textbf{方針}\quad $x\cdot\dfrac1x=1$ なので，$x+\dfrac1x$ を「和」，1を「積」とみて，\point{対称式の変形}を使う．\\[2pt]
+(1)\ $\left(x+\dfrac1x\right)^2=x^2+2+\dfrac1{x^2}$ より\\
+\hspace*{1.5em}$x^2+\dfrac1{x^2}=\left(x+\dfrac1x\right)^2-2=16-2=14$\\[2pt]
+(2)\ $\left(x+\dfrac1x\right)^3=x^3+3x+\dfrac3x+\dfrac1{x^3}=x^3+\dfrac1{x^3}+3\left(x+\dfrac1x\right)$ より\\
+\hspace*{1.5em}$x^3+\dfrac1{x^3}=\left(x+\dfrac1x\right)^3-3\left(x+\dfrac1x\right)=64-12=52$\\[2pt]
+(3)\ $\left(x-\dfrac1x\right)^2=x^2-2+\dfrac1{x^2}=\left(x^2+\dfrac1{x^2}\right)-2=14-2=12$\\
+\hspace*{1.5em}（$\left(x+\dfrac1x\right)^2-4=16-4=12$ としてもよい）
 \end{kai}
 
 \ans{9}{比例式（Ⅰ）}
 \begin{kai}
-\point{比例式は $=k$ とおく}\quad $x=2k$，$y=3k$，$z=4k$（$k\neq0$）．\\
-(1)\ $\dfrac{9k}{3k}=3$\qquad (2)\ $\dfrac{(6+12+8)k^2}{(4+9+16)k^2}=\dfrac{26}{29}$
+\textbf{方針}\quad \point{比例式は $=k$ とおき，すべての文字を $k$ で表す}．分母・分子の $k$ は約分で消える．\\[2pt]
+$\dfrac x2=\dfrac y3=\dfrac z4=k$ とおくと\quad $x=2k$，$y=3k$，$z=4k$\quad （$k\neq0$）\\[2pt]
+(1)\ $\dfrac{x+y+z}{x-y+z}=\dfrac{2k+3k+4k}{2k-3k+4k}=\dfrac{9k}{3k}=3$\\[2pt]
+(2)\ $xy=6k^2$，$yz=12k^2$，$zx=8k^2$，\quad $x^2+y^2+z^2=4k^2+9k^2+16k^2=29k^2$ だから\\
+\hspace*{1.5em}$\dfrac{xy+yz+zx}{x^2+y^2+z^2}=\dfrac{(6+12+8)k^2}{29k^2}=\dfrac{26}{29}$
 \end{kai}
 
 \ans{10}{比例式（Ⅱ）}
 \begin{kai}
-$b+c=ak$，$c+a=bk$，$a+b=ck$．辺々加えて $2(a+b+c)=k(a+b+c)$．\\
-\point{$a+b+c$ でわれるかどうかで場合分け}\\
-$a+b+c\neq0$ のとき $k=2$．\quad $a+b+c=0$ のとき $b+c=-a$ より $k=\dfrac{-a}{a}=-1$．\quad よって\quad $k=2,\ -1$
+\textbf{方針}\quad 分母を払って3式を辺々加える．\point{両辺を $a+b+c$ で割るときは，$a+b+c=0$ の場合を別に考える}．\\[2pt]
+分母を払うと\quad $b+c=ak$ ……①，\quad $c+a=bk$ ……②，\quad $a+b=ck$ ……③\\
+（分母が0にならないので $a,\ b,\ c\neq0$．）\\
+①＋②＋③より\quad $2(a+b+c)=k(a+b+c)$，\quad $(k-2)(a+b+c)=0$\\[2pt]
+(i)\ $a+b+c\neq0$ のとき\quad $k=2$\\
+(ii)\ $a+b+c=0$ のとき\quad $b+c=-a$ だから\quad $k=\dfrac{b+c}{a}=\dfrac{-a}{a}=-1$\\[2pt]
+よって\quad $k=2,\ -1$\\
+（例：$a=b=c=1$ のとき $k=2$，$a=1,\ b=1,\ c=-2$ のとき $k=-1$ となり，どちらも実際に起こる．）
 \end{kai}
 
 \ans{11}{恒等式}
 \begin{kai}
-(1)\ 左辺を展開すると $ax^2+(2a+b)x+(a+b+c)$．係数を比較して $a=2$，$2a+b=-1$，$a+b+c=3$．\\
-\hspace*{1.5em}$a=2$，$b=-5$，$c=6$\\[2pt]
-(2)\ 右辺を通分した分子は $a(x+3)+b(x+1)$ で，これが1と恒等的に等しい．\\
-\hspace*{1.5em}$a+b=0$，$3a+b=1$ より\quad $a=\dfrac12$，$b=-\dfrac12$
+\textbf{方針}\quad 恒等式は\point{両辺の同じ次数の項の係数を比較する}（係数比較法）．または，\point{都合のよい値を代入して}必要条件を求め，恒等式になることを確かめる（数値代入法）．\\[2pt]
+(1)\ 左辺を展開して $x$ について整理すると\\
+\hspace*{1.5em}$a(x^2+2x+1)+b(x+1)+c=ax^2+(2a+b)x+(a+b+c)$\\
+\hspace*{1.5em}右辺 $2x^2-x+3$ と係数を比較して\quad $a=2$，\quad $2a+b=-1$，\quad $a+b+c=3$\\
+\hspace*{1.5em}これを解いて\quad $a=2$，$b=-5$，$c=6$\\
+\hspace*{1.5em}（数値代入法：$x=-1$ を代入すると $c=2+1+3=6$．以下同様．）\\[2pt]
+(2)\ 右辺を通分すると\quad $\dfrac{a(x+3)+b(x+1)}{(x+1)(x+3)}=\dfrac{(a+b)x+(3a+b)}{(x+1)(x+3)}$\\
+\hspace*{1.5em}分子が1と恒等的に等しいので，係数を比較して\quad $a+b=0$，\quad $3a+b=1$\\
+\hspace*{1.5em}これを解いて\quad $a=\dfrac12$，$b=-\dfrac12$\\
+\hspace*{1.5em}（$\dfrac{1}{(x+1)(x+3)}=\dfrac12\left(\dfrac1{x+1}-\dfrac1{x+3}\right)$ という部分分数分解になる．）
 \end{kai}
 
 \ans{12}{等式の証明}
 \begin{kai}
-(1)\ \point{1文字を消去する}\quad $c=-(a+b)$ を代入すると\\
-\hspace*{1.5em}左辺 $=a^3+b^3-(a+b)^3=-3a^2b-3ab^2=-3ab(a+b)$，\quad 右辺 $=3ab\cdot\{-(a+b)\}=-3ab(a+b)$．よって成りたつ．\\[2pt]
-(2)\ $\dfrac ab=\dfrac cd=k$ とおくと $a=bk$，$c=dk$．\\
-\hspace*{1.5em}$\dfrac{a+c}{b+d}=\dfrac{k(b+d)}{b+d}=k$，\quad $\dfrac{a-2c}{b-2d}=\dfrac{k(b-2d)}{b-2d}=k$．よって成りたつ．
+\textbf{方針}\quad 条件つきの等式は，(1)\point{条件式で1文字を消去する}，(2)\point{比例式は $=k$ とおく}．左辺と右辺をそれぞれ計算して一致を示す．\\[2pt]
+(1)\ $a+b+c=0$ より $c=-(a+b)$．これを代入する．\\
+\hspace*{1.5em}左辺 $=a^3+b^3-(a+b)^3=a^3+b^3-(a^3+3a^2b+3ab^2+b^3)=-3a^2b-3ab^2=-3ab(a+b)$\\
+\hspace*{1.5em}右辺 $=3ab\cdot\{-(a+b)\}=-3ab(a+b)$\\
+\hspace*{1.5em}よって\quad $a^3+b^3+c^3=3abc$\\
+\hspace*{1.5em}（別解：$a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)=0$）\\[2pt]
+(2)\ $\dfrac ab=\dfrac cd=k$ とおくと\quad $a=bk$，$c=dk$\\
+\hspace*{1.5em}左辺 $=\dfrac{bk+dk}{b+d}=\dfrac{k(b+d)}{b+d}=k$\\
+\hspace*{1.5em}右辺 $=\dfrac{bk-2dk}{b-2d}=\dfrac{k(b-2d)}{b-2d}=k$\\
+\hspace*{1.5em}よって\quad $\dfrac{a+c}{b+d}=\dfrac{a-2c}{b-2d}$
 \end{kai}
 
 \ans{13}{不等式の証明}
 \begin{kai}
-(1)\ \point{(左辺)$-$(右辺) を平方の和にする}\quad $x^2+y^2-2x-2y+2=(x-1)^2+(y-1)^2\geqq0$．\\
-\hspace*{1.5em}等号は $x=1$ かつ $y=1$ のとき．\\[2pt]
-(2)\ \point{相加平均と相乗平均の関係}\quad $x>0$，$\dfrac9x>0$ より $x+\dfrac9x\geqq2\sqrt{x\cdot\dfrac9x}=6$．\\
-\hspace*{1.5em}等号は $x=\dfrac9x$，すなわち $x=3$ のとき．\\[2pt]
-(3)\ \point{両辺が正なので2乗して比べる}\quad $(\sqrt a+\sqrt b)^2-(\sqrt{a+b})^2=2\sqrt{ab}>0$．\\
-\hspace*{1.5em}$\sqrt a+\sqrt b>0$，$\sqrt{a+b}>0$ だから\quad $\sqrt a+\sqrt b>\sqrt{a+b}$
+\textbf{方針}\quad 不等式 $A\geqq B$ の証明は\point{$A-B\geqq0$ を示す}のが基本．平方の和，相加平均と相乗平均の関係，2乗して比べる，のどれが使えるかを考える．\\[2pt]
+(1)\ \point{(左辺)$-$(右辺) を平方の和にする}\\
+\hspace*{1.5em}$x^2+y^2-\{2(x+y)-2\}=x^2-2x+1+y^2-2y+1=(x-1)^2+(y-1)^2\geqq0$\\
+\hspace*{1.5em}よって $x^2+y^2\geqq2(x+y)-2$．等号は $x-1=0$ かつ $y-1=0$，すなわち $x=1,\ y=1$ のとき．\\[2pt]
+(2)\ \point{相加平均と相乗平均の関係：$a>0,\ b>0$ のとき $a+b\geqq2\sqrt{ab}$}\\
+\hspace*{1.5em}$x>0$，$\dfrac9x>0$ だから\quad $x+\dfrac9x\geqq2\sqrt{x\cdot\dfrac9x}=2\sqrt9=6$\\
+\hspace*{1.5em}等号は $x=\dfrac9x$，すなわち $x^2=9$，$x>0$ より $x=3$ のとき．\\[2pt]
+(3)\ \point{両辺が正なので2乗して比べる}\\
+\hspace*{1.5em}$(\sqrt a+\sqrt b)^2-(\sqrt{a+b})^2=(a+2\sqrt{ab}+b)-(a+b)=2\sqrt{ab}>0$\\
+\hspace*{1.5em}よって $(\sqrt a+\sqrt b)^2>(\sqrt{a+b})^2$．$\sqrt a+\sqrt b>0$，$\sqrt{a+b}>0$ だから\quad $\sqrt a+\sqrt b>\sqrt{a+b}$\\
+\hspace*{1.5em}\point{2乗して比べてよいのは，両辺が正（0以上）のときだけ}
 \end{kai}
 
 \shouans{第2章}{複素数と方程式}
 \ans{14}{2次方程式の解}
 \begin{kai}
-(1)\ $x^2=-4$ より\quad $x=\pm2i$\qquad
-(2)\ $x=\dfrac{1\pm\sqrt{1-3}}{3}=\dfrac{1\pm\sqrt2\,i}{3}$
+\textbf{方針}\quad 複素数の範囲では\point{$\sqrt{-a}=\sqrt a\,i\ (a>0)$} として，負の数の平方根も考える．解の公式はそのまま使える．\\[2pt]
+(1)\ $x^2=-4$ より\quad $x=\pm\sqrt{-4}=\pm2i$\\[2pt]
+(2)\ $x$ の係数が $-2=2\cdot(-1)$ なので，$b'=-1$ の解の公式を使って\\
+\hspace*{1.5em}$x=\dfrac{-(-1)\pm\sqrt{(-1)^2-3\cdot1}}{3}=\dfrac{1\pm\sqrt{-2}}{3}=\dfrac{1\pm\sqrt2\,i}{3}$
 \end{kai}
 
 \ans{15}{複素数の計算（Ⅰ）}
 \begin{kai}
-\point{$i^2=-1$ として文字式と同様に計算}\\
-(1)\ $2-4i+3i-6i^2=8-i$\qquad (2)\ $9-6i+i^2=8-6i$\\[2pt]
-(3)\ \point{分母の共役複素数をかける}\quad $\dfrac{(1+i)^2}{(1-i)(1+i)}=\dfrac{2i}{2}=i$
+\textbf{方針}\quad \point{$i^2=-1$ として文字式と同様に計算}し，実部と虚部に分ける．分母に $i$ があるときは\point{分母の共役複素数を分母・分子に掛ける}．\\[2pt]
+(1)\ $(2+3i)(1-2i)=2-4i+3i-6i^2=2-i-6\cdot(-1)=8-i$\\[2pt]
+(2)\ $(3-i)^2=9-6i+i^2=9-6i-1=8-6i$\\[2pt]
+(3)\ 分母 $1-i$ の共役複素数 $1+i$ を分母・分子に掛けて\\
+\hspace*{1.5em}$\dfrac{1+i}{1-i}=\dfrac{(1+i)^2}{(1-i)(1+i)}=\dfrac{1+2i+i^2}{1-i^2}=\dfrac{2i}{2}=i$\quad （$=0+1\cdot i$）
 \end{kai}
 
 \ans{16}{複素数の計算（Ⅱ）}
 \begin{kai}
-(1)\ $(1+i)^2=2i$ より $(1+i)^8=(2i)^4=16$\\[2pt]
-(2)\ $x+yi=\dfrac{5+5i}{2-i}=\dfrac{(5+5i)(2+i)}{5}=(1+i)(2+i)=1+3i$．\quad $x=1$，$y=3$
+\textbf{方針}\quad (1)は\point{低い次数の累乗から順に計算する}（$(1+i)^2$ が簡単になる）．(2)は $x+yi$ について解くか，展開して\point{実部・虚部を比較}する．\\[2pt]
+(1)\ $(1+i)^2=1+2i+i^2=2i$\\
+\hspace*{1.5em}$(1+i)^8=\{(1+i)^2\}^4=(2i)^4=2^4\cdot i^4=16\cdot1=16$\quad （$i^4=(i^2)^2=1$）\\[2pt]
+(2)\ $x+yi=\dfrac{5+5i}{2-i}=\dfrac{(5+5i)(2+i)}{(2-i)(2+i)}=\dfrac{10+5i+10i+5i^2}{4+1}=\dfrac{5+15i}{5}=1+3i$\\[2pt]
+\hspace*{1.5em}$x,\ y$ は実数だから，実部と虚部を比べて\quad $x=1$，$y=3$\\
+\hspace*{1.5em}（別解：左辺を展開すると $(2x+y)+(-x+2y)i=5+5i$．$2x+y=5$，$-x+2y=5$ を解いても同じ．）
 \end{kai}
 
 \ans{17}{解の判別（Ⅰ）}
 \begin{kai}
-$D=(k-1)^2-4(k+2)=k^2-6k-7=(k+1)(k-7)$\\
-$k<-1,\ 7<k$ のとき異なる2つの実数解，\quad $k=-1,\ 7$ のとき重解，\quad $-1<k<7$ のとき異なる2つの虚数解
+\textbf{方針}\quad 判別式 $D=b^2-4ac$ の符号で判別する．\point{$D>0$：異なる2つの実数解，$D=0$：重解，$D<0$：異なる2つの虚数解}．$D$ を $k$ の2次不等式として解く．\\[2pt]
+$D=(k-1)^2-4\cdot1\cdot(k+2)=k^2-2k+1-4k-8=k^2-6k-7=(k+1)(k-7)$\\[2pt]
+$D>0$，すなわち $k<-1,\ 7<k$ のとき\quad 異なる2つの実数解\\
+$D=0$，すなわち $k=-1,\ 7$ のとき\quad 重解\\
+$D<0$，すなわち $-1<k<7$ のとき\quad 異なる2つの虚数解
 \end{kai}
 
 \ans{18}{解の判別（Ⅱ）}
 \begin{kai}
-①が虚数解をもつ：$\dfrac{D_1}4=a^2-4<0$ より $-2<a<2$．\quad ②が虚数解をもつ：$\dfrac{D_2}4=1-a<0$ より $a>1$．\\
-(1)\ \point{少なくとも一方 → 和集合}\quad $-2<a$\\[2pt]
-(2)\ \point{一方だけ → 和集合から共通部分 $1<a<2$ を除く}\quad $-2<a\leqq1,\ 2\leqq a$
+\textbf{方針}\quad まず①，②それぞれが虚数解をもつ $a$ の範囲を求める．\point{「少なくとも一方」は和集合，「一方だけ」は和集合から共通部分を除いたもの}．数直線で考える．\\[2pt]
+①が虚数解をもつ条件：$\dfrac{D_1}4=a^2-4<0$ より\quad $-2<a<2$\\
+②が虚数解をもつ条件：$\dfrac{D_2}4=(-1)^2-a=1-a<0$ より\quad $a>1$\\[2pt]
+(1)\ \point{少なくとも一方 → 和集合}．$-2<a<2$ と $a>1$ を合わせると\quad $-2<a$\\[2pt]
+(2)\ 両方が虚数解をもつのは，共通部分の $1<a<2$．\\
+\hspace*{1.5em}\point{一方だけ → 和集合 $-2<a$ から共通部分 $1<a<2$ を除く}\\
+\hspace*{1.5em}よって\quad $-2<a\leqq1,\ 2\leqq a$\\
+\hspace*{1.5em}（$a=1$ のとき①だけ，$a=2$ のとき②だけが虚数解をもつので，端を含む．）
 \end{kai}
 
 \ans{19}{$i$ を含んだ方程式（Ⅰ）}
 \begin{kai}
-左辺を整理して $(2x+y)+(x-3y)i=5-i$．$2x+y,\ x-3y$ は実数だから\\
-\point{複素数の相等：実部と虚部をそれぞれ比較}\quad $2x+y=5$，$x-3y=-1$．\quad $x=2$，$y=1$
+\textbf{方針}\quad \point{複素数の相等：$a,\ b,\ c,\ d$ が実数のとき，$a+bi=c+di\iff a=c$ かつ $b=d$}．左辺を実部と虚部に整理する．\\[2pt]
+左辺を展開して整理すると\\
+\hspace*{1.5em}$(2+i)x+(1-3i)y=2x+xi+y-3yi=(2x+y)+(x-3y)i$\\
+これが $5-i$ に等しい．$x,\ y$ は実数なので $2x+y$，$x-3y$ も実数．実部と虚部を比べて\\
+\hspace*{1.5em}$2x+y=5$ ……①，\quad $x-3y=-1$ ……②\\
+②より $x=3y-1$．①に代入して $2(3y-1)+y=5$，$7y=7$，$y=1$．よって $x=2$．\\
+\hspace*{1.5em}$x=2$，\quad $y=1$\\
+\point{「$x,\ y$ は実数」という条件がないと，実部・虚部の比較はできない}
 \end{kai}
 
 \ans{20}{$i$ を含んだ方程式（Ⅱ）}
 \begin{kai}
-実数解を $x$ とすると $(x^2-2x+1)+(a-x)i=0$．$x,\ a$ は実数だから $x^2-2x+1=0$，$a-x=0$．\\
-$(x-1)^2=0$ より $x=1$，$a=1$．\quad $a=1$，実数解は $x=1$
+\textbf{方針}\quad 実数解を $x$ として代入し，\point{実部と虚部に分けてそれぞれ0とおく}（$x,\ a$ が実数だから使える）．\\[2pt]
+実数解を $x$ とすると\quad $x^2-(2+i)x+1+ai=0$\\
+実部と虚部に分けて整理すると\quad $(x^2-2x+1)+(a-x)i=0$\\
+$x,\ a$ は実数なので $x^2-2x+1$，$a-x$ も実数．よって\\
+\hspace*{1.5em}$x^2-2x+1=0$ ……①，\quad $a-x=0$ ……②\\
+①より $(x-1)^2=0$，$x=1$．②より $a=x=1$．\\[2pt]
+よって\quad $a=1$，実数解は $x=1$\\
+\point{判別式は係数が実数のときにしか使えない．この方程式は係数に $i$ を含むので使えない}
 \end{kai}
 
 \ans{21}{解と係数の関係（Ⅰ）}
 \begin{kai}
-$\alpha+\beta=3$，$\alpha\beta=5$\\
-(1)\ $(\alpha+\beta)^2-2\alpha\beta=9-10=-1$\qquad
-(2)\ $(\alpha+\beta)^3-3\alpha\beta(\alpha+\beta)=27-45=-18$\\[2pt]
-(3)\ $\dfrac{\alpha+\beta}{\alpha\beta}=\dfrac35$\qquad
-(4)\ $\alpha\beta-(\alpha+\beta)+1=5-3+1=3$
+\textbf{方針}\quad \point{解と係数の関係：$ax^2+bx+c=0$ の2解 $\alpha,\ \beta$ について $\alpha+\beta=-\dfrac ba$，$\alpha\beta=\dfrac ca$}．求める式を $\alpha+\beta$ と $\alpha\beta$ で表す（解そのものは虚数で計算が大変）．\\[2pt]
+解と係数の関係より\quad $\alpha+\beta=3$，\quad $\alpha\beta=5$\\[2pt]
+(1)\ $\alpha^2+\beta^2=(\alpha+\beta)^2-2\alpha\beta=9-10=-1$\\
+\hspace*{1.5em}（$\alpha,\ \beta$ は虚数なので，2乗の和が負になってもおかしくない）\\[2pt]
+(2)\ $\alpha^3+\beta^3=(\alpha+\beta)^3-3\alpha\beta(\alpha+\beta)=27-45=-18$\\[2pt]
+(3)\ $\dfrac1\alpha+\dfrac1\beta=\dfrac{\alpha+\beta}{\alpha\beta}=\dfrac35$\\[2pt]
+(4)\ $(\alpha-1)(\beta-1)=\alpha\beta-(\alpha+\beta)+1=5-3+1=3$
 \end{kai}
 
 \ans{22}{解と係数の関係（Ⅱ）}
 \begin{kai}
-\point{2数 $p,\ q$ を解とする2次方程式は $x^2-(p+q)x+pq=0$}\\
-(1)\ 和 $(\alpha+\beta)+2=5$，積 $\alpha\beta+(\alpha+\beta)+1=9$．\quad $x^2-5x+9=0$\\[2pt]
-(2)\ 和 $\alpha^2+\beta^2=-1$，積 $(\alpha\beta)^2=25$．\quad $x^2+x+25=0$
+\textbf{方針}\quad \point{2数 $p,\ q$ を解とする2次方程式の1つは $x^2-(p+q)x+pq=0$}．新しい2数の和と積を $\alpha+\beta=3$，$\alpha\beta=5$ で表す．\\[2pt]
+解と係数の関係より\quad $\alpha+\beta=3$，\quad $\alpha\beta=5$\\[2pt]
+(1)\ 和：$(\alpha+1)+(\beta+1)=(\alpha+\beta)+2=5$\\
+\hspace*{1.5em}積：$(\alpha+1)(\beta+1)=\alpha\beta+(\alpha+\beta)+1=5+3+1=9$\\
+\hspace*{1.5em}よって\quad $x^2-5x+9=0$\\[2pt]
+(2)\ 和：$\alpha^2+\beta^2=(\alpha+\beta)^2-2\alpha\beta=9-10=-1$\\
+\hspace*{1.5em}積：$\alpha^2\beta^2=(\alpha\beta)^2=25$\\
+\hspace*{1.5em}よって\quad $x^2-(-1)x+25=0$，すなわち\quad $x^2+x+25=0$\\
+\hspace*{1.5em}（「1つ求めよ」とあるのは，両辺を定数倍した方程式も同じ解をもつため．）
 \end{kai}
 
 \ans{23}{虚数解}
 \begin{kai}
-\point{実数係数の方程式では，共役な複素数も解になる}\quad 他の解は $2-3i$．\\
-解と係数の関係より $-a=(2+3i)+(2-3i)=4$，$b=(2+3i)(2-3i)=13$．\quad $a=-4$，$b=13$，他の解 $2-3i$
+\textbf{方針}\quad \point{実数係数の方程式が虚数解 $p+qi$ をもてば，共役な複素数 $p-qi$ も解}．2解がわかれば解と係数の関係で係数が決まる．\\[2pt]
+$a,\ b$ は実数だから，$2+3i$ と共役な $2-3i$ も解である．よって他の解は\quad $2-3i$\\[2pt]
+解と係数の関係より\\
+\hspace*{1.5em}和：$(2+3i)+(2-3i)=4=-a$ より\quad $a=-4$\\
+\hspace*{1.5em}積：$(2+3i)(2-3i)=4-9i^2=4+9=13=b$ より\quad $b=13$\\[2pt]
+よって\quad $a=-4$，\quad $b=13$，\quad 他の解 $2-3i$\\
+（別解：$x=2+3i$ を代入して実部・虚部を比較してもよい．）
 \end{kai}
 
 \ans{24}{剰余の定理（Ⅰ）}
 \begin{kai}
-\point{$P(x)$ を $x-a$ でわった余りは $P(a)$}\quad $P(2)=8-8+2a+3=5$ より\quad $a=1$
+\textbf{方針}\quad \point{剰余の定理：整式 $P(x)$ を $x-a$ で割った余りは $P(a)$}．実際に割り算をしなくてよい．\\[2pt]
+$P(x)$ を $x-2$ で割った余りは $P(2)$ だから\\
+\hspace*{1.5em}$P(2)=2^3-2\cdot2^2+2a+3=8-8+2a+3=2a+3$\\
+これが5に等しいので\quad $2a+3=5$，\quad $a=1$\\
+（理由：$P(x)=(x-2)Q(x)+R$ に $x=2$ を代入すると $P(2)=R$．）
 \end{kai}
 
 \ans{25}{剰余の定理（Ⅱ）}
 \begin{kai}
-2次式でわった余りは1次以下なので，$P(x)=(x-1)(x+2)Q(x)+ax+b$ とおける．\\
-$P(1)=a+b=3$，$P(-2)=-2a+b=-6$ より $a=3$，$b=0$．\quad 余りは\quad $3x$
+\textbf{方針}\quad \point{2次式で割った余りは1次以下}なので $ax+b$ とおく．割り算の等式に，わる式が0になる $x$ を代入する．\\[2pt]
+$P(x)$ を $(x-1)(x+2)$ で割った商を $Q(x)$，余りを $ax+b$ とすると\\
+\hspace*{1.5em}$P(x)=(x-1)(x+2)Q(x)+ax+b$\\[2pt]
+剰余の定理より $P(1)=3$，$P(-2)=-6$．上の式に $x=1,\ -2$ を代入すると\\
+\hspace*{1.5em}$P(1)=a+b=3$ ……①，\quad $P(-2)=-2a+b=-6$ ……②\\
+①$-$②より $3a=9$，$a=3$．①より $b=0$．\\[2pt]
+よって余りは\quad $3x$
 \end{kai}
 
 \ans{26}{剰余の定理（Ⅲ）}
 \begin{kai}
-\point{$(x-1)^2$ でわった余りを利用して余りの形を決める}\\
-$P(x)=(x-1)^2(x+1)Q(x)+c(x-1)^2+2x+1$ とおける．$P(-1)=4c-1=3$ より $c=1$．\\
-余りは\quad $(x-1)^2+2x+1=x^2+2$
+\textbf{方針}\quad 3次式で割った余りは2次以下．\point{$(x-1)^2$ で割った余りがわかっているので，余りを $c(x-1)^2+2x+1$ の形におく}と，未知数が1つで済む．\\[2pt]
+$P(x)$ を $(x-1)^2(x+1)$ で割った商を $Q(x)$，余りを $R(x)$（2次以下）とすると\\
+\hspace*{1.5em}$P(x)=(x-1)^2(x+1)Q(x)+R(x)$\\
+右辺の第1項は $(x-1)^2$ で割り切れるので，$P(x)$ を $(x-1)^2$ で割った余りは $R(x)$ を $(x-1)^2$ で割った余りと等しく，$2x+1$．\\
+$R(x)$ は2次以下だから\quad $R(x)=c(x-1)^2+2x+1$ とおける．\\[2pt]
+$P(x)=(x-1)^2(x+1)Q(x)+c(x-1)^2+2x+1$\\
+$x+1$ で割った余りが3だから $P(-1)=3$．$x=-1$ を代入して\\
+\hspace*{1.5em}$P(-1)=c\cdot4+2\cdot(-1)+1=4c-1=3$，\quad $c=1$\\[2pt]
+余りは\quad $(x-1)^2+2x+1=x^2-2x+1+2x+1=x^2+2$
 \end{kai}
 
 \ans{27}{因数定理}
 \begin{kai}
-(1)\ $P(-1)=-1-4-1+6=0$ より $x+1$ を因数にもつ．\quad $(x+1)(x^2-5x+6)=(x+1)(x-2)(x-3)$\\[2pt]
-(2)\ $P(3)=54-27-33+6=0$ より $x-3$ を因数にもつ．\quad $(x-3)(2x^2+3x-2)=(x-3)(x+2)(2x-1)$
+\textbf{方針}\quad \point{因数定理：$P(a)=0$ なら $P(x)$ は $x-a$ を因数にもつ}．$a$ の候補は $\pm\dfrac{\text{定数項の約数}}{\text{最高次の係数の約数}}$．見つけたら割り算（組立除法）で残りを求める．\\[2pt]
+(1)\ $P(x)=x^3-4x^2+x+6$ とする．定数項6の約数 $\pm1,\ \pm2,\ \pm3,\ \pm6$ を試す．\\
+\hspace*{1.5em}$P(-1)=-1-4-1+6=0$ より，$P(x)$ は $x+1$ を因数にもつ．\\
+\hspace*{1.5em}$P(x)$ を $x+1$ で割ると商は $x^2-5x+6$．\\
+\hspace*{1.5em}$P(x)=(x+1)(x^2-5x+6)=(x+1)(x-2)(x-3)$\\[2pt]
+(2)\ $P(x)=2x^3-3x^2-11x+6$ とする．候補は $\pm1,\ \pm2,\ \pm3,\ \pm6,\ \pm\dfrac12,\ \pm\dfrac32$．\\
+\hspace*{1.5em}$P(3)=54-27-33+6=0$ より，$P(x)$ は $x-3$ を因数にもつ．\\
+\hspace*{1.5em}$P(x)$ を $x-3$ で割ると商は $2x^2+3x-2$．\\
+\hspace*{1.5em}$P(x)=(x-3)(2x^2+3x-2)=(x-3)(x+2)(2x-1)$
 \end{kai}
 
 \ans{28}{虚数 $\omega$}
 \begin{kai}
-$x^3-1=(x-1)(x^2+x+1)=0$ で，$\omega$ は $x^2+x+1=0$ の解．\\
-(1)\ $\omega^2+\omega+1=0$\\[2pt]
-(2)\ \point{$\omega^3=1$ で次数を下げる}\quad $\omega^{10}=\omega$，$\omega^5=\omega^2$ より $\omega+\omega^2+1=0$\\[2pt]
-(3)\ $1+\omega=-\omega^2$ より $(1+\omega)^6=\omega^{12}=1$
+\textbf{方針}\quad $\omega$ のみたす2つの式 \point{$\omega^3=1$ と $\omega^2+\omega+1=0$} を使う．累乗は $\omega^3=1$ で次数を下げる．\\[2pt]
+$x^3=1$ より $x^3-1=(x-1)(x^2+x+1)=0$．$\omega$ は虚数なので $\omega\neq1$ で，$\omega$ は $x^2+x+1=0$ の解．\\[2pt]
+(1)\ $\omega$ は $x^2+x+1=0$ の解だから\quad $\omega^2+\omega+1=0$\\[2pt]
+(2)\ \point{$\omega^3=1$ で次数を下げる}\\
+\hspace*{1.5em}$\omega^{10}=(\omega^3)^3\cdot\omega=\omega$，\quad $\omega^5=\omega^3\cdot\omega^2=\omega^2$ だから\\
+\hspace*{1.5em}$\omega^{10}+\omega^5+1=\omega+\omega^2+1=0$\\[2pt]
+(3)\ $\omega^2+\omega+1=0$ より $1+\omega=-\omega^2$．よって\\
+\hspace*{1.5em}$(1+\omega)^6=(-\omega^2)^6=\omega^{12}=(\omega^3)^4=1$
 \end{kai}
 
 \ans{29}{共通解}
 \begin{kai}
-共通解を $x=\alpha$ とすると $\alpha^2+a\alpha+2=0$，$\alpha^2+2\alpha+a=0$．\\
-\point{2式の差をとって2次の項を消す}\quad $(a-2)\alpha-(a-2)=0$，$(a-2)(\alpha-1)=0$．\\
-$a=2$ のとき，2式はともに $x^2+2x+2=0$ となり，実数解をもたないので不適．\\
-$\alpha=1$ のとき，$1+a+2=0$ より $a=-3$．\quad $a=-3$，共通解 $x=1$
+\textbf{方針}\quad 共通解を $\alpha$ とおいて2式に代入し，\point{2式の差をとって2次の項を消す}．因数分解して場合分けし，最後に条件（実数解）を確かめる．\\[2pt]
+共通解を $x=\alpha$ とすると\quad $\alpha^2+a\alpha+2=0$ ……①，\quad $\alpha^2+2\alpha+a=0$ ……②\\
+①$-$②より\quad $(a-2)\alpha+(2-a)=0$，\quad $(a-2)(\alpha-1)=0$\\
+よって $a=2$ または $\alpha=1$．\\[2pt]
+(i)\ $a=2$ のとき，2つの方程式はともに $x^2+2x+2=0$ となる．\\
+\hspace*{1.5em}判別式 $\dfrac D4=1-2<0$ より実数解をもたないので不適．\\
+(ii)\ $\alpha=1$ のとき，①に代入して $1+a+2=0$，$a=-3$．\\
+\hspace*{1.5em}このとき2つの方程式は $x^2-3x+2=0$，$x^2+2x-3=0$ で，それぞれ $(x-1)(x-2)=0$，$(x-1)(x+3)=0$．\\
+\hspace*{1.5em}確かに共通解 $x=1$ をもつ．\\[2pt]
+よって\quad $a=-3$，\quad 共通解 $x=1$
 \end{kai}
 
 \ans{30}{高次方程式}
 \begin{kai}
-(1)\ $(x-2)(x^2+2x+4)=0$ より\quad $x=2,\ -1\pm\sqrt3\,i$\\[2pt]
-(2)\ $(x^2-3)(x^2+4)=0$ より\quad $x=\pm\sqrt3,\ \pm2i$\\[2pt]
-(3)\ 実数係数だから $1-2i$ も解．残りの解を $r$（実数）とすると，解と係数の関係より\\
-\hspace*{1.5em}積：$(1+2i)(1-2i)r=5r=-10$ より $r=-2$．\\
-\hspace*{1.5em}和：$2+r=-a$ より $a=0$．\quad 2つずつの積の和：$5+2r=b$ より $b=1$．\\
+\textbf{方針}\quad 高次方程式は\point{因数分解して1次・2次方程式に帰着}させる．(3)は\point{実数係数なら共役な複素数も解}になることと，3次方程式の解と係数の関係を使う．\\[2pt]
+(1)\ $x^3-8=0$ より $(x-2)(x^2+2x+4)=0$\\
+\hspace*{1.5em}$x=2$，または $x^2+2x+4=0$ より $x=-1\pm\sqrt{1-4}=-1\pm\sqrt3\,i$\\
+\hspace*{1.5em}よって\quad $x=2,\ -1\pm\sqrt3\,i$\\[2pt]
+(2)\ $x^2=X$ とおくと $X^2+X-12=0$，$(X-3)(X+4)=0$．\\
+\hspace*{1.5em}$(x^2-3)(x^2+4)=0$ より $x^2=3$ または $x^2=-4$．\quad $x=\pm\sqrt3,\ \pm2i$\\[2pt]
+(3)\ 係数が実数だから，$1+2i$ と共役な $1-2i$ も解．残りの解を $r$ とすると，3次方程式の解は3つなので $r$ は実数．\\
+\hspace*{1.5em}3次方程式 $x^3+ax^2+bx+c=0$ の解 $\alpha,\ \beta,\ \gamma$ について\\
+\hspace*{1.5em}$\alpha+\beta+\gamma=-a$，\quad $\alpha\beta+\beta\gamma+\gamma\alpha=b$，\quad $\alpha\beta\gamma=-c$\\
+\hspace*{1.5em}$(1+2i)+(1-2i)=2$，\quad $(1+2i)(1-2i)=5$ を使って\\
+\hspace*{1.5em}積：$5r=-10$ より\quad $r=-2$\\
+\hspace*{1.5em}和：$2+r=-a$ より\quad $a=0$\\
+\hspace*{1.5em}2つずつの積の和：$5+2r=b$ より\quad $b=1$\\
 \hspace*{1.5em}$a=0$，$b=1$，他の解は $1-2i,\ -2$\quad（$x^3+x+10=(x+2)(x^2-2x+5)$ で確認できる）
 \end{kai}
 
 \shouans{第3章}{図形と式}
 \ans{31}{分点の座標}
 \begin{kai}
-(1)\ 内分点 $\left(\dfrac{1\cdot1+2\cdot7}{3},\ \dfrac{1\cdot2+2\cdot(-4)}{3}\right)=(5,\ -2)$\\[2pt]
-\hspace*{1.5em}外分点 $\left(\dfrac{-1\cdot1+2\cdot7}{2-1},\ \dfrac{-1\cdot2+2\cdot(-4)}{2-1}\right)=(13,\ -10)$\\[2pt]
-(2)\ $\left(\dfrac{1+7+4}3,\ \dfrac{2-4+5}3\right)=(4,\ 1)$
+\textbf{方針}\quad \point{$m:n$ に内分する点は $\left(\dfrac{nx_1+mx_2}{m+n},\ \dfrac{ny_1+my_2}{m+n}\right)$，外分は $n$ を $-n$ にする}．重心は3頂点の座標の平均．\\[2pt]
+(1)\ 内分点：$m=2$，$n=1$ として\\
+\hspace*{1.5em}$\left(\dfrac{1\cdot1+2\cdot7}{2+1},\ \dfrac{1\cdot2+2\cdot(-4)}{2+1}\right)=\left(\dfrac{15}3,\ \dfrac{-6}3\right)=(5,\ -2)$\\[2pt]
+\hspace*{1.5em}外分点：$n$ を $-1$ にして\\
+\hspace*{1.5em}$\left(\dfrac{-1\cdot1+2\cdot7}{2-1},\ \dfrac{-1\cdot2+2\cdot(-4)}{2-1}\right)=(13,\ -10)$\\
+\hspace*{1.5em}（$2:1$ の外分点は AB の B 側の延長上にあり，B は A と外分点の中点になる．）\\[2pt]
+(2)\ 重心は\quad $\left(\dfrac{1+7+4}3,\ \dfrac{2+(-4)+5}3\right)=(4,\ 1)$
 \end{kai}
 
 \ans{32}{直線の方程式}
 \begin{kai}
-(1)\ $y+1=3(x-2)$ より $y=3x-7$\qquad
-(2)\ 傾き $\dfrac{-3-3}{4-1}=-2$，$y-3=-2(x-1)$ より $y=-2x+5$\\[2pt]
-(3)\ $\dfrac x3+\dfrac y{-2}=1$，すなわち $2x-3y=6$
+\textbf{方針}\quad \point{点 $(x_1,\ y_1)$ を通り傾き $m$ の直線は $y-y_1=m(x-x_1)$}．2点を通るときは先に傾きを求める．切片がわかれば $\dfrac xa+\dfrac yb=1$．\\[2pt]
+(1)\ $y-(-1)=3(x-2)$ より\quad $y=3x-7$\\[2pt]
+(2)\ 傾きは\quad $\dfrac{-3-3}{4-1}=\dfrac{-6}3=-2$\\
+\hspace*{1.5em}点 $(1,\ 3)$ を通るので $y-3=-2(x-1)$ より\quad $y=-2x+5$\\
+\hspace*{1.5em}（確認：$x=4$ のとき $y=-3$）\\[2pt]
+(3)\ 2点 $(3,\ 0)$，$(0,\ -2)$ を通る直線．\point{$x$ 切片 $a$，$y$ 切片 $b$ の直線は $\dfrac xa+\dfrac yb=1$}\\
+\hspace*{1.5em}$\dfrac x3+\dfrac y{-2}=1$．両辺に6を掛けて\quad $2x-3y=6$
 \end{kai}
 
 \ans{33}{2点間の距離}
 \begin{kai}
-(1)\ $\sqrt{4^2+3^2}=5$\\[2pt]
-(2)\ $\mathrm P(x,\ 0)$ とすると $\mathrm{AP}^2=\mathrm{BP}^2$ より $(x+1)^2+4=(x-3)^2+25$，$8x=29$．\quad $\mathrm P\left(\dfrac{29}{8},\ 0\right)$
+\textbf{方針}\quad \point{2点間の距離は $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$}．等距離の条件は，\point{距離の2乗どうしを等しくおく}と根号が消える．\\[2pt]
+(1)\ $\mathrm{AB}=\sqrt{(3-(-1))^2+(5-2)^2}=\sqrt{16+9}=5$\\[2pt]
+(2)\ P は $x$ 軸上にあるので $\mathrm P(x,\ 0)$ とおく．$\mathrm{AP}=\mathrm{BP}$ より $\mathrm{AP}^2=\mathrm{BP}^2$．\\
+\hspace*{1.5em}$(x+1)^2+(0-2)^2=(x-3)^2+(0-5)^2$\\
+\hspace*{1.5em}$x^2+2x+1+4=x^2-6x+9+25$，\quad $8x=29$，\quad $x=\dfrac{29}8$\\
+\hspace*{1.5em}よって\quad $\mathrm P\left(\dfrac{29}{8},\ 0\right)$
 \end{kai}
 
 \ans{34}{点と直線の距離}
 \begin{kai}
-(1)\ $\dfrac{|3\cdot2+4\cdot3-8|}{\sqrt{3^2+4^2}}=\dfrac{10}5=2$\\[2pt]
-(2)\ $\mathrm{AB}=5$．直線 AB は $y-1=\dfrac43(x-1)$，すなわち $4x-3y-1=0$．\\
-\hspace*{1.5em}C との距離は $\dfrac{|24-6-1|}{5}=\dfrac{17}5$．\quad 面積は\quad $\dfrac12\cdot5\cdot\dfrac{17}5=\dfrac{17}2$
+\textbf{方針}\quad \point{点 $(x_1,\ y_1)$ と直線 $ax+by+c=0$ の距離は $\dfrac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}$}．直線の式は「$=0$」の形にしてから使う．(2)は AB を底辺，C からの距離を高さとみる．\\[2pt]
+(1)\ $\dfrac{|3\cdot2+4\cdot3-8|}{\sqrt{3^2+4^2}}=\dfrac{|10|}5=2$\\[2pt]
+(2)\ $\mathrm{AB}=\sqrt{(4-1)^2+(5-1)^2}=\sqrt{9+16}=5$\\
+\hspace*{1.5em}直線 AB の傾きは $\dfrac{5-1}{4-1}=\dfrac43$ だから\quad $y-1=\dfrac43(x-1)$\\
+\hspace*{1.5em}両辺に3を掛けて整理すると\quad $4x-3y-1=0$\\
+\hspace*{1.5em}点 $\mathrm C(6,\ 2)$ と直線 AB の距離は\quad $\dfrac{|4\cdot6-3\cdot2-1|}{\sqrt{4^2+(-3)^2}}=\dfrac{17}5$\\
+\hspace*{1.5em}面積は\quad $\dfrac12\cdot\mathrm{AB}\cdot(\text{高さ})=\dfrac12\cdot5\cdot\dfrac{17}5=\dfrac{17}2$
 \end{kai}
 
 \ans{35}{線対称}
 \begin{kai}
-(1)\ $\mathrm B(p,\ q)$ とする．\point{AB の中点が $\ell$ 上，AB $\perp\ell$}\\
-\hspace*{1.5em}$\dfrac{q+1}2=2\cdot\dfrac{p+3}2$，\quad $\dfrac{q-1}{p-3}\cdot2=-1$．これを解いて $p=-1$，$q=3$．\quad $\mathrm B(-1,\ 3)$\\[2pt]
-(2)\ A，C は $\ell$ に関して同じ側にある．$\mathrm{AP}=\mathrm{BP}$ だから $\mathrm{AP}+\mathrm{PC}=\mathrm{BP}+\mathrm{PC}\geqq\mathrm{BC}=\sqrt{49+1}=5\sqrt2$．\\
-\hspace*{1.5em}等号は P が直線 BC 上にあるとき．BC：$y=-\dfrac17x+\dfrac{20}7$ と $y=2x$ の交点は $\left(\dfrac43,\ \dfrac83\right)$．\\
-\hspace*{1.5em}最小値 $5\sqrt2$，\quad $\mathrm P\left(\dfrac43,\ \dfrac83\right)$
+\textbf{方針}\quad (1)は\point{AB の中点が $\ell$ 上にあり，AB $\perp\ell$}．(2)は\point{対称な点 B をとって $\mathrm{AP}=\mathrm{BP}$ に置きかえ，折れ線を1本の線分にする}．\\[2pt]
+(1)\ $\mathrm B(p,\ q)$ とする．\\
+\hspace*{1.5em}AB の中点 $\left(\dfrac{p+3}2,\ \dfrac{q+1}2\right)$ が $\ell$ 上にあるので\quad $\dfrac{q+1}2=2\cdot\dfrac{p+3}2$，\quad $q=2p+5$ ……①\\
+\hspace*{1.5em}AB $\perp\ell$ だから，傾きの積が $-1$：\quad $\dfrac{q-1}{p-3}\cdot2=-1$，\quad $p+2q=5$ ……②\\
+\hspace*{1.5em}①を②に代入して $p+4p+10=5$，$p=-1$，$q=3$．\quad $\mathrm B(-1,\ 3)$\\[2pt]
+(2)\ $y-2x$ の値は A で $1-6=-5$，C で $2-12=-10$ と同符号なので，A，C は $\ell$ に関して同じ側にある．\\
+\hspace*{1.5em}$\ell$ は線分 AB の垂直二等分線だから $\mathrm{AP}=\mathrm{BP}$．よって\\
+\hspace*{1.5em}$\mathrm{AP}+\mathrm{PC}=\mathrm{BP}+\mathrm{PC}\geqq\mathrm{BC}=\sqrt{(6+1)^2+(2-3)^2}=\sqrt{50}=5\sqrt2$\\
+\hspace*{1.5em}等号は P が線分 BC 上にあるとき（B，C は $\ell$ の反対側にあるので，BC は $\ell$ と交わる）．\\
+\hspace*{1.5em}直線 BC：傾き $\dfrac{2-3}{6-(-1)}=-\dfrac17$ より $y-3=-\dfrac17(x+1)$，\quad $y=-\dfrac17x+\dfrac{20}7$\\
+\hspace*{1.5em}$y=2x$ との交点：$2x=-\dfrac17x+\dfrac{20}7$，$15x=20$，$x=\dfrac43$，$y=\dfrac83$\\
+\hspace*{1.5em}最小値 $5\sqrt2$，\quad そのとき\quad $\mathrm P\left(\dfrac43,\ \dfrac83\right)$
 \end{kai}
 
 \ans{36}{平行条件・垂直条件}
 \begin{kai}
-(1)\ 平行：$2(x-1)-3(y-2)=0$ より $2x-3y+4=0$．\quad 垂直：$3(x-1)+2(y-2)=0$ より $3x+2y-7=0$\\[2pt]
-(2)\ \point{$a_1x+b_1y=c_1$，$a_2x+b_2y=c_2$ が平行 $\iff a_1b_2-a_2b_1=0$，垂直 $\iff a_1a_2+b_1b_2=0$}\\
-\hspace*{1.5em}平行：$a(a+1)-2=0$ より $a=1,\ -2$（どちらも2直線は一致しない）．\quad 垂直：$a+2(a+1)=0$ より $a=-\dfrac23$
+\textbf{方針}\quad 直線 $ax+by+c=0$ に\point{平行な直線は $a(x-x_1)+b(y-y_1)=0$，垂直な直線は $b(x-x_1)-a(y-y_1)=0$}．一般形のままなら，\point{平行 $\iff a_1b_2-a_2b_1=0$，垂直 $\iff a_1a_2+b_1b_2=0$}．\\[2pt]
+(1)\ 直線 $2x-3y+1=0$ の傾きは $\dfrac23$．\\
+\hspace*{1.5em}平行な直線（傾き $\dfrac23$）：$2(x-1)-3(y-2)=0$ より\quad $2x-3y+4=0$\\
+\hspace*{1.5em}垂直な直線（傾き $-\dfrac32$）：$3(x-1)+2(y-2)=0$ より\quad $3x+2y-7=0$\\[2pt]
+(2)\ $a_1=a$，$b_1=2$，$a_2=1$，$b_2=a+1$．\\
+\hspace*{1.5em}平行：$a(a+1)-2\cdot1=0$，\quad $a^2+a-2=0$，\quad $(a-1)(a+2)=0$ より $a=1,\ -2$\\
+\hspace*{1.5em}\point{一致する場合を除く}：$a=1$ のとき $x+2y=1$ と $x+2y=3$，$a=-2$ のとき $-2x+2y=1$ と $x-y=3$．\\
+\hspace*{1.5em}どちらも一致しないので\quad $a=1,\ -2$\\[2pt]
+\hspace*{1.5em}垂直：$a\cdot1+2(a+1)=0$，\quad $3a+2=0$ より\quad $a=-\dfrac23$
 \end{kai}
 
 \ans{37}{定点を通る直線}
 \begin{kai}
-\point{$k$ について整理する}\quad $k(2x+y-4)+(x-y+1)=0$．\\
-これがすべての $k$ で成りたつ条件は $2x+y-4=0$ かつ $x-y+1=0$．\quad 定点 $(1,\ 2)$
+\textbf{方針}\quad \point{$k$ について整理して，$k\times(\ \ )+(\ \ )=0$ の形にする}．これが $k$ の恒等式となる条件は，両方のかっこが0．\\[2pt]
+与式を展開して $k$ について整理すると\\
+\hspace*{1.5em}$2kx+x+ky-y-4k+1=0$，\quad $k(2x+y-4)+(x-y+1)=0$\\[2pt]
+これがすべての $k$ で成りたつ条件は\quad $2x+y-4=0$ かつ $x-y+1=0$\\
+2式を加えて $3x-3=0$，$x=1$．よって $y=2$．\\[2pt]
+定点は\quad $(1,\ 2)$
 \end{kai}
 
 \ans{38}{交点を通る直線}
 \begin{kai}
-求める直線は $(2x+y-4)+k(x-y+1)=0$ ……① とおける（$x-y+1=0$ 自身は $(3,\ 0)$ を通らない）．\\
-$(3,\ 0)$ を通るので $2+4k=0$，$k=-\dfrac12$．①に代入して整理すると\quad $x+y-3=0$
+\textbf{方針}\quad 2直線 $f=0$，$g=0$ の交点を通る直線は\point{$f+kg=0$（$k$ は定数）}と表せる（ただし $g=0$ 自身は表せない）．交点を求めずに済む．\\[2pt]
+求める直線は\quad $(2x+y-4)+k(x-y+1)=0$ ……① とおける．\\
+（$x-y+1=0$ 自身は $(3,\ 0)$ を通らないので，この形で表せないものを考えなくてよい．）\\[2pt]
+①が点 $(3,\ 0)$ を通るので\quad $(6+0-4)+k(3-0+1)=0$，\quad $2+4k=0$，\quad $k=-\dfrac12$\\
+①に代入して\quad $(2x+y-4)-\dfrac12(x-y+1)=0$\\
+両辺を2倍して $4x+2y-8-x+y-1=0$，\quad $3x+3y-9=0$．\quad よって\quad $x+y-3=0$\\[2pt]
+（確認：2直線の交点は $(1,\ 2)$ で，$1+2-3=0$．$(3,\ 0)$ も $3+0-3=0$ をみたす．）
 \end{kai}
 
 \ans{39}{円の方程式}
 \begin{kai}
-(1)\ 半径は $\sqrt{3^2+4^2}=5$．\quad $(x-2)^2+(y+1)^2=25$\\[2pt]
-(2)\ $x^2+y^2+lx+my+n=0$ に代入して $n=0$，$16+4l=0$，$4+2m=0$．\quad $x^2+y^2-4x-2y=0$\\
-\hspace*{1.5em}$(x-2)^2+(y-1)^2=5$ より\quad 中心 $(2,\ 1)$，半径 $\sqrt5$\\[2pt]
-(3)\ $(x-3)^2+(y+2)^2=13-k$．\quad $13-k>0$ より\quad $k<13$
+\textbf{方針}\quad 中心と半径がわかれば\point{$(x-a)^2+(y-b)^2=r^2$}．3点を通る円は\point{$x^2+y^2+lx+my+n=0$ とおいて代入}．一般形が円を表すかは平方完成して右辺 $>0$ を調べる．\\[2pt]
+(1)\ 半径は中心 $(2,\ -1)$ と点 $(5,\ 3)$ の距離で\quad $\sqrt{(5-2)^2+(3+1)^2}=\sqrt{9+16}=5$\\
+\hspace*{1.5em}$(x-2)^2+(y+1)^2=25$\\[2pt]
+(2)\ $x^2+y^2+lx+my+n=0$ に3点を代入すると\\
+\hspace*{1.5em}$(0,\ 0)$：$n=0$，\quad $(4,\ 0)$：$16+4l+n=0$，\quad $(0,\ 2)$：$4+2m+n=0$\\
+\hspace*{1.5em}よって $n=0$，$l=-4$，$m=-2$．\quad $x^2+y^2-4x-2y=0$\\
+\hspace*{1.5em}平方完成すると $(x-2)^2+(y-1)^2=5$ より\quad 中心 $(2,\ 1)$，半径 $\sqrt5$\\
+\hspace*{1.5em}（3点のうち $(4,\ 0)$ と $(0,\ 2)$ を結ぶ線分は，原点で直角をはさむので直径になっている．）\\[2pt]
+(3)\ 平方完成すると\quad $(x-3)^2-9+(y+2)^2-4+k=0$，\quad $(x-3)^2+(y+2)^2=13-k$\\
+\hspace*{1.5em}円を表すのは右辺が正のときだから\quad $13-k>0$，\quad $k<13$\\
+\hspace*{1.5em}（$k=13$ なら点 $(3,\ -2)$ だけ，$k>13$ なら図形を表さない．）
 \end{kai}
 
 \ans{40}{円と直線の位置関係}
 \begin{kai}
-(1)\ \point{中心と直線の距離 $d$ と半径を比べる}\quad $d=\dfrac{|k|}{\sqrt5}$，半径 $\sqrt5$．\\
-\hspace*{1.5em}$|k|<5$ のとき2個，$|k|=5$ のとき1個，$|k|>5$ のとき0個\\[2pt]
-(2)\ $d=1$．弦の長さは\quad $2\sqrt{5-1}=4$
+\textbf{方針}\quad 円と直線の位置関係は\point{中心と直線の距離 $d$ と半径 $r$ を比べる}：$d<r$ で2個，$d=r$ で1個（接する），$d>r$ で0個．弦の長さは三平方の定理．\\[2pt]
+(1)\ 円の中心は原点，半径は $\sqrt5$．直線 $2x-y+k=0$ と原点の距離は\\
+\hspace*{1.5em}$d=\dfrac{|2\cdot0-0+k|}{\sqrt{2^2+(-1)^2}}=\dfrac{|k|}{\sqrt5}$\\[2pt]
+\hspace*{1.5em}$d<\sqrt5$，すなわち $|k|<5$（$-5<k<5$）のとき\quad 共有点は2個\\
+\hspace*{1.5em}$d=\sqrt5$，すなわち $|k|=5$（$k=\pm5$）のとき\quad 共有点は1個\\
+\hspace*{1.5em}$d>\sqrt5$，すなわち $|k|>5$（$k<-5,\ 5<k$）のとき\quad 共有点は0個\\
+\hspace*{1.5em}（判別式でもよい：$x^2+(2x+k)^2=5$，$5x^2+4kx+k^2-5=0$ の $\dfrac D4=4k^2-5(k^2-5)=25-k^2$．）\\[2pt]
+(2)\ $k=\sqrt5$ のとき $d=\dfrac{\sqrt5}{\sqrt5}=1$．\\
+\hspace*{1.5em}中心から弦に下ろした垂線は弦を2等分する．弦の長さの半分を $l$ とすると，三平方の定理より\\
+\hspace*{1.5em}$l^2+d^2=r^2$，\quad $l=\sqrt{5-1}=2$．\quad 弦の長さは\quad $2l=4$
 \end{kai}
 
 \ans{41}{円と接線}
 \begin{kai}
-(1)\ \point{円 $x^2+y^2=r^2$ 上の点 $(x_1,\ y_1)$ における接線は $x_1x+y_1y=r^2$}\quad $x+2y=5$\\[2pt]
-(2)\ 接点を $(x_1,\ y_1)$ とすると接線は $x_1x+y_1y=5$．これが $(5,\ 0)$ を通るので $x_1=1$．\\
-\hspace*{1.5em}$x_1^2+y_1^2=5$ より $y_1=\pm2$．\quad 接線 $x+2y=5$（接点 $(1,\ 2)$），\ $x-2y=5$（接点 $(1,\ -2)$）
+\textbf{方針}\quad \point{円 $x^2+y^2=r^2$ 上の点 $(x_1,\ y_1)$ における接線は $x_1x+y_1y=r^2$}．円外の点からの接線は，\point{接点を $(x_1,\ y_1)$ とおいて}この公式を使う．\\[2pt]
+(1)\ 点 $(1,\ 2)$ は $1^2+2^2=5$ より円上の点．接線は\quad $1\cdot x+2\cdot y=5$，すなわち\quad $x+2y=5$\\[2pt]
+(2)\ 接点を $(x_1,\ y_1)$ とすると，$x_1^2+y_1^2=5$ ……①，接線は $x_1x+y_1y=5$ ……②．\\
+\hspace*{1.5em}②が点 $(5,\ 0)$ を通るので\quad $5x_1=5$，\quad $x_1=1$\\
+\hspace*{1.5em}①に代入して $1+y_1^2=5$，\quad $y_1=\pm2$\\
+\hspace*{1.5em}$y_1=2$ のとき\quad 接線 $x+2y=5$，接点 $(1,\ 2)$\\
+\hspace*{1.5em}$y_1=-2$ のとき\quad 接線 $x-2y=5$，接点 $(1,\ -2)$\\
+\hspace*{1.5em}（別解：接線を $y=m(x-5)$ とおき，中心との距離 $=$ 半径 から $m=\pm\dfrac12$ を求めてもよい．）
 \end{kai}
 
 \ans{42}{2円の交点を通る円}
 \begin{kai}
-（2円の中心間の距離は $\sqrt5$，半径は3と $\sqrt6$ で，$3-\sqrt6<\sqrt5<3+\sqrt6$ だから2点で交わる．）\\
-(1)\ 2式の差をとって $4x+2y-8=0$，すなわち\quad $2x+y-4=0$\\[2pt]
-(2)\ $(x^2+y^2-9)+k(x^2+y^2-4x-2y-1)=0$ が原点を通るので $-9-k=0$，$k=-9$．\\
-\hspace*{1.5em}整理して $8x^2+8y^2-36x-18y=0$，すなわち\quad $x^2+y^2-\dfrac92x-\dfrac94y=0$
+\textbf{方針}\quad 2円 $f=0$，$g=0$ の交点を通る図形は\point{$f+kg=0$} と表せる．$k=-1$ なら2次の項が消えて直線，それ以外は円．\\[2pt]
+（2円の中心は $(0,\ 0)$ と $(2,\ 1)$ で距離 $\sqrt5$，半径は3と $\sqrt6$．$3-\sqrt6<\sqrt5<3+\sqrt6$ だから2点で交わる．）\\[2pt]
+(1)\ $(x^2+y^2-9)+k(x^2+y^2-4x-2y-1)=0$ で $k=-1$ とすると\\
+\hspace*{1.5em}$(x^2+y^2-9)-(x^2+y^2-4x-2y-1)=0$，\quad $4x+2y-8=0$．すなわち\quad $2x+y-4=0$\\
+\hspace*{1.5em}（2つの交点はどちらも両方の円の式をみたすので，差の式もみたす．）\\[2pt]
+(2)\ $(x^2+y^2-9)+k(x^2+y^2-4x-2y-1)=0$ ……① が原点を通るので\\
+\hspace*{1.5em}$-9+k\cdot(-1)=0$，\quad $k=-9$\\
+\hspace*{1.5em}①に代入して $(x^2+y^2-9)-9(x^2+y^2-4x-2y-1)=0$，\quad $-8x^2-8y^2+36x+18y=0$\\
+\hspace*{1.5em}両辺を $-8$ で割って\quad $x^2+y^2-\dfrac92x-\dfrac94y=0$
 \end{kai}
 
 \ans{43}{軌跡（Ⅰ）}
 \begin{kai}
-$\mathrm P(x,\ y)$ とする．$\mathrm{AP}=2\mathrm{BP}$ より $x^2+y^2=4\{(x-3)^2+y^2\}$．\\
-整理して $x^2+y^2-8x+12=0$，$(x-4)^2+y^2=4$．\quad 中心 $(4,\ 0)$，半径2の円\quad（アポロニウスの円）
+\textbf{方針}\quad 軌跡は\point{動く点を $(x,\ y)$ とおき，条件を $x,\ y$ の式で表す}．距離の条件は2乗して根号を消す．\\[2pt]
+$\mathrm P(x,\ y)$ とする．$\mathrm{AP}:\mathrm{BP}=2:1$ より $\mathrm{AP}=2\mathrm{BP}$．両辺を2乗して $\mathrm{AP}^2=4\mathrm{BP}^2$\\
+\hspace*{1.5em}$x^2+y^2=4\{(x-3)^2+y^2\}$\\
+\hspace*{1.5em}$x^2+y^2=4x^2-24x+36+4y^2$，\quad $3x^2+3y^2-24x+36=0$\\
+\hspace*{1.5em}$x^2+y^2-8x+12=0$，\quad $(x-4)^2+y^2=4$\\[2pt]
+逆に，この円上の点はすべて条件をみたす．\\
+よって軌跡は\quad 中心 $(4,\ 0)$，半径2の円\quad（アポロニウスの円）\\
+（この円は AB を $2:1$ に内分する点 $(2,\ 0)$ と外分する点 $(6,\ 0)$ を直径の両端とする．）
 \end{kai}
 
 \ans{44}{軌跡（Ⅱ）}
 \begin{kai}
-$\mathrm Q(s,\ t)$，$\mathrm M(x,\ y)$ とすると $x=\dfrac{s+4}2$，$y=\dfrac t2$ より $s=2x-4$，$t=2y$．\\
-\point{動く点の座標を $x,\ y$ で表して条件式に代入}\quad $s^2+t^2=4$ に代入して $(2x-4)^2+4y^2=4$．\\
-中心 $(2,\ 0)$，半径1の円\quad $(x-2)^2+y^2=1$
+\textbf{方針}\quad \point{動く点 Q の座標を $s,\ t$，軌跡を求める点 M を $(x,\ y)$ とし，$s,\ t$ を $x,\ y$ で表して Q の条件式に代入}する．\\[2pt]
+$\mathrm Q(s,\ t)$，$\mathrm M(x,\ y)$ とする．Q は円上にあるので\quad $s^2+t^2=4$ ……①\\
+M は AQ の中点だから\quad $x=\dfrac{s+4}2$，\quad $y=\dfrac{t+0}2$\\
+よって\quad $s=2x-4$，\quad $t=2y$\\[2pt]
+①に代入して\quad $(2x-4)^2+(2y)^2=4$\\
+両辺を4で割って\quad $(x-2)^2+y^2=1$\\[2pt]
+軌跡は\quad 中心 $(2,\ 0)$，半径1の円\\
+（もとの円を A を中心に $\dfrac12$ 倍に縮小した円になっている．）
 \end{kai}
 
 \ans{45}{軌跡（Ⅲ）}
 \begin{kai}
-$y=(x-t)^2-t^2+3t$ より頂点は $(t,\ -t^2+3t)$．$x=t$，$y=-t^2+3t$ から $t$ を消去して\\
-放物線\quad $y=-x^2+3x$
+\textbf{方針}\quad 頂点の座標を $t$ で表し，\point{$x=(t\text{の式})$，$y=(t\text{の式})$ から $t$ を消去}する．$t$ の動く範囲から $x$ の範囲も確認する．\\[2pt]
+$y=x^2-2tx+3t=(x-t)^2-t^2+3t$\\
+よって頂点は\quad $(t,\ -t^2+3t)$\\[2pt]
+頂点を $(x,\ y)$ とすると\quad $x=t$，\quad $y=-t^2+3t$\\
+$t=x$ を代入して $t$ を消去すると\quad $y=-x^2+3x$\\
+$t$ は実数全体を動くので，$x$ も実数全体を動く（除く部分はない）．\\[2pt]
+軌跡は\quad 放物線\quad $y=-x^2+3x$
 \end{kai}
 
 \ans{46}{軌跡（Ⅳ）}
 \begin{kai}
-交点を $(x,\ y)$ とする．$x=0$ とすると $y=0$ となり，$x+my=2$ をみたさないので $x\neq0$．\\
-よって $m=\dfrac yx$．これを $x+my=2$ に代入して $x^2+y^2=2x$．\\
-\point{除外点に注意}\quad 円 $(x-1)^2+y^2=1$ から原点 $(0,\ 0)$ を除いた部分
+\textbf{方針}\quad 交点 $(x,\ y)$ の2式から\point{パラメータ $m$ を消去}する．$m$ について解くときに割る数が0になる場合を確かめ，\point{除外点}に注意する．\\[2pt]
+交点を $(x,\ y)$ とすると\quad $y=mx$ ……①，\quad $x+my=2$ ……②\\[2pt]
+$x=0$ とすると，①より $y=0$ となり，②は $0=2$ で成りたたない．よって $x\neq0$．\\
+①より $m=\dfrac yx$．②に代入して\quad $x+\dfrac{y^2}x=2$，\quad $x^2+y^2=2x$，\quad $(x-1)^2+y^2=1$\\[2pt]
+逆に，この円上の $x\neq0$ である点 $(x,\ y)$ に対して $m=\dfrac yx$ とおけば①②をみたす．\\
+円 $(x-1)^2+y^2=1$ 上で $x=0$ となる点は原点だけ．\\[2pt]
+\point{除外点に注意}．軌跡は\quad 円 $(x-1)^2+y^2=1$ から原点 $(0,\ 0)$ を除いた部分\\
+（原点は，直線 $x+my=2$ が原点を通らないことからも除かれる．）
 \end{kai}
 
 \ans{47}{軌跡（Ⅴ）}
 \begin{kai}
-直線 $y=m(x-3)$ と $y=x^2$ から $x^2-mx+3m=0$ ……①．異なる2点で交わる条件は $m^2-12m>0$，$m<0,\ 12<m$．\\
-①の2解を $\alpha,\ \beta$ とすると中点の $x$ 座標は $X=\dfrac{\alpha+\beta}2=\dfrac m2$，$y$ 座標は $Y=m(X-3)$．\\
-$m=2X$ を代入して $Y=2X^2-6X$．$m$ の範囲から $X<0,\ 6<X$．\\
-放物線 $y=2x^2-6x$ の $x<0,\ 6<x$ の部分
+\textbf{方針}\quad 交点の $x$ 座標は連立した2次方程式の解 $\alpha,\ \beta$．\point{中点の座標を解と係数の関係で $m$ の式に}し，$m$ を消去する．\point{「異なる2点で交わる」条件から $x$ の範囲}が出る．\\[2pt]
+直線は $y=m(x-3)$．$y=x^2$ と連立して $x^2=m(x-3)$，\quad $x^2-mx+3m=0$ ……①\\
+異なる2点で交わる条件は①の判別式 $D>0$：$m^2-12m>0$，\quad $m(m-12)>0$ より\quad $m<0,\ 12<m$\\[2pt]
+①の2解を $\alpha,\ \beta$ とすると，解と係数の関係より $\alpha+\beta=m$．\\
+中点を $(X,\ Y)$ とすると\quad $X=\dfrac{\alpha+\beta}2=\dfrac m2$\\
+中点は直線上にあるので\quad $Y=m(X-3)$\\[2pt]
+$m=2X$ を代入して\quad $Y=2X(X-3)=2X^2-6X$\\
+$m<0,\ 12<m$ より\quad $X<0,\ 6<X$\\[2pt]
+軌跡は\quad 放物線 $y=2x^2-6x$ の $x<0,\ 6<x$ の部分
 \end{kai}
 
 \ans{48}{一般の曲線の移動}
 \begin{kai}
-(1)\ \point{$x$ を $x-3$，$y$ を $y+1$ におきかえる}\quad $y+1=(x-3)^2-2(x-3)$ より\quad $y=x^2-8x+14$\\[2pt]
-(2)\ 点 $(x,\ y)$ の点 $(1,\ 1)$ に関する対称点は $(2-x,\ 2-y)$．\\
-\hspace*{1.5em}$2-y=(2-x)^2-2(2-x)$ より\quad $y=-x^2+2x+2$
+\textbf{方針}\quad 曲線 $f(x,\ y)=0$ の移動は，\point{移動後の点 $(x,\ y)$ のもとの点を求め，それを $f$ に代入}する．平行移動なら $x\to x-p$，$y\to y-q$．\\[2pt]
+(1)\ 移動後の点 $(x,\ y)$ のもとの点は $(x-3,\ y+1)$．これが $C$ 上にあるので\\
+\hspace*{1.5em}\point{$x$ を $x-3$，$y$ を $y+1$ におきかえる}\\
+\hspace*{1.5em}$y+1=(x-3)^2-2(x-3)=x^2-6x+9-2x+6=x^2-8x+15$\\
+\hspace*{1.5em}よって\quad $y=x^2-8x+14$\\
+\hspace*{1.5em}（確認：$C$ の頂点 $(1,\ -1)$ は $(4,\ -2)$ に移り，$y=(x-4)^2-2=x^2-8x+14$ と一致．）\\[2pt]
+(2)\ 点 $(x,\ y)$ と点 $(1,\ 1)$ に関して対称な点を $(X,\ Y)$ とすると，$(1,\ 1)$ が中点だから\\
+\hspace*{1.5em}$\dfrac{x+X}2=1$，$\dfrac{y+Y}2=1$ より\quad $X=2-x$，$Y=2-y$\\
+\hspace*{1.5em}$(X,\ Y)$ が $C$ 上にあるので\quad $2-y=(2-x)^2-2(2-x)=x^2-2x$\\
+\hspace*{1.5em}よって\quad $y=-x^2+2x+2$
 \end{kai}
 
 \ans{49}{不等式の表す領域（Ⅰ）}
 \begin{kai}
+\textbf{方針}\quad \point{$y>f(x)$ は曲線 $y=f(x)$ の上側，$y<f(x)$ は下側}．それぞれの領域を求め，共通部分をとる．境界線の交点も求める．\\[2pt]
 \begin{minipage}[t]{0.55\linewidth}
 放物線 $y=x^2-2$ の上側と，直線 $y=x$ の下側の共通部分．\\
 交点は $x^2-2=x$ より $x=-1,\ 2$，すなわち $(-1,\ -1)$，$(2,\ 2)$．\\
@@ -1206,8 +1449,10 @@ $m=2X$ を代入して $Y=2X^2-6X$．$m$ の範囲から $X<0,\ 6<X$．\\
 
 \ans{50}{不等式の表す領域（Ⅱ）}
 \begin{kai}
+\textbf{方針}\quad \point{$AB>0\iff$「$A>0$ かつ $B>0$」または「$A<0$ かつ $B<0$」}．2直線で平面が4つに分かれ，そのうち向かいあう2つの部分が答え．\\[2pt]
 \begin{minipage}[t]{0.55\linewidth}
 \point{積が正 $\iff$ 2因数が同符号}\\
+$x-y>0\iff y<x$，\quad $x+y-2>0\iff y>-x+2$ だから\\
 「$y<x$ かつ $y>-x+2$」または「$y>x$ かつ $y<-x+2$」．\\
 2直線 $y=x$，$y=-x+2$ は点 $(1,\ 1)$ で交わる．\\
 右図の斜線部分．境界線を含まない．
@@ -1226,73 +1471,117 @@ $m=2X$ を代入して $Y=2X^2-6X$．$m$ の範囲から $X<0,\ 6<X$．\\
 
 \ans{51}{領域内の点に対する最大・最小}
 \begin{kai}
-領域は4点 $(0,0)$，$(3,0)$，$(2,3)$，$(0,4)$ を頂点とする四角形の周および内部（$(2,3)$ は2直線の交点）．\\
-(1)\ $x+y=k$ とおくと，傾き $-1$ の直線が領域と共有点をもつ範囲で $k$ が最大になるのは $(2,\ 3)$ を通るとき．\\
-\hspace*{1.5em}最大値 $5$（$x=2$，$y=3$）\\[2pt]
-(2)\ $x^2+y^2$ は原点からの距離の2乗．頂点で比べると $(3,0)$：9，$(2,3)$：13，$(0,4)$：16．\\
-\hspace*{1.5em}最大値 $16$（$x=0$，$y=4$），\quad 最小値 $0$（$x=0$，$y=0$）
+\textbf{方針}\quad まず領域を図示する．$x+y=k$ は\point{直線とみて，領域と共有点をもつ範囲で $k$ を動かす}．$x^2+y^2$ は\point{原点からの距離の2乗}とみる．\\[2pt]
+$x+2y=8$ と $3x+y=9$ の交点：第2式より $y=9-3x$，第1式に代入して $x+18-6x=8$，$x=2$，$y=3$．\\
+領域は4点 $(0,0)$，$(3,0)$，$(2,3)$，$(0,4)$ を頂点とする四角形の周および内部．\\[2pt]
+(1)\ $x+y=k$ とおくと $y=-x+k$ で，傾き $-1$，$y$ 切片 $k$ の直線．\\
+\hspace*{1.5em}この直線が領域と共有点をもつときの $k$ の最大値を考える．\\
+\hspace*{1.5em}境界の傾きは $x+2y=8$ が $-\dfrac12$，$3x+y=9$ が $-3$ で，$-3<-1<-\dfrac12$ だから，\\
+\hspace*{1.5em}$y$ 切片が最大になるのは直線が頂点 $(2,\ 3)$ を通るとき．\\
+\hspace*{1.5em}最大値 $2+3=5$\quad（$x=2$，$y=3$）\\
+\hspace*{1.5em}（各頂点での値 0，3，5，4 を比べても確かめられる．）\\[2pt]
+(2)\ $x^2+y^2=r^2$ とおくと，これは原点を中心とする半径 $r$ の円．$r$ は原点から点 $(x,\ y)$ までの距離．\\
+\hspace*{1.5em}最大：原点から最も遠い点は頂点のどれか．$(3,0)$：9，$(2,3)$：13，$(0,4)$：16．\\
+\hspace*{1.5em}\quad 最大値 $16$\quad（$x=0$，$y=4$）\\
+\hspace*{1.5em}最小：原点は領域に含まれるので\quad 最小値 $0$\quad（$x=0$，$y=0$）
 \end{kai}
 
 \shouans{第4章}{三角関数}
 \ans{52}{一般角}
 \begin{kai}
-(1)\ $40^\circ+360^\circ\times1$，第1象限\qquad
-(2)\ $60^\circ+360^\circ\times(-1)$，第1象限\qquad
-(3)\ $280^\circ+360^\circ\times2$，第4象限
+\textbf{方針}\quad \point{$360^\circ$ を何回分引けば（足せば）$0^\circ$〜$360^\circ$ に入るか}を考える．$\alpha$ の大きさで象限がわかる．\\[2pt]
+(1)\ $400^\circ=40^\circ+360^\circ$ より\quad $40^\circ+360^\circ\times1$．\quad $0^\circ<40^\circ<90^\circ$ だから\quad 第1象限\\[2pt]
+(2)\ $-300^\circ=60^\circ-360^\circ$ より\quad $60^\circ+360^\circ\times(-1)$．\quad 第1象限\\
+\hspace*{1.5em}（時計回りに $300^\circ$ 回ると，反時計回りに $60^\circ$ 回ったのと同じ位置）\\[2pt]
+(3)\ $1000^\circ=280^\circ+720^\circ$ より\quad $280^\circ+360^\circ\times2$．\quad $270^\circ<280^\circ<360^\circ$ だから\quad 第4象限
 \end{kai}
 
 \ans{53}{弧度法}
 \begin{kai}
-(1)\ \point{$180^\circ=\pi$}\quad $150^\circ=\dfrac56\pi$，$225^\circ=\dfrac54\pi$，\quad $\dfrac56\pi=150^\circ$，$\dfrac74\pi=315^\circ$\\[2pt]
-(2)\ \point{$\ell=r\theta$，$S=\dfrac12r^2\theta$}\quad 弧の長さ $6\cdot\dfrac23\pi=4\pi$，\quad 面積 $\dfrac12\cdot36\cdot\dfrac23\pi=12\pi$
+\textbf{方針}\quad \point{$180^\circ=\pi$（ラジアン）}をもとに比例で換算する．扇形は\point{弧の長さ $\ell=r\theta$，面積 $S=\dfrac12r^2\theta=\dfrac12r\ell$}（$\theta$ は弧度法）．\\[2pt]
+(1)\ $1^\circ=\dfrac{\pi}{180}$ だから\\
+\hspace*{1.5em}$150^\circ=150\times\dfrac{\pi}{180}=\dfrac56\pi$，\quad $225^\circ=225\times\dfrac{\pi}{180}=\dfrac54\pi$\\
+\hspace*{1.5em}$\pi=180^\circ$ だから\quad $\dfrac56\pi=\dfrac56\times180^\circ=150^\circ$，\quad $\dfrac74\pi=\dfrac74\times180^\circ=315^\circ$\\[2pt]
+(2)\ 弧の長さ\quad $\ell=6\cdot\dfrac23\pi=4\pi$\\
+\hspace*{1.5em}面積\quad $S=\dfrac12\cdot6^2\cdot\dfrac23\pi=12\pi$\quad （$S=\dfrac12r\ell=\dfrac12\cdot6\cdot4\pi$ でも同じ）
 \end{kai}
 
 \ans{54}{三角関数の加法定理}
 \begin{kai}
-(1)\ $\sin75^\circ=\sin(45^\circ+30^\circ)=\dfrac{\sqrt2}2\cdot\dfrac{\sqrt3}2+\dfrac{\sqrt2}2\cdot\dfrac12=\dfrac{\sqrt6+\sqrt2}{4}$\\[2pt]
-\hspace*{1.5em}$\tan105^\circ=\tan(60^\circ+45^\circ)=\dfrac{\sqrt3+1}{1-\sqrt3}=-\dfrac{(\sqrt3+1)^2}{2}=-2-\sqrt3$\\[2pt]
-(2)\ $\cos\alpha=\dfrac45$，$\sin\beta=\dfrac{12}{13}$．\quad $\cos(\alpha+\beta)=\dfrac45\cdot\dfrac5{13}-\dfrac35\cdot\dfrac{12}{13}=-\dfrac{16}{65}$
+\textbf{方針}\quad 求める角を\point{有名角の和や差に分ける}．加法定理 $\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$，$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$，$\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}$．\\[2pt]
+(1)\ $\sin75^\circ=\sin(45^\circ+30^\circ)=\sin45^\circ\cos30^\circ+\cos45^\circ\sin30^\circ$\\
+\hspace*{1.5em}$=\dfrac{\sqrt2}2\cdot\dfrac{\sqrt3}2+\dfrac{\sqrt2}2\cdot\dfrac12=\dfrac{\sqrt6+\sqrt2}{4}$\\[2pt]
+\hspace*{1.5em}$\tan105^\circ=\tan(60^\circ+45^\circ)=\dfrac{\tan60^\circ+\tan45^\circ}{1-\tan60^\circ\tan45^\circ}=\dfrac{\sqrt3+1}{1-\sqrt3}$\\[2pt]
+\hspace*{1.5em}分母・分子に $1+\sqrt3$ を掛けて\quad $=\dfrac{(\sqrt3+1)^2}{1-3}=\dfrac{4+2\sqrt3}{-2}=-2-\sqrt3$\\[2pt]
+(2)\ $\alpha,\ \beta$ は鋭角なので $\cos\alpha>0$，$\sin\beta>0$．\\
+\hspace*{1.5em}$\cos\alpha=\sqrt{1-\dfrac{9}{25}}=\dfrac45$，\quad $\sin\beta=\sqrt{1-\dfrac{25}{169}}=\dfrac{12}{13}$\\
+\hspace*{1.5em}$\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta=\dfrac45\cdot\dfrac5{13}-\dfrac35\cdot\dfrac{12}{13}=\dfrac{20-36}{65}=-\dfrac{16}{65}$
 \end{kai}
 
 \ans{55}{2倍角・半角の公式}
 \begin{kai}
-$\theta$ は第2象限の角だから $\cos\theta=-\dfrac45$．\\
-(1)\ $2\sin\theta\cos\theta=-\dfrac{24}{25}$\qquad (2)\ $1-2\sin^2\theta=\dfrac7{25}$\\[2pt]
-(3)\ $\cos^2\dfrac\theta2=\dfrac{1+\cos\theta}2=\dfrac1{10}$．$\dfrac\pi4<\dfrac\theta2<\dfrac\pi2$ より $\cos\dfrac\theta2>0$．\quad $\cos\dfrac\theta2=\dfrac1{\sqrt{10}}=\dfrac{\sqrt{10}}{10}$
+\textbf{方針}\quad まず\point{$\theta$ の範囲から $\cos\theta$ の符号を決めて}値を求める．2倍角 $\sin2\theta=2\sin\theta\cos\theta$，$\cos2\theta=1-2\sin^2\theta$，半角 $\cos^2\dfrac\theta2=\dfrac{1+\cos\theta}2$．半角は $\dfrac\theta2$ の範囲で符号を決める．\\[2pt]
+$\dfrac\pi2<\theta<\pi$（第2象限）では $\cos\theta<0$ だから\quad $\cos\theta=-\sqrt{1-\dfrac9{25}}=-\dfrac45$\\[2pt]
+(1)\ $\sin2\theta=2\sin\theta\cos\theta=2\cdot\dfrac35\cdot\left(-\dfrac45\right)=-\dfrac{24}{25}$\\[2pt]
+(2)\ $\cos2\theta=1-2\sin^2\theta=1-2\cdot\dfrac{9}{25}=\dfrac7{25}$\\[2pt]
+(3)\ $\cos^2\dfrac\theta2=\dfrac{1+\cos\theta}2=\dfrac{1-\frac45}{2}=\dfrac1{10}$\\
+\hspace*{1.5em}$\dfrac\pi4<\dfrac\theta2<\dfrac\pi2$ だから $\cos\dfrac\theta2>0$．\quad $\cos\dfrac\theta2=\dfrac1{\sqrt{10}}=\dfrac{\sqrt{10}}{10}$
 \end{kai}
 
 \ans{56}{3倍角の公式}
 \begin{kai}
-(1)\ $\sin3\theta=\sin(2\theta+\theta)=\sin2\theta\cos\theta+\cos2\theta\sin\theta=2\sin\theta\cos^2\theta+(1-2\sin^2\theta)\sin\theta$\\
-\hspace*{1.5em}$=2\sin\theta(1-\sin^2\theta)+\sin\theta-2\sin^3\theta=3\sin\theta-4\sin^3\theta$\\[2pt]
-(2)\ $3\cdot\dfrac13-4\cdot\dfrac1{27}=\dfrac{23}{27}$
+\textbf{方針}\quad \point{$3\theta=2\theta+\theta$} とみて加法定理，さらに2倍角の公式を使い，最後に $\cos^2\theta=1-\sin^2\theta$ で $\sin\theta$ だけの式にする．\\[2pt]
+(1)\ $\sin3\theta=\sin(2\theta+\theta)=\sin2\theta\cos\theta+\cos2\theta\sin\theta$\\
+\hspace*{1.5em}$\sin2\theta=2\sin\theta\cos\theta$，$\cos2\theta=1-2\sin^2\theta$ を代入して\\
+\hspace*{1.5em}$=2\sin\theta\cos^2\theta+(1-2\sin^2\theta)\sin\theta$\\
+\hspace*{1.5em}$\cos^2\theta=1-\sin^2\theta$ を代入して\\
+\hspace*{1.5em}$=2\sin\theta(1-\sin^2\theta)+\sin\theta-2\sin^3\theta=2\sin\theta-2\sin^3\theta+\sin\theta-2\sin^3\theta$\\
+\hspace*{1.5em}$=3\sin\theta-4\sin^3\theta$\\[2pt]
+(2)\ $\sin3\theta=3\cdot\dfrac13-4\cdot\left(\dfrac13\right)^3=1-\dfrac4{27}=\dfrac{23}{27}$
 \end{kai}
 
 \ans{57}{和積・積和の公式}
 \begin{kai}
-(1)\ $\sin\alpha\cos\beta=\dfrac12\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\}$ より\quad $\dfrac12(\sin90^\circ+\sin60^\circ)=\dfrac{2+\sqrt3}{4}$\\[2pt]
-(2)\ $\cos A+\cos B=2\cos\dfrac{A+B}2\cos\dfrac{A-B}2$ より\quad $2\cos45^\circ\cos30^\circ=\dfrac{\sqrt6}{2}$
+\textbf{方針}\quad 積の形は\point{積和の公式}で和に，和の形は\point{和積の公式}で積に直し，有名角の三角比にする．\\[2pt]
+(1)\ \point{$\sin\alpha\cos\beta=\dfrac12\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\}$}\\
+\hspace*{1.5em}$\sin75^\circ\cos15^\circ=\dfrac12\{\sin90^\circ+\sin60^\circ\}=\dfrac12\left(1+\dfrac{\sqrt3}2\right)=\dfrac{2+\sqrt3}{4}$\\[2pt]
+(2)\ \point{$\cos A+\cos B=2\cos\dfrac{A+B}2\cos\dfrac{A-B}2$}\\
+\hspace*{1.5em}$\cos75^\circ+\cos15^\circ=2\cos\dfrac{75^\circ+15^\circ}2\cos\dfrac{75^\circ-15^\circ}2=2\cos45^\circ\cos30^\circ$\\
+\hspace*{1.5em}$=2\cdot\dfrac{\sqrt2}2\cdot\dfrac{\sqrt3}2=\dfrac{\sqrt6}{2}$
 \end{kai}
 
 \ans{58}{直線の傾きと tangent}
 \begin{kai}
-(1)\ 2直線と $x$ 軸の正の向きのなす角を $\alpha,\ \beta$ とすると $\tan\alpha=3$，$\tan\beta=\dfrac12$．\\
-\hspace*{1.5em}$\tan(\alpha-\beta)=\dfrac{3-\frac12}{1+\frac32}=1$．\quad $\theta=45^\circ$\quad $\left(\dfrac\pi4\right)$\\[2pt]
-(2)\ 求める直線の傾きを $m$ とすると $\left|\dfrac{m-2}{1+2m}\right|=\tan45^\circ=1$．\\
-\hspace*{1.5em}$m-2=\pm(1+2m)$ より $m=-3,\ \dfrac13$．\quad $y=-3x$，\ $y=\dfrac13x$
+\textbf{方針}\quad \point{直線の傾きは，直線と $x$ 軸の正の向きのなす角 $\alpha$ の $\tan\alpha$}．2直線のなす角は，その角の差として tan の加法定理で求める．\\[2pt]
+(1)\ 2直線と $x$ 軸の正の向きのなす角を $\alpha,\ \beta$ とすると\quad $\tan\alpha=3$，$\tan\beta=\dfrac12$（$\alpha>\beta$）．\\
+\hspace*{1.5em}$\tan(\alpha-\beta)=\dfrac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}=\dfrac{3-\frac12}{1+3\cdot\frac12}=\dfrac{\frac52}{\frac52}=1$\\
+\hspace*{1.5em}$0<\alpha-\beta<\dfrac\pi2$ だから\quad $\theta=\alpha-\beta=45^\circ$\quad $\left(\dfrac\pi4\right)$\\[2pt]
+(2)\ 求める直線の傾きを $m$ とする．$y=2x$ とのなす角が $45^\circ$ だから\\
+\hspace*{1.5em}$\left|\dfrac{m-2}{1+2m}\right|=\tan45^\circ=1$\quad （$1+2m\neq0$）\\
+\hspace*{1.5em}$m-2=1+2m$ のとき $m=-3$．\quad $m-2=-(1+2m)$ のとき $3m=1$，$m=\dfrac13$．\\
+\hspace*{1.5em}よって\quad $y=-3x$，\quad $y=\dfrac13x$\\
+\hspace*{1.5em}（$y=2x$ を $\pm45^\circ$ 回転させた2本がある．）
 \end{kai}
 
 \ans{59}{三角関数の合成（Ⅰ）}
 \begin{kai}
-\point{$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\alpha)$，点 $(a,\ b)$ の偏角が $\alpha$}\\
-(1)\ $r=2$，点 $(\sqrt3,\ 1)$ の偏角は $\dfrac\pi6$．\quad $2\sin\left(\theta+\dfrac\pi6\right)$\\[2pt]
-(2)\ $r=\sqrt2$，点 $(1,\ -1)$ の偏角は $-\dfrac\pi4$．\quad $\sqrt2\sin\left(\theta-\dfrac\pi4\right)$
+\textbf{方針}\quad \point{$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\alpha)$}．$\alpha$ は\point{点 $(a,\ b)$ を座標平面にとったときの偏角}（$\cos\alpha=\dfrac a{\sqrt{a^2+b^2}}$，$\sin\alpha=\dfrac b{\sqrt{a^2+b^2}}$）．\\[2pt]
+(1)\ $a=\sqrt3$，$b=1$．$r=\sqrt{3+1}=2$．\\
+\hspace*{1.5em}$\cos\alpha=\dfrac{\sqrt3}2$，$\sin\alpha=\dfrac12$ より $\alpha=\dfrac\pi6$．\quad $\sqrt3\sin\theta+\cos\theta=2\sin\left(\theta+\dfrac\pi6\right)$\\[2pt]
+(2)\ $a=1$，$b=-1$．$r=\sqrt{1+1}=\sqrt2$．\\
+\hspace*{1.5em}$\cos\alpha=\dfrac1{\sqrt2}$，$\sin\alpha=-\dfrac1{\sqrt2}$ より $\alpha=-\dfrac\pi4$．\quad $\sin\theta-\cos\theta=\sqrt2\sin\left(\theta-\dfrac\pi4\right)$\\[2pt]
+（検算：加法定理で展開すると，たとえば(1)は $2\left(\sin\theta\cdot\dfrac{\sqrt3}2+\cos\theta\cdot\dfrac12\right)$ でもとの式にもどる．）
 \end{kai}
 
 \ans{60}{三角関数の合成（Ⅱ）}
 \begin{kai}
-$y=2\sin\left(\theta+\dfrac\pi3\right)$．$\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac43\pi$ だから $-\dfrac{\sqrt3}2\leqq\sin\left(\theta+\dfrac\pi3\right)\leqq1$．\\
-最大値 $2$（$\theta=\dfrac\pi6$），\quad 最小値 $-\sqrt3$（$\theta=\pi$）
+\textbf{方針}\quad 合成して $\sin$ 1つにまとめる．\point{$\theta+\alpha$ の範囲を求め}，単位円で $\sin$ のとる値の範囲を読む．\\[2pt]
+$a=1$，$b=\sqrt3$ より $r=2$，$\alpha=\dfrac\pi3$．\quad $y=2\sin\left(\theta+\dfrac\pi3\right)$\\[2pt]
+$0\leqq\theta\leqq\pi$ より\quad $\dfrac\pi3\leqq\theta+\dfrac\pi3\leqq\dfrac43\pi$\\
+この範囲で $\sin\left(\theta+\dfrac\pi3\right)$ は，$\theta+\dfrac\pi3=\dfrac\pi2$ で最大値1，$\theta+\dfrac\pi3=\dfrac43\pi$ で最小値 $-\dfrac{\sqrt3}2$ をとる．\\
+\hspace*{1.5em}（左端 $\dfrac\pi3$ での値は $\dfrac{\sqrt3}2$ で，右端の方が小さい．）\\[2pt]
+最大値 $2\cdot1=2$\quad（$\theta+\dfrac\pi3=\dfrac\pi2$ より $\theta=\dfrac\pi6$）\\
+最小値 $2\cdot\left(-\dfrac{\sqrt3}2\right)=-\sqrt3$\quad（$\theta+\dfrac\pi3=\dfrac43\pi$ より $\theta=\pi$）
 \end{kai}
 
 \ans{61}{三角関数の合成（Ⅲ）}
