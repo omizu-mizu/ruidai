@@ -2476,6 +2476,11 @@ $f(x)=x^2+2ax+2a+8=(x+a)^2-a^2+2a+8$\\
 \ans{53}{角の2等分線の性質}
 \begin{kai}
 \textbf{方針}\quad \point{角の二等分線は，対辺をはさむ2辺の比に内分する}：$\angle\mathrm A$ の二等分線と BC の交点 D について $\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}$．どの三角形のどの角の二等分線かをはっきりさせて使う．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\draw[thick] (4.500,3.969)--(0.000,0.000)--(5.000,0.000)--cycle; \draw (4.500,3.969)--(3.000,0.000); \draw (0.000,0.000)--(4.773,1.804);\fill (3.000,0.000) circle (1.5pt);\fill (4.773,1.804) circle (1.5pt);\fill (3.500,1.323) circle (1.5pt);\node[above] at (4.500,3.969){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (5.000,0.000){\scriptsize C};\node[below] at (3.000,0.000){\scriptsize D};\node[right] at (4.773,1.804){\scriptsize E};\node[above left] at (3.500,1.323){\scriptsize I};\node[above left] at (2.250,1.984){\scriptsize 6};\node[right] at (4.625,2.976){\scriptsize 4};\node[below] at (1.500,0.000){\scriptsize 3};\node[below] at (4.000,0.000){\scriptsize 2};
+\end{tikzpicture}
+\end{center}
 (1)\ AD は $\angle\mathrm{BAC}$ の二等分線だから\quad $\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}=6:4=3:2$\\[2pt]
 (2)\ (1)より\quad $\mathrm{BD}=\mathrm{BC}\times\dfrac{3}{3+2}=5\times\dfrac35=3$\\
 \hspace*{1.5em}$\triangle\mathrm{ABD}$ に注目すると，BI は $\angle\mathrm{ABD}$ の二等分線で，対辺 AD と I で交わる．よって\\
@@ -2554,6 +2559,12 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{57}{接弦定理}
 \begin{kai}
 \textbf{方針}\quad \point{接弦定理：接線と弦のつくる角は，その角の内部にある弧に対する円周角に等しい}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw (0,0) circle (1.5); \draw (-2,-1.5)--(2.6,-1.5); \draw[thick] (-0.000,-1.500)--(1.410,0.513)--(-0.964,1.149)--cycle;\node[below] at (-0.000,-1.500){\scriptsize A};\node[right] at (1.410,0.513){\scriptsize B};\node[above left] at (-0.964,1.149){\scriptsize C};\node[below] at (2.400,-1.500){\scriptsize T};\draw[blue!70!black] (0.55,-1.5) arc (0:55:0.55); \node[blue!70!black] at (0.95,-1.25){\tiny $55^\circ$};\node[blue!70!black] at (-0.597,0.788){\tiny $55^\circ$};\node at (1.031,0.375){\tiny $70^\circ$};
+\end{tikzpicture}
+\end{center}
+\hspace*{1.5em}接線と弦 AB のなす角（青）と，弧 AB に対する円周角 $\angle\mathrm{ACB}$（青）が等しい．\\
 (1)\ $\angle\mathrm{TAB}$ は接線 AT と弦 AB のつくる角．その内部にある弧 AB（C を含まない方）に対する円周角は $\angle\mathrm{ACB}$．\\
 \hspace*{1.5em}接弦定理より\quad $\angle\mathrm{ACB}=\angle\mathrm{TAB}=55^\circ$\\[2pt]
 (2)\ $\triangle\mathrm{ABC}$ の内角の和は $180^\circ$ だから\\
@@ -2589,6 +2600,11 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{60}{平面幾何（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad (1)は $\triangle\mathrm{ABC}$ と直線 DEF に\point{メネラウスの定理}．(2)は\point{4点が同一円周上 → 方べきの定理}．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[thick] (1.500,3.000)--(0.000,0.000)--(4.000,0.000)--cycle; \draw (-2.000,0.000)--(2.333,2.000); \draw (-2.000,0.000)--(0.000,0.000);\fill (0.600,1.200) circle (1.5pt);\fill (2.333,2.000) circle (1.5pt);\fill (-2.000,0.000) circle (1.5pt);\node[above] at (1.500,3.000){\scriptsize A};\node[below] at (0.000,0.000){\scriptsize B};\node[below right] at (4.000,0.000){\scriptsize C};\node[above left] at (0.600,1.200){\scriptsize D};\node[above right] at (2.333,2.000){\scriptsize E};\node[below] at (-2.000,0.000){\scriptsize F};\node[left] at (1.050,2.100){\scriptsize 3};\node[left] at (0.300,0.600){\scriptsize 2};\node[right] at (1.917,2.500){\scriptsize 1};\node[right] at (3.167,1.000){\scriptsize 2};
+\end{tikzpicture}
+\end{center}
 (1)\ 条件より $\mathrm{AD}:\mathrm{DB}=3:2$，\quad $\mathrm{AE}:\mathrm{EC}=1:2$．\\
 \hspace*{1.5em}$\triangle\mathrm{ABC}$ と直線 DF にメネラウスの定理を用いて\quad $\dfrac{\mathrm{AD}}{\mathrm{DB}}\cdot\dfrac{\mathrm{BF}}{\mathrm{FC}}\cdot\dfrac{\mathrm{CE}}{\mathrm{EA}}=1$\\[2pt]
 \hspace*{1.5em}$\dfrac32\cdot\dfrac{\mathrm{BF}}{\mathrm{FC}}\cdot\dfrac21=1$ より $\dfrac{\mathrm{BF}}{\mathrm{FC}}=\dfrac13$．\quad よって\quad $\mathrm{BF}:\mathrm{FC}=1:3$\\
@@ -2602,6 +2618,11 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{61}{平面幾何（Ⅱ）}
 \begin{kai}
 \textbf{方針}\quad 直角三角形の斜辺への垂線は\point{面積を2通りに表す}か\point{相似}で求める．直角三角形の外心は斜辺の中点．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.32]
+\fill[blue!10] (3.600,4.800)--(3.600,0.000)--(5.000,0.000)--cycle;\draw[thick] (3.600,4.800)--(0.000,0.000)--(10.000,0.000)--cycle; \draw (3.600,4.800)--(3.600,0.000); \draw (3.600,4.800)--(5.000,0.000); \draw[gray] (5,0) circle (5);\draw (3.6,0.35)--(3.95,0.35)--(3.95,0);\fill (3.600,0.000) circle (1.5pt);\fill (5.000,0.000) circle (1.5pt);\node[above] at (3.600,4.800){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (10.000,0.000){\scriptsize C};\node[below] at (3.600,0.000){\scriptsize H};\node[below] at (5.000,0.000){\scriptsize M};\node[above left] at (1.800,2.400){\scriptsize 6};\node[above right] at (6.800,2.400){\scriptsize 8};
+\end{tikzpicture}
+\end{center}
 (1)\ 三平方の定理より\quad $\mathrm{BC}=\sqrt{6^2+8^2}=\sqrt{100}=10$\\
 \hspace*{1.5em}$\triangle\mathrm{ABC}$ の面積を2通りに表して\quad $\dfrac12\cdot6\cdot8=\dfrac12\cdot10\cdot\mathrm{AH}$，\quad $\mathrm{AH}=\dfrac{24}{5}$\\[2pt]
 \hspace*{1.5em}$\triangle\mathrm{ABH}$ と $\triangle\mathrm{CBA}$ は，$\angle\mathrm B$ 共通，$\angle\mathrm{AHB}=\angle\mathrm{CAB}=90^\circ$ で相似．\\
@@ -2618,6 +2639,11 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{62}{四角形への応用（トレミーの定理）}
 \begin{kai}
 \textbf{方針}\quad \point{直径に対する円周角は $90^\circ$}．トレミーの定理は円に内接する四角形の「対辺の積の和 $=$ 対角線の積」．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+\draw (0,0) circle (2.5); \draw[thick] (-2.500,0.000)--(-0.700,2.400)--(2.500,0.000)--(-0.700,-2.400)--cycle; \draw (-2.500,0.000)--(2.500,0.000); \draw (-0.700,2.400)--(-0.700,-2.400);\fill (-0.700,0.000) circle (1.5pt);\node[left] at (-2.500,0.000){\scriptsize A};\node[above] at (-0.700,2.400){\scriptsize B};\node[right] at (2.500,0.000){\scriptsize C};\node[below] at (-0.700,-2.400){\scriptsize D};\node[below right] at (-0.700,0.000){\scriptsize K};\node[above left] at (-1.600,1.200){\scriptsize 3};\node[above right] at (0.900,1.200){\scriptsize 4};\node[below left] at (-1.600,-1.200){\scriptsize 3};\node[below right] at (0.900,-1.200){\scriptsize 4};\node[above] at (1.200,0.000){\scriptsize 5};
+\end{tikzpicture}
+\end{center}
 (1)\ AC は直径だから\quad $\angle\mathrm{ABC}=\angle\mathrm{ADC}=90^\circ$\\
 \hspace*{1.5em}直角三角形 ABC，ADC に三平方の定理を用いて\\
 \hspace*{1.5em}$\mathrm{BC}=\sqrt{\mathrm{AC}^2-\mathrm{AB}^2}=\sqrt{25-9}=4$，\quad 同様に\quad $\mathrm{CD}=4$\\[2pt]
@@ -2646,6 +2672,11 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{64}{特殊な四面体（Ⅰ）}
 \begin{kai}
 \textbf{方針}\quad \point{頂点から等距離にある点への垂線の足は外心}．底面の外接円の半径がわかれば，三平方の定理で高さが出る．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+\draw[thick] (3.953,4.299)--(0.000,0.000)--(6.000,0.000)--cycle; \draw[thick] (3.953,4.299)--(5.858,2.078)--(6.000,0.000);\draw[dashed] (0.000,0.000)--(5.858,2.078); \draw[dashed] (3.953,4.299)--(3.953,0.693); \draw[dashed] (0.000,0.000)--(3.953,0.693);\fill (3.953,0.693) circle (1.5pt);\node[above] at (3.953,4.299){\scriptsize O};\node[below left] at (0.000,0.000){\scriptsize A};\node[below right] at (6.000,0.000){\scriptsize B};\node[right] at (5.858,2.078){\scriptsize C};\node[below] at (3.953,0.693){\scriptsize H};\node[left] at (1.500,1.800){\scriptsize 5};\node[below] at (3.000,0.000){\scriptsize 6};
+\end{tikzpicture}
+\end{center}
 (1)\ $\triangle\mathrm{OAH}$，$\triangle\mathrm{OBH}$，$\triangle\mathrm{OCH}$ において\\
 \hspace*{1.5em}OH は共通，\quad $\angle\mathrm{OHA}=\angle\mathrm{OHB}=\angle\mathrm{OHC}=90^\circ$，\quad $\mathrm{OA}=\mathrm{OB}=\mathrm{OC}=5$\\
 \hspace*{1.5em}斜辺と他の1辺がそれぞれ等しい直角三角形なので，3つは合同．\\
@@ -2660,6 +2691,11 @@ $\dfrac12\cdot\dfrac31\cdot\dfrac{\mathrm{DP}}{\mathrm{PA}}=1$\\
 \ans{65}{特殊な四面体（Ⅱ）}
 \begin{kai}
 \textbf{方針}\quad (1)(2)は類題64と同じく，垂線の足が底面の外心になることを使う．(3)は\point{内接球の中心と4頂点を結んで4つの四面体に分け}，体積を2通りに表す．\\[2pt]
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+\draw[thick] (3.953,5.592)--(0.000,0.000)--(6.000,0.000)--cycle; \draw[thick] (3.953,5.592)--(5.858,2.078)--(6.000,0.000);\draw[dashed] (0.000,0.000)--(5.858,2.078); \draw[dashed] (3.953,5.592)--(3.953,0.693); \draw[dashed] (0.000,0.000)--(3.953,0.693);\fill (3.953,0.693) circle (1.5pt);\node[above] at (3.953,5.592){\scriptsize A};\node[below left] at (0.000,0.000){\scriptsize B};\node[below right] at (6.000,0.000){\scriptsize C};\node[right] at (5.858,2.078){\scriptsize D};\node[below] at (3.953,0.693){\scriptsize G};\node[right] at (3.953,3.093){\scriptsize $h$};
+\end{tikzpicture}
+\end{center}
 (1)\ A から平面 BCD に下ろした垂線の足を G とすると，$\mathrm{AB}=\mathrm{AC}=\mathrm{AD}$ より，類題64と同様に G は正三角形 BCD の外心．\\
 \hspace*{1.5em}正弦定理より $2\mathrm{BG}=\dfrac{6}{\sin60^\circ}=4\sqrt3$，\quad $\mathrm{BG}=2\sqrt3$\\
 \hspace*{1.5em}直角三角形 ABG に三平方の定理を用いて\quad $h=\mathrm{AG}=\sqrt{6^2-(2\sqrt3)^2}=\sqrt{24}=2\sqrt6$\\[2pt]
